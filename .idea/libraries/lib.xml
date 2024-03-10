@@ -1,0 +1,26 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/ViaBackwards-4.4.3-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slick.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ViaRewind-2.0.3-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org.apache.aries.proxy-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ibxm.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/vecmath.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org.apache.aries.proxy-1.1.1-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/asm-9.6-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jna-5.13.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org.apache.aries.proxy-1.1.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ViaVersion-4.4.3-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/asm-9.6-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jna-5.13.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/tools.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ViaSnakeYaml-1.30.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/asm-9.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/trove4j-3.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jna-platform-5.13.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

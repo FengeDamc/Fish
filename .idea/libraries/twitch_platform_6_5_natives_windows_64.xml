@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="twitch-platform-6.5-natives-windows-64">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/libraries/tv/twitch/twitch-platform/6.5/twitch-platform-6.5-natives-windows-64.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -11,5 +11,7 @@
     <orderEntry type="library" name="platform-3.4.0" level="project" />
     <orderEntry type="library" name="jna-3.4.0" level="project" />
     <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="commons-io-2.4" level="project" />
+    <orderEntry type="library" name="log4j-core-2.0-beta9" level="project" />
   </component>
 </module>
