@@ -24,7 +24,8 @@ public class Agent {
         logger.info("注入成功!!!");
         try {
             Mappings.readMappings(MinecraftVersion.VER_189, MinecraftType.VANILLA);
-            logger.info("Read mappings successfully");
+            logger.info("Read mappings successfully:"+Mappings.obfClass);
+
         } catch (Exception e) {
             logger.info("Failed to read mappings,");
             e.printStackTrace();

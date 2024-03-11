@@ -28,11 +28,12 @@ public class Transformers {
     public static final List<Transformer> transformers = new ArrayList<>();
 
     public static void transform(Instrumentation inst) throws IOException {
+
         if (transformers.isEmpty()) {
             logger.warn("No transformers were added");
             return;
         }
-
+        Transformers.init();
         logger.info("{} transformers to load", transformers.size());
 
         for (Transformer transformer : transformers) {
@@ -117,8 +118,8 @@ public class Transformers {
         return writer.toByteArray();
     }
 
-    static {
-        transformers.add(new EntityPlayerSP("net/minecraft/client/entity/EntityPlayerSP"));
+    public static void init(){
+        transformers.add(new EntityPlayerSP());
 
     }
 }

@@ -11,8 +11,8 @@ import jdk.internal.org.objectweb.asm.tree.*;
 import static jdk.internal.org.objectweb.asm.Opcodes.*;
 
 public class EntityPlayerSP extends Transformer {
-    public EntityPlayerSP(String name) {
-        super(name);
+    public EntityPlayerSP() {
+        super("net/minecraft/client/entity/EntityPlayerSP");
     }
     @Inject(method = "func_70071_h_")
     public void onUpdate(MethodNode methodNode) {
