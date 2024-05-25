@@ -2,6 +2,7 @@ package fun.inject.inject.wrapper.impl.world;
 
 
 import fun.inject.inject.Mappings;
+import fun.inject.inject.ReflectionUtils;
 import fun.inject.inject.wrapper.Wrapper;
 import fun.inject.inject.wrapper.impl.entity.EntityPlayerWrapper;
 import fun.inject.inject.wrapper.impl.entity.EntityWrapper;
@@ -14,7 +15,7 @@ import java.util.List;
 import static com.viaversion.viaversion.libs.javassist.runtime.Desc.getClazz;
 
 public class WorldClientWrapper extends Wrapper {
-    private Object worldObj;
+    public Object worldObj;
 
     public WorldClientWrapper() {
         super("net/minecraft/client/multiplayer/WorldClient");
@@ -28,8 +29,8 @@ public class WorldClientWrapper extends Wrapper {
         // FD: adm/f net/minecraft/world/World/field_72996_f
 
         try {
-            Field field = getClazz().getField(Mappings.getObfField("field_72996_f"));
-            Object value = field.get(worldObj);
+
+            Object value = ReflectionUtils.getFieldValue(worldObj,Mappings.getObfField("field_72996_f"));
             if (value instanceof List) {
                 List<EntityWrapper> entities = new ArrayList<>();
 
@@ -46,13 +47,20 @@ public class WorldClientWrapper extends Wrapper {
 
         return null;
     }
+    public EntityWrapper getEntityByID(int id){
+        //func_73045_a,getEntityByID,2,"Returns the Entity with the given ID, or null if it doesn't exist in this World."
+        //MD: adm/a (I)Lpk; net/minecraft/world/World/func_73045_a (I)Lnet/minecraft/entity/Entity;
+        return new EntityWrapper(ReflectionUtils.invokeMethod(worldObj,
+                Mappings.getObfMethod("func_73045_a")
+        ,new Class[]{int.class},id));
+    }
 
     public List<EntityPlayerWrapper> getLoadedPlayers() {
         // FD: adm/j net/minecraft/world/World/field_73010_i
 
         try {
-            Field field = getClazz().getDeclaredField(Mappings.getObfField("field_73010_i"));
-            Object value = field.get(worldObj);
+
+            Object value = ReflectionUtils.getFieldValue(worldObj,Mappings.getObfField("field_73010_i"));
             if (value instanceof List) {
                 List<EntityPlayerWrapper> entities = new ArrayList<>();
 

@@ -1,5 +1,6 @@
 package com.darkmagician6.eventapi;
 
+import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
@@ -8,9 +9,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import com.darkmagician6.eventapi.events.Event;
-import com.darkmagician6.eventapi.events.EventStoppable;
+import com.darkmagician6.eventapi.event.Event;
+import com.darkmagician6.eventapi.event.EventStoppable;
 import com.darkmagician6.eventapi.types.Priority;
+import fun.inject.Agent;
+import javafx.animation.Animation;
 
 /**
  * 
@@ -23,7 +26,7 @@ public final class EventManager {
 	/**
 	 * HashMap containing all the registered MethodData sorted on the event parameters of the methods.
 	 */
-	private static final Map<Class<? extends Event>, List<MethodData>> REGISTRY_MAP = new HashMap<Class<? extends Event>, List<MethodData>>();
+	public static final Map<Class<? extends Event>, List<MethodData>> REGISTRY_MAP = new HashMap<Class<? extends Event>, List<MethodData>>();
 	
 	/**
 	 * All methods in this class are static so there would be no reason to create an object of the EventManager class.
@@ -47,15 +50,7 @@ public final class EventManager {
         }
     }
 
-    /**
-     * Registers the methods marked with the EventTarget annotation and that require
-     * the specified Event as the parameter in the class of the given Object.
-     *
-     * @param object
-     *         Object that contains the Method you want to register.
-     * @param Parameter
-     *         class for the marked method we are looking for.
-     */
+
     public static void register(Object object, Class<? extends Event> eventClass) {
         for (final Method method : object.getClass().getDeclaredMethods()) {
             if (isMethodBad(method, eventClass)) {
@@ -84,14 +79,7 @@ public final class EventManager {
         cleanMap(true);
     }
 
-    /**
-     * Unregisters all the methods in the given Object that have the specified class as a parameter.
-     *
-     * @param object
-     *         Object that implements the Listener interface.
-     * @param Parameter
-     *         class for the method to remove.
-     */
+
     public static void unregister(Object object, Class<? extends Event> eventClass) {
         if (REGISTRY_MAP.containsKey(eventClass)) {
             for (final MethodData data : REGISTRY_MAP.get(eventClass)) {
@@ -119,6 +107,7 @@ public final class EventManager {
     private static void register(Method method, Object object) {
     	Class<? extends Event> indexClass = (Class<? extends Event>) method.getParameterTypes()[0];
     	//New MethodData from the Method we are registering.
+
     	final MethodData data = new MethodData(object, method, method.getAnnotation(EventTarget.class).value());
     	
     	//Set's the method to accessible so that we can also invoke it if it's protected or private.
@@ -211,19 +200,6 @@ public final class EventManager {
         return method.getParameterTypes().length != 1 || !method.isAnnotationPresent(EventTarget.class);
     }
 
-    /**
-     * Checks if the method does not meet the requirements to be used to receive event calls from the Dispatcher.
-     * Performed checks: Checks if the parameter class of the method is the same as the event we want to receive.
-     *
-     * @param method
-     *         Method to check.
-     * @param Class
-     *         of the Event we want to find a method for receiving it.
-     *
-     * @return True if the method should not be used for receiving event calls from the Dispatcher.
-     *
-     * @see EventTarget
-     */
     private static boolean isMethodBad(Method method, Class<? extends Event> eventClass) {
         return isMethodBad(method) || !method.getParameterTypes()[0].equals(eventClass);
     }
@@ -243,7 +219,7 @@ public final class EventManager {
      *
      * @return Event in the state after dispatching it.
      */
-    public static final Event call(final Event event) {
+    public static final com.darkmagician6.eventapi.event.events.Event call(final com.darkmagician6.eventapi.event.events.Event event) {
         List<MethodData> dataList = REGISTRY_MAP.get(event.getClass());
 
         if (dataList != null) {

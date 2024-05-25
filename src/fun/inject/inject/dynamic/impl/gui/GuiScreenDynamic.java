@@ -25,13 +25,13 @@ public class GuiScreenDynamic extends Dynamic {
         classWriter.visit(V1_8, ACC_PUBLIC | ACC_SUPER, "net/minecraft/client/gui/GuiScreen", null, Mappings.getObfClass("net/minecraft/client/gui/GuiScreen"), null);
 
         {
-            methodVisitor = classWriter.visitMethod(ACC_PUBLIC, "<init>", "()V", null, null);
+            methodVisitor = classWriter.visitMethod(ACC_PUBLIC, "<initFrame>", "()V", null, null);
             methodVisitor.visitCode();
             Label label0 = new Label();
             methodVisitor.visitLabel(label0);
             methodVisitor.visitLineNumber(7, label0);
             methodVisitor.visitVarInsn(ALOAD, 0);
-            methodVisitor.visitMethodInsn(INVOKESPECIAL, Mappings.getObfClass("net/minecraft/client/gui/GuiScreen"), "<init>", "()V", false);
+            methodVisitor.visitMethodInsn(INVOKESPECIAL, Mappings.getObfClass("net/minecraft/client/gui/GuiScreen"), "<initFrame>", "()V", false);
             methodVisitor.visitInsn(RETURN);
             Label label1 = new Label();
             methodVisitor.visitLabel(label1);

@@ -1,0 +1,131 @@
+//
+// Created by admin on 2024/4/7.
+//
+#include <windows.h>
+#include <iostream>
+#include "jni.h"
+#include "jvmti.h"
+#include "jni_md.h"
+#include "direct.h"
+
+using namespace std;
+
+typedef struct{
+    JavaVM* vm;
+    JNIEnv* jniEnv;
+    jvmtiEnv* jvmtiEnv;
+} JAVA;
+void loadJar(JNIEnv* jniEnv,const char *path, jobject thread,BOOL useThread)
+{
+    jclass URLClassLoader = (*jniEnv)->FindClass(jniEnv, "java/net/URLClassLoader");
+    jclass ClassLoader = (*jniEnv)->FindClass(jniEnv, "java/lang/ClassLoader");
+    jclass URI = (*jniEnv)->FindClass(jniEnv, "java/net/URI");
+    jclass File = (*jniEnv)->FindClass(jniEnv, "java/io/File");
+    jclass Thread = (*jniEnv)->GetObjectClass(jniEnv, thread);
+
+    jmethodID init = (*jniEnv)->GetMethodID(jniEnv, File, "<init>", "(Ljava/lang/String;)V");
+    jmethodID addURL = (*jniEnv)->GetMethodID(jniEnv, URLClassLoader, "addURL", "(Ljava/net/URL;)V");
+    jmethodID toURI = (*jniEnv)->GetMethodID(jniEnv, File, "toURI", "()Ljava/net/URI;");
+    jmethodID toURL = (*jniEnv)->GetMethodID(jniEnv, URI, "toURL", "()Ljava/net/URL;");
+    jmethodID getContextClassLoader = (*jniEnv)->GetMethodID(jniEnv, Thread, "getContextClassLoader", "()Ljava/lang/ClassLoader;");
+    jmethodID getSystemClassLoader = (*jniEnv)->GetMethodID(jniEnv, ClassLoader, "getSystemClassLoader", "()Ljava/lang/ClassLoader;");
+
+    jstring filePath = (*jniEnv)->NewStringUTF(jniEnv, path);
+    jobject file = (*jniEnv)->NewObject(jniEnv, File, init, filePath);
+    jobject uri = (*jniEnv)->CallObjectMethod(jniEnv, file, toURI);
+    jobject url = (*jniEnv)->CallObjectMethod(jniEnv, uri, toURL);
+    jobject classloader;
+
+    if (useThread)
+    {
+        classloader = (*jniEnv)->CallObjectMethod(jniEnv, thread, getContextClassLoader);
+    }
+    else
+    {
+        classloader = (*jniEnv)->CallStaticObjectMethod(jniEnv, ClassLoader, getSystemClassLoader);
+    }
+
+    (*jniEnv)->CallVoidMethod(jniEnv, classloader, addURL, url);
+}
+
+
+
+//
+
+DWORD WINAPI Main(){
+    MessageBoxA(NULL,"INJECTED",NULL,NULL);
+
+
+    HMODULE hJvm=GetModuleHandle("jvm.dll");
+    JAVA java;
+    JavaVM *jvm;
+    JNIEnv* jniEnv;
+    typedef jint(JNICALL * fnJNI_GetCreatedJavaVMs)(JavaVM **, jsize, jsize *);
+    fnJNI_GetCreatedJavaVMs JNI_GetCreatedJavaVMs = (fnJNI_GetCreatedJavaVMs)GetProcAddress(hJvm, "JNI_GetCreatedJavaVMs");
+    jint num = JNI_GetCreatedJavaVMs(&jvm,1,NULL);
+    if(num!=JNI_OK)return 1;
+    java.vm=jvm;
+    java.vm->functions->AttachCurrentThread(java.vm, reinterpret_cast<void **>(&java.jniEnv), NULL);
+    java.vm->functions->GetEnv(java.vm, (void **)(&java.jvmtiEnv), JVMTI_VERSION);
+    jniEnv=java.jniEnv;
+    MessageBoxA(NULL,"LOADJAVA","FISHClient",MB_OK);
+
+    jclass threadClass = (*jniEnv)->FindClass(jniEnv, "java/lang/Thread");
+    jmethodID getAllStackTraces = (*jniEnv)->GetStaticMethodID(jniEnv, threadClass, "getAllStackTraces", "()Ljava/util/Map;");
+    if (!getAllStackTraces)
+        return 0;
+    jobjectArray threads = (jobjectArray)(*jniEnv)->CallObjectMethod(jniEnv, (*jniEnv)->CallObjectMethod(jniEnv, (*jniEnv)->CallStaticObjectMethod(jniEnv, threadClass, getAllStackTraces), (*jniEnv)->GetMethodID(jniEnv, (*jniEnv)->FindClass(jniEnv, "java/util/Map"), "keySet", "()Ljava/util/Set;")), (*jniEnv)->GetMethodID(jniEnv, (*jniEnv)->FindClass(jniEnv, "java/util/Set"), "toArray", "()[Ljava/lang/Object;"));
+    if (!threads)
+        return 0;
+    jsize arrlength = (*jniEnv)->GetArrayLength(jniEnv, threads);
+    jobject clientThread = NULL;
+    for (int i = 0; i < arrlength; i++)
+    {
+        jobject thread = (*jniEnv)->GetObjectArrayElement(jniEnv, threads, i);
+        if (thread == NULL)
+            continue;
+        jclass threadClass = (*jniEnv)->GetObjectClass(jniEnv, thread);
+        jstring name = (jstring)(*jniEnv)->CallObjectMethod(jniEnv, thread,
+                                                             (*jniEnv)->GetMethodID(jniEnv, threadClass,
+                                                                                          "getName",
+                                                                                          "()Ljava/lang/String;"));
+        const char *str = (*jniEnv)->GetStringUTFChars(jniEnv, name, (jboolean*) false);
+        if (!strcmp(str, "Client thread"))
+        {
+            clientThread = thread;
+            (*jniEnv)->ReleaseStringUTFChars(jniEnv, name, str);
+            break;
+        }
+        (*jniEnv)->ReleaseStringUTFChars(jniEnv, name, str);
+    }
+    MessageBoxA(NULL,"GETTHREAD","FISHClient",MB_OK);
+
+    if (!clientThread)
+        return 0;
+    char current_dir[MAX_PATH];
+    getcwd(current_dir,MAX_PATH);
+    string cd=string(current_dir)+"FunGhostClient.jar";
+    MessageBoxA(NULL,cd.c_str(),"FISHClient",MB_OK);
+
+    loadJar(jniEnv,cd.c_str(),clientThread,true);
+    MessageBoxA(NULL,"LOADEDJAR","FISHClient",MB_OK);
+
+    return 1;
+}
+
+
+INT WINAPI DllMain( HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved )
+{
+    if( dwReason == DLL_PROCESS_ATTACH )
+    {
+        MessageBoxW(NULL,L"INJECTED111",NULL,0);
+
+        if(dwReason==DLL_PROCESS_ATTACH){
+            //return TRUE;
+            CreateThread(NULL,128*1024*1024,(LPTHREAD_START_ROUTINE)(&Main), NULL, 0, NULL);
+        }
+        FreeLibrary( hInstance );
+    }
+
+    return 0;
+}

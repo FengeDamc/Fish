@@ -6,6 +6,10 @@ import fun.inject.inject.ReflectionUtils;
 import fun.inject.inject.wrapper.Wrapper;
 import fun.inject.inject.wrapper.impl.other.MovementInputWrapper;
 import fun.inject.inject.wrapper.impl.world.BlockPosWrapper;
+import fun.utils.Classes;
+import fun.utils.Fields;
+import fun.utils.Methods;
+import fun.utils.Vec3;
 
 import javax.vecmath.Vector3f;
 import java.lang.reflect.Field;
@@ -18,7 +22,7 @@ public class EntityPlayerSPWrapper extends Wrapper {
     private MovementInputWrapper movementInputObj;
 
     public EntityPlayerSPWrapper() {
-        super("net/minecraft/client/entity/EntityPlayerSP");
+        super(Classes.ENTITY_PLAYERSP.getName());
     }
 
     public boolean isNull() {
@@ -28,15 +32,17 @@ public class EntityPlayerSPWrapper extends Wrapper {
     public double getX() {
         // FD: pk/s net/minecraft/entity/Entity/field_70165_t
 
-        String notch = Mappings.getObfField("field_70165_t");
+        String notch = Fields.posX_Entity.getName();
         Object value = ReflectionUtils.getFieldValue(playerObj, notch);
         return value == null ? 0.0 : (Double) value;
     }
+    //movementInput FD: bew/b net/minecraft/client/entity/EntityPlayerSP/field_71158_b
+
 
     public double getY() {
         // FD: pk/s net/minecraft/entity/Entity/field_70165_t
 
-        String notch = Mappings.getObfField("field_70163_u");
+        String notch = Fields.posY_Entity.getName();
         Object value = ReflectionUtils.getFieldValue(playerObj, notch);
         return value == null ? 0.0 : (Double) value;
     }
@@ -44,7 +50,7 @@ public class EntityPlayerSPWrapper extends Wrapper {
     public double getZ() {
         // FD: pk/s net/minecraft/entity/Entity/field_70165_t
 
-        String notch = Mappings.getObfField("field_70161_v");
+        String notch = Fields.posZ_Entity.getName();
         Object value = ReflectionUtils.getFieldValue(playerObj, notch);
         return value == null ? 0.0 : (Double) value;
     }
@@ -54,32 +60,32 @@ public class EntityPlayerSPWrapper extends Wrapper {
     }
 
     public double getMotionX() {
-        return (Double) ReflectionUtils.getFieldValue(playerObj, Mappings.getObfField("field_70159_w"));
+        return (Double) ReflectionUtils.getFieldValue(playerObj, Fields.MotionX.getName());
     }
 
     public double getMotionY() {
-        return (Double) ReflectionUtils.getFieldValue(playerObj, Mappings.getObfField("field_70181_x"));
+        return (Double) ReflectionUtils.getFieldValue(playerObj, Fields.MotionY.getName());
     }
 
     public double getMotionZ() {
-        return (Double) ReflectionUtils.getFieldValue(playerObj, Mappings.getObfField("field_70179_y"));
+        return (Double) ReflectionUtils.getFieldValue(playerObj, Fields.MotionZ.getName());
     }
 
     public void setMotionX(double motionX) {
-        ReflectionUtils.setFieldValue(playerObj, Mappings.getObfField("field_70159_w"), motionX);
+        ReflectionUtils.setFieldValue(playerObj, Fields.MotionX.getName(), motionX);
     }
 
     public void setMotionY(double motionY) {
-        ReflectionUtils.setFieldValue(playerObj, Mappings.getObfField("field_70181_x"), motionY);
+        ReflectionUtils.setFieldValue(playerObj, Fields.MotionY.getName(), motionY);
     }
 
     public void setMotionZ(double motionZ) {
-        ReflectionUtils.setFieldValue(playerObj, Mappings.getObfField("field_70179_y"), motionZ);
+        ReflectionUtils.setFieldValue(playerObj,Fields.MotionZ.getName(), motionZ);
     }
 
     public boolean isOnGround() {
         // FD: pk/C net/minecraft/entity/Entity/field_70122_E
-        return (Boolean) ReflectionUtils.getFieldValue(playerObj, Mappings.getObfField("field_70122_E"));
+        return (Boolean) ReflectionUtils.getFieldValue(playerObj,Fields.OnGround_Entity.getName());
     }
 
     public float getFallDistance() {
@@ -117,12 +123,15 @@ public class EntityPlayerSPWrapper extends Wrapper {
     public BlockPosWrapper getPos() {
         return new BlockPosWrapper(Math.floor(getX()), Math.floor(getY()), Math.floor(getZ()));
     }
+    public Vec3 getPosVec() {
+        return new Vec3(getX(),getY(),getZ());//new BlockPosWrapper(Math.floor(getX()), Math.floor(getY()), Math.floor(getZ()));
+    }
 
     public Object getPosObj() {
         return BlockPosWrapper.create(getX(), getY(), getZ());
     }
 
-    public double getDistance(EntityPlayerWrapper wrapper) {
+    public double getDistance(EntityWrapper wrapper) {
         float f = (float) (getX() - wrapper.getX());
         float f1 = (float) (getY() - wrapper.getY());
         float f2 = (float) (getZ() - wrapper.getZ());
@@ -139,15 +148,27 @@ public class EntityPlayerSPWrapper extends Wrapper {
 
     public float getYaw() {
         // FD: pk/y net/minecraft/entity/Entity/field_70177_z
-        Object value = ReflectionUtils.getFieldValue(playerObj, Mappings.getObfField("field_70177_z"));
+        Object value = ReflectionUtils.getFieldValue(playerObj, Fields.Yaw_Entity.getName());
         return value == null ? 0.0f : (Float) value;
     }
 
     public float getPitch() {
         // FD: pk/z net/minecraft/entity/Entity/field_70125_A
-        Object value = ReflectionUtils.getFieldValue(playerObj, Mappings.getObfField("field_70125_A"));
+        Object value = ReflectionUtils.getFieldValue(playerObj, Fields.Pitch_Entity.getName());
         return value == null ? 0.0f : (Float) value;
     }
+    public void setYaw(float yaw) {
+        // FD: pk/y net/minecraft/entity/Entity/field_70177_z
+        ReflectionUtils.setFieldValue(playerObj, Fields.Yaw_Entity.getName(), yaw);
+        //return value == null ? 0.0f : (Float) value;
+    }
+
+    public void setPitch(float pitch) {
+        // FD: pk/z net/minecraft/entity/Entity/field_70125_A
+        ReflectionUtils.setFieldValue(playerObj, Fields.Pitch_Entity.getName(),pitch);
+        //return value == null ? 0.0f : (Float) value;
+    }
+
 
     public Vector3f getVectorForRotation() {
         float pitch = getPitch();
@@ -165,7 +186,7 @@ public class EntityPlayerSPWrapper extends Wrapper {
 
         // MD: bew/d (Z)V net/minecraft/client/entity/EntityPlayerSP/func_70031_b (Z)V
 
-        String notch = Mappings.getObfMethod("func_70031_b"); // setSprinting
+        String notch = Methods.setSprinting.getName(); // setSprinting
         try {
             Method m = getClazz().getMethod(notch, boolean.class);
             m.invoke(playerObj, value);
@@ -214,7 +235,7 @@ public class EntityPlayerSPWrapper extends Wrapper {
     public Object getSendQueue() {
         if (sendQueueObj == null) {
             try {
-                String notch = Mappings.getObfField("field_71174_a"); // sendQueue
+                String notch = Fields.sendQueueSP.getName(); // sendQueue
                 Field field = getClazz().getField(notch);
                 sendQueueObj = field.get(playerObj);
             } catch (Exception e) {
@@ -225,14 +246,7 @@ public class EntityPlayerSPWrapper extends Wrapper {
     }
 
     public MovementInputWrapper getMovementInputObj() {
-        if (movementInputObj == null) {
-            try {
-                movementInputObj = new MovementInputWrapper(ReflectionUtils.getFieldValue(playerObj, Mappings.getObfField("field_71158_b")));
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-        return movementInputObj;
+        return new MovementInputWrapper(ReflectionUtils.getFieldValue(playerObj, Mappings.getObfField("field_71158_b")));
     }
 
     public void addChatMessage(Object chatComponentText) {
@@ -256,6 +270,11 @@ public class EntityPlayerSPWrapper extends Wrapper {
     }
 
     public int getEntityID() {
-        return (Integer) ReflectionUtils.getFieldValue(playerObj, Mappings.getObfField("field_145783_c"));
+        return (int) ReflectionUtils.invokeMethod(playerObj, Methods.getEntityID_Entity.getName());
+    }
+
+    public boolean isUsingItem() {
+        return (boolean)ReflectionUtils.invokeMethod(playerObj, Methods.isUsing.getName());
+
     }
 }

@@ -1,7 +1,8 @@
 package fun.inject.inject;
 
 
-import org.apache.logging.log4j.core.config.plugins.ResolverUtil;
+import fun.inject.Agent;
+
 
 import java.lang.reflect.*;
 import java.util.Set;
@@ -27,7 +28,7 @@ public class ReflectionUtils {
 
             c = c.getSuperclass();
         }
-
+        Agent.logger.error("cant find {} {}",instance.getClass().getName(),name);
         return null;
     }
 
@@ -64,11 +65,12 @@ public class ReflectionUtils {
                     field = c.getField(name);
                 }
                 field.setAccessible(true);
-                Field modifiersField = Field.class.getDeclaredField("modifiers");
+                /*Field modifiersField = Field.class.getDeclaredField("modifiers");
                 modifiersField.setAccessible(true);
-                modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
+                modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);*/
                 field.set(instance, value);
             } catch (IllegalAccessException | NoSuchFieldException ignored) {
+                ignored.printStackTrace();
             }
 
             c = c.getSuperclass();
@@ -123,15 +125,19 @@ public class ReflectionUtils {
                 try {
                     method = c.getDeclaredMethod(name);
                 } catch (NoSuchMethodException | SecurityException exception) {
+                    //exception.printStackTrace();
                     method = c.getMethod(name);
                 }
                 method.setAccessible(true);
                 return method.invoke(instance);
             } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException ignored) {
+                //ignored.printStackTrace();
             }
 
             c = c.getSuperclass();
         }
+        Agent.logger.error("cant find {} {}",instance.getClass().getName(),name);
+
         return null;
     }
 
@@ -184,21 +190,6 @@ public class ReflectionUtils {
         return null;
     }
 
-    public static Set<Class<?>> getSubTypesOf(String packagePath, Class<?> clazz) {
-
-        ResolverUtil resolver = new ResolverUtil();
-
-        resolver.setClassLoader(clazz.getClassLoader());
-
-        resolver.findInPackage(new ResolverUtil.ClassTest() {
-            @Override
-            public boolean matches(Class<?> aClass) {
-                return aClass.getSuperclass() == clazz;
-            }
-        }, packagePath);
-
-        return resolver.getClasses();
-    }
 
     public static boolean isInstanceOf(Object obj, Class<?> cls) {
         return cls.isAssignableFrom(obj.getClass());

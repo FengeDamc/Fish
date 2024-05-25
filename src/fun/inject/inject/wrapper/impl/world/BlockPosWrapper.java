@@ -1,8 +1,11 @@
 package fun.inject.inject.wrapper.impl.world;
 
 
+import fun.inject.Agent;
 import fun.inject.inject.Mappings;
+import fun.inject.inject.ReflectionUtils;
 import fun.inject.inject.wrapper.Wrapper;
+import fun.utils.Classes;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;
@@ -13,53 +16,60 @@ public class BlockPosWrapper extends Wrapper {
     private static final Map<Integer, Object> blockPosCache = new HashMap<>();
 
     private Object blockPosObj;
-    private int x, y, z;
+    public int x, y, z;
+
 
     public BlockPosWrapper(Object blockPosObj) {
-        super("net/minecraft/util/BlockPos");
+        super(Classes.BlockPos);
+        if(blockPosObj==null){
+            return;
+        }
         this.blockPosObj = blockPosObj;
 
         //FD: df/a net/minecraft/util/Vec3i/field_177962_a x
         //FD: df/c net/minecraft/util/Vec3i/field_177960_b y
         //FD: df/d net/minecraft/util/Vec3i/field_177961_c z
+        //MD: df/n ()I net/minecraft/util/Vec3i/func_177958_n ()I getX
+        //MD: df/o ()I net/minecraft/util/Vec3i/func_177956_o ()I getY
+        //MD: df/p ()I net/minecraft/util/Vec3i/func_177952_p ()I getZ
 
         try {
-            Field field = getClazz().getDeclaredField(Mappings.getObfField("field_177962_a"));
-            field.setAccessible(true);
 
-            x = (Integer) field.get(blockPosObj);
+            x = (int) ReflectionUtils.invokeMethod(this.blockPosObj,Mappings.getObfMethod("func_177958_n"));
 
-            field = getClazz().getDeclaredField(Mappings.getObfField("field_177960_b"));
-            field.setAccessible(true);
 
-            y = (Integer) field.get(blockPosObj);
 
-            field = getClazz().getDeclaredField(Mappings.getObfField("field_177961_c"));
-            field.setAccessible(true);
+            y = (int) ReflectionUtils.invokeMethod(this.blockPosObj,Mappings.getObfMethod("func_177956_o"));
 
-            z = (Integer) field.get(blockPosObj);
+
+
+            z = (int) ReflectionUtils.invokeMethod(this.blockPosObj,Mappings.getObfMethod("func_177952_p"));
+
+
+
+
+
         } catch (Exception e) {
             e.printStackTrace();
-
         }
     }
 
     public BlockPosWrapper(int x, int y, int z) {
-        super("net/minecraft/util/BlockPos");
+        super(Classes.BlockPos);
         this.x = x;
         this.y = y;
         this.z = z;
     }
 
     public BlockPosWrapper(double x, double y, double z) {
-        super("net/minecraft/util/BlockPos");
+        super(Classes.BlockPos);
         this.x = (int) x;
         this.y = (int) y;
         this.z = (int) z;
     }
 
-    public Object add(int x, int y, int z) {
-        return create(this.x + x, this.y + y, this.z + z);
+    public BlockPosWrapper add(int x, int y, int z) {
+        return new BlockPosWrapper(this.x + x, this.y + y, this.z + z);
     }
 
     public Object get() {
@@ -67,10 +77,19 @@ public class BlockPosWrapper extends Wrapper {
     }
 
     public static Object create(int x, int y, int z) {
+        return ReflectionUtils.newInstance(getBlockPosClass(),new Class[]{int.class,int.class,int.class},x,y,z);
+    }
+    public static Object create(double x, double y, double z) {
+        return ReflectionUtils.newInstance(getBlockPosClass(),new Class[]{double.class,double.class,double.class},x,y,z);//getBlockPosClass().getConstructors()[4].newInstance(x, y, z);
+
+    }
+
+
+    public static Object createIntoCache(int x, int y, int z) {
         int hash = hash(x, y, z);
         if (!blockPosCache.containsKey(hash)) {
             try {
-                Object blockPosObj = getBlockPosClass().getConstructors()[4].newInstance(x, y, z);
+                Object blockPosObj = ReflectionUtils.newInstance(getBlockPosClass(),new Class[]{int.class,int.class,int.class},x,y,z);//getBlockPosClass().getConstructors()[4].newInstance(x, y, z);
                 blockPosCache.put(hash, blockPosObj);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -81,11 +100,11 @@ public class BlockPosWrapper extends Wrapper {
         return blockPosCache.get(hash);
     }
 
-    public static Object create(double x, double y, double z) {
+    public static Object createIntoCache(double x, double y, double z) {
         int hash = hash((int) x, (int) y, (int) z);
         if (!blockPosCache.containsKey(hash)) {
             try {
-                Object blockPosObj = getBlockPosClass().getConstructors()[4].newInstance((int) x, (int) y, (int) z);
+                Object blockPosObj = ReflectionUtils.newInstance(getBlockPosClass(),new Class[]{int.class,int.class,int.class},(int)x,(int)y,(int)z);//getBlockPosClass().getConstructors()[4].newInstance(x, y, z);
                 blockPosCache.put(hash, blockPosObj);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -99,7 +118,7 @@ public class BlockPosWrapper extends Wrapper {
     public static Class<?> getBlockPosClass() {
         if (blockPosClass == null) {
             try {
-                blockPosClass = Class.forName(Mappings.getObfClass("net/minecraft/util/BlockPos"));
+                blockPosClass = Classes.BlockPos.getClazz();
             } catch (Exception e) {
                 e.printStackTrace();
             }

@@ -1,5 +1,8 @@
 package fun.inject.inject.asm.api;
 
+import fun.utils.Fields;
+import fun.utils.Methods;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
@@ -7,5 +10,5 @@ import java.lang.annotation.RetentionPolicy;
 public @interface Inject {
     String method();
 
-    String descriptor() default "()V";
+    String descriptor() default  "()V";
 }

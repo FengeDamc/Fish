@@ -1,6 +1,8 @@
 package fun.inject.inject.wrapper.impl;
 
 
+import com.google.common.util.concurrent.ListenableFuture;
+import fun.inject.Agent;
 import fun.inject.inject.Mappings;
 import fun.inject.inject.ReflectionUtils;
 import fun.inject.inject.wrapper.Wrapper;
@@ -13,6 +15,8 @@ import fun.inject.inject.wrapper.impl.render.FramebufferWrapper;
 import fun.inject.inject.wrapper.impl.render.RenderManagerWrapper;
 import fun.inject.inject.wrapper.impl.setting.GameSettingsWrapper;
 import fun.inject.inject.wrapper.impl.world.WorldClientWrapper;
+import fun.utils.Fields;
+
 
 public class MinecraftWrapper extends Wrapper {
     private static final String CLASS = "net/minecraft/client/Minecraft";
@@ -110,7 +114,7 @@ public class MinecraftWrapper extends Wrapper {
     public EntityPlayerSPWrapper getPlayer() {
 
         try {
-            Object value = ReflectionUtils.getFieldValue(minecraftObj, Mappings.getObfField("field_71439_g"));
+            Object value = ReflectionUtils.getFieldValue(minecraftObj, Fields.player.getName());
             thePlayer.setPlayerObj(value);
         } catch (Exception e) {
             e.printStackTrace();
@@ -209,6 +213,14 @@ public class MinecraftWrapper extends Wrapper {
 
         }
     }
+    //MD: le/a (Ljava/lang/Runnable;)Lcom/google/common/util/concurrent/ListenableFuture; net/minecraft/world/WorldServer/func_152344_a (Ljava/lang/Runnable;)Lcom/google/common/util/concurrent/ListenableFuture;
+    public void addScheduledTask(Runnable runnable) {
+        try {
+            ReflectionUtils.invokeMethod(minecraftObj,Mappings.getObfMethod("func_152344_a"),new Class[]{Agent.findClass("java/lang/Runnable")},runnable);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public Object getMinecraftObj() {
         return minecraftObj;
@@ -217,9 +229,10 @@ public class MinecraftWrapper extends Wrapper {
     public static MinecraftWrapper get() {
         if (instance == null) {
             try {
-                instance = new MinecraftWrapper(ReflectionUtils.invokeMethod(Class.forName(Mappings.getObfClass(CLASS)), Mappings.getObfMethod("func_71410_x")));
+
+                instance = new MinecraftWrapper(ReflectionUtils.invokeMethod(Agent.findClass(Mappings.getObfClass(CLASS)), Mappings.getObfMethod("func_71410_x")));
             } catch (Exception e) {
-                e.printStackTrace();
+
 
             }
         }

@@ -3,33 +3,38 @@ package fun.client.settings;
 
 import fun.client.FunGhostClient;
 import fun.client.mods.Module;
+import fun.inject.Agent;
+import fun.network.TCPClient;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 // I have to delete all the comments for normal encoding
 
 public class Setting {
-	private String name;
-	private Module parent;
-	private String mode;
+	public String name;
+	public Module parent;
+	public String smode;
 
-	private String sval="";
-	private ArrayList<String> options;
 
-	private boolean bval=false;
+	public String sval="";
+	public ArrayList<String> options;
 
-	private double dval=0.0d;
-	private double min;
-	private double max;
-	private boolean onlyint = false;
+	public boolean bval=false;
+
+	public double dval=0.0d;
+	public double min;
+	public double max;
+	public boolean onlyint = false;
+	public ArrayList<JComponent> jComponents=new ArrayList<>();
 
 	public Setting(String name, Module parent, String sval, ArrayList<String> options){
 		this.name = name;
 		this.parent = parent;
 		this.sval = sval;
 		this.options = options;
-		this.mode = "Combo";
+		this.smode = "Combo";
 		FunGhostClient.settingsManager.reg(this);
 
 	}
@@ -39,17 +44,18 @@ public class Setting {
 		this.sval = sval;
 		this.options = new ArrayList<>();
 		this.options.addAll(Arrays.asList(options));
-		this.mode = "Combo";
+		this.smode = "Combo";
 		FunGhostClient.settingsManager.reg(this);
 
 
 	}
 
+
 	public Setting(String name, Module parent, boolean bval){
 		this.name = name;
 		this.parent = parent;
 		this.bval = bval;
-		this.mode = "Check";
+		this.smode = "Check";
 		FunGhostClient.settingsManager.reg(this);
 
 	}
@@ -64,8 +70,25 @@ public class Setting {
 		this.min = min;
 		this.max = max;
 		this.onlyint = onlyint;
-		this.mode = "Slider";
+		this.smode = "Slider";
 		FunGhostClient.settingsManager.reg(this);
+	}
+
+
+	public void updateActiveState(){
+        for (int i = 0, jComponentsSize = jComponents.size(); i < jComponentsSize; i++) {
+            JComponent jc = jComponents.get(i);
+            boolean b = isActive() == jc.isVisible();
+            jc.setVisible(isActive());
+            if (!b) {
+                SwingUtilities.invokeLater(() ->
+                        SwingUtilities.updateComponentTreeUI(Agent.fishFrame));
+            }
+        }
+	}
+
+	public boolean isActive() {
+		return true;
 	}
 
 	public String getName(){
@@ -81,6 +104,11 @@ public class Setting {
 	}
 
 	public void setValString(String in){
+		if(!Agent.isAgent) {
+			TCPClient.send(Agent.SERVERPORT,"setstring "+FunGhostClient.settingsManager.getSettings().indexOf(this)+" "+in);
+
+
+		}
 		this.sval = in;
 		this.parent.onSettingChange(this);
 
@@ -95,12 +123,16 @@ public class Setting {
 	}
 
 	public void setValBoolean(boolean in){
+		if(!Agent.isAgent) {
+			TCPClient.send(Agent.SERVERPORT,"setbool "+FunGhostClient.settingsManager.getSettings().indexOf(this)+" "+in);
+
+		}
 		this.bval = in;
 		this.parent.onSettingChange(this);
 
 	}
 
-	public double getValDouble(){
+	public strictfp double getValDouble(){
 		if(this.onlyint){
 			this.dval = (int)dval;
 		}
@@ -108,6 +140,9 @@ public class Setting {
 	}
 
 	public void setValDouble(double in){
+		if(!Agent.isAgent) {
+			TCPClient.send(Agent.SERVERPORT,"setdouble "+FunGhostClient.settingsManager.getSettings().indexOf(this)+" "+in);
+		}
 		this.dval = in;
 		this.parent.onSettingChange(this);
 
@@ -122,15 +157,15 @@ public class Setting {
 	}
 
 	public boolean isCombo(){
-		return this.mode.equalsIgnoreCase("Combo") ? true : false;
+		return this.smode.equalsIgnoreCase("Combo") ? true : false;
 	}
 
 	public boolean isCheck(){
-		return this.mode.equalsIgnoreCase("Check") ? true : false;
+		return this.smode.equalsIgnoreCase("Check") ? true : false;
 	}
 
 	public boolean isSlider(){
-		return this.mode.equalsIgnoreCase("Slider") ? true : false;
+		return this.smode.equalsIgnoreCase("Slider") ? true : false;
 	}
 
 	public boolean onlyInt(){

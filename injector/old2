@@ -1,0 +1,40 @@
+//
+// Created by admin on 2024/4/7.
+//
+#include <windows.h>
+#include <iostream>
+#include "jni.h"
+#include "jvmti.h"
+typedef struct{
+    JavaVM* vm;
+    JNIEnv* jniEnv;
+    jvmtiEnv* jvmtiEnv;
+} JAVA;
+
+
+
+//
+
+DWORD WINAPI Main(){
+    MessageBoxA(NULL,"INJECTED",NULL,NULL);
+    HMODULE hJvm=GetModuleHandle("jvm.dll");
+    JAVA java;
+    JavaVM *jvm;
+    typedef jint(JNICALL * fnJNI_GetCreatedJavaVMs)(JavaVM **, jsize, jsize *);
+    fnJNI_GetCreatedJavaVMs JNI_GetCreatedJavaVMs = (fnJNI_GetCreatedJavaVMs)GetProcAddress(hJvm, "JNI_GetCreatedJavaVMs");
+    jint num = JNI_GetCreatedJavaVMs(&jvm,1,NULL);
+    if(num!=JNI_OK)return 1;
+    java.vm=jvm;
+    java.vm->functions->AttachCurrentThread(java.vm, reinterpret_cast<void **>(&java.jniEnv), NULL);
+    java.vm->functions->GetEnv(java.vm, (void **)(&java.jvmtiEnv), JVMTI_VERSION);
+    printf("hello jni jvmti java love from fun");
+    return 1;
+}
+
+
+BOOL APIENTRY DllMain(HMODULE,DWORD reason,LPVOID lpReserved){
+    if(reason==DLL_PROCESS_ATTACH){
+        CreateThread(NULL,1024*1024,(LPTHREAD_START_ROUTINE)(&Main), NULL, 0, NULL);
+    }
+    return TRUE;
+}

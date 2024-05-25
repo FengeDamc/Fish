@@ -10,8 +10,8 @@ public enum Category {
     Movement,
     MISC,
     RENDER,
-    PLAYER,
-    WORLD,
+    Player,
+    World,
     CLIENT
     ;
     public ArrayList<Module> mods = new ArrayList<Module>();
