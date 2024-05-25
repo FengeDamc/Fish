@@ -36,4 +36,7 @@ public class GameSettingsWrapper extends Wrapper {
     public KeyBindingWrapper getKey(String name) {
         return bindings.getOrDefault(name, null);
     }
+    public static final String USE="key.use";//-99
+    public static final String ATTACK="key.attack";//-100
+
 }

@@ -138,5 +138,11 @@ public class ModuleManager {
             if (m.running) m.onMoment(event);
         }
     }
+    @EventTarget
+    public void onTick(EventTick event){
+        for (Module m : mods) {
+            if (m.running) m.onTick(event);
+        }
+    }
 
 }

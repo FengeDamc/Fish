@@ -22,7 +22,8 @@ public enum Methods {
     isUsing(new VMethod("func_71039_bw","()Z"),
             new VMethod("func_184587_cr","()Z").version(MinecraftVersion.VER_1122),
             new VMethod("func_184587_cr","()Z").version(MinecraftVersion.VER_1165)
-            );
+            ),
+    runTick_Minecraft(new VMethod("func_71407_l","()V"));
     public String obf_name ="";
     public String friendly_name ="";
     public Method method;

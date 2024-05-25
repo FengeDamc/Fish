@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="ow2.asm.tree" type="repository">
+    <properties maven-id="org.ow2.asm:asm-tree:9.7" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/asm-tree-9.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/asm-9.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

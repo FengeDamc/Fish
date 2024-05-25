@@ -82,4 +82,7 @@ public class Module {
 
     public void onMoment(EventMoment event) {
     }
+
+    public void onTick(EventTick event) {
+    }
 }
