@@ -4,6 +4,7 @@ import com.darkmagician6.eventapi.event.events.EventMotion;
 import com.darkmagician6.eventapi.event.events.EventRender3D;
 import com.darkmagician6.eventapi.event.events.EventStrafe;
 import com.darkmagician6.eventapi.event.events.EventUpdate;
+import fun.client.FunGhostClient;
 import fun.client.mods.Category;
 import fun.client.mods.Module;
 import fun.client.settings.Setting;
@@ -25,10 +26,8 @@ public class AimBot extends Module {
     }
     public EntityWrapper target=null;
 
-    public Setting onlyPlayer=new Setting("OnlyPlayer",this,false);
     public Setting onAttack=new Setting("OnAttack",this,false);
 
-    public Setting range=new Setting("Range",this,6.0,0,6.0,false);
     public Setting speed=new Setting("Speed",this,50,0,180,false);
     public boolean isEntityLivingBase(Object instance){
         Class<?> c = instance.getClass();
@@ -46,23 +45,8 @@ public class AimBot extends Module {
     public void onRender3D(EventRender3D event) {
         super.onRender3D(event);
         if(onAttack.getValBoolean()&&!mc.getGameSettings().getKey("key.attack").isPressed())return;
-        target=null;
-        EntityPlayerSPWrapper playersp = mc.getPlayer();
-
-        //playersp.setPitch(0);
-
-
-        //playersp.setYaw(0);
-        //Agent.logger.info(mc.getWorld().worldObj);
-        for (EntityWrapper player : onlyPlayer.getValBoolean()?
-                mc.getWorld().getLoadedPlayers()
-                :mc.getWorld().getLoadedEntities()) {
-            if (player.entityObj!=playersp.getPlayerObj()&&mc.getPlayer().getDistance(player) < range.getValDouble()&&!player.isDead()
-                    &&isEntityLivingBase(player.entityObj)) {
-                target = player;
-                //Agent.logger.info(+":{}",);
-            }
-        }
+        target= FunGhostClient.moduleManager.target.target;
+        EntityPlayerSPWrapper playersp=mc.getPlayer();
 
 
         if(target==null)return;

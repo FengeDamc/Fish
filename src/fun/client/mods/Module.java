@@ -7,6 +7,8 @@ import fun.client.settings.Setting;
 import fun.inject.Agent;
 import fun.inject.inject.wrapper.impl.MinecraftWrapper;
 import fun.network.TCPClient;
+import fun.network.TCPServer;
+import fun.utils.render.Notification;
 
 import java.util.ArrayList;
 
@@ -33,8 +35,22 @@ public class Module {
     }
 
     public void setRunning(boolean running) {
-            if(Agent.isAgent)this.running = running;
-            else TCPClient.send(Agent.SERVERPORT,"setrun "+FunGhostClient.moduleManager.mods.indexOf(this)+" "+running);
+        if(running!=this.running) {
+            this.running = running;
+            if(Agent.isAgent){
+                if (running) onEnable();
+                else onDisable();
+            }
+            if (!TCPServer.isNetworkThread()) {
+                TCPClient.send(TCPServer.getTargetPort(), "setrun " + FunGhostClient.moduleManager.mods.indexOf(this) + " " + running);
+            }
+        }
+    }
+    public void setKey(int key){
+        this.key=key;
+        if (!TCPServer.isNetworkThread()) {
+            TCPClient.send(TCPServer.getTargetPort(), "setkey " + FunGhostClient.moduleManager.mods.indexOf(this) + " " + key);
+        }
     }
 
     public String getName() {
@@ -84,5 +100,12 @@ public class Module {
     }
 
     public void onTick(EventTick event) {
+    }
+    public void onEnable(){
+        FunGhostClient.moduleManager.notification.post(new Notification("Enable "+getName(), Notification.Type.GREEN));
+
+    }
+    public void onDisable(){
+        FunGhostClient.moduleManager.notification.post(new Notification("Disable "+getName(), Notification.Type.RED));
     }
 }

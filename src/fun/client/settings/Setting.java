@@ -5,6 +5,7 @@ import fun.client.FunGhostClient;
 import fun.client.mods.Module;
 import fun.inject.Agent;
 import fun.network.TCPClient;
+import fun.network.TCPServer;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -104,8 +105,8 @@ public class Setting {
 	}
 
 	public void setValString(String in){
-		if(!Agent.isAgent) {
-			TCPClient.send(Agent.SERVERPORT,"setstring "+FunGhostClient.settingsManager.getSettings().indexOf(this)+" "+in);
+		if(!TCPServer.isNetworkThread()) {
+			TCPClient.send(TCPServer.getTargetPort(),"setstring "+FunGhostClient.settingsManager.getSettings().indexOf(this)+" "+in);
 
 
 		}
@@ -123,8 +124,8 @@ public class Setting {
 	}
 
 	public void setValBoolean(boolean in){
-		if(!Agent.isAgent) {
-			TCPClient.send(Agent.SERVERPORT,"setbool "+FunGhostClient.settingsManager.getSettings().indexOf(this)+" "+in);
+		if(!TCPServer.isNetworkThread()) {
+			TCPClient.send(TCPServer.getTargetPort(),"setbool "+FunGhostClient.settingsManager.getSettings().indexOf(this)+" "+in);
 
 		}
 		this.bval = in;
@@ -140,8 +141,8 @@ public class Setting {
 	}
 
 	public void setValDouble(double in){
-		if(!Agent.isAgent) {
-			TCPClient.send(Agent.SERVERPORT,"setdouble "+FunGhostClient.settingsManager.getSettings().indexOf(this)+" "+in);
+		if(!TCPServer.isNetworkThread()) {
+			TCPClient.send(TCPServer.getTargetPort(),"setdouble "+FunGhostClient.settingsManager.getSettings().indexOf(this)+" "+in);
 		}
 		this.dval = in;
 		this.parent.onSettingChange(this);

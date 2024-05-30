@@ -19,7 +19,7 @@ public class CommandHandle {
                 for(Module m: FunGhostClient.moduleManager.mods){
 
                     if(s1[1].equalsIgnoreCase(m.getName())){
-                        m.key= s1[2].equalsIgnoreCase("none")?0: Keyboard.getKeyIndex(s1[2].toUpperCase());
+                        m.setKey(s1[2].equalsIgnoreCase("none")?0: Keyboard.getKeyIndex(s1[2].toUpperCase()));
                         return true;
                     }
                 }

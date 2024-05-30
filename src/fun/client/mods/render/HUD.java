@@ -10,6 +10,7 @@ import fun.inject.Agent;
 import fun.inject.inject.wrapper.impl.MinecraftWrapper;
 import fun.inject.inject.wrapper.impl.gui.GuiWrapper;
 import fun.inject.inject.wrapper.impl.gui.ScaledResolutionWrapper;
+import fun.utils.font.FontManager;
 import org.lwjgl.input.Keyboard;
 
 import javax.vecmath.Vector2d;
@@ -24,14 +25,16 @@ public class HUD extends Module {
         super(Keyboard.KEY_F,nameIn, Category.RENDER);
         this.running=true;
     }
-    public Setting setting=new Setting("Test",this,"A",new String[]{"A","B","C"});
+    public Setting mixColor1=new Setting("MixColor1",this,0xffffff,0x000000,0xffffff,true);
+    public Setting mixColor2=new Setting("MixColor2",this,0xffffff,0x000000,0xffffff,true);
+
 
     @Override
     public void onRender2D(EventRender2D event) {
         super.onRender2D(event);
 
             //drawRect(2, 2, 100, 14, ColorUtils.getRainbow((int) 3872.0f, (int) (10*1E7)));
-        mc.getFontRenderer().drawStringShadow("FISH", 4, 4, ColorUtils.getRainbow((int) 3872.0f, (int) (0xffffff*1E7)),false);
+        FontManager.inkFree.drawStringWithShadow("FISH", 4, 4, ColorUtils.getRainbow((int) 3872.0f, (int) (0xffffff*1E7)));
             //fm.arraylist.drawString("FPS: " + , 4, 25, Color.white.getRGB());
         renderArrayList();
             //FengeGG.onRenderer();
@@ -56,7 +59,7 @@ public class HUD extends Module {
         for(Module mod:running)
             for (int i = 0, runningSize = running.size(); i < runningSize; i++) {
                 Module m = running.get(i);
-                if (i<runningSize-1&&mc.getFontRenderer().getStringWidth(m.getName())<mc.getFontRenderer().getStringWidth(running.get(i+1).getName())){
+                if (i<runningSize-1&&FontManager.tenacity.getStringWidth(m.getName())<FontManager.tenacity.getStringWidth(running.get(i+1).getName())){
                     running.set(i,running.get(i+1));
                     running.set(i+1,m);
 
@@ -69,9 +72,8 @@ public class HUD extends Module {
             if (m.running) {
                 if (!modBlacklist.contains(m.getClass().getName())) {
                     //GuiWrapper.drawRect(sr.getScaledWidth() - mc.getFontRenderer().getStringWidth(m.getName())-6, (int) offset, sr.getScaledWidth(), (int) (6 + mc.getFontRenderer().getHeight() + offset), new Color(255,255,200, 35).getRGB());
-                    mc.getFontRenderer().drawStringShadow( m.getName(), sr.getScaledWidth() -mc.getFontRenderer().getStringWidth(m.getName()), (int) (4 + offset),
-                                    ColorUtils.mixColors(new Color(255, 252, 0,255),new Color(78, 255, 166, 235),ColorUtils.getBlendFactor(new Vector2d(sr.getScaledWidth() - mc.getFontRenderer().getStringWidth(m.getName())-6, (int) offset))).getRGB(),
-                            false);
+                    FontManager.tenacity.drawStringWithShadow( m.getName(), sr.getScaledWidth() -FontManager.tenacity.getStringWidth(m.getName()), (int) (4 + offset),
+                                    ColorUtils.mixColors(new Color((int) mixColor1.getValDouble()),new Color((int) mixColor2.getValDouble()),ColorUtils.getBlendFactor(new Vector2d(sr.getScaledWidth() - FontManager.tenacity.getStringWidth(m.getName())-6, (int) offset))).getRGB());
                     yCount++;
                     index++;
                     x++;

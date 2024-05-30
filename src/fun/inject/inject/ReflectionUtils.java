@@ -2,10 +2,17 @@ package fun.inject.inject;
 
 
 import fun.inject.Agent;
+import fun.utils.Classes;
+import fun.utils.Fields;
+import fun.utils.Methods;
+import fun.utils.VMethod;
+import org.objectweb.asm.Type;
 
 
 import java.lang.reflect.*;
 import java.util.Set;
+
+
 
 public class ReflectionUtils {
 
@@ -32,7 +39,7 @@ public class ReflectionUtils {
         return null;
     }
 
-    public static Object getFieldValue(Class<?> clazz, String name) {
+    public static Object getFieldValue(Class<?> clazz,String name) {
         Class<?> c = clazz;
         while (c.getSuperclass() != null) {
             try {
@@ -75,6 +82,40 @@ public class ReflectionUtils {
 
             c = c.getSuperclass();
         }
+    }
+    public static void setFieldValue(Class<?> c, String name, Object value) {
+        while (c.getSuperclass() != null) {
+            try {
+                Field field;
+                try {
+                    field = c.getDeclaredField(name);
+                } catch (NoSuchFieldException | SecurityException e) {
+                    field = c.getField(name);
+                }
+                field.setAccessible(true);
+                /*Field modifiersField = Field.class.getDeclaredField("modifiers");
+                modifiersField.setAccessible(true);
+                modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);*/
+                field.set(null, value);
+            } catch (IllegalAccessException | NoSuchFieldException ignored) {
+                ignored.printStackTrace();
+            }
+
+            c = c.getSuperclass();
+        }
+    }
+
+    public static void setFieldValue(Classes clazz, Fields fields, Object value){
+        setFieldValue(clazz.getClazz(), fields.getName(),value);
+    }
+    public static Object getFieldValue(Classes clazz, Fields fields){
+        return getFieldValue(clazz.getClazz(), fields.getName());
+    }
+    public static Object getFieldValue(Object target,Fields fields){
+        return getFieldValue(target,fields.getName());
+    }
+    public static void setFieldValue(Object target,Fields fields,Object value){
+        setFieldValue(target,fields.getName(),value);
     }
 
     public static Object invokeMethod(Object instance, String name, Class<?>[] desc, Object... args) {
@@ -140,6 +181,12 @@ public class ReflectionUtils {
 
         return null;
     }
+    public static Object invokeMethod(Classes clazz, Methods method,Object... args){
+        return invokeMethod(clazz.getClazz(), method.getName(),method.getVMethod().getMethod(clazz).getParameterTypes(),args);
+    }
+    public static Object invokeMethod(Object target,Classes clazz, Methods method,Object... args){
+        return invokeMethod(target, method.getName(),method.getVMethod().getMethod(clazz).getParameterTypes(),args);
+    }
 
     public static Object invokeMethod(Class<?> clazz, String name) {
         Class<?> c = clazz;
@@ -179,7 +226,12 @@ public class ReflectionUtils {
                 } catch (NoSuchMethodException | SecurityException exception) {
                     constructor = c.getConstructor(desc);
                 }
-                constructor.setAccessible(true);
+                try{
+                    constructor.setAccessible(true);
+                }
+                catch (Exception e){
+
+                }
                 return constructor.newInstance(args);
             } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException |
                      InstantiationException ignored) {

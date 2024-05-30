@@ -10,11 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/forge_1_16_5_36_2_42_mapped_official_1_16_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jna.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/launchwrapper_1_12__2_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/net_java_dev_jna.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/ow2_asm_tree.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/1122/Start.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/1122/conf/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/1122/conf/.idea/misc.xml" afterDir="false" />
@@ -3941,8 +3936,6 @@
       <change afterPath="$PROJECT_DIR$/forge-1.12.2-14.23.5.2860-universal (1)/paulscode/sound/codecs/CodecIBXM.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/forge-1.12.2-14.23.5.2860-universal (1)/url.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/injector.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/asm-9.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/asm-tree-9.7.jar" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/libinjector.dll" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/logs/2024-05-09-7.log.gz" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/logs/2024-05-11-1.log.gz" afterDir="false" />
@@ -4228,14 +4221,45 @@
       <change afterPath="$PROJECT_DIR$/mcp/patches/server/net/minecraft/world/storage/loot/conditions/LootConditionManager.java.patch" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mcp/patches/server/net/minecraft/world/storage/loot/functions/LootFunctionManager.java.patch" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mcp/patches/server/net/minecraft/world/storage/loot/properties/EntityPropertyManager.java.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/event/events/EventTick.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Inkfree.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/corbel.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/corbelb.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/corbeli.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/corbell.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/corbelli.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/corbelz.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/simkai.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/tenacity.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fun/client/mods/combat/CombatModule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fun/client/mods/combat/Target.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fun/client/mods/render/NotificationModule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/render/GlStateManagerWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fun/utils/font/FontManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fun/utils/font/UnicodeFontRenderer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fun/utils/render/Notification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fun/utils/render/RenderUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fun/client/command/CommandHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/client/command/CommandHandle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fun/client/config/ConfigModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/client/config/ConfigModule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fun/client/mods/Module.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/client/mods/Module.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fun/client/mods/ModuleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/client/mods/ModuleManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fun/client/mods/combat/AimBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/client/mods/combat/AimBot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fun/client/mods/combat/AutoBlocking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/client/mods/combat/AutoBlocking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fun/client/mods/render/HUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/client/mods/render/HUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fun/client/mods/world/Eagle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/client/mods/world/Eagle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fun/client/settings/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/client/settings/Setting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fun/inject/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/Agent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fun/inject/inject/MinecraftVersion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/inject/MinecraftVersion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fun/inject/inject/ReflectionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/inject/ReflectionUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fun/inject/inject/asm/api/Transformers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/inject/asm/api/Transformers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fun/inject/inject/asm/transformers/MinecraftTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/inject/asm/transformers/MinecraftTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/setting/GameSettingsWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/setting/GameSettingsWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/entity/EntityPlayerSPWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/entity/EntityPlayerSPWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/gui/GuiWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/gui/GuiWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fun/network/TCPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/network/TCPServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fun/utils/Classes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/utils/Classes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fun/utils/Fields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/utils/Fields.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fun/utils/Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/utils/Methods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fun/utils/VMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/utils/VMethod.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -4299,7 +4323,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/FengeGG/funsrc127",
+    "last_opened_file_path": "D:/FengeGG/FunGhostClient/src/assets/fonts",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -4321,11 +4345,11 @@
       <recent name="com.darkmagician6.eventapi.event.events" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\FengeGG\FunGhostClient\src\assets\fonts" />
       <recent name="D:\FengeGG\FunGhostClient\src\assets\mappings" />
       <recent name="D:\FengeGG\FunGhostClient\mappings\1.12.2" />
       <recent name="D:\FengeGG\FunGhostClient\lib" />
       <recent name="D:\FengeGG\FunGhostClient" />
-      <recent name="D:\FengeGG\FunGhostClient\src\fun\client" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\FengeGG\FunGhostClient\lib" />
@@ -4459,7 +4483,8 @@
       <workItem from="1716123512894" duration="2169000" />
       <workItem from="1716206307014" duration="20249000" />
       <workItem from="1716437655312" duration="13252000" />
-      <workItem from="1716554728955" duration="11244000" />
+      <workItem from="1716554728955" duration="15668000" />
+      <workItem from="1716713750543" duration="25633000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -4509,7 +4534,23 @@
       <option name="project" value="LOCAL" />
       <updated>1716605612958</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1716632526308</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716632526309</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1716632622231</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716632622231</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

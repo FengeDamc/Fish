@@ -1,8 +1,10 @@
 package fun.client.mods.combat;
 
 import com.darkmagician6.eventapi.event.events.EventRender3D;
+import com.darkmagician6.eventapi.event.events.EventTick;
 import fun.client.mods.Category;
 import fun.client.mods.Module;
+import fun.inject.Agent;
 import fun.inject.inject.wrapper.impl.setting.GameSettingsWrapper;
 import fun.inject.inject.wrapper.impl.setting.KeyBindingWrapper;
 import net.java.games.input.Controller;
@@ -18,10 +20,16 @@ public class AutoBlocking extends Module {
     }
 
     @Override
-    public void onRender3D(EventRender3D event) {
-        super.onRender3D(event);
-        mc.getGameSettings().getKey(GameSettingsWrapper.USE).setPressed(Mouse.isButtonDown(1));
-        mc.getGameSettings().getKey(GameSettingsWrapper.ATTACK).setPressed(Mouse.isButtonDown(0));
+    public void onTick(EventTick event) {
+        super.onTick(event);
+
+
+
+    }
+
+    @Override
+    public void onEnable() {
+        super.onEnable();
 
     }
 }

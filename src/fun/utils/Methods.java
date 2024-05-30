@@ -4,6 +4,7 @@ import fun.inject.Agent;
 import fun.inject.inject.Mappings;
 import fun.inject.inject.MinecraftType;
 import fun.inject.inject.MinecraftVersion;
+import fun.inject.inject.ReflectionUtils;
 import org.objectweb.asm.Type;
 import net.minecraft.client.entity.player.ClientPlayerEntity;
 
@@ -12,26 +13,30 @@ import java.util.HashMap;
 
 public enum Methods {
     getEntityID_Entity(new VMethod("func_145782_y","()I")),
-    setSprinting(new VMethod("func_70031_b","(B)V")),
+    setSprinting(new VMethod("func_70031_b","(Z)V")),
     onUpdate_Entity(new VMethod("func_70071_h_","()V"),
             new VMethod("func_70071_h_","()V")),
     onUpdateWalking_SP(new VMethod("func_175161_p","()V"),
             new VMethod("func_175161_p","()V").version(MinecraftVersion.VER_1165)),
-    onLivingUpdate_SP(new VMethod("func_70636_d","()V"),
+    onLivingUpdate_SP(Classes.ENTITY_PLAYERSP,new VMethod("func_70636_d","()V"),
             new VMethod("func_70636_d","()V").version(MinecraftVersion.VER_1165)),
     isUsing(new VMethod("func_71039_bw","()Z"),
             new VMethod("func_184587_cr","()Z").version(MinecraftVersion.VER_1122),
             new VMethod("func_184587_cr","()Z").version(MinecraftVersion.VER_1165)
             ),
-    runTick_Minecraft(new VMethod("func_71407_l","()V"));
+    runTick_Minecraft(new VMethod("func_71407_l","()V")),
+    color_GlStateManager(new VMethod("func_179124_c","(FFF)V")),
+    bindTexture_GlStateManager(new VMethod("func_179144_i","(I)V")),
+    drawRect_Gui(new VMethod("func_73734_a","(IIIII)V"));//MD: avp/a (IIIII)V net/minecraft/client/gui/Gui/func_73734_a (IIIII)V
+
     public String obf_name ="";
     public String friendly_name ="";
     public Method method;
-    public Class<?> parent;
+    public Classes parent;
     public Class<?>[] args;
     public HashMap<MinecraftType, HashMap<MinecraftVersion,VMethod>> map=new HashMap<>();
 
-    Methods(String mname,Class<?> parent,Class<?>... args){
+    /*Methods(String mname,Class<?> parent,Class<?>... args){
         m0(mname, parent.getName(), args);
     }
     Methods(String mname){
@@ -49,6 +54,17 @@ public enum Methods {
         } catch (ClassNotFoundException | NoSuchMethodException e) {
 
         }
+    }*/
+    public void invoke(Object target,Object... args){
+        if(target==null){
+            ReflectionUtils.invokeMethod(getParent(),this,args);
+        }
+        else {
+            ReflectionUtils.invokeMethod(target,getParent(),this,args);
+        }
+    }
+    public Classes getParent(){
+        return parent;
     }
     Methods(VMethod... vMethods){
         for(MinecraftType type: MinecraftType.values()){
@@ -58,6 +74,16 @@ public enum Methods {
             map.get(vMethod.minecraftType).put(vMethod.minecraftVersion,vMethod);
         }
     }
+    Methods(Classes parent,VMethod... vMethods){
+        this.parent=parent;
+        for(MinecraftType type: MinecraftType.values()){
+            map.put(type,new HashMap<>());
+        }
+        for(VMethod vMethod:vMethods){
+            map.get(vMethod.minecraftType).put(vMethod.minecraftVersion,vMethod);
+        }
+    }
+
     public String getName(){
         VMethod V1=map.get(Agent.minecraftType).get(Agent.minecraftVersion);
         if(V1!=null)return V1.obf_name;
@@ -76,7 +102,7 @@ public enum Methods {
         if(V3!=null)return V3;
         return null;
     }
-    Methods(String mname,Class<?> parent){
+    /*Methods(String mname,Class<?> parent){
         try {
             m1(mname,parent.getName());
             if(method==null)throw new NoSuchMethodException(mname);
@@ -99,9 +125,9 @@ public enum Methods {
             }
         }
         friendly_name=mname;
-    }
+    }*/
     public String getDescriptor(){
-        return Mappings.getObfMethodDesc(getVMethod().getDescriptor());
+        return getVMethod().getDescriptor();
     }
 
 }

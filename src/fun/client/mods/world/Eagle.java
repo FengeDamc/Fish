@@ -12,6 +12,7 @@ import fun.inject.inject.wrapper.impl.world.Vec3Wrapper;
 import fun.utils.Vec3;
 
 public class Eagle extends Module {
+    private int dis=0;
     public Eagle() {
         super("Eagle",Category.World);
     }

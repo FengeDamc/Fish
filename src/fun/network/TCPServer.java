@@ -1,5 +1,6 @@
 package fun.network;
 
+import com.sun.corba.se.spi.activation.Server;
 import com.sun.tools.attach.VirtualMachine;
 import com.sun.tools.attach.VirtualMachineDescriptor;
 import fun.client.FunGhostClient;
@@ -23,6 +24,12 @@ public class TCPServer {
          thread= new ServerThread(portIn);
          //System.out.println(thread.getContextClassLoader().getClass().getName());
          thread.start();
+    }
+    public static boolean isNetworkThread(){
+        return Thread.currentThread() instanceof ServerThread;
+    }
+    public static int getTargetPort(){
+        return Agent.isAgent?Main.SERVERPORT:Agent.SERVERPORT;
     }
     public static String review(String mess){
         String[] split=mess.split(" ");
@@ -85,7 +92,7 @@ public class TCPServer {
         for (VirtualMachineDescriptor virtualMachineDescriptor : VirtualMachine.list()) {
             System.out.println(virtualMachineDescriptor.displayName());
             for (MinecraftVersion mcVer : MinecraftVersion.values()) {
-                if (virtualMachineDescriptor.displayName().contains(mcVer.getVer())) {
+                if (virtualMachineDescriptor.displayName().contains(mcVer.getGeneralVer())) {
                     return mcVer;
                 }
             }
@@ -95,7 +102,8 @@ public class TCPServer {
     public static void receive(String info){
             String[] split = info.split(" ");
 
-            if(Agent.isAgent){
+
+            try{
                 switch (split[0]) {
                     case "setstring":
                         FunGhostClient.settingsManager.getSettings().get(Integer.parseInt(split[1])).setValString(split[2]);
@@ -107,7 +115,10 @@ public class TCPServer {
                         FunGhostClient.settingsManager.getSettings().get(Integer.parseInt(split[1])).setValDouble(Double.parseDouble(split[2]));
                         break;
                     case "setrun":
-                        FunGhostClient.moduleManager.mods.get(Integer.parseInt(split[1])).running= Boolean.parseBoolean(split[2]);
+                        FunGhostClient.moduleManager.mods.get(Integer.parseInt(split[1])).setRunning(Boolean.parseBoolean(split[2]));
+                        break;
+                    case "setkey":
+                        FunGhostClient.moduleManager.mods.get(Integer.parseInt(split[1])).setKey(Integer.parseInt(split[2]));
                         break;
                     case "destroy":
                         try {
@@ -117,13 +128,6 @@ public class TCPServer {
                             e.printStackTrace();
                         }
                         break;
-                    default:
-                        break;
-
-                }
-            }
-            else{
-                switch (split[0]) {
                     case "mcpath":
                         try {
                             Main.mcPath = split[1];
@@ -144,9 +148,12 @@ public class TCPServer {
                     default:
                         break;
 
-
                 }
             }
+            catch (IndexOutOfBoundsException e){
+
+            }
+
 
 
     }

@@ -186,14 +186,15 @@ public class EntityPlayerSPWrapper extends Wrapper {
 
         // MD: bew/d (Z)V net/minecraft/client/entity/EntityPlayerSP/func_70031_b (Z)V
 
-        String notch = Methods.setSprinting.getName(); // setSprinting
+        /*String notch = Methods.setSprinting.getName(); // setSprinting
         try {
             Method m = getClazz().getMethod(notch, boolean.class);
             m.invoke(playerObj, value);
         } catch (Exception e) {
             e.printStackTrace();
 
-        }
+        }*/
+        ReflectionUtils.invokeMethod(playerObj,Classes.ENTITY_PLAYERSP,Methods.setSprinting,true);
     }
 
     public boolean isSprinting() {

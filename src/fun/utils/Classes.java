@@ -16,7 +16,9 @@ public enum Classes {
     Entity(new VClass("net/minecraft/entity/Entity")),
     BlockPos(new VClass("net/minecraft/util/math/BlockPos").version(MinecraftVersion.VER_1122),
             new VClass("net/minecraft/util/BlockPos"),
-            new VClass("net/minecraft/util/math/BlockPos").version(MinecraftVersion.VER_1165));
+            new VClass("net/minecraft/util/math/BlockPos").version(MinecraftVersion.VER_1165)),
+    GlStateManager(new VClass("net/minecraft/client/renderer/GlStateManager")),
+    Gui(new VClass("net/minecraft/client/gui/Gui"));
     public String obf_name ="";
     public String friendly_name ="";
     public Class<?> clazz =null;

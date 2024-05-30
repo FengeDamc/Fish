@@ -9,15 +9,21 @@ import fun.client.mods.combat.*;
 import fun.client.mods.movement.Flight;
 import fun.client.mods.movement.KeepSprint;
 import fun.client.mods.render.HUD;
+import fun.client.mods.render.NotificationModule;
 import fun.client.mods.world.Eagle;
 import fun.inject.Agent;
 import fun.inject.inject.Mappings;
 import fun.inject.inject.MinecraftType;
+import fun.inject.inject.wrapper.impl.setting.GameSettingsWrapper;
+import fun.utils.render.Notification;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.eventhandler.EventBus;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import org.lwjgl.input.Mouse;
 
 import java.util.ArrayList;
+
+import static fun.client.utils.Rotation.Rotation.mc;
 
 public class ModuleManager {
     public ArrayList<Module> mods = new ArrayList<>();
@@ -33,6 +39,8 @@ public class ModuleManager {
     public Eagle eagle;
     public Velocity velocity;
     public AutoBlocking autoBlocking;
+    public NotificationModule notification;
+    public Target target;
 
     public void init() {
         EventManager.register(this);
@@ -45,7 +53,8 @@ public class ModuleManager {
         eagle=new Eagle();
         velocity=new Velocity();
         autoBlocking=new AutoBlocking();
-
+        notification=new NotificationModule();
+        target=new Target();
     }
 
     @EventTarget
@@ -97,7 +106,7 @@ public class ModuleManager {
     @EventTarget
     public void onKey(EventKey event) {
         for (Module m : mods) {
-            if (event.key != 0 && event.key == m.key) m.running = !m.running;
+            if (event.key != 0 && event.key == m.key) m.setRunning(!m.running);
             if (m.running) m.onKey(event);
         }
         if (event.key == 1) ConfigModule.saveConfig();
@@ -140,6 +149,8 @@ public class ModuleManager {
     }
     @EventTarget
     public void onTick(EventTick event){
+        mc.getGameSettings().getKey(GameSettingsWrapper.USE).setPressed(Mouse.isButtonDown(1));
+        mc.getGameSettings().getKey(GameSettingsWrapper.ATTACK).setPressed(Mouse.isButtonDown(0));
         for (Module m : mods) {
             if (m.running) m.onTick(event);
         }

@@ -13,6 +13,7 @@ import fun.inject.inject.asm.api.Transformers;
 import fun.network.TCPClient;
 import fun.network.TCPServer;
 import fun.utils.Methods;
+import fun.utils.font.FontManager;
 import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.MethodNode;
 import org.apache.commons.io.FileUtils;
@@ -36,7 +37,7 @@ public class Agent {
     public static Native instrumentation;
 
     public static FishFrame fishFrame;
-    public static final String VERSION="1.0";
+    public static final String VERSION="1.1";
     public static boolean isAgent =false;
     public static ClassTransformer transformer;
     public static MinecraftType minecraftType=MinecraftType.VANILLA;
@@ -162,6 +163,7 @@ public class Agent {
         ConfigModule.loadConfig();
         TCPClient.send(Main.SERVERPORT,"mcpath "+ System.getProperty("user.dir"));
         TCPServer.startServer(SERVERPORT);
+        FontManager.init();
 
         logger.info("o god start!");
 

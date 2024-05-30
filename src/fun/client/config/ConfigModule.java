@@ -4,7 +4,9 @@ package fun.client.config;
 import fun.client.FunGhostClient;
 import fun.client.mods.Module;
 import fun.client.settings.Setting;
+import fun.inject.Agent;
 import fun.inject.Main;
+import fun.network.TCPClient;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -29,7 +31,7 @@ public class ConfigModule {
     }
     public static void saveConfig() {
         PrintWriter writer=null;
-        File file=new File("Fish.config.txt");
+        File file=new File(Main.mcPath+"/Fish.config.txt");
         try {
             writer=new PrintWriter(file);
         } catch (FileNotFoundException ignored) {
