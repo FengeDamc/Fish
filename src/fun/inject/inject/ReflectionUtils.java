@@ -218,6 +218,7 @@ public class ReflectionUtils {
 
     public static Object newInstance(Class<?> clazz, Class<?>[] desc, Object... args) {
         Class<?> c = clazz;
+
         while (c.getSuperclass() != null) {
             try {
                 Constructor<?> constructor;
@@ -226,12 +227,7 @@ public class ReflectionUtils {
                 } catch (NoSuchMethodException | SecurityException exception) {
                     constructor = c.getConstructor(desc);
                 }
-                try{
-                    constructor.setAccessible(true);
-                }
-                catch (Exception e){
 
-                }
                 return constructor.newInstance(args);
             } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException |
                      InstantiationException ignored) {
