@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="fix java17+">
+    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="更新了一些东西">
       <change afterPath="$PROJECT_DIR$/1122/Start.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/1122/conf/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/1122/conf/.idea/misc.xml" afterDir="false" />
@@ -3940,14 +3940,15 @@
       <change afterPath="$PROJECT_DIR$/forge-1.12.2-14.23.5.2860-universal (1)/paulscode/sound/codecs/CodecIBXM.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/forge-1.12.2-14.23.5.2860-universal (1)/url.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/injector.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/injector/GetProcAddressR.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/injector/GetProcAddressR.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/injector/Inject.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/injector/LoadLibraryR.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/injector/LoadLibraryR.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/injector/ReflectiveDLLInjection.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/injector/utils.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/injector/utils.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/injector/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-27e2e260b9be07cf6d8a.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/injector/cmake-build-debug/.cmake/api/v1/reply/index-2024-06-09T08-49-32-0277.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/injector/cmake-build-debug/.cmake/api/v1/reply/target-agent-Debug-5627bb6da0f87b21f925.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/injector/cmake-build-debug/.cmake/api/v1/reply/target-injector-Debug-1b324b93ae56c892d045.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/injector.dir/GetProcAddressR.c.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/injector.dir/Inject.c.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/injector.dir/LoadLibraryR.c.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/injector/cmake-build-debug/libinjector.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/injector/cmake-build-debug/libinjector.dll.a" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/libinjector.dll" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/logs/2024-05-09-7.log.gz" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/logs/2024-05-11-1.log.gz" afterDir="false" />
@@ -4233,65 +4234,8 @@
       <change afterPath="$PROJECT_DIR$/mcp/patches/server/net/minecraft/world/storage/loot/conditions/LootConditionManager.java.patch" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mcp/patches/server/net/minecraft/world/storage/loot/functions/LootFunctionManager.java.patch" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mcp/patches/server/net/minecraft/world/storage/loot/properties/EntityPropertyManager.java.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/mappings/1.12.2McpToSrg.tsrg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/texture/injector.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/other/IChatComponentWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/other/TeamWrapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/FunGhostClient_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/FunGhostClient_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FunGhostClient.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FunGhostClient.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/injector/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/libagent.dll" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/libagent.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/libagent.dll.a" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/libagent.dll.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/dllmain.c" beforeDir="false" afterPath="$PROJECT_DIR$/injector/dllmain.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/include/jdwpTransport.h" beforeDir="false" afterPath="$PROJECT_DIR$/injector/include/jdwpTransport.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/libraries/commons-io/commons-io/2.4/commons-io-2.4.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libraries/commons-io/commons-io/2.4/commons-io-2.4.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/libraries/org/apache/logging/log4j/log4j-api/2.0-beta9/log4j-api-2.0-beta9.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libraries/org/apache/logging/log4j/log4j-api/2.0-beta9/log4j-api-2.0-beta9.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/libraries/org/apache/logging/log4j/log4j-core/2.0-beta9/log4j-core-2.0-beta9.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libraries/org/apache/logging/log4j/log4j-core/2.0-beta9/log4j-core-2.0-beta9.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/org.apache.aries.proxy-1.1.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/org.apache.aries.proxy-1.1.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/vecmath.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/vecmath.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mappings/1.8.9/methods.csv" beforeDir="false" afterPath="$PROJECT_DIR$/mappings/1.8.9/methods.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/client/FunGhostClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/client/FunGhostClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/client/config/ConfigModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/client/config/ConfigModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/client/mods/ModuleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/client/mods/ModuleManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/client/mods/combat/AimBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/client/mods/combat/AimBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/client/mods/combat/AutoBlocking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/client/mods/combat/AutoBlocking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/client/mods/combat/AutoClicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/client/mods/combat/AutoClicker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/client/mods/combat/CombatModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/client/mods/combat/Reach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/client/mods/combat/Reach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/client/mods/combat/Target.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/client/mods/combat/Target.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/client/mods/movement/KeepSprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/client/mods/movement/KeepSprint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/client/mods/render/HUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/client/mods/render/HUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/client/mods/world/Eagle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/client/mods/world/Eagle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/gui/FishFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/gui/FishFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/gui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/gui/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/inject/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/Agent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/inject/InjectorUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/InjectorUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/inject/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/inject/NativeUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/inject/NativeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/NativeUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/inject/inject/InjectUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/inject/InjectUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/inject/inject/ReflectionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/inject/ReflectionUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/inject/inject/asm/transformers/EntityPlayerSP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/inject/asm/transformers/EntityPlayerSP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/inject/inject/asm/transformers/EntityTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/inject/asm/transformers/EntityTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/Wrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/Wrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/HitResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/HitResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/MinecraftWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/MinecraftWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/entity/EntityPlayerSPWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/entity/EntityPlayerSPWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/entity/EntityPlayerWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/entity/EntityPlayerWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/entity/EntityWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/entity/EntityWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/gui/ScaledResolutionWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/gui/ScaledResolutionWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/network/NetHandlerPlayClientWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/network/NetHandlerPlayClientWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/other/MovementInputWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/other/MovementInputWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/setting/KeyBindingWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/setting/KeyBindingWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/world/BlockPosWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/inject/inject/wrapper/impl/world/BlockPosWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/utils/Classes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/utils/Classes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/utils/Fields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/utils/Fields.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/utils/Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/utils/Methods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun/utils/VMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun/utils/VMethod.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -4612,7 +4556,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717070693512</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="更新了一些东西">
+      <option name="closed" value="true" />
+      <created>1717926302227</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1717926302227</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -4634,7 +4586,8 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="a" />
     <MESSAGE value="fix java17+" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix java17+" />
+    <MESSAGE value="更新了一些东西" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新了一些东西" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

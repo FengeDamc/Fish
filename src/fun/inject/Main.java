@@ -56,7 +56,7 @@ public class Main {
         }
         File dll=new File(path,dllpath);
 
-        InjectorUtils.injectorR(pid,dll.getAbsolutePath());
+        InjectorUtils.injector(pid,dll.getAbsolutePath());//这边正在抄袭反射dll注入
         System.out.println("injected in:"+pid);
 
 
