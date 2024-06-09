@@ -1,9 +1,8 @@
 package fun.client.mods.combat;
 
-import com.darkmagician6.eventapi.event.events.EventMotion;
-import com.darkmagician6.eventapi.event.events.EventRender3D;
+import com.darkmagician6.eventapi.event.events.EventMoment;
 import com.darkmagician6.eventapi.event.events.EventStrafe;
-import com.darkmagician6.eventapi.event.events.EventUpdate;
+import com.darkmagician6.eventapi.event.events.EventTick;
 import fun.client.FunGhostClient;
 import fun.client.mods.Category;
 import fun.client.mods.Module;
@@ -17,8 +16,7 @@ import fun.utils.MathHelper;
 import fun.utils.Vec3;
 import org.lwjgl.util.vector.Vector2f;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
+import static fun.client.FunGhostClient.moduleManager;
 
 public class AimBot extends Module {
     public AimBot() {
@@ -42,10 +40,12 @@ public class AimBot extends Module {
 
 
     @Override
-    public void onRender3D(EventRender3D event) {
-        super.onRender3D(event);
+    public void onStrafe(EventStrafe event) {
+
+
+        super.onStrafe(event);
         if(onAttack.getValBoolean()&&!mc.getGameSettings().getKey("key.attack").isPressed())return;
-        target= FunGhostClient.moduleManager.target.target;
+        target= moduleManager.target.target;
         EntityPlayerSPWrapper playersp=mc.getPlayer();
 
 
@@ -59,8 +59,7 @@ public class AimBot extends Module {
         Rotation r=limitAngleChange(Rotation.player(),new Rotation(v), (float) speed.getValDouble());
         playersp.setPitch(r.getPitch());
         playersp.setYaw(r.getYaw());
-
-
+        event.yaw=r.getYaw();
     }
 
     public static float getAngleDifference(final float a, final float b) {

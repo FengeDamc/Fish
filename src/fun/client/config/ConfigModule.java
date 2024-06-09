@@ -4,9 +4,7 @@ package fun.client.config;
 import fun.client.FunGhostClient;
 import fun.client.mods.Module;
 import fun.client.settings.Setting;
-import fun.inject.Agent;
 import fun.inject.Main;
-import fun.network.TCPClient;
 
 import java.io.*;
 import java.util.ArrayList;

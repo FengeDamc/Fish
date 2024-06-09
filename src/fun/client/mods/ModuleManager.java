@@ -11,14 +11,7 @@ import fun.client.mods.movement.KeepSprint;
 import fun.client.mods.render.HUD;
 import fun.client.mods.render.NotificationModule;
 import fun.client.mods.world.Eagle;
-import fun.inject.Agent;
-import fun.inject.inject.Mappings;
-import fun.inject.inject.MinecraftType;
 import fun.inject.inject.wrapper.impl.setting.GameSettingsWrapper;
-import fun.utils.render.Notification;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.eventhandler.EventBus;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.lwjgl.input.Mouse;
 
 import java.util.ArrayList;

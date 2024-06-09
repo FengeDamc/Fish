@@ -40,7 +40,7 @@ public class Main {
     public static boolean started=false;
     public static final int SERVERPORT=17573;
     static {
-        //System.loadLibrary("attach");
+        System.loadLibrary("libinjector");
 
 
     }
@@ -56,7 +56,7 @@ public class Main {
         }
         File dll=new File(path,dllpath);
 
-        InjectorUtils.injector(pid,dll.getAbsolutePath());
+        InjectorUtils.injectorR(pid,dll.getAbsolutePath());
         System.out.println("injected in:"+pid);
 
 

@@ -5211,6 +5211,7 @@ func_74428_b,processReceivedPackets,2,Checks timeouts and processes all packets 
 func_74430_c,getRemoteAddress,2,Returns the socket address of the remote side. Server-only.
 func_74505_d,unpressKey,0,
 func_74506_a,unPressAllKeys,0,
+func_74506_a,unPressAllKeys,0,
 func_74507_a,onTick,0,
 func_74508_b,resetKeyBindingArrayAndHash,0,
 func_74510_a,setKeyBindState,0,

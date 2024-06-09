@@ -4,7 +4,6 @@ import com.darkmagician6.eventapi.EventManager;
 import com.darkmagician6.eventapi.event.events.EventMoment;
 import com.darkmagician6.eventapi.event.events.EventMotion;
 import com.darkmagician6.eventapi.event.events.EventUpdate;
-import fun.inject.Agent;
 import fun.inject.inject.Mappings;
 import fun.inject.inject.MinecraftVersion;
 import fun.inject.inject.asm.api.Mixin;
@@ -15,11 +14,10 @@ import fun.utils.VRunable;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.*;
-import net.minecraft.client.entity.player.ClientPlayerEntity;
 
 public class EntityPlayerSP extends Transformer {
     public EntityPlayerSP() {
-        super(Classes.ENTITY_PLAYERSP);
+        super(Classes.EntityPlayerSP);
     }
 
     public static EventMotion onMotion(double x, double y, double z, float yaw, float pitch) {

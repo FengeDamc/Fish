@@ -8,6 +8,8 @@ import com.sun.tools.attach.VirtualMachine;
 import com.sun.tools.attach.VirtualMachineDescriptor;
 import fun.client.FunGhostClient;
 import fun.inject.Agent;
+import fun.inject.InjectorUtils;
+import fun.inject.NativeUtils;
 import fun.inject.inject.asm.api.Transformers;
 import fun.network.TCPClient;
 import org.apache.commons.io.IOUtils;
@@ -80,7 +82,8 @@ public class InjectUtils {
         });
         FunGhostClient.moduleManager.mods.clear();
         Transformers.transformers.clear();
-
+        //NativeUtils.freeLibrary();
+        //InjectorUtils.free();
     }
 
     public static byte[] getClassBytes(Class<?> c) throws IOException {

@@ -1,12 +1,9 @@
 package fun.utils;
 
 import fun.inject.Agent;
-import fun.inject.inject.Mappings;
 import fun.inject.inject.MinecraftType;
 import fun.inject.inject.MinecraftVersion;
 import fun.inject.inject.ReflectionUtils;
-import org.objectweb.asm.Type;
-import net.minecraft.client.entity.player.ClientPlayerEntity;
 
 import java.lang.reflect.Method;
 import java.util.HashMap;
@@ -18,7 +15,7 @@ public enum Methods {
             new VMethod("func_70071_h_","()V")),
     onUpdateWalking_SP(new VMethod("func_175161_p","()V"),
             new VMethod("func_175161_p","()V").version(MinecraftVersion.VER_1165)),
-    onLivingUpdate_SP(Classes.ENTITY_PLAYERSP,new VMethod("func_70636_d","()V"),
+    onLivingUpdate_SP(Classes.EntityPlayerSP,new VMethod("func_70636_d","()V"),
             new VMethod("func_70636_d","()V").version(MinecraftVersion.VER_1165)),
     isUsing(new VMethod("func_71039_bw","()Z"),
             new VMethod("func_184587_cr","()Z").version(MinecraftVersion.VER_1122),
@@ -27,12 +24,31 @@ public enum Methods {
     runTick_Minecraft(new VMethod("func_71407_l","()V")),
     color_GlStateManager(new VMethod("func_179124_c","(FFF)V")),
     bindTexture_GlStateManager(new VMethod("func_179144_i","(I)V")),
-    drawRect_Gui(new VMethod("func_73734_a","(IIIII)V"));//MD: avp/a (IIIII)V net/minecraft/client/gui/Gui/func_73734_a (IIIII)V
+    drawRect_Gui(new VMethod("func_73734_a","(IIIII)V")),
+    setKeyBindState_KeyBinding(Classes.KeyBinding,new VMethod("func_74510_a","(IZ)V")),
+    onTick_KeyBinding(Classes.KeyBinding,new VMethod("func_74507_a","(I)V")),
+    getKeyCode_KeyBinding(Classes.KeyBinding,new VMethod("func_151463_i","()I")),
+    getDisplayName_EntityPlayer(Classes.EntityPlayer,new VMethod("func_145748_c_","()Lnet/minecraft/util/IChatComponent;"),
+            new VMethod("func_145748_c_","()Lnet/minecraft/util/text/ITextComponent;").version(MinecraftVersion.VER_1122)),
+    getUnformattedText(new VMethod("func_150260_c","()Ljava/lang/String;")),
+    getPlayerInfo_String_NetHandlerPlayClient(Classes.NetHandlerPlayClient,new VMethod("func_175104_a","(Ljava/lang/String;)Lnet/minecraft/client/network/NetworkPlayerInfo;")),
+    getPlayerInfo_UUID_NetHandlerPlayClient(Classes.NetHandlerPlayClient,new VMethod("func_175102_a","(Ljava/util/UUID;)Lnet/minecraft/client/network/NetworkPlayerInfo;")),
+    getUniqueID(Classes.Entity,new VMethod("func_110124_au","()Ljava/util/UUID;")),
+    isInvisible(Classes.Entity,new VMethod("func_82150_aj","()Z")),
+    getTeam(Classes.EntityLivingBase,new VMethod("func_96124_cp","()Lnet/minecraft/scoreboard/Team;")),
+    isSameTeam(Classes.Team,new VMethod("func_142054_a","(Lnet/minecraft/scoreboard/Team;)Z")),
+    isSneaking_Entity(Classes.Entity,new VMethod("func_70093_af","()Z")),
+    isSneaking_EntityPlayerSP(Classes.EntityPlayerSP,new VMethod("func_70093_af","()Z")),
+    getNetHandler_Minecraft(new VMethod("func_147114_u")),
+    moveFlying_Entity(new VMethod("func_70060_a","(FFF)V"),new VMethod("func_191958_b","(FFFF)V").version(MinecraftVersion.VER_1122));//func_147114_u,getNetHandler,0,
+
+
+
 
     public String obf_name ="";
     public String friendly_name ="";
     public Method method;
-    public Classes parent;
+    public Classes parent=null;
     public Class<?>[] args;
     public HashMap<MinecraftType, HashMap<MinecraftVersion,VMethod>> map=new HashMap<>();
 
@@ -55,12 +71,30 @@ public enum Methods {
 
         }
     }*/
-    public void invoke(Object target,Object... args){
+    public Object invoke(Object target,Object... args){
+        Classes parent=getParent();
         if(target==null){
-            ReflectionUtils.invokeMethod(getParent(),this,args);
+            return ReflectionUtils.invokeMethod(getParent(),this,args);
+        }
+        else if(parent!=null){
+            return ReflectionUtils.invokeMethod(target,getParent(),this,args);
         }
         else {
-            ReflectionUtils.invokeMethod(target,getParent(),this,args);
+            return ReflectionUtils.invokeMethod(target,this,args);
+
+        }
+    }
+    public Object invoke(Object target){
+        Classes parent=getParent();
+        if(target==null){
+            return ReflectionUtils.invokeMethod(parent,this,(Object[])null);
+        }
+        else if(parent!=null){
+            return ReflectionUtils.invokeMethod(target,parent,this,(Object[])null);
+        }
+        else {
+            return ReflectionUtils.invokeMethod(target,this,(Object[])null);
+
         }
     }
     public Classes getParent(){

@@ -1,13 +1,11 @@
 package fun.utils;
 
 import fun.inject.Agent;
-import fun.inject.inject.Mappings;
 import fun.inject.inject.MinecraftType;
 import fun.inject.inject.MinecraftVersion;
 import fun.inject.inject.ReflectionUtils;
 
 import java.lang.reflect.Field;
-import java.sql.Ref;
 import java.util.HashMap;
 
 public enum Fields {
@@ -25,7 +23,13 @@ public enum Fields {
     MotionZ(Classes.Entity,new VField("field_70179_y")),
     posZ_Entity(Classes.Entity,new VField("field_70161_v")),
     posY_Entity(Classes.Entity,new VField("field_70163_u")),
-    posX_Entity(Classes.Entity,new VField("field_70165_t"));
+    posX_Entity(Classes.Entity,new VField("field_70165_t")),
+    pressTime_KeyBinding(Classes.KeyBinding,new VField("field_151474_i")),
+    moveForward_MovementInput(Classes.MovementInput,new VField("field_78900_b"),
+            new VField("field_192832_b").version(MinecraftVersion.VER_1122)),
+    moveStrafe_MovementInput(Classes.MovementInput,new VField("field_78902_a"),
+            new VField("field_78902_a").version(MinecraftVersion.VER_1122)),
+    sideHit_MovingObj(new VField("field_178784_b"));//field_178784_b,sideHit
 
         public Field field;
         public String friendly_name;

@@ -16,18 +16,18 @@ public class MovementInputWrapper extends Wrapper {
     }
 
     public float getMoveForward() {
-        return (Float) ReflectionUtils.getFieldValue(movementInputObj, Mappings.getObfField("field_78900_b"));
+        return (float)Fields.moveForward_MovementInput.get(movementInputObj);
     }
 
     public float getMoveStrafe() {
-        return (Float) ReflectionUtils.getFieldValue(movementInputObj, Mappings.getObfField("field_78902_a"));
+        return (float) Fields.moveStrafe_MovementInput.get(movementInputObj);
     }
     public void setMoveForward(float forward) {
-        ReflectionUtils.setFieldValue(movementInputObj, Mappings.getObfField("field_78900_b"),forward);
+        Fields.moveForward_MovementInput.set(movementInputObj,forward);
     }
 
     public void setMoveStrafe(float strafe) {
-        ReflectionUtils.setFieldValue(movementInputObj, Mappings.getObfField("field_78902_a"),strafe);
+        Fields.moveStrafe_MovementInput.set(movementInputObj,strafe);
     }
     public void setSneak(boolean sneak) {
         //FD: beu/d net/minecraft/util/MovementInput/field_78899_d

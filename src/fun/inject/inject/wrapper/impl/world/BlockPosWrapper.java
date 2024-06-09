@@ -6,6 +6,9 @@ import fun.inject.inject.Mappings;
 import fun.inject.inject.ReflectionUtils;
 import fun.inject.inject.wrapper.Wrapper;
 import fun.utils.Classes;
+import fun.utils.Vec3;
+import fun.utils.Vec3i;
+import jdk.nashorn.internal.ir.Block;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;
@@ -15,7 +18,7 @@ public class BlockPosWrapper extends Wrapper {
     private static Class<?> blockPosClass;
     private static final Map<Integer, Object> blockPosCache = new HashMap<>();
 
-    private Object blockPosObj;
+    public Object blockPosObj;
     public int x, y, z;
 
 
@@ -52,6 +55,19 @@ public class BlockPosWrapper extends Wrapper {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    public Vec3 toVec3(){
+        return new Vec3(x+0.5,y,z+0.5);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj instanceof BlockPosWrapper){
+            return this.x==((BlockPosWrapper) obj).x&&
+                    this.y==((BlockPosWrapper) obj).y&&
+                    this.z==((BlockPosWrapper) obj).z;
+        }
+        return super.equals(obj);
     }
 
     public BlockPosWrapper(int x, int y, int z) {
@@ -129,5 +145,9 @@ public class BlockPosWrapper extends Wrapper {
 
     public static int hash(int x, int y, int z) {
         return (y + z * 31) * 31 + x;
+    }
+
+    public BlockPosWrapper add(Vec3i offset) {
+        return add(offset.getX(),offset.getY(), offset.getZ());
     }
 }

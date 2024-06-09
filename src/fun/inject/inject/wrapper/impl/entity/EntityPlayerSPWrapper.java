@@ -4,6 +4,7 @@ package fun.inject.inject.wrapper.impl.entity;
 import fun.inject.inject.Mappings;
 import fun.inject.inject.ReflectionUtils;
 import fun.inject.inject.wrapper.Wrapper;
+import fun.inject.inject.wrapper.impl.other.IChatComponentWrapper;
 import fun.inject.inject.wrapper.impl.other.MovementInputWrapper;
 import fun.inject.inject.wrapper.impl.world.BlockPosWrapper;
 import fun.utils.Classes;
@@ -15,18 +16,21 @@ import javax.vecmath.Vector3f;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-public class EntityPlayerSPWrapper extends Wrapper {
+public class EntityPlayerSPWrapper extends EntityPlayerWrapper {
     private Object playerObj;
     private Object sendQueueObj;
 
     private MovementInputWrapper movementInputObj;
 
     public EntityPlayerSPWrapper() {
-        super(Classes.ENTITY_PLAYERSP.getName());
+        super(Classes.EntityPlayerSP);
     }
 
     public boolean isNull() {
         return playerObj == null;
+    }
+    public IChatComponentWrapper getDisplayName() {
+        return new IChatComponentWrapper(Methods.getDisplayName_EntityPlayer.invoke(playerObj));
     }
 
     public double getX() {
@@ -138,10 +142,10 @@ public class EntityPlayerSPWrapper extends Wrapper {
         return Math.sqrt(f * f + f1 * f1 + f2 * f2);
     }
 
-    public double getEyeHeight() {
-        double value = 1.62;
+    public float getEyeHeight() {
+        float value = 1.62f;
         if (isSneaking()) {
-            value -= 0.08;
+            value -= 0.08f;
         }
         return value;
     }
@@ -194,7 +198,7 @@ public class EntityPlayerSPWrapper extends Wrapper {
             e.printStackTrace();
 
         }*/
-        ReflectionUtils.invokeMethod(playerObj,Classes.ENTITY_PLAYERSP,Methods.setSprinting,true);
+        ReflectionUtils.invokeMethod(playerObj,Classes.EntityPlayerSP,Methods.setSprinting,true);
     }
 
     public boolean isSprinting() {
@@ -216,21 +220,7 @@ public class EntityPlayerSPWrapper extends Wrapper {
     }
 
     public boolean isSneaking() {
-        if (playerObj == null) return false;
-
-        // MD: pk/av ()Z net/minecraft/entity/Entity/func_70093_af ()Z
-
-        String notch = Mappings.getObfMethod("func_70093_af"); // isSneaking
-        try {
-            Method m = getClazz().getDeclaredMethod(notch);
-            Object value = m.invoke(playerObj);
-            return value != null && (Boolean) value;
-        } catch (Exception e) {
-            e.printStackTrace();
-
-        }
-
-        return false;
+        return (boolean)Methods.isSneaking_EntityPlayerSP.invoke(playerObj);
     }
 
     public Object getSendQueue() {

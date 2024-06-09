@@ -10,6 +10,7 @@ import fun.inject.inject.asm.api.Inject;
 import fun.inject.inject.asm.api.Mixin;
 import fun.inject.inject.asm.api.Transformer;
 import fun.inject.inject.asm.api.Transformers;
+import fun.inject.inject.wrapper.impl.MinecraftWrapper;
 import fun.network.TCPClient;
 import fun.network.TCPServer;
 import fun.utils.Methods;
@@ -157,15 +158,17 @@ public class Agent {
         isAgent=true;
 
 
-        FunGhostClient.init();
+        MinecraftWrapper.get().addScheduledTask(()->{
+            FunGhostClient.init();
 
 
-        ConfigModule.loadConfig();
-        TCPClient.send(Main.SERVERPORT,"mcpath "+ System.getProperty("user.dir"));
-        TCPServer.startServer(SERVERPORT);
-        FontManager.init();
+            ConfigModule.loadConfig();
+            TCPClient.send(Main.SERVERPORT,"mcpath "+ System.getProperty("user.dir"));
+            TCPServer.startServer(SERVERPORT);
+            FontManager.init();
 
-        logger.info("o god start!");
+            logger.info("o god start!");
+        });
 
 
 

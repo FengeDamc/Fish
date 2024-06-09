@@ -9,6 +9,7 @@ public class Wrapper {
 
     private final String name, obfName;
     public Class<?> clazz;
+    public Object obj;
 
     public Wrapper(String name) {
         this.name = name;

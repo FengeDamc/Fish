@@ -4,7 +4,6 @@ import com.darkmagician6.eventapi.event.events.EventUpdate;
 import fun.client.mods.Category;
 import fun.client.mods.Module;
 import fun.client.settings.Setting;
-import org.lwjgl.Sys;
 import org.lwjgl.input.Keyboard;
 
 public class KeepSprint extends Module {

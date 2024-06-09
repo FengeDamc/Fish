@@ -1,5 +1,7 @@
 package fun.gui;
 
+import com.formdev.flatlaf.FlatDarkLaf;
+import com.formdev.flatlaf.FlatLightLaf;
 import fun.client.FunGhostClient;
 import fun.client.config.ConfigModule;
 import fun.client.mods.Category;
@@ -14,13 +16,12 @@ import javax.swing.event.*;
 import javax.swing.tree.DefaultMutableTreeNode;
 import java.awt.*;
 import java.awt.event.*;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
 public class FishFrame extends JFrame {
 
-    public DefaultMutableTreeNode settings=new DefaultMutableTreeNode("Settings");
-    public JTree settingsTree=new JTree(settings);
+    public DefaultMutableTreeNode settings;
+    public JTree settingsTree;
     public JScrollPane jScrollPane;
     public JPanel jPanel=new JPanel(new GridLayout(0,1,5,5));
 
@@ -38,6 +39,11 @@ public class FishFrame extends JFrame {
         }
     }
     public static void init0(){
+        try {
+            UIManager.setLookAndFeel(new FlatDarkLaf());
+        } catch (UnsupportedLookAndFeelException e) {
+
+        }
         Agent.fishFrame = new FishFrame();
         Agent.fishFrame.initFrame();
     }
@@ -45,6 +51,9 @@ public class FishFrame extends JFrame {
 
 
     public void initFrame(){
+
+        settings=new DefaultMutableTreeNode("Settings");
+        settingsTree=new JTree(settings);
         setTitle("Fish"+Agent.VERSION);
         setIconImage(new ImageIcon(getClass().getResource("/assets/texture/fishico.png")).getImage());
         System.out.println("Frame Init");
@@ -79,6 +88,7 @@ public class FishFrame extends JFrame {
         //jPanel.setBounds(200,30,1000,1000);
         jPanel.setBackground(Color.darkGray);
         jPanel.setLayout(new VerticalFlowLayout());
+
 
         settingsTree.addMouseListener(new MouseAdapter() {
             @Override
@@ -181,7 +191,9 @@ public class FishFrame extends JFrame {
                         }
                         if (set.isSlider()) {
                             i++;
-                            JLabel jl = new JLabel(set.getName() + ":" + set.getValDouble());
+                            String dv = "" + Math.round(set.getValDouble() * 100D) / 100D;
+
+                            JLabel jl = new JLabel(set.getName() + ":" + dv);
                             JSlider js = new JSlider(0, 100, (int) (set.getValDouble() / set.getMax() * 100));
 
                             js.setSize(50, 5);
@@ -268,6 +280,8 @@ public class FishFrame extends JFrame {
 
         setSize(1000,618);
         container.setBackground(Color.darkGray);
+
+
         Thread updataUIThread= new Thread("Settings"){
             @Override
             public void run() {

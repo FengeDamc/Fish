@@ -3,19 +3,20 @@ package fun.inject;
 import com.sun.jna.Function;
 import com.sun.jna.Memory;
 import com.sun.jna.Pointer;
-import com.sun.jna.platform.win32.BaseTSD;
-import com.sun.jna.platform.win32.Kernel32;
-import com.sun.jna.platform.win32.User32;
-import com.sun.jna.platform.win32.WinNT;
+import com.sun.jna.platform.win32.*;
 
 public class InjectorUtils {
     public static final Kernel32 kernel32 = Kernel32.INSTANCE;
     public static final User32 user32 = User32.INSTANCE;
-    public static  void injector(int pid,String dllPath){
+    public static void injector(int pid,String dllPath){
         WinNT.HANDLE hdl = kernel32.OpenProcess(0x1F1FFB, false, pid);
         loadLibrary(hdl,dllPath);
 
     }
+    public static void free(){
+        kernel32.FreeLibrary(kernel32.GetModuleHandle("libagent.dll"));
+    }
+    public static native void injectorR(int pid,String dll);
     public static void loadLibrary(WinNT.HANDLE hdl, String path) {
         Memory pathMemory = new Memory((long) path.length() + 1L);
         pathMemory.setString(0L, path);

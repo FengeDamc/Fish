@@ -5,6 +5,11 @@ import fun.inject.inject.Mappings;
 import fun.inject.inject.ReflectionUtils;
 import fun.inject.inject.wrapper.Wrapper;
 import fun.inject.inject.wrapper.impl.world.BlockPosWrapper;
+import fun.utils.Fields;
+import fun.utils.Methods;
+
+import java.lang.reflect.Method;
+import java.util.UUID;
 
 public class EntityWrapper extends Wrapper {
     public Object entityObj;
@@ -13,8 +18,15 @@ public class EntityWrapper extends Wrapper {
         super("net/minecraft/entity/Entity");
         this.entityObj = entityObj;
     }
+    public UUID getUniqueID(){
+        return (UUID) Methods.getUniqueID.invoke(entityObj);
+    }
+    public boolean isInvisible(){
+        return (boolean)Methods.isInvisible.invoke(entityObj);
+    }
     public EntityWrapper(Object entityObj,String clazz) {
         super(clazz);
+
         this.entityObj = entityObj;
     }
     public float getEyeHeight(){
@@ -37,6 +49,28 @@ public class EntityWrapper extends Wrapper {
         String notch = Mappings.getObfField("field_70165_t");
         Object value = ReflectionUtils.getFieldValue(entityObj, notch);
         return value == null ? 0.0 : (Double) value;
+    }
+    public float getYaw() {
+        // FD: pk/y net/minecraft/entity/Entity/field_70177_z
+        Object value = ReflectionUtils.getFieldValue(entityObj, Fields.Yaw_Entity.getName());
+        return value == null ? 0.0f : (Float) value;
+    }
+
+    public float getPitch() {
+        // FD: pk/z net/minecraft/entity/Entity/field_70125_A
+        Object value = ReflectionUtils.getFieldValue(entityObj, Fields.Pitch_Entity.getName());
+        return value == null ? 0.0f : (Float) value;
+    }
+    public void setYaw(float yaw) {
+        // FD: pk/y net/minecraft/entity/Entity/field_70177_z
+        ReflectionUtils.setFieldValue(entityObj, Fields.Yaw_Entity.getName(), yaw);
+        //return value == null ? 0.0f : (Float) value;
+    }
+
+    public void setPitch(float pitch) {
+        // FD: pk/z net/minecraft/entity/Entity/field_70125_A
+        ReflectionUtils.setFieldValue(entityObj, Fields.Pitch_Entity.getName(),pitch);
+        //return value == null ? 0.0f : (Float) value;
     }
 
     public double getY() {

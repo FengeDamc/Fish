@@ -2,7 +2,6 @@ package fun.client.mods.combat;
 
 import com.darkmagician6.eventapi.event.events.EventAttackReach;
 import com.darkmagician6.eventapi.event.events.EventBlockReach;
-import com.ibm.icu.util.ULocale;
 import fun.client.mods.Category;
 import fun.client.mods.Module;
 import fun.client.settings.Setting;

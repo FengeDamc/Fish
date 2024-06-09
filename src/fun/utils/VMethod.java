@@ -6,6 +6,7 @@ import fun.inject.inject.MinecraftType;
 import fun.inject.inject.MinecraftVersion;
 import org.objectweb.asm.Type;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Map;
 
@@ -69,16 +70,32 @@ public class VMethod extends Version{
         if(method==null)return obf_desc;
         return Type.getType(method).getDescriptor();
     }
-    public Method getMethod(Classes clazz){
+    public Method getMethod(Class<?> clazz){
         if(this.method==null){
-            for(Method m:clazz.getClazz().getDeclaredMethods()){
-                if(Type.getMethodDescriptor(m).equals(this.getDescriptor())){
-                    this.method=m;
-                    break;
-                }
-            }
+            this.method=findMethod(clazz);
         }
         return this.method;
+    }
+    public Method getMethod(Classes c){
+        return getMethod(c.getClazz());
+    }
+    public Method findMethod(Class<?> clazz){
+        Class<?> c = clazz;
+        while (c != null) {
+            if (this.method == null) {
+                for (Method m : c.getDeclaredMethods()) {
+                    if (Type.getMethodDescriptor(m).equals(this.getDescriptor())) {
+                        return m;
+
+                    }
+                }
+            }
+            else return this.method;
+            c = c.getSuperclass();
+
+
+        }
+        return null;
     }
 
 

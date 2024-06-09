@@ -6,8 +6,6 @@ import fun.client.mods.Category;
 import fun.client.mods.Module;
 import fun.client.settings.Setting;
 import fun.client.utils.ColorUtils;
-import fun.inject.Agent;
-import fun.inject.inject.wrapper.impl.MinecraftWrapper;
 import fun.inject.inject.wrapper.impl.gui.GuiWrapper;
 import fun.inject.inject.wrapper.impl.gui.ScaledResolutionWrapper;
 import fun.utils.font.FontManager;
@@ -34,7 +32,7 @@ public class HUD extends Module {
         super.onRender2D(event);
 
             //drawRect(2, 2, 100, 14, ColorUtils.getRainbow((int) 3872.0f, (int) (10*1E7)));
-        FontManager.inkFree.drawStringWithShadow("FISH", 4, 4, ColorUtils.getRainbow((int) 3872.0f, (int) (0xffffff*1E7)));
+        FontManager.tenacity.drawStringWithShadow("FISH", 4, 4, new Color(78, 255, 166, 235).getRGB());
             //fm.arraylist.drawString("FPS: " + , 4, 25, Color.white.getRGB());
         renderArrayList();
             //FengeGG.onRenderer();
@@ -71,9 +69,10 @@ public class HUD extends Module {
 
             if (m.running) {
                 if (!modBlacklist.contains(m.getClass().getName())) {
+                    int color=ColorUtils.mixColors(new Color((int) mixColor1.getValDouble()),new Color((int) mixColor2.getValDouble()),ColorUtils.getBlendFactor(new Vector2d(sr.getScaledWidth() - FontManager.tenacity.getStringWidth(m.getName())-6, (int) offset))).getRGB();
+                    GuiWrapper.drawRect(sr.getScaledWidth() -4, (int) (4 + offset),sr.getScaledWidth(),(int) (4 + offset+FontManager.tenacity.getHeight()),color);
                     //GuiWrapper.drawRect(sr.getScaledWidth() - mc.getFontRenderer().getStringWidth(m.getName())-6, (int) offset, sr.getScaledWidth(), (int) (6 + mc.getFontRenderer().getHeight() + offset), new Color(255,255,200, 35).getRGB());
-                    FontManager.tenacity.drawStringWithShadow( m.getName(), sr.getScaledWidth() -FontManager.tenacity.getStringWidth(m.getName()), (int) (4 + offset),
-                                    ColorUtils.mixColors(new Color((int) mixColor1.getValDouble()),new Color((int) mixColor2.getValDouble()),ColorUtils.getBlendFactor(new Vector2d(sr.getScaledWidth() - FontManager.tenacity.getStringWidth(m.getName())-6, (int) offset))).getRGB());
+                    FontManager.tenacity.drawStringWithShadow( m.getName(), sr.getScaledWidth() -FontManager.tenacity.getStringWidth(m.getName())-4, (int) (4 + offset),color);
                     yCount++;
                     index++;
                     x++;

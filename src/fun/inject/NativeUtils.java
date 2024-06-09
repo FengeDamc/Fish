@@ -1,5 +1,6 @@
 package fun.inject;
 
+import com.sun.jna.platform.win32.WinDef;
 import fun.inject.inject.Mappings;
 
 import java.lang.instrument.ClassDefinition;
@@ -57,6 +58,8 @@ public class NativeUtils {
         retransformClass0(clazz);
     }
     public static native void retransformClass0(Class<?> clazz);
+    public static native void clickMouse(int event);
+    public static native void freeLibrary();
 
 
 

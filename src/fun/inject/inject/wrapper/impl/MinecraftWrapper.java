@@ -8,6 +8,7 @@ import fun.inject.inject.ReflectionUtils;
 import fun.inject.inject.wrapper.Wrapper;
 import fun.inject.inject.wrapper.impl.entity.EntityPlayerSPWrapper;
 import fun.inject.inject.wrapper.impl.network.NetHandlerPlayClientWrapper;
+import fun.inject.inject.wrapper.impl.other.IChatComponentWrapper;
 import fun.inject.inject.wrapper.impl.other.TimerWrapper;
 import fun.inject.inject.wrapper.impl.render.EntityRendererWrapper;
 import fun.inject.inject.wrapper.impl.render.FontRendererWrapper;
@@ -16,6 +17,7 @@ import fun.inject.inject.wrapper.impl.render.RenderManagerWrapper;
 import fun.inject.inject.wrapper.impl.setting.GameSettingsWrapper;
 import fun.inject.inject.wrapper.impl.world.WorldClientWrapper;
 import fun.utils.Fields;
+import fun.utils.Methods;
 
 
 public class MinecraftWrapper extends Wrapper {
@@ -123,6 +125,7 @@ public class MinecraftWrapper extends Wrapper {
         return thePlayer;
     }
 
+
     public WorldClientWrapper getWorld() {
         try {
             Object value = ReflectionUtils.getFieldValue(minecraftObj, Mappings.getObfField("field_71441_e"));
@@ -174,10 +177,8 @@ public class MinecraftWrapper extends Wrapper {
     }
 
     public NetHandlerPlayClientWrapper getNetHandler() {
-        if (netHandlerPlayClientWrapper == null) {
-            netHandlerPlayClientWrapper = new NetHandlerPlayClientWrapper(getPlayer().getSendQueue());
-        }
-        return netHandlerPlayClientWrapper;
+
+        return new NetHandlerPlayClientWrapper(Methods.getNetHandler_Minecraft.invoke(minecraftObj));
     }
 
     public FramebufferWrapper getFramebuffer() {

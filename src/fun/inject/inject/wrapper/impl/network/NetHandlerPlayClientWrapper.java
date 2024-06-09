@@ -4,8 +4,10 @@ package fun.inject.inject.wrapper.impl.network;
 import fun.inject.inject.Mappings;
 import fun.inject.inject.ReflectionUtils;
 import fun.inject.inject.wrapper.Wrapper;
+import fun.utils.Methods;
 
 import java.lang.reflect.Method;
+import java.util.UUID;
 
 public class NetHandlerPlayClientWrapper extends Wrapper {
 
@@ -25,6 +27,9 @@ public class NetHandlerPlayClientWrapper extends Wrapper {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    public Object getPlayerInfo(UUID id){
+        return Methods.getPlayerInfo_UUID_NetHandlerPlayClient.invoke(netHandlerPlayClientObj,id);
     }
 
     public NetworkManagerWrapper getNetworkManager() {

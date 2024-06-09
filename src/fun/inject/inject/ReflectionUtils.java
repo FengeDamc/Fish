@@ -188,6 +188,10 @@ public class ReflectionUtils {
         return invokeMethod(target, method.getName(),method.getVMethod().getMethod(clazz).getParameterTypes(),args);
     }
 
+    public static Object invokeMethod(Object target, Methods method,Object... args){
+        return invokeMethod(target, method.getName(),method.getVMethod().getMethod(target.getClass()).getParameterTypes(),args);
+    }
+
     public static Object invokeMethod(Class<?> clazz, String name) {
         Class<?> c = clazz;
         while (c.getSuperclass() != null) {
@@ -219,7 +223,7 @@ public class ReflectionUtils {
     public static Object newInstance(Class<?> clazz, Class<?>[] desc, Object... args) {
         Class<?> c = clazz;
 
-        while (c.getSuperclass() != null) {
+        while (c != null) {
             try {
                 Constructor<?> constructor;
                 try {
@@ -230,7 +234,8 @@ public class ReflectionUtils {
 
                 return constructor.newInstance(args);
             } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException |
-                     InstantiationException ignored) {
+                     InstantiationException e) {
+                e.printStackTrace();
             }
 
             c = c.getSuperclass();

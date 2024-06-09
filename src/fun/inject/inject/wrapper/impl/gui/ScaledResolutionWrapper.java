@@ -5,13 +5,14 @@ import fun.inject.inject.Mappings;
 import fun.inject.inject.ReflectionUtils;
 import fun.inject.inject.wrapper.Wrapper;
 import fun.inject.inject.wrapper.impl.MinecraftWrapper;
+import fun.utils.Classes;
 
 public class ScaledResolutionWrapper extends Wrapper {
     private Object scaledResolutionObj;
 
     public ScaledResolutionWrapper(MinecraftWrapper mc) {
-        super("net/minecraft/client/gui/ScaledResolution");
-        scaledResolutionObj = ReflectionUtils.newInstance(getClazz(), new Class[]{MinecraftWrapper.get().getClazz()}, mc.getMinecraftObj());
+        super(Classes.ScaledResolution);
+        scaledResolutionObj = ReflectionUtils.newInstance(getClazz(), new Class[]{Classes.Minecraft.getClazz()}, mc.getMinecraftObj());
     }
 
     public int getScaleFactor() {

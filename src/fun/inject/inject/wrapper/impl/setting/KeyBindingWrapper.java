@@ -3,6 +3,7 @@ package fun.inject.inject.wrapper.impl.setting;
 
 import fun.inject.inject.Mappings;
 import fun.inject.inject.wrapper.Wrapper;
+import fun.utils.Methods;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -10,13 +11,16 @@ import java.lang.reflect.Method;
 import static com.viaversion.viaversion.libs.javassist.runtime.Desc.getClazz;
 
 public class KeyBindingWrapper extends Wrapper {
-    private final Object keyBindingObj;
+    public final Object keyBindingObj;
 
     private String keyDescription;
 
     public KeyBindingWrapper(Object keyBindingObj) {
         super("net/minecraft/client/settings/KeyBinding");
         this.keyBindingObj = keyBindingObj;
+    }
+    public int getKeyCode(){
+        return (int)Methods.getKeyCode_KeyBinding.invoke(keyBindingObj);
     }
 
     public String getKeyName() {

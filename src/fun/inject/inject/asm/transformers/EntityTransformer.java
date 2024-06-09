@@ -4,8 +4,12 @@ import com.darkmagician6.eventapi.EventManager;
 import com.darkmagician6.eventapi.event.events.EventStrafe;
 import fun.inject.Agent;
 import fun.inject.inject.Mappings;
+import fun.inject.inject.MinecraftVersion;
 import fun.inject.inject.asm.api.Inject;
+import fun.inject.inject.asm.api.Mixin;
 import fun.inject.inject.asm.api.Transformer;
+import fun.utils.Classes;
+import fun.utils.Methods;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.*;
@@ -14,18 +18,20 @@ import java.util.ArrayList;
 
 public class EntityTransformer extends Transformer {
     public EntityTransformer() {
-        super("net/minecraft/entity/Entity");
+        super(Classes.Entity);
     }
-    @Inject(method = "func_70060_a",descriptor = "(FFF)V")
+    @Mixin(method = Methods.moveFlying_Entity)
     public void onMoveFly(MethodNode methodNode) {
+        final int ASTRAFE = Agent.minecraftVersion== MinecraftVersion.VER_189||
+                Agent.minecraftVersion== MinecraftVersion.VER_1710?0:1;
         InsnList list = new InsnList();
         //Agent.logger.info("moveFlying");
         int j =0;
         list.add(new VarInsnNode(Opcodes.ALOAD,0));
 
         list.add(new VarInsnNode(Opcodes.FLOAD,1));
-        list.add(new VarInsnNode(Opcodes.FLOAD,2));
-        list.add(new VarInsnNode(Opcodes.FLOAD,3));
+        list.add(new VarInsnNode(Opcodes.FLOAD,2+ASTRAFE));
+        list.add(new VarInsnNode(Opcodes.FLOAD,3+ASTRAFE));
 
         list.add(new VarInsnNode(Opcodes.ALOAD,0));
         //FD: pk/s net/minecraft/entity/Entity/field_70165_t
@@ -37,34 +43,34 @@ public class EntityTransformer extends Transformer {
         //event参数
 
         list.add(new MethodInsnNode(Opcodes.INVOKESTATIC, Type.getInternalName(EntityTransformer.class),"onStrafe","(Ljava/lang/Object;FFFF)Lcom/darkmagician6/eventapi/event/events/EventStrafe;"));
-        list.add(new VarInsnNode(Opcodes.ASTORE,4));
+        list.add(new VarInsnNode(Opcodes.ASTORE,4+ASTRAFE));
         j++;
-        list.add(new VarInsnNode(Opcodes.ALOAD,4));
+        list.add(new VarInsnNode(Opcodes.ALOAD,4+ASTRAFE));
         list.add(new FieldInsnNode(Opcodes.GETFIELD,"com/darkmagician6/eventapi/event/events/EventStrafe","strafe","F"));
 
         list.add(new VarInsnNode(Opcodes.FSTORE,1));
 
-        list.add(new VarInsnNode(Opcodes.ALOAD,4));
+        list.add(new VarInsnNode(Opcodes.ALOAD,4+ASTRAFE));
         list.add(new FieldInsnNode(Opcodes.GETFIELD,"com/darkmagician6/eventapi/event/events/EventStrafe","forward","F"));
 
-        list.add(new VarInsnNode(Opcodes.FSTORE,2));
+        list.add(new VarInsnNode(Opcodes.FSTORE,2+ASTRAFE));
 
-        list.add(new VarInsnNode(Opcodes.ALOAD,4));
+        list.add(new VarInsnNode(Opcodes.ALOAD,4+ASTRAFE));
         list.add(new FieldInsnNode(Opcodes.GETFIELD,"com/darkmagician6/eventapi/event/events/EventStrafe","friction","F"));
-        list.add(new VarInsnNode(Opcodes.FSTORE,3));
+        list.add(new VarInsnNode(Opcodes.FSTORE,3+ASTRAFE));
 
         ArrayList<AbstractInsnNode> rl=new ArrayList<>();
         //ArrayList<AbstractInsnNode> rload=new ArrayList<>();
         for (int i = 0; i < methodNode.instructions.size(); ++i) {
             AbstractInsnNode node = methodNode.instructions.get(i);
-            if(node instanceof VarInsnNode&&((VarInsnNode) node).var>=3+j){
+            if(node instanceof VarInsnNode&&((VarInsnNode) node).var>=3+ASTRAFE+j){
                 ((VarInsnNode) node).var+=j;//插入偏移值;
             }
             if(node instanceof FieldInsnNode&&((FieldInsnNode) node).name.equals(Mappings.getObfField("field_70177_z"))){
                  //标记替换yaw轴
                 AbstractInsnNode aload_0 = methodNode.instructions.get(i-1);
                 if(aload_0 instanceof VarInsnNode){
-                    ((VarInsnNode) aload_0).var=4;
+                    ((VarInsnNode) aload_0).var=4+ASTRAFE;
                     rl.add(node);
                 }
 
@@ -84,6 +90,33 @@ public class EntityTransformer extends Transformer {
 
 
     }
+    /*
+    public void moveRelative(float strafe, float up, float forward, float friction)
+    {
+        float f = strafe * strafe + up * up + forward * forward;
+
+        if (f >= 1.0E-4F)
+        {
+            f = MathHelper.sqrt(f);
+
+            if (f < 1.0F)
+            {
+                f = 1.0F;
+            }
+
+            f = friction / f;
+            strafe = strafe * f;
+            up = up * f;
+            forward = forward * f;
+            float f1 = MathHelper.sin(this.rotationYaw * 0.017453292F);
+            float f2 = MathHelper.cos(this.rotationYaw * 0.017453292F);
+            this.motionX += (double)(strafe * f2 - forward * f1);
+            this.motionY += (double)up;
+            this.motionZ += (double)(forward * f2 + strafe * f1);
+        }
+    }
+
+     */
     public static EventStrafe onStrafe(Object entity,float f0, float f1, float f2, float f){
         EventStrafe eventStrafe=new EventStrafe(f1,f0,f,f2);
         if(entity.getClass().getName().equals(Mappings.getObfClass("net/minecraft/client/entity/EntityPlayerSP").replace('/','.'))) EventManager.call(eventStrafe);
