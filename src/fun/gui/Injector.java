@@ -27,6 +27,7 @@ public class Injector extends JFrame {
     private void init(){
         setTitle("Fish"+ Agent.VERSION);
         setIconImage(new ImageIcon(getClass().getResource("/assets/texture/fishico.png")).getImage());
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.getContentPane().setLayout(new GridLayout());
         this.setBackground(Color.WHITE);
         JButton jb=new JButton("Inject");
