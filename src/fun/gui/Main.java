@@ -10,7 +10,7 @@ public class Main {
     public static FishFrame fishFrame=null;
     public static void main(String[] args) {
         //FunGhostClient.init();
-        FishFrame.init();
+        fun.inject.Main.main(null);
 
     }
 

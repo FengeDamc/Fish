@@ -30,7 +30,7 @@
 #ifndef JDWPTRANSPORT_H
 #define JDWPTRANSPORT_H
 
-#include "jni.h"
+#include "src/java/jni.h"
 
 enum {
     JDWPTRANSPORT_VERSION_1_0 = 0x00010000

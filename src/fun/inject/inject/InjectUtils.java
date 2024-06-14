@@ -80,8 +80,9 @@ public class InjectUtils {
                 e.printStackTrace();
             }
         });
-        FunGhostClient.moduleManager.mods.clear();
-        Transformers.transformers.clear();
+
+
+
         //NativeUtils.freeLibrary();
         //InjectorUtils.free();
     }

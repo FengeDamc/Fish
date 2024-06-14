@@ -8,6 +8,7 @@ import fun.client.mods.Category;
 import fun.client.mods.Module;
 import fun.client.settings.Setting;
 import fun.inject.Agent;
+import fun.inject.Main;
 import fun.inject.inject.InjectUtils;
 import fun.inject.inject.wrapper.impl.MinecraftWrapper;
 
@@ -39,6 +40,7 @@ public class FishFrame extends JFrame {
         }
     }
     public static void init0(){
+        Main.injector.setVisible(false);
         try {
             UIManager.setLookAndFeel(new FlatDarkLaf());
         } catch (UnsupportedLookAndFeelException e) {
@@ -245,7 +247,12 @@ public class FishFrame extends JFrame {
             @Override
             public void windowClosing(WindowEvent e) {
                 ConfigModule.saveConfig();
-                InjectUtils.destroyClient();
+                try {
+                    InjectUtils.destroyClient();
+                }
+                catch (Exception ex){
+
+                }
                 System.exit(0);
 
 

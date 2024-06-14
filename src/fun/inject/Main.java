@@ -5,6 +5,7 @@ import com.sun.jna.JNIEnv;
 import com.sun.tools.attach.VirtualMachine;
 import fun.client.FunGhostClient;
 import fun.gui.FishFrame;
+import fun.gui.Injector;
 import fun.inject.inject.InjectUtils;
 import fun.network.TCPServer;
 import org.lwjgl.Sys;
@@ -17,9 +18,7 @@ import sun.jvmstat.perfdata.monitor.PerfStringMonitor;
 import sun.misc.Unsafe;
 import sun.tools.attach.WindowsVirtualMachine;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.lang.instrument.Instrumentation;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -39,28 +38,48 @@ public class Main {
     public static String mcPath=System.getProperty("user.dir");
     public static boolean started=false;
     public static final int SERVERPORT=17573;
+    public static Injector injector;
     static {
-        System.loadLibrary("libinjector");
+        if(!Agent.isAgent)System.loadLibrary("libinjector");
 
 
     }
-    public static void main(String[] args) {
-        Agent.classLoader=Main.class.getClassLoader();
-        TCPServer.startServer(SERVERPORT);
-        Method addURL = null;
-        int pid=0;
-        try {
-            pid = InjectUtils.getMinecraftProcessId();
-        } catch (InterruptedException e) {
+    public static void start()
+    {
+            Agent.classLoader=Main.class.getClassLoader();
+            TCPServer.startServer(SERVERPORT);
+            Method addURL = null;
+            int pid=0;
+            try {
+                pid = InjectUtils.getMinecraftProcessId();
+            } catch (InterruptedException e) {
+
+            }
+            File f=new File(System.getProperty("user.home")+"\\fish.txt");
+            if(!f.exists()) {
+                try {
+                    f.createNewFile();
+                } catch (IOException e) {
+
+                }
+            }
+            try {
+                PrintWriter pw = new PrintWriter(f);
+                pw.print(new File(path,"FunGhostClient.jar").getAbsolutePath());
+                pw.close();
+            } catch (FileNotFoundException e) {
+
+            }
+            File dll=new File(path,dllpath);
+            InjectorUtils.injectorR(pid,dll.getAbsolutePath());//这边正在抄袭反射dll注入
+            System.out.println("injected in:"+pid);
+
+
 
         }
-        File dll=new File(path,dllpath);
 
-        InjectorUtils.injector(pid,dll.getAbsolutePath());//这边正在抄袭反射dll注入
-        System.out.println("injected in:"+pid);
-
-
-
+    public static void main(String[] args) {
+        injector=new Injector();
     }
 
     private static File writeagent(Class<?> class1) {

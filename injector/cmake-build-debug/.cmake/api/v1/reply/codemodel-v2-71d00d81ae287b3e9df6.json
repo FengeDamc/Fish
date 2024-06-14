@@ -16,7 +16,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				}
 			],
@@ -32,7 +33,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				}
 			],
@@ -41,15 +43,22 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "agent::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-agent-Debug-5627bb6da0f87b21f925.json",
+					"jsonFile" : "target-agent-Debug-9029fa208681eac5ad8a.json",
 					"name" : "agent",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "injector::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-injector-Debug-1b324b93ae56c892d045.json",
+					"jsonFile" : "target-injector-Debug-29fa03d48ea6350ba957.json",
 					"name" : "injector",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "launcher::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-launcher-Debug-69e0951cc09285e51b6e.json",
+					"name" : "launcher",
 					"projectIndex" : 0
 				}
 			]

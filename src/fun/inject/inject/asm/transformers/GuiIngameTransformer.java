@@ -18,7 +18,7 @@ public class GuiIngameTransformer extends Transformer {
 
 
     public GuiIngameTransformer() {
-        super(Agent.minecraftType== MinecraftType.VANILLA?"net/minecraft/client/gui/GuiIngame":"net/minecraftforge/client/GuiIngameForge");
+        super(!(Agent.minecraftType == MinecraftType.FORGE) ?"net/minecraft/client/gui/GuiIngame":"net/minecraftforge/client/GuiIngameForge");
     }
 
 

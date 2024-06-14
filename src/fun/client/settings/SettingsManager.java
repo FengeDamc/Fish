@@ -1,6 +1,7 @@
 package fun.client.settings;
 
 
+import fun.client.FunGhostClient;
 import fun.client.mods.Module;
 
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ public class SettingsManager {
 
 	public SettingsManager(){
 		this.settings = new ArrayList<Setting>();
+
 	}
 
 	public void rSetting(Setting in){

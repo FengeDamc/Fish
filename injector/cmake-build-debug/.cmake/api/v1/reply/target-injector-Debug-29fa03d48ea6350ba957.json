@@ -99,19 +99,19 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Inject.c",
+			"path" : "src/injector/Inject.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "GetProcAddressR.c",
+			"path" : "src/injector/GetProcAddressR.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "LoadLibraryR.c",
+			"path" : "src/injector/LoadLibraryR.c",
 			"sourceGroupIndex" : 0
 		}
 	],

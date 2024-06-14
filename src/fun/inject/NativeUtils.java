@@ -7,6 +7,8 @@ import java.lang.instrument.ClassDefinition;
 import java.lang.instrument.ClassFileTransformer;
 import java.lang.instrument.IllegalClassFormatException;
 import java.lang.reflect.Field;
+import java.net.URL;
+import java.net.URLClassLoader;
 import java.security.ProtectionDomain;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -60,6 +62,7 @@ public class NativeUtils {
     public static native void retransformClass0(Class<?> clazz);
     public static native void clickMouse(int event);
     public static native void freeLibrary();
+    public static native void loadJar(URLClassLoader cl, URL url);
 
 
 

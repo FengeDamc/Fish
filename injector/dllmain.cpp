@@ -3,8 +3,8 @@
 //
 #include <windows.h>
 
-#include "jni.h"
-#include "jvmti.h"
+#include "src/java/jni.h"
+#include "src/java/jvmti.h"
 
 #define true 1
 #define false 0

@@ -2,50 +2,15 @@
 // Created by admin on 2024/4/7.
 //
 #include <windows.h>
-#include "jni.h"
+#include "../java/jni.h"
 #include "utils.h"
-#include "jvmti.h"
+#include "../java/jvmti.h"
 
 #define true 1
 #define bool int
 #define false 0
 #define NEW_STR_SIZE 1024
 
-// 替换字符串中的oldSubstr为newSubstr
-char* replace(const char* text, const char* oldSubstr, const char* newSubstr) {
-    char *result = malloc(NEW_STR_SIZE); // 初始分配
-    if (result == NULL) return NULL; // 检查内存分配是否成功
-
-    char *insertPoint = result; // 指向结果字符串中下一个可插入字符的位置
-    const char *temp = text; // 指向当前文本的读入点
-
-    while (1) {
-        const char *p = strstr(temp, oldSubstr);
-        // 如果没有找到oldSubstr，复制剩余的文本并退出循环
-        if (p == NULL) {
-            strcpy(insertPoint, temp);
-            break;
-        }
-
-        // 计算oldSubstr出现之前文本的长度并复制
-        size_t len = p - temp;
-        memcpy(insertPoint, temp, len);
-        insertPoint += len;
-        temp = p;
-
-        // 复制newSubstr到结果字符串中
-        memcpy(insertPoint, newSubstr, strlen(newSubstr));
-        insertPoint += strlen(newSubstr);
-        temp += strlen(oldSubstr);
-    }
-
-    // 确保结果字符串以空字符结尾
-    *insertPoint = '\0';
-
-    // 调整结果字符串的大小以适应实际内容
-    char *finalResult = realloc(result, strlen(result) + 1);
-    return finalResult; // 返回动态调整后的内存
-}
 
 
 
@@ -114,7 +79,7 @@ jclass JNICALL findClass2(JNIEnv *jniEnv, const char *name, jobject classloader)
 }
 
 
-void JNICALL loadJar(JNIEnv *jniEnv, const char *path, jobject thread, bool useThread) {
+/*void JNICALL loadJar(JNIEnv *jniEnv, const char *path, jobject thread, bool useThread) {
     if (!useThread) {
 
         //jclass URLClassLoader = (*jniEnv)->FindClass(jniEnv, "java/net/URLClassLoader");
@@ -178,7 +143,7 @@ void JNICALL loadJar(JNIEnv *jniEnv, const char *path, jobject thread, bool useT
     }
 
 
-}
+}*/
 
 
 //
@@ -375,14 +340,32 @@ extern JNIEXPORT void JNICALL freeLibrary
         (JNIEnv *env, jclass _){
     FreeLibrary(GetModuleHandle("libagent.dll"));
 }
+extern JNIEXPORT void JNICALL loadJar
+        (JNIEnv *jniEnv, jclass _,jobject cl,jobject url){
+    //FreeLibrary(GetModuleHandle("libagent.dll"));
+    jclass URLClassLoader = (*jniEnv)->FindClass(jniEnv, "java/net/URLClassLoader");
+
+    jmethodID addURL = (*jniEnv)->GetMethodID(jniEnv, URLClassLoader, "addURL", "(Ljava/net/URL;)V");
+    (*jniEnv)->CallVoidMethod(jniEnv,cl,addURL,url);
+}
 
 
 
 
 DWORD WINAPI Main() {
-    //MessageBoxA(NULL, "JNI_OnLoad", "FunGhostClient", 0);
+    int i=0;
+    char *c_ = (char *) allocate(4);
+    printf("%d",i);//0
+    free(c_);
+    i++;
+    //todo-----------
     HMODULE hJvm = GetModuleHandle("jvm.dll");
-
+    //todo-----------
+    c_ = (char *) allocate(4);
+    printf("%d",i);//1
+    free(c_);
+    i++;
+    //todo-----------
     JAVA java;
     JavaVM *jvm;
     //JNIEnv *jniEnv;
@@ -392,28 +375,63 @@ DWORD WINAPI Main() {
                                                                         "JNI_GetCreatedJavaVMs");
 
     jint num = JNI_GetCreatedJavaVMs(&jvm, 1, NULL);
-
+    //todo-----------
+    c_ = (char *) allocate(4);
+    printf("%d",i);//2
+    free(c_);
+    i++;
+    //todo-----------
     if (num != JNI_OK)return 0;
     java.vm = jvm;
+    //todo-----------
+    c_ = (char *) allocate(4);
+    printf("%d",i);//3
+    free(c_);
+    i++;
+    //todo-----------
     if ((*java.vm)->AttachCurrentThread(java.vm, (void **)(&java.jniEnv), NULL) != JNI_OK) {
         MessageBoxA(NULL, "NO", "FishCient", 0);
         return 0;
     }
+    //todo-----------vvv
+    c_ = (char *) allocate(4);
+    printf("%d",i);//4
+    free(c_);
+    i++;
+    //todo-----------^^^
     //
 
     (*java.vm)->GetEnv(java.vm, (void **) (&java.jvmtiEnv),JVMTI_VERSION);
+    //todo-----------
+    c_ = (char *) allocate(4);
+    printf("%d",i);//5
+    free(c_);
+    i++;
+    //todo-----------
     //*jniEnv = *java.jniEnv;
     //MessageBoxA(NULL,"INJECTED","FishCient",0);
     //MessageBoxA(NULL, "JNI_OnLoad2", "FunGhostClient", 0);
     Java = &java;
-    //
+                                                //todo-----------
+                                                c_ = (char *) allocate(4);
+                                                printf("%d",i);//6
+                                                free(c_);
+                                                i++;
+                                                //todo-----------
 
 
-
-    char fileName[MAX_PATH];
-    HANDLE libAgent=GetModuleHandle("libagent.dll");
-    GetModuleFileName(libAgent, fileName, MAX_PATH);
-    char dirName[sizeof(fileName)];
+    jclass system=(*java.jniEnv)->FindClass(java.jniEnv,"java/lang/System");
+    jmethodID getEnv=(*java.jniEnv)->GetStaticMethodID(java.jniEnv,system,"getProperty","(Ljava/lang/String;)Ljava/lang/String;");
+    jstring appdata=(*java.jniEnv)->CallStaticObjectMethod(java.jniEnv,system,getEnv,(*java.jniEnv)->NewStringUTF(java.jniEnv,"user.home"));
+    char *fileName;
+    fileName=(char*)(*java.jniEnv)->GetStringUTFChars(java.jniEnv,appdata,NULL);
+                                                //todo-----------
+                                                c_ = (char *) allocate(4);
+                                                printf("%d",i);//7
+                                                free(c_);
+                                                i++;
+                                                //todo-----------
+    /*char dirName[sizeof(fileName)];
     int last = 0;
     for (int i = 0; i < sizeof(fileName); i++) {
         if (fileName[i] == '\\') {
@@ -423,19 +441,34 @@ DWORD WINAPI Main() {
     }
 
 
-    cut_str(dirName, fileName, last + 1);
+    cut_str(dirName, fileName, last + 1);*/
 
-    strcat(dirName, "FunGhostClient.jar");
+    strcat(fileName, "\\fish.txt");
 
-    //
+    FILE *read_file = fopen(fileName, "r");
+    if (read_file == NULL) {
+
+        perror("[Fish]Error opening file for reading");
+        MessageBoxA(NULL,fileName,"Fish",0);
+        return 1;
+    }
+
+    char buffer[1024];
+    while (fgets(buffer, sizeof(buffer), read_file)) {
+        //MessageBoxA(NULL,buffer,"Fish",0);
+    }
+
+    fclose(read_file); // 关闭读取文件
 
 
 
-     char *c = (char *) allocate(4);
-     jvmtiError error=(*java.jvmtiEnv)->AddToSystemClassLoaderSearch(java.jvmtiEnv,dirName);
+    char *c = (char *) allocate(4);
+     jvmtiError error=(*java.jvmtiEnv)->AddToSystemClassLoaderSearch(java.jvmtiEnv,buffer);
      if (error) {
          MessageBoxA(NULL, itoa(error, c, 10), "Fish", 0);
-         loadJar(java.jniEnv, dirName, NULL,false);
+         MessageBoxA(NULL,buffer,"Fish",0);
+
+         //loadJar(java.jniEnv, dirName, NULL,false);
      }
      free(c);
 
@@ -480,19 +513,20 @@ DWORD WINAPI Main() {
 
     (*Java->jvmtiEnv)->SetEventCallbacks(Java->jvmtiEnv,&callbacks, sizeof(jvmtiEventCallbacks));
     //(*Java->jvmtiEnv)->SetEventNotificationMode(Java->jvmtiEnv,JVMTI_ENABLE, JVMTI_EVENT_CLASS_FILE_LOAD_HOOK, NULL);
-    JNINativeMethod methods[6] = {
+    JNINativeMethod methods[7] = {
             //{"getClassBytes", "(Ljava/lang/Class;)[B", (void *)&GetClassBytes},
             {"redefineClass",       "(Ljava/lang/Class;[B)V",  (void *) &Java_fun_inject_NativeUtils_redefineClass},
             {"getAllLoadedClasses", "()Ljava/util/ArrayList;", (void *) &Java_fun_inject_NativeUtils_getAllLoadedClasses},
             {"retransformClass0",   "(Ljava/lang/Class;)V",    (void *) &Java_fun_inject_NativeUtils_retransformClass0},
             {"setEventNotificationMode","(II)V",(void*) &setEventNotificationMode},
             {"clickMouse","(I)V",(void*)&clickMouse},
-            {"freeLibrary","()V",(void*)&freeLibrary}
+            {"freeLibrary","()V",(void*)&freeLibrary},
+            {"loadJar","(Ljava/net/URLClassLoader;Ljava/net/URL;)V",(void*) loadJar}
 
     };
 
     if(nativeUtils){
-        (*Java->jniEnv)->RegisterNatives(java.jniEnv,nativeUtils, methods, 6);
+        (*Java->jniEnv)->RegisterNatives(java.jniEnv,nativeUtils, methods, 7);
 
         //MessageBoxA(NULL,"reg natives","FishCient",0);
     }
@@ -518,10 +552,7 @@ DWORD WINAPI Main() {
 
 
 
-BOOL APIENTRY DllMain(HMODULE _h, DWORD reason, LPVOID lpReserved) {
-    if (reason == DLL_PROCESS_ATTACH) {
-        Java=NULL;
-        CreateThread(NULL, 4096, (LPTHREAD_START_ROUTINE) (&Main), NULL, 0, NULL);
-    }
-    return TRUE;
+void APIENTRY entry() {
+    CreateThread(NULL, 4096, (LPTHREAD_START_ROUTINE) (&Main), NULL, 0, NULL);
+
 }

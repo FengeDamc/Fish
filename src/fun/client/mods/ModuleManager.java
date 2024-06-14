@@ -36,6 +36,7 @@ public class ModuleManager {
     public Target target;
 
     public void init() {
+        mods.clear();
         EventManager.register(this);
         keepSprint = new KeepSprint("KeepSprint");
         hud = new HUD("HUD");

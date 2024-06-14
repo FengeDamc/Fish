@@ -3,8 +3,8 @@
 //
 #include <windows.h>
 #include <iostream>
-#include "jni.h"
-#include "jvmti.h"
+#include "src/java/jni.h"
+#include "src/java/jvmti.h"
 typedef struct{
     JavaVM* vm;
     JNIEnv* jniEnv;

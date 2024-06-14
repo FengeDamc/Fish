@@ -25,9 +25,9 @@ import static org.objectweb.asm.ClassWriter.COMPUTE_MAXS;
 
 public class Transformers {
 
-    public static final Logger logger = LogManager.getLogger("Transformers");
+    public static Logger logger = LogManager.getLogger("Transformers");
 
-    public static final List<Transformer> transformers = new ArrayList<>();
+    public static List<Transformer> transformers = new ArrayList<>();
     public static boolean contains(String[] s1,String target){
         for(String s:s1){
             if(!target.replace('.', '/').contains(Mappings.getObfClass(s).replace('.', '/')))return false;
@@ -61,6 +61,7 @@ public class Transformers {
     }
 
     public static void init(){
+        Transformers.transformers.clear();
         transformers.add(new EntityPlayerSP());
 //
         transformers.add(new GuiIngameTransformer());

@@ -30,7 +30,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "LoadLibraryR.h"
-#include "jni.h"
+#include "../java/jni.h"
 
 #pragma comment(lib,"Advapi32.lib")
 
@@ -50,7 +50,7 @@ JNIEXPORT void JNICALL Java_fun_inject_InjectorUtils_injectorR
 	DWORD dwProcessId     = 0;
 	TOKEN_PRIVILEGES priv = {0};
 
-    const char * cpDllFile= (*env)->GetStringUTFChars(env, dll, NULL);
+    const char * cpDllFile= (*env)->GetStringUTFChars(env, dll, 0);
 
 	do
 	{
@@ -86,15 +86,16 @@ JNIEXPORT void JNICALL Java_fun_inject_InjectorUtils_injectorR
 			CloseHandle( hToken );
 		}
 
-		hProcess = OpenProcess( PROCESS_CREATE_THREAD | PROCESS_QUERY_INFORMATION | PROCESS_VM_OPERATION | PROCESS_VM_WRITE | PROCESS_VM_READ, FALSE, dwProcessId );
+		hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, dwProcessId );
+        //PROCESS_CREATE_THREAD | PROCESS_QUERY_INFORMATION | PROCESS_VM_OPERATION | PROCESS_VM_WRITE | PROCESS_VM_READ
 		if( !hProcess )
 			BREAK_WITH_ERROR( "Failed to open the target process" );
 
 		hModule = LoadRemoteLibraryR( hProcess, lpBuffer, dwLength, NULL );
 		if( !hModule )
-			BREAK_WITH_ERROR( "Failed to inject the DLL" );
+			BREAK_WITH_ERROR( "Failed to inject the DLL\n" );
 
-		printf( "[+] Injected the '%s' DLL into process %d.", cpDllFile, dwProcessId );
+		printf( "[+] Injected the '%s' DLL into process %d.\n", cpDllFile, dwProcessId );
 		
 		WaitForSingleObject( hModule, -1 );
 
@@ -105,5 +106,7 @@ JNIEXPORT void JNICALL Java_fun_inject_InjectorUtils_injectorR
 
 	if( hProcess )
 		CloseHandle( hProcess );
+    (*env)->ReleaseStringUTFChars(env,dll,cpDllFile);
+
 
 }

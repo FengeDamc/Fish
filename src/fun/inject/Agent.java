@@ -20,14 +20,18 @@ import org.objectweb.asm.tree.MethodNode;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import sun.tools.jar.resources.jar;
 
 import java.io.File;
 import java.io.IOException;
 import java.lang.instrument.*;
+import java.lang.reflect.AccessibleObject;
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.net.URLClassLoader;
 import java.security.ProtectionDomain;
 import java.util.HashMap;
 
@@ -48,7 +52,7 @@ public class Agent {
 
     public static ClassLoader classLoader=null;
     public static Logger logger= LogManager.getLogger("FunClient");
-    public synchronized static Class<?> findClass(String name) throws ClassNotFoundException {
+    public static Class<?> findClass(String name) throws ClassNotFoundException {
 
         return classLoader.loadClass(name.replace('/','.'));
     }
@@ -89,6 +93,9 @@ public class Agent {
         }
 
     }*/
+    private static void loadJar(URLClassLoader urlClassLoader, URL jar) throws Throwable {
+        NativeUtils.loadJar(urlClassLoader, jar);
+    }
 
     public static void start() throws URISyntaxException, IOException, InterruptedException {
         {
@@ -99,7 +106,7 @@ public class Agent {
             Class<?>[] loadedClasses = instrumentation.getAllLoadedClasses();
 
 
-            for (Class<?> c : loadedClasses) {
+            /*for (Class<?> c : loadedClasses) {
                 //classesMap.put(c.getName(),c);
                 //System.out.println(c.getName());
                 if ((c.getName().contains("Item") || c.getName().contains("zw")) && classLoader == null) {
@@ -107,13 +114,34 @@ public class Agent {
                     break;
                 }
                 //if(c.getName().contains("EntityPlayerSP")||c.getName().contains("Network"))logger.info(c.getName());
+            }*/
+            boolean running = true;
+            while (running) {
+                for (Object o : Thread.getAllStackTraces().keySet().toArray()) {
+                    Thread thread = (Thread) o;
+                    if (thread.getName().equals("Client thread")) {
+
+                        classLoader=thread.getContextClassLoader();
+                        running = false;
+                        break;
+                    }
+                }
             }
+            System.out.println(classLoader.getClass().getName());
+
             try {
-                if (!Agent.class.getClassLoader().equals(classLoader)) {
-                    ReflectionUtils.invokeMethod(classLoader, "addURL", new Class[]{URL.class}, Agent.class.getProtectionDomain().getCodeSource().getLocation());
-                    Agent.logger.info("added URL To CL");
+                if (ClassLoader.getSystemClassLoader()!=(classLoader)) {
+                    try {
+                        loadJar((URLClassLoader) classLoader,Agent.class.getProtectionDomain().getCodeSource().getLocation());
+                    } catch (Throwable e) {
+                        e.printStackTrace();
+                    }
+                    //ReflectionUtils.invokeMethod(classLoader, "addURL", new Class[]{URL.class}, Agent.class.getProtectionDomain().getCodeSource().getLocation());
+                    System.out.println("added URL To CL");
                 }
                 Class<?> agentClass = Agent.findClass("fun.inject.Agent");
+                //agentClass = Agent.findClass("fun.inject.Agent");
+
                 for (Method m : agentClass.getDeclaredMethods()) {
                     if (m.getName().equals("init")) {
                         m.invoke(null, classLoader);
@@ -126,7 +154,6 @@ public class Agent {
                 e.printStackTrace();
             }
 
-            logger.info(classLoader.getClass().getName());
             Transformers.init();
             transformer = new ClassTransformer();
             instrumentation.addTransformer(transformer, true);

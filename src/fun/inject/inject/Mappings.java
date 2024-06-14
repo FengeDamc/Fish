@@ -7,6 +7,7 @@ import fun.inject.Agent;
 import fun.inject.Main;
 import fun.inject.inject.asm.FishClassWriter;
 import fun.inject.inject.asm.api.Transformers;
+import fun.inject.inject.wrapper.impl.MinecraftWrapper;
 import fun.network.TCPClient;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.Type;
@@ -16,6 +17,7 @@ import org.objectweb.asm.tree.MethodNode;
 import org.lwjgl.opengl.Display;
 
 import java.io.*;
+import java.lang.reflect.Field;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
@@ -54,10 +56,10 @@ public class Mappings {
     static {
         if(Agent.isAgent){
             try {
-                Agent.findClass("net.minecraft.client.Minecraft");
-
-
-                Agent.minecraftType=MinecraftType.FORGE;
+                Class<?> c=Agent.findClass("net.minecraft.client.Minecraft");
+                Agent.minecraftType=MinecraftType.MCP;
+                if(MinecraftWrapper.get().getMinecraftObj()!=null)
+                    Agent.minecraftType=MinecraftType.FORGE;
 
             } catch (Exception e) {
 
@@ -128,13 +130,85 @@ public class Mappings {
 
 
     public static void readMappings(MinecraftVersion mcVer,MinecraftType mcType) throws IOException {
-            if(mcType==MinecraftType.FORGE)return;
-            InputStream fileIn = Agent.class.getResourceAsStream(InjectUtils.getSrg(mcVer,mcType));
+        if (mcType == MinecraftType.FORGE) {
+            return;
+        } else if (mcType == MinecraftType.MCP) {
+            if (mcVer == MinecraftVersion.VER_1710 || mcVer == MinecraftVersion.VER_189) {
+                InputStream f = Agent.class.getResourceAsStream(InjectUtils.getCvsF(mcVer));
+                InputStream m = Agent.class.getResourceAsStream(InjectUtils.getCvsM(mcVer));
+                BufferedReader bufferedreader = new BufferedReader(new InputStreamReader(m, StandardCharsets.UTF_8));
+                String line="";
+                while ((line = bufferedreader.readLine()) != null) {
+                    String[] parts = line.split(",");
+                    //srg mcp
+                    obfMethods.put(parts[0], parts[1]);
+                    unObfMethods.put(parts[1], parts[0]);
+                }
+                bufferedreader.close();
+
+                bufferedreader = new BufferedReader(new InputStreamReader(f, StandardCharsets.UTF_8));
+                while ((line = bufferedreader.readLine()) != null) {
+                    String[] parts = line.split(",");
+                    //srg mcp
+
+                    obfFields.put(parts[0], parts[1]);
+                    unObfFields.put(parts[1], parts[0]);
+                }
+                bufferedreader.close();
+                f.close();
+                m.close();
+            } else {
+                InputStream mcp = Agent.class.getResourceAsStream(InjectUtils.getSrg(mcVer, mcType));
+
+                BufferedReader bufferedreader = new BufferedReader(
+                        new InputStreamReader(mcp,
+                                StandardCharsets.UTF_8));
+
+                String line = "";
+                while ((line = bufferedreader.readLine()) != null) {
+                    String[] split = line.split(" ");
+                    try {
+                        if (line.startsWith("\t")) {
+                            if (split.length > 2) {//method
+                                //0   1    2
+                                //mcp desc srg
+                                obfMethods.put(split[2],split[0].substring(1));
+                                unObfMethods.put(split[0].substring(1),split[2]);
+
+
+                            } else {
+                                //field
+                                //0   1
+                                //mcp srg
+                                obfFields.put(split[1],split[0].substring(1));
+                                unObfFields.put(split[0].substring(1),split[1]);
+
+                            }
+                        } else {
+                            //class
+                            //0   1
+                            //mcp friendly
+                            obfClass.put(split[1], split[0]);
+                            unobfClass.put(split[0], split[1]);
+
+
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+                bufferedreader.close();
+            }
+
+
+        }
+        else{
+            InputStream fileIn = Agent.class.getResourceAsStream(InjectUtils.getSrg(mcVer, mcType));
             InputStream f = Agent.class.getResourceAsStream(InjectUtils.getCvsF(mcVer));
             InputStream m = Agent.class.getResourceAsStream(InjectUtils.getCvsM(mcVer));
 
 
-            if(mcVer==MinecraftVersion.VER_189){
+            if (mcVer == MinecraftVersion.VER_189) {
                 BufferedReader bufferedreader = new BufferedReader(
                         new InputStreamReader(fileIn,
                                 StandardCharsets.UTF_8));
@@ -197,15 +271,14 @@ public class Mappings {
                 fileIn.close();
                 //Agent.logger.info(getObfClass("net/minecraft/client/Minecraft"));
 
-            }
-            else{
+            } else {
                 BufferedReader bufferedreader = new BufferedReader(
                         new InputStreamReader(fileIn,
                                 StandardCharsets.UTF_8));
 
                 String line = "";
-                while ((line = bufferedreader.readLine()) != null){
-                    String[] split=line.split(" ");
+                while ((line = bufferedreader.readLine()) != null) {
+                    String[] split = line.split(" ");
                     try {
                         if (line.startsWith("\t")) {
                             if (split.length > 2) {//method
@@ -232,15 +305,15 @@ public class Mappings {
 
 
                         }
-                    }
-                    catch (Exception e){
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
                 bufferedreader.close();
-            }
-            Agent.logger.info("readmappings");
+        }
+        Agent.logger.info("readmappings");
         //BufferedReader =new BufferedReader(new FileReader());
+    }
 
 
     }

@@ -34,7 +34,6 @@ public class TCPClient {
         } catch (UnknownHostException e) {
             System.err.println("无法识别的主机或客户端还未初始化完成: " + host);
         } catch (Exception e) {
-            e.printStackTrace();
         }
     }
     public static void review(String mess){

@@ -128,7 +128,12 @@ public class ReflectionUtils {
                 } catch (NoSuchMethodException | SecurityException exception) {
                     method = c.getMethod(name, desc);
                 }
-                method.setAccessible(true);
+                try {
+                    method.setAccessible(true);
+                }
+                catch (Exception e){
+
+                }
                 return method.invoke(instance, args);
             } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException ignored) {
             }
