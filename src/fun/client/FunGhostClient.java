@@ -4,17 +4,25 @@ import com.darkmagician6.eventapi.EventManager;
 import com.darkmagician6.eventapi.event.events.EventRender3D;
 import fun.client.mods.ModuleManager;
 import fun.client.settings.SettingsManager;
+import fun.inject.inject.asm.api.Transformers;
 
 public class FunGhostClient {
-    public static SettingsManager settingsManager=new SettingsManager();
-    public static ModuleManager moduleManager=new ModuleManager();
+    public static SettingsManager settingsManager;
+    public static ModuleManager moduleManager;
     public static void init(){
             try{
+                settingsManager=new SettingsManager();
+                moduleManager=new ModuleManager();
                 moduleManager.init();
             }
             catch (Exception e){
                 e.printStackTrace();
             }
+    }
+    public static void destroyClient() {
+        moduleManager.mods.clear();
+        settingsManager.getSettings().clear();
+        Transformers.transformers.clear();
     }
     public static void onRender3D(float f){
         EventManager.call(new EventRender3D((f)));

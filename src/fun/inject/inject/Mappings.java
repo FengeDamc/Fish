@@ -57,9 +57,11 @@ public class Mappings {
         if(Agent.isAgent){
             try {
                 Class<?> c=Agent.findClass("net.minecraft.client.Minecraft");
-                Agent.minecraftType=MinecraftType.MCP;
-                if(MinecraftWrapper.get().getMinecraftObj()!=null)
-                    Agent.minecraftType=MinecraftType.FORGE;
+                if(c!=null) {
+                    Agent.minecraftType = MinecraftType.MCP;
+                    if (MinecraftWrapper.get().getMinecraftObj() != null)
+                        Agent.minecraftType = MinecraftType.FORGE;
+                }
 
             } catch (Exception e) {
 

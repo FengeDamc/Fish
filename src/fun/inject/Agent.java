@@ -52,9 +52,14 @@ public class Agent {
 
     public static ClassLoader classLoader=null;
     public static Logger logger= LogManager.getLogger("FunClient");
-    public static Class<?> findClass(String name) throws ClassNotFoundException {
+    public static Class<?> findClass(String name) {
 
-        return classLoader.loadClass(name.replace('/','.'));
+        try {
+            return classLoader.loadClass(name.replace('/','.'));
+        } catch (ClassNotFoundException e) {
+
+        }
+        return null;
     }
 
 

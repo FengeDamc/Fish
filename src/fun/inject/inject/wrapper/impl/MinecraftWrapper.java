@@ -218,7 +218,7 @@ public class MinecraftWrapper extends Wrapper {
     public void addScheduledTask(Runnable runnable) {
         try {
             ReflectionUtils.invokeMethod(minecraftObj,Mappings.getObfMethod("func_152344_a"),new Class[]{Agent.findClass("java/lang/Runnable")},runnable);
-        } catch (ClassNotFoundException e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }

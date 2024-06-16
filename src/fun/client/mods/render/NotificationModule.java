@@ -14,11 +14,11 @@ public class NotificationModule extends Module {
         super("Notification",Category.RENDER);
     }
     public void post(Notification notification){
-        notifications.add(notification);
+        if(notification.type== Notification.Type.WHITE||isRunning())notifications.add(notification);
     }
 
-    @Override
-    public void onRender2D(EventRender2D event) {
+
+    public void render(EventRender2D event) {
         super.onRender2D(event);
         ArrayList<Notification> removes=new ArrayList<>();
         for (int i = 0, notificationsSize = notifications.size(); i < notificationsSize; i++) {

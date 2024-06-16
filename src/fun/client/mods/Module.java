@@ -16,6 +16,7 @@ public class Module {
     public int key;
     public Category category;
     public String name;
+    public int toggleTick=0;
     public MinecraftWrapper mc=MinecraftWrapper.get();
     public ConfigModule configModule =null;
 

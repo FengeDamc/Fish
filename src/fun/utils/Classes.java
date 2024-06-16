@@ -43,11 +43,8 @@ public enum Classes {
     Classes(String name){
         this.obf_name =Mappings.getObfClass(name);
         this.friendly_name=name;
-        try {
-            this.clazz = Agent.findClass(this.obf_name);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
+        this.clazz = Agent.findClass(this.obf_name);
+
 
     }
     Classes(VClass... vClasses){

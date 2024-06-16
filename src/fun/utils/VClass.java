@@ -13,11 +13,8 @@ public class VClass extends Version{
     VClass(String name){
             this.obf_name = Mappings.getObfClass(name);
             this.friendly_name=name;
-            try {
-                this.clazz = Agent.findClass(this.obf_name);
-            } catch (ClassNotFoundException e) {
+            this.clazz = Agent.findClass(this.obf_name);
 
-            }
     }
 
     public boolean isInstanceof(Object obj){

@@ -10,7 +10,8 @@ import java.awt.*;
 public class Notification {
     public enum Type{
         GREEN(new Color(0x739CFFCC, true)),
-        RED(new Color(0x73FF5555, true));
+        RED(new Color(0x73FF5555, true)),
+        WHITE(new Color(255,255,255,100));
         public final Color color;
         Type(Color c){
             color=c;

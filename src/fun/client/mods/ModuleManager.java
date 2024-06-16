@@ -12,6 +12,7 @@ import fun.client.mods.render.HUD;
 import fun.client.mods.render.NotificationModule;
 import fun.client.mods.world.Eagle;
 import fun.inject.inject.wrapper.impl.setting.GameSettingsWrapper;
+import fun.utils.render.Notification;
 import org.lwjgl.input.Mouse;
 
 import java.util.ArrayList;
@@ -49,6 +50,7 @@ public class ModuleManager {
         autoBlocking=new AutoBlocking();
         notification=new NotificationModule();
         target=new Target();
+        notification.post(new Notification("Fish Injected", Notification.Type.WHITE));
     }
 
     @EventTarget
@@ -57,7 +59,9 @@ public class ModuleManager {
         for (Module m : FunGhostClient.moduleManager.mods) {
             //Agent.logger.info(m.getName());
 
-            if (m.running) m.onUpdate(event);
+            if (m.running) {
+                m.onUpdate(event);
+            }
         }
 
 
@@ -100,7 +104,9 @@ public class ModuleManager {
     @EventTarget
     public void onKey(EventKey event) {
         for (Module m : mods) {
-            if (event.key != 0 && event.key == m.key) m.setRunning(!m.running);
+            if (event.key != 0 && event.key == m.key) {
+                m.setRunning(!m.running);
+            }
             if (m.running) m.onKey(event);
         }
         if (event.key == 1) ConfigModule.saveConfig();
@@ -120,6 +126,7 @@ public class ModuleManager {
         for (Module m : mods) {
             if (m.running) m.onRender2D(event);
         }
+        notification.render(event);
     }
 
     @EventTarget
@@ -146,7 +153,10 @@ public class ModuleManager {
         mc.getGameSettings().getKey(GameSettingsWrapper.USE).setPressed(Mouse.isButtonDown(1));
         mc.getGameSettings().getKey(GameSettingsWrapper.ATTACK).setPressed(Mouse.isButtonDown(0));
         for (Module m : mods) {
-            if (m.running) m.onTick(event);
+            if (m.running){
+
+                m.onTick(event);
+            }
         }
     }
 

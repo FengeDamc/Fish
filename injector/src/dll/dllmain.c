@@ -388,11 +388,14 @@ DWORD WINAPI Main() {
     printf("%d",i);//3
     free(c_);
     i++;
+    SetH
     //todo-----------
-    if ((*java.vm)->AttachCurrentThread(java.vm, (void **)(&java.jniEnv), NULL) != JNI_OK) {
+    ((*java.vm)->AttachCurrentThread(java.vm, (void **)(&java.jniEnv), NULL) != JNI_OK) {
         MessageBoxA(NULL, "NO", "FishCient", 0);
         return 0;
     }
+
+    (*java.vm)->GetEnv(java.vm,(void **)java.jniEnv,JNI_EVERSION);
     //todo-----------vvv
     c_ = (char *) allocate(4);
     printf("%d",i);//4
@@ -400,6 +403,7 @@ DWORD WINAPI Main() {
     i++;
     //todo-----------^^^
     //
+
 
     (*java.vm)->GetEnv(java.vm, (void **) (&java.jvmtiEnv),JVMTI_VERSION);
     //todo-----------

@@ -37,6 +37,7 @@ public class Main {
     public static String dllpath = "libagent.dll";
     public static String mcPath=System.getProperty("user.dir");
     public static boolean started=false;
+    public static String pid;
     public static final int SERVERPORT=17573;
     public static Injector injector;
     static {
@@ -49,9 +50,9 @@ public class Main {
             Agent.classLoader=Main.class.getClassLoader();
             TCPServer.startServer(SERVERPORT);
             Method addURL = null;
-            int pid=0;
+
             try {
-                pid = InjectUtils.getMinecraftProcessId();
+                pid = String.valueOf(InjectUtils.getMinecraftProcessId());
             } catch (InterruptedException e) {
 
             }
@@ -71,7 +72,7 @@ public class Main {
 
             }
             File dll=new File(path,dllpath);
-            InjectorUtils.injectorR(pid,dll.getAbsolutePath());//这边正在抄袭反射dll注入
+            InjectorUtils.injectorR(Integer.parseInt(pid),dll.getAbsolutePath());//这边正在抄袭反射dll注入
             System.out.println("injected in:"+pid);
 
 

@@ -90,10 +90,12 @@ public class TCPServer {
     }
     public static MinecraftVersion getVersion(){
         for (VirtualMachineDescriptor virtualMachineDescriptor : VirtualMachine.list()) {
-            System.out.println(virtualMachineDescriptor.displayName());
-            for (MinecraftVersion mcVer : MinecraftVersion.values()) {
-                if (virtualMachineDescriptor.displayName().contains(mcVer.getGeneralVer())) {
-                    return mcVer;
+            if(virtualMachineDescriptor.id().equals(Main.pid)) {
+                System.out.println(virtualMachineDescriptor.displayName());
+                for (MinecraftVersion mcVer : MinecraftVersion.values()) {
+                    if (virtualMachineDescriptor.displayName().contains(mcVer.getGeneralVer())) {
+                        return mcVer;
+                    }
                 }
             }
         }

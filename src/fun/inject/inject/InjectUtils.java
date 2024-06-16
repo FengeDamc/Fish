@@ -18,6 +18,7 @@ import org.apache.commons.io.IOUtils;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.instrument.UnmodifiableClassException;
+import java.lang.reflect.InvocationTargetException;
 
 public class InjectUtils {
 
@@ -80,7 +81,12 @@ public class InjectUtils {
                 e.printStackTrace();
             }
         });
+        try {
+            Agent.findClass("fun.client.FunGhostClient").getDeclaredMethod("destroyClient").invoke(null);
+        } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
+            e.printStackTrace();
 
+        }
 
 
         //NativeUtils.freeLibrary();
