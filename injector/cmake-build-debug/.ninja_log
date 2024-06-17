@@ -24,3 +24,6 @@
 6	834	7403319399453849	CMakeFiles/agent.dir/src/dll/dllmain.c.obj	efd2a3b7410edfd5
 834	920	7403319408514231	bin/libagent.dll	ef8891a156dfe8f8
 834	920	7403319408514231	bin/libagent.dll.a	ef8891a156dfe8f8
+6	918	7403329518811232	CMakeFiles/agent.dir/src/dll/dllmain.c.obj	efd2a3b7410edfd5
+918	1012	7403329528800524	bin/libagent.dll	ef8891a156dfe8f8
+918	1012	7403329528800524	bin/libagent.dll.a	ef8891a156dfe8f8
