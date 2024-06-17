@@ -36,6 +36,7 @@ public class FishFrame extends JFrame {
         } catch (Exception e) {
             init0();
 
+
             //e.printStackTrace();
         }
     }

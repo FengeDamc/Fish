@@ -2,13 +2,13 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "libagent.dll"
+			"path" : "bin/libinjector.dll"
 		},
 		{
-			"path" : "libagent.dll.a"
+			"path" : "bin/libinjector.dll.a"
 		},
 		{
-			"path" : "libagent.pdb"
+			"path" : "bin/libinjector.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -30,7 +30,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 14,
+				"line" : 13,
 				"parent" : 0
 			}
 		]
@@ -47,7 +47,7 @@
 			"defines" : 
 			[
 				{
-					"define" : "agent_EXPORTS"
+					"define" : "injector_EXPORTS"
 				}
 			],
 			"language" : "C",
@@ -59,7 +59,7 @@
 			]
 		}
 	],
-	"id" : "agent::@6890427a1f51a3e7e1df",
+	"id" : "injector::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -75,8 +75,8 @@
 		],
 		"language" : "C"
 	},
-	"name" : "agent",
-	"nameOnDisk" : "libagent.dll",
+	"name" : "injector",
+	"nameOnDisk" : "libinjector.dll",
 	"paths" : 
 	{
 		"build" : ".",
@@ -99,19 +99,19 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/dll/utils.c",
+			"path" : "src/injector/Inject.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/dll/dllmain.c",
+			"path" : "src/injector/GetProcAddressR.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/dll/ReflectiveLoader.c",
+			"path" : "src/injector/LoadLibraryR.c",
 			"sourceGroupIndex" : 0
 		}
 	],

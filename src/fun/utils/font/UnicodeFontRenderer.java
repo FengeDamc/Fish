@@ -3,7 +3,7 @@ package fun.utils.font;
 import fun.inject.inject.wrapper.impl.MinecraftWrapper;
 import fun.inject.inject.wrapper.impl.gui.ScaledResolutionWrapper;
 import fun.inject.inject.wrapper.impl.render.GlStateManagerWrapper;
-import net.minecraft.client.Minecraft;
+
 
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.GL11;

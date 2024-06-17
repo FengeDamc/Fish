@@ -73,5 +73,6 @@
     <orderEntry type="library" name="net.java.dev.jna" level="project" />
     <orderEntry type="library" name="jna" level="project" />
     <orderEntry type="library" name="ow2.asm.tree" level="project" />
+    <orderEntry type="library" name="flatlaf-3.1.1" level="project" />
   </component>
 </module>

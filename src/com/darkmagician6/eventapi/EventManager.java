@@ -12,8 +12,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import com.darkmagician6.eventapi.event.Event;
 import com.darkmagician6.eventapi.event.EventStoppable;
 import com.darkmagician6.eventapi.types.Priority;
-import fun.inject.Agent;
-import javafx.animation.Animation;
+
 
 /**
  * 

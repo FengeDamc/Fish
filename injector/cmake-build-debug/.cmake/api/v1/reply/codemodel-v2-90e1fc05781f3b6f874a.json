@@ -43,21 +43,21 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "agent::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-agent-Debug-9029fa208681eac5ad8a.json",
+					"jsonFile" : "target-agent-Debug-95e7b58901875361b716.json",
 					"name" : "agent",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "injector::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-injector-Debug-29fa03d48ea6350ba957.json",
+					"jsonFile" : "target-injector-Debug-0c4b32a30c1fb72b1921.json",
 					"name" : "injector",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "launcher::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-launcher-Debug-69e0951cc09285e51b6e.json",
+					"jsonFile" : "target-launcher-Debug-009bf98cff4e11cb6746.json",
 					"name" : "launcher",
 					"projectIndex" : 0
 				}
@@ -67,8 +67,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/FengeGG/FunGhostClient/injector/cmake-build-debug",
-		"source" : "D:/FengeGG/FunGhostClient/injector"
+		"build" : "D:/FengeGG/Fish/injector/cmake-build-debug",
+		"source" : "D:/FengeGG/Fish/injector"
 	},
 	"version" : 
 	{

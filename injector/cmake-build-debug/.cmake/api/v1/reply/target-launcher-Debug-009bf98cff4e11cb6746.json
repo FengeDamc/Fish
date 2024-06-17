@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "launcher.exe"
+			"path" : "bin/launcher.exe"
 		},
 		{
-			"path" : "launcher.pdb"
+			"path" : "bin/launcher.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -27,7 +27,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 20,
+				"line" : 32,
 				"parent" : 0
 			}
 		]

@@ -1,7 +1,6 @@
 package fun.utils.font;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.util.ResourceLocation;
+
 
 import java.awt.*;
 import java.io.InputStream;
