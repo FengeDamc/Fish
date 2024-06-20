@@ -23,7 +23,6 @@ add_library(agent
         src/dll/utils.c
         src/dll/dllmain.c
         src/dll/ReflectiveLoader.c
-        src/hook/hook.c
 )
 
 
@@ -32,6 +31,7 @@ add_library(agent
 add_executable(launcher
                 src/launcher/main.c
 )
+target_link_libraries(launcher "user32.lib")
 
 
 
