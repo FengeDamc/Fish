@@ -477,7 +477,6 @@ extern DWORD JNICALL Inject(JAVA java){
 
     (*Java->jniEnv)->CallStaticVoidMethod(Java->jniEnv,agent, start);
     //MessageBoxA(NULL, "started", "FunGhostClient", 0);
-    (*Java->jniEnv)->DefineClass
 
     //if(!hook)
     return 0;

@@ -148,17 +148,19 @@ public class Agent {
         classLoader=cl;
         isAgent=true;
 
+        MinecraftWrapper.get().addScheduledTask(() -> {
+            FunGhostClient.init();
 
+
+            ConfigModule.loadConfig();
+            TCPClient.send(Main.SERVERPORT,"mcpath "+ System.getProperty("user.dir"));
+            TCPServer.startServer(SERVERPORT);
+            FontManager.init();
+
+            logger.info("o god start!");
+        });
         //logger.info("start init");
-        FunGhostClient.init();
 
-
-        ConfigModule.loadConfig();
-        TCPClient.send(Main.SERVERPORT,"mcpath "+ System.getProperty("user.dir"));
-        TCPServer.startServer(SERVERPORT);
-        FontManager.init();
-
-        logger.info("o god start!");
 
 
 
