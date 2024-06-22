@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Main-Class: net.fun.inject.Main
+Main-Class: com.fun.inject.Main
 Can-Redefine-Classes: true
 Can-Retransform-Classes: true
 

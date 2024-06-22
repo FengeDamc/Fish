@@ -1,8 +1,7 @@
 package com.darkmagician6.eventapi.event.events;
 
 
-import com.sun.xml.internal.fastinfoset.stax.events.EventBase;
-import net.fun.inject.inject.wrapper.impl.MinecraftWrapper;
+import com.fun.inject.inject.wrapper.impl.MinecraftWrapper;
 
 public class EventStrafe extends Event {
     public float forward,strafe, friction;

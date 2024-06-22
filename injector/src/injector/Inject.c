@@ -37,7 +37,7 @@
 #define BREAK_WITH_ERROR( e ) { printf( "[-] %s. Error=%d", e, GetLastError() ); break; }
 
 // Simple app to inject a reflective DLL into a process vis its process ID.
-JNIEXPORT void JNICALL Java_net_fun_inject_InjectorUtils_injectorR
+JNIEXPORT void JNICALL Java_com_fun_inject_InjectorUtils_injectorR
         (JNIEnv * env, jclass c, jint pid,jstring dll)
 {
 	HANDLE hFile          = NULL;
