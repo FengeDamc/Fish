@@ -9,147 +9,128 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="更新了注入网易(all)">
-      <change afterPath="$PROJECT_DIR$/a.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/com/google/guava/guava/21.0/guava-21.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/com/ibm/icu/icu4j/66.1/icu4j-66.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/com/mojang/authlib/1.5.25/authlib-1.5.25.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/com/mojang/authlib/2.1.28/authlib-2.1.28.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/com/mojang/brigadier/1.0.17/brigadier-1.0.17.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/com/mojang/datafixerupper/2.0.24/datafixerupper-2.0.24.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/com/mojang/datafixerupper/4.0.26/datafixerupper-4.0.26.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/com/mojang/javabridge/1.0.22/javabridge-1.0.22.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/com/mojang/patchy/1.3.9/patchy-1.3.9.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/com/mojang/realms/1.10.22/realms-1.10.22.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/com/mojang/realms/1.7.59/realms-1.7.59.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/com/mojang/text2speech/1.10.3/text2speech-1.10.3-natives-windows.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/com/mojang/text2speech/1.10.3/text2speech-1.10.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/com/mojang/text2speech/1.11.3/text2speech-1.11.3-natives-windows.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/com/mojang/text2speech/1.11.3/text2speech-1.11.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/com/typesafe/akka/akka-actor_2.11/2.3.3/akka-actor_2.11-2.3.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/com/typesafe/config/1.2.1/config-1.2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/commons-codec/commons-codec/1.10/commons-codec-1.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/commons-io/commons-io/2.5/commons-io-2.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/io/netty/netty-all/4.1.25.Final/netty-all-4.1.25.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/io/netty/netty-all/4.1.9.Final/netty-all-4.1.9.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/it/unimi/dsi/fastutil/7.1.0/fastutil-7.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/it/unimi/dsi/fastutil/8.2.1/fastutil-8.2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/java3d/vecmath/1.5.2/vecmath-1.5.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/jline/jline/2.13/jline-2.13.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/lzma/lzma/0.0.1/lzma-0.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/net/java/dev/jna/jna/4.4.0/jna-4.4.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/net/minecraft/launchwrapper/1.12/launchwrapper-1.12.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/net/minecraftforge/forge/1.8.9-11.15.1.2318-1.8.9/forge-1.8.9-11.15.1.2318-1.8.9.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/net/sf/jopt-simple/jopt-simple/5.0.3/jopt-simple-5.0.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/net/sf/trove4j/trove4j/3.0.3/trove4j-3.0.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/optifine/OptiFine/1.8.9_HD_U_M5/OptiFine-1.8.9_HD_U_M5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/apache/logging/log4j/log4j-api/2.8.1/log4j-api-2.8.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/apache/logging/log4j/log4j-core/2.8.1/log4j-core-2.8.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/lwjgl/lwjgl-glfw/3.2.2/lwjgl-glfw-3.2.2-natives-windows.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/lwjgl/lwjgl-glfw/3.2.2/lwjgl-glfw-3.2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/lwjgl/lwjgl-jemalloc/3.2.2/lwjgl-jemalloc-3.2.2-natives-windows.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/lwjgl/lwjgl-jemalloc/3.2.2/lwjgl-jemalloc-3.2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/lwjgl/lwjgl-openal/3.2.2/lwjgl-openal-3.2.2-natives-windows.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/lwjgl/lwjgl-openal/3.2.2/lwjgl-openal-3.2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/lwjgl/lwjgl-opengl/3.2.2/lwjgl-opengl-3.2.2-natives-windows.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/lwjgl/lwjgl-opengl/3.2.2/lwjgl-opengl-3.2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/lwjgl/lwjgl-stb/3.2.2/lwjgl-stb-3.2.2-natives-windows.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/lwjgl/lwjgl-stb/3.2.2/lwjgl-stb-3.2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/lwjgl/lwjgl-tinyfd/3.2.2/lwjgl-tinyfd-3.2.2-natives-windows.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/lwjgl/lwjgl-tinyfd/3.2.2/lwjgl-tinyfd-3.2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/lwjgl/lwjgl/3.2.2/lwjgl-3.2.2-natives-windows.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/lwjgl/lwjgl/3.2.2/lwjgl-3.2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/ow2/asm/asm-all/5.0.3/asm-all-5.0.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/scala-lang/plugins/scala-continuations-library_2.11/1.0.2/scala-continuations-library_2.11-1.0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/scala-lang/plugins/scala-continuations-plugin_2.11.1/1.0.2/scala-continuations-plugin_2.11.1-1.0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/scala-lang/scala-actors-migration_2.11/1.1.0/scala-actors-migration_2.11-1.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/scala-lang/scala-compiler/2.11.1/scala-compiler-2.11.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/scala-lang/scala-library/2.11.1/scala-library-2.11.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/scala-lang/scala-parser-combinators_2.11/1.0.1/scala-parser-combinators_2.11-1.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/scala-lang/scala-reflect/2.11.1/scala-reflect-2.11.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/scala-lang/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libraries/org/scala-lang/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/IOUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/ClassLoaderTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/FunGhostClient_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/FunGhostClient_jar.xml" afterDir="false" />
+    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="更新了注入网易">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/launchwrapper_1_12__3_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/WYGameState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/other/TeamWrapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/injector/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FunGhostClient.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FunGhostClient.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/agent.dir/src/dll/dllmain.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/agent.dir/src/dll/dllmain.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/injector.dir/src/injector/Inject.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/injector.dir/src/injector/Inject.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/injector/src/dll/dllmain.c" beforeDir="false" afterPath="$PROJECT_DIR$/injector/src/dll/dllmain.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/libraries/commons-io/commons-io/2.4/commons-io-2.4.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libraries/commons-io/commons-io/2.4/commons-io-2.4.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/libraries/net/java/dev/jna/platform/3.4.0/platform-3.4.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libraries/net/java/dev/jna/platform/3.4.0/platform-3.4.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/libraries/org/apache/logging/log4j/log4j-api/2.0-beta9/log4j-api-2.0-beta9.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libraries/org/apache/logging/log4j/log4j-api/2.0-beta9/log4j-api-2.0-beta9.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/libraries/org/apache/logging/log4j/log4j-core/2.0-beta9/log4j-core-2.0-beta9.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libraries/org/apache/logging/log4j/log4j-core/2.0-beta9/log4j-core-2.0-beta9.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/EventAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/eventapi/EventAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/EventManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/eventapi/EventManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/EventTarget.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/eventapi/EventTarget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/event/Cancellable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/eventapi/event/Cancellable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/event/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/eventapi/event/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/event/EventStoppable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/eventapi/event/EventStoppable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/event/Typed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/eventapi/event/Typed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/event/callables/EventCancellable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/eventapi/event/callables/EventCancellable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/event/callables/EventTyped.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/eventapi/event/callables/EventTyped.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/event/events/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/eventapi/event/events/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/event/events/EventAttackReach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/eventapi/event/events/EventAttackReach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/event/events/EventBlockReach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/eventapi/event/events/EventBlockReach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/event/events/EventKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/eventapi/event/events/EventKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/event/events/EventMoment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/eventapi/event/events/EventMoment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/event/events/EventMotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/eventapi/event/events/EventMotion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/event/events/EventPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/eventapi/event/events/EventPacket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/event/events/EventRender2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/eventapi/event/events/EventRender2D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/event/events/EventRender3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/eventapi/event/events/EventRender3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/event/events/EventStrafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/eventapi/event/events/EventStrafe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/event/events/EventTick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/eventapi/event/events/EventTick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/event/events/EventUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/eventapi/event/events/EventUpdate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/types/EventType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/eventapi/types/EventType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/types/Priority.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/eventapi/types/Priority.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/FunGhostClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/FunGhostClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/Module.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/Module.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/ModuleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/ModuleManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/combat/AimBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/combat/AimBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/combat/AutoBlocking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/combat/AutoBlocking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/combat/AutoClicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/combat/AutoClicker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/combat/Reach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/combat/Reach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/combat/Target.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/combat/Target.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/combat/Velocity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/combat/Velocity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/movement/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/movement/Flight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/movement/KeepSprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/movement/KeepSprint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/render/HUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/render/HUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/render/NotificationModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/render/NotificationModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/world/Eagle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/world/Eagle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/utils/Rotation/Rotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/utils/Rotation/Rotation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/gui/FishFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/gui/FishFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/gui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/gui/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/Agent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/NativeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/NativeUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/InjectUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/InjectUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/Mappings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/Mappings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/api/Transformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/api/Transformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/api/Transformers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/api/Transformers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/EntityPlayerSP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/EntityPlayerSP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/EntityRendererTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/EntityRendererTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/EntityTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/EntityTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/GuiIngameTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/GuiIngameTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/KeyBindTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/KeyBindTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/MinecraftTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/MinecraftTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/NetworkManagerTransFormer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/NetworkManagerTransFormer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/dynamic/Dynamics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/dynamic/Dynamics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/HitResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/HitResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/entity/EntityPlayerSPWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/entity/EntityPlayerSPWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/world/BlockPosWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/world/BlockPosWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/Classes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/Classes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/MathHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/MathHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/Methods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/PacketUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/PacketUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/Vec3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/vecmath/Vec3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/Vec3i.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/vecmath/Vec3i.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/font/FontManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/font/FontManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/font/UnicodeFontRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/font/UnicodeFontRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/render/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/render/Notification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/injector/src/injector/Inject.c" beforeDir="false" afterPath="$PROJECT_DIR$/injector/src/injector/Inject.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/launchwrapper-1.12.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/launchwrapper-1.12.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HackInst.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HackInst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/event/events/EventStrafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/darkmagician6/eventapi/event/events/EventStrafe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/client/FunGhostClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/FunGhostClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/client/command/CommandHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/command/CommandHandle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/client/config/ConfigModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/config/ConfigModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/client/mods/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/client/mods/Module.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/Module.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/client/mods/ModuleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/ModuleManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/client/mods/combat/AimBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/combat/AimBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/client/mods/combat/AutoBlocking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/combat/AutoBlocking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/client/mods/combat/AutoClicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/combat/AutoClicker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/client/mods/combat/Reach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/combat/Reach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/client/mods/combat/Target.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/combat/Target.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/client/mods/combat/Velocity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/combat/Velocity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/client/mods/movement/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/movement/Flight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/client/mods/movement/KeepSprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/movement/KeepSprint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/client/mods/render/HUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/render/HUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/client/mods/render/NotificationModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/render/NotificationModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/client/mods/world/Eagle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/world/Eagle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/client/settings/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/settings/Setting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/client/settings/SettingsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/settings/SettingsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/client/utils/ColorUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/utils/ColorUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/client/utils/Rotation/Rotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/utils/Rotation/Rotation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/gui/FishFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/gui/FishFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/gui/Injector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/gui/Injector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/gui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/gui/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/gui/VerticalFlowLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/gui/VerticalFlowLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/Agent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/InjectorUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/InjectorUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/Native.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/Native.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/NativeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/NativeUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/file/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/file/FileUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/fun_inject_InjectorUtils.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/fun_inject_NativeUtils.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/InjectUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/InjectUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/Mappings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/Mappings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/MinecraftType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/MinecraftType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/MinecraftVersion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/MinecraftVersion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/ReflectionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/ReflectionUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/ViaVersionHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/ViaVersionHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/WindowEnumerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/WindowEnumerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/asm/FishClassWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/FishClassWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/asm/api/Inject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/api/Inject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/asm/api/Mixin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/api/Mixin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/asm/api/Transformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/api/Transformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/asm/api/Transformers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/api/Transformers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/asm/transformers/EntityPlayerSP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/EntityPlayerSP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/asm/transformers/EntityRendererTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/EntityRendererTransformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/asm/transformers/EntityTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/EntityTransformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/asm/transformers/GuiIngameTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/GuiIngameTransformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/asm/transformers/GuiScreenTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/GuiScreenTransformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/asm/transformers/KeyBindTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/KeyBindTransformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/asm/transformers/MinecraftTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/MinecraftTransformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/asm/transformers/NetworkHandlerTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/NetworkHandlerTransformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/asm/transformers/NetworkManagerTransFormer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/NetworkManagerTransFormer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/dynamic/Dynamic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/dynamic/Dynamic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/dynamic/Dynamics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/dynamic/Dynamics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/dynamic/impl/gui/GuiScreenDynamic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/dynamic/impl/gui/GuiScreenDynamic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/Wrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/Wrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/HitResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/HitResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/MinecraftWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/MinecraftWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/entity/EntityPlayerSPWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/entity/EntityPlayerSPWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/entity/EntityPlayerWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/entity/EntityPlayerWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/entity/EntityWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/entity/EntityWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/gui/GuiWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/gui/GuiWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/gui/ScaledResolutionWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/gui/ScaledResolutionWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/network/NetHandlerPlayClientWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/network/NetHandlerPlayClientWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/network/NetworkManagerWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/network/NetworkManagerWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/network/packets/PacketWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/network/packets/PacketWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/network/packets/server/S12PacketEntityVelocity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/network/packets/server/S12PacketEntityVelocity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/other/IChatComponentWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/other/IChatComponentWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/other/MovementInputWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/other/MovementInputWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/other/TeamWrapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/other/TimerWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/other/TimerWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/render/EntityRendererWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/render/EntityRendererWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/render/FontRendererWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/render/FontRendererWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/render/FramebufferWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/render/FramebufferWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/render/GlStateManagerWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/render/GlStateManagerWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/render/RenderManagerWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/render/RenderManagerWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/setting/GameSettingsWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/setting/GameSettingsWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/setting/KeyBindingWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/setting/KeyBindingWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/world/BlockPosWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/world/BlockPosWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/world/BlockWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/world/BlockWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/world/IBlockStateWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/world/IBlockStateWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/world/MaterialWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/world/MaterialWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/world/Vec3Wrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/world/Vec3Wrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/inject/inject/wrapper/impl/world/WorldClientWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/world/WorldClientWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/network/TCPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/network/TCPClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/network/TCPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/network/TCPServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/utils/Classes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/Classes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/utils/Fields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/Fields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/utils/MathHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/MathHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/utils/Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/Methods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/utils/PacketUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/PacketUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/utils/VClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/VClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/utils/VField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/VField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/utils/VMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/VMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/utils/VRunable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/VRunable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/utils/Vec3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/Vec3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/utils/Vec3i.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/Vec3i.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/utils/Version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/Version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/utils/font/FontManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/font/FontManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/utils/font/UnicodeFontRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/font/UnicodeFontRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/utils/render/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/render/Notification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/fun/utils/render/RenderUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/render/RenderUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,12 +176,6 @@
     &quot;accountId&quot;: &quot;5d612265-8c28-49d3-a5eb-b135d93324da&quot;
   }
 }</component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$USER_HOME$/.jdks/azul-1.8.0_412/src.zip!/java/lang/ClassLoader.java" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.jdks/azul-1.8.0_412/src.zip!/java/net/URLClassLoader.java" root0="SKIP_INSPECTION" />
-    <setting file="jar://$PROJECT_DIR$/lib/asm-9.6.jar!/org/objectweb/asm/ClassReader.class" root0="SKIP_INSPECTION" />
-    <setting file="jar://$PROJECT_DIR$/lib/asm-9.6.jar!/org/objectweb/asm/Opcodes.class" root0="SKIP_INSPECTION" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -218,51 +193,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Run",
-    "Application.WindowEnumerator.executor": "Run",
-    "Application.com.fun.gui.Main.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "true",
-    "JAR 应用程序.FunGhostClient.jar (1).executor": "Run",
-    "JAR 应用程序.FunGhostClient.jar.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/FengeGG/Fish/src/com/fun",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15234375",
-    "project.structure.side.proportion": "0.5940023",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true",
-    "应用程序.JNAUtils.executor": "Run",
-    "应用程序.Main.executor": "Run",
-    "应用程序.fun.inject.Main.executor": "Run"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.WindowEnumerator.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;JAR 应用程序.FunGhostClient.jar (1).executor&quot;: &quot;Run&quot;,
+    &quot;JAR 应用程序.FunGhostClient.jar.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/FengeGG/Fish/lib&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15234375&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.5940023&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;应用程序.JNAUtils.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.Main.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.fun.inject.Main.executor&quot;: &quot;Run&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="fun.client.utils.Rotation" />
       <recent name="com.darkmagician6.eventapi.event.events" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\FengeGG\Fish\src\com\fun" />
       <recent name="D:\FengeGG\Fish\lib" />
       <recent name="D:\FengeGG\FunGhostClient\src\assets\texture" />
       <recent name="D:\FengeGG\FunGhostClient\src\assets\mappings" />
       <recent name="D:\FengeGG\FunGhostClient\src\assets\fonts" />
+      <recent name="D:\FengeGG\FunGhostClient\mappings\1.12.2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\FengeGG\FunGhostClient\lib" />
@@ -277,7 +251,20 @@
       <recent name="fun.inject.inject.asm.transformers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.fun.gui.Main">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="JNAUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fun.inject.JNAUtils" />
+      <module name="FunGhostClient" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fun.inject.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="fun.gui.Main" />
       <module name="FunGhostClient" />
@@ -304,19 +291,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.fun.gui.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.fun.gui.Main" />
-      <module name="FunGhostClient" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.fun.gui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FunGhostClient.jar (1)" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/FunGhostClient_jar2/FunGhostClient.jar" />
       <method v="2" />
@@ -327,7 +301,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.com.fun.gui.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.WindowEnumerator" />
       </list>
@@ -412,8 +385,6 @@
       <workItem from="1718597292866" duration="7255000" />
       <workItem from="1718770688284" duration="8759000" />
       <workItem from="1718856903080" duration="17111000" />
-      <workItem from="1719047909682" duration="23789000" />
-      <workItem from="1719320415332" duration="11113000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -589,8 +560,7 @@
     <MESSAGE value="更新一堆" />
     <MESSAGE value="更新一点" />
     <MESSAGE value="更新了注入网易" />
-    <MESSAGE value="更新了注入网易(all)" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新了注入网易(all)" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新了注入网易" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
