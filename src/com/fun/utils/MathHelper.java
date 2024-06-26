@@ -1,5 +1,7 @@
 package com.fun.utils;
 
+import com.fun.utils.vecmath.Vec3i;
+
 import java.util.Random;
 import java.util.UUID;
 

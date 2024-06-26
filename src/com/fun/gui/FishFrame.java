@@ -164,7 +164,7 @@ public class FishFrame extends JFrame {
                                 String s = options.get(j);
                                 comboBox.addItem(s);
                                 if((s).equalsIgnoreCase(set.getValString())){
-                                    //Agent.logger.info(s+j);
+                                    //Agent.System.out.println(s+j);
                                     index =j;
                                 }
                             }
@@ -174,7 +174,7 @@ public class FishFrame extends JFrame {
                                 try{
                                     MinecraftWrapper.get().addScheduledTask(()->{
                                         set.setValString(((String) comboBox.getSelectedItem()));
-                                        //Agent.logger.info("itemChange"+(String) set.getValString());
+                                        //Agent.System.out.println("itemChange"+(String) set.getValString());
                                     });
                                 }
                                 catch (Exception e1){
@@ -212,7 +212,7 @@ public class FishFrame extends JFrame {
                                 String displayval = "" + Math.round(set.getValDouble() * 100D) / 100D;
                                 jl.setText(set.getName() + ":" + displayval);
 
-                                //Agent.logger.info(String.format("%.2f",js.getValue()/100*set.getMax()));
+                                //Agent.System.out.println(String.format("%.2f",js.getValue()/100*set.getMax()));
                             });
                             js.setBackground(Color.lightGray);
                             js.setForeground(new Color(154, 130, 168));

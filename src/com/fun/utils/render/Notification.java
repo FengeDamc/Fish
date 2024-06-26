@@ -3,8 +3,9 @@ package com.fun.utils.render;
 import com.fun.inject.inject.wrapper.impl.MinecraftWrapper;
 import com.fun.inject.inject.wrapper.impl.gui.ScaledResolutionWrapper;
 import com.fun.utils.font.FontManager;
-import org.lwjgl.util.vector.Vector2f;
 
+
+import javax.vecmath.Vector2f;
 import java.awt.*;
 
 public class Notification {

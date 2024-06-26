@@ -42,7 +42,9 @@ public enum Methods {
     getNetHandler_Minecraft(new VMethod("func_147114_u")),
     moveFlying_Entity(new VMethod("func_70060_a","(FFF)V")
             ,new VMethod("func_191958_b","(FFFF)V").version(MinecraftVersion.VER_1122)),
-    needNewCheck(new VMethod("needNewCheck","()Z"));//needNewCheck()Z
+    needNewCheck(new VMethod("needNewCheck","()Z")),
+    isButtonDown(Classes.Mousse,new VMethod("isButtonDown","(I)Z")),
+    glPushMatrix(Classes.GL11,new VMethod("glPushMatrix","()V"));
 
 
 

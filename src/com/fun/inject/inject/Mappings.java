@@ -16,6 +16,7 @@ import org.objectweb.asm.tree.MethodNode;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
+import java.util.jar.JarFile;
 
 public class Mappings {
 
@@ -64,7 +65,7 @@ public class Mappings {
             }
             TCPClient.send(Main.SERVERPORT,"mcver");
 
-            Agent.logger.info("it's {} {} client",Agent.minecraftVersion.getVer(),Agent.minecraftType.getType());
+            System.out.printf("it's %s %s client%n",Agent.minecraftVersion.getVer(),Agent.minecraftType.getType());
             try {
                 readMappings(Agent.minecraftVersion,Agent.minecraftType);
             } catch (IOException e) {
@@ -128,12 +129,13 @@ public class Mappings {
 
 
     public static void readMappings(MinecraftVersion mcVer,MinecraftType mcType) throws IOException {
+        JarFile jar=new JarFile(Agent.jarPath);
         if (mcType == MinecraftType.FORGE) {
-            return;
-        } else if (mcType == MinecraftType.MCP) {
+        }
+        else if (mcType == MinecraftType.MCP) {
             if (mcVer == MinecraftVersion.VER_1710 || mcVer == MinecraftVersion.VER_189) {
-                InputStream f = Agent.class.getResourceAsStream(InjectUtils.getCvsF(mcVer));
-                InputStream m = Agent.class.getResourceAsStream(InjectUtils.getCvsM(mcVer));
+                InputStream f = IOUtils.getEntryFromJar(jar,InjectUtils.getCvsF(mcVer));
+                InputStream m = IOUtils.getEntryFromJar(jar,InjectUtils.getCvsM(mcVer));
                 BufferedReader bufferedreader = new BufferedReader(new InputStreamReader(m, StandardCharsets.UTF_8));
                 String line="";
                 while ((line = bufferedreader.readLine()) != null) {
@@ -156,7 +158,7 @@ public class Mappings {
                 f.close();
                 m.close();
             } else {
-                InputStream mcp = Agent.class.getResourceAsStream(InjectUtils.getSrg(mcVer, mcType));
+                InputStream mcp = IOUtils.getEntryFromJar(jar,InjectUtils.getSrg(mcVer, mcType));
 
                 BufferedReader bufferedreader = new BufferedReader(
                         new InputStreamReader(mcp,
@@ -201,17 +203,17 @@ public class Mappings {
 
         }
         else{
-            InputStream fileIn = Agent.class.getResourceAsStream(InjectUtils.getSrg(mcVer, mcType));
-            InputStream f = Agent.class.getResourceAsStream(InjectUtils.getCvsF(mcVer));
-            InputStream m = Agent.class.getResourceAsStream(InjectUtils.getCvsM(mcVer));
+            InputStream fileIn = IOUtils.getEntryFromJar(jar,InjectUtils.getSrg(mcVer, mcType));
+            InputStream f = IOUtils.getEntryFromJar(jar,InjectUtils.getCvsF(mcVer));
+            InputStream m = IOUtils.getEntryFromJar(jar,InjectUtils.getCvsM(mcVer));
 
+            BufferedReader bufferedreader = new BufferedReader(
+                    new InputStreamReader(fileIn,
+                            StandardCharsets.UTF_8));
 
+            String line = "";
             if (mcVer == MinecraftVersion.VER_189) {
-                BufferedReader bufferedreader = new BufferedReader(
-                        new InputStreamReader(fileIn,
-                                StandardCharsets.UTF_8));
 
-                String line = "";
                 while ((line = bufferedreader.readLine()) != null) {
 
                     String[] parts = line.substring(4)
@@ -267,14 +269,11 @@ public class Mappings {
                 f.close();
                 m.close();
                 fileIn.close();
-                //Agent.logger.info(getObfClass("net/minecraft/client/Minecraft"));
+                //Agent.System.out.println(getObfClass("net/minecraft/client/Minecraft"));
 
             } else {
-                BufferedReader bufferedreader = new BufferedReader(
-                        new InputStreamReader(fileIn,
-                                StandardCharsets.UTF_8));
 
-                String line = "";
+
                 while ((line = bufferedreader.readLine()) != null) {
                     String[] split = line.split(" ");
                     try {
@@ -309,9 +308,11 @@ public class Mappings {
                 }
                 bufferedreader.close();
         }
-        Agent.logger.info("readmappings");
+            System.out.println("readmappings");
+
         //BufferedReader =new BufferedReader(new FileReader());
     }
+        jar.close();
 
 
     }

@@ -4,13 +4,12 @@ package com.fun.inject;
 
 import com.fun.client.FunGhostClient;
 import com.fun.client.config.ConfigModule;
-import com.fun.inject.inject.Mappings;
-import com.fun.inject.inject.MinecraftType;
-import com.fun.inject.inject.MinecraftVersion;
+import com.fun.inject.inject.*;
 import com.fun.inject.inject.asm.api.Inject;
 import com.fun.inject.inject.asm.api.Mixin;
 import com.fun.inject.inject.asm.api.Transformer;
 import com.fun.inject.inject.asm.api.Transformers;
+import com.fun.inject.inject.asm.transformers.ClassLoaderTransformer;
 import com.fun.inject.inject.wrapper.impl.MinecraftWrapper;
 import com.fun.utils.Methods;
 import com.fun.gui.FishFrame;
@@ -18,20 +17,24 @@ import com.fun.gui.FishFrame;
 import com.fun.network.TCPClient;
 import com.fun.network.TCPServer;
 import com.fun.utils.font.FontManager;
-import org.objectweb.asm.tree.ClassNode;
-import org.objectweb.asm.tree.MethodNode;
+
+import net.minecraft.launchwrapper.Launch;
+import org.objectweb.asm.*;
+import org.objectweb.asm.tree.*;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import sun.misc.IOUtils;
+import sun.misc.Launcher;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.lang.instrument.*;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLClassLoader;
+import java.nio.charset.StandardCharsets;
 import java.security.ProtectionDomain;
 import java.util.HashMap;
 
@@ -41,20 +44,96 @@ public class Agent {
 
     public static FishFrame fishFrame;
     public static final String VERSION="1.1";
+    public static String jarPath;
     public static boolean isAgent =false;
     public static ClassTransformer transformer;
     public static MinecraftType minecraftType=MinecraftType.VANILLA;
     public static MinecraftVersion minecraftVersion=MinecraftVersion.VER_189;
     public static HashMap<String,Class<?>> classesMap=new HashMap<>();
     public static final int SERVERPORT=11451;
+    public static final String[] selfClasses=new String[]{"com.fun","org.newdawn","javax.vecmath"};
 
     public static ClassLoader classLoader=null;
     public static Logger logger= LogManager.getLogger("FunClient");
     public static Class<?> findClass(String name) {
-
         try {
             return classLoader.loadClass(name.replace('/','.'));
         } catch (ClassNotFoundException e) {
+
+        }
+        return null;
+    }
+    public static void injectClassLoader(ClassLoader classLoader) {
+        ClassLoaderTransformer classLoaderTransformer=new ClassLoaderTransformer(classLoader);
+        Transformers.transformers.add(classLoaderTransformer);
+        try {
+            classLoaderTransformer.oldBytes=readClazzBytes(classLoaderTransformer.clazz);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        //NativeUtils.setEventNotificationMode(1,54);
+        //NativeUtils.retransformClass(classLoaderTransformer.clazz);
+        //NativeUtils.setEventNotificationMode(0,54);
+        //Transformers.transformers.remove(classLoaderTransformer);
+        ClassReader cr=new ClassReader(classLoaderTransformer.oldBytes);
+        ClassNode node = new ClassNode();
+        cr.accept(node, ClassReader.EXPAND_FRAMES);
+        for(MethodNode mn:node.methods){
+            if(mn.name.equals("findClass")){
+                LabelNode l=new LabelNode();
+                InsnList insnList=new InsnList();
+                insnList.add(new VarInsnNode(Opcodes.ALOAD,0));
+                insnList.add(new VarInsnNode(Opcodes.ALOAD,1));
+                insnList.add(new MethodInsnNode(Opcodes.INVOKESTATIC, Type.getInternalName(Agent.class),"hookFindClass","(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/Class;"));
+                insnList.add(new VarInsnNode(Opcodes.ASTORE,2));
+                insnList.add(new VarInsnNode(Opcodes.ALOAD,2));
+                insnList.add(new JumpInsnNode(Opcodes.IFNULL,l));
+                insnList.add(new VarInsnNode(Opcodes.ALOAD,2));
+                insnList.add(new InsnNode(Opcodes.ARETURN));
+                insnList.add(l);
+                mn.instructions.insert(insnList);
+            }
+        }
+        ClassWriter writer=new ClassWriter(ClassWriter.COMPUTE_FRAMES|ClassWriter.COMPUTE_MAXS);
+        node.accept(writer);
+        byte[] bytes = writer.toByteArray();
+        NativeUtils.redefineClass(classLoaderTransformer.clazz,bytes);
+        classLoaderTransformer.newBytes=bytes;
+        try {
+            FileUtils.writeByteArrayToFile(new File(System.getProperty("user.home"),classLoaderTransformer.name + "Old.class"), bytes);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+    public static byte[] readClazzBytes(Class<?> c) throws IOException {
+
+        return InjectUtils.getClassBytes(c);//(c.getName().replace('.', '/') + ".class"));
+    }
+    public static Class<?> hookFindClass(ClassLoader cl,String name) {
+        for (String cname : selfClasses) {
+            if (name.replace('/', '.').startsWith(cname))
+                try {
+                    byte[] bytes = InjectUtils.getClassBytes(cl, name);//IOUtils.readAllBytes(ClassLoader.getSystemResourceAsStream(name.replace('.', '/') + ".class"));
+                    return (Class<?>) ReflectionUtils.invokeMethod(
+                            cl,
+                            "defineClass",
+                            new Class[]{
+                                    String.class,
+                                    byte[].class,
+                                    int.class,
+                                    int.class
+                            },
+                            name,
+                            bytes,
+                            0,
+                            bytes.length
+                    );
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
 
         }
         return null;
@@ -68,8 +147,17 @@ public class Agent {
 
     public static synchronized void start() throws URISyntaxException, IOException, InterruptedException {
                 isAgent =true;
-                logger.info("attached!!");
+                System.out.println("attached!!");
+                File f=new File(System.getProperty("user.home")+"\\fish.txt");
+                BufferedReader bufferedreader = new BufferedReader(new FileReader(f));
+                String line="";
+                while ((line = bufferedreader.readLine()) != null) {
+                    //srg mcp
 
+                    jarPath=line;
+
+                }
+                bufferedreader.close();
                 instrumentation = new Native();
                 boolean running = true;
                 while (running) {
@@ -83,42 +171,39 @@ public class Agent {
                         }
                     }
                 }
-                System.out.println(classLoader.getClass().getName());
-
+                System.out.println("jarPath:"+jarPath);
+                if(classLoader.getClass().getClassLoader()!=null)injectClassLoader(classLoader);
                 try {
-                    if (ClassLoader.getSystemClassLoader()!=(classLoader)) {
+                    if (Agent.class.getClassLoader()!=(classLoader)) {
+
                         try {
-                            loadJar((URLClassLoader) classLoader,Agent.class.getProtectionDomain().getCodeSource().getLocation());
+                            loadJar((URLClassLoader) classLoader,new File(jarPath).toURI().toURL());
 
                         } catch (Throwable e) {
                             e.printStackTrace();
                         }
                         System.out.println("added URL To CL");
                     }
+
+
                     Class<?> agentClass = Agent.findClass("com.fun.inject.Agent");
-
-
                     for (Method m : agentClass.getDeclaredMethods()) {
                         if (m.getName().equals("init")) {
-
-                            m.invoke(null, classLoader);
-
+                            m.invoke(null, classLoader,jarPath);
                         }
                     }
-
-
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-
-
+                //NativeUtils.messageBox("pcl:"+classLoader.getParent(),"Fish");
+                //init(classLoader,jarPath);
                 Transformers.init();
                 transformer = new ClassTransformer();
                 instrumentation.addTransformer(transformer, true);
 
 
                 NativeUtils.setEventNotificationMode(1,54);
-
+                //NativeUtils.messageBox("native cl:"+NativeUtils.class.getClassLoader(),"Fish");
 
                 for (Transformer transformer : Transformers.transformers) {
                     try {
@@ -127,7 +212,8 @@ public class Agent {
                             System.out.println("NULL CLASS");
                             continue;
                         }
-                        instrumentation.retransformClasses(transformer.clazz);
+                        //System.out.println("TRANS:"+transformer.clazz.getName());
+                        NativeUtils.retransformClass(transformer.clazz);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -138,28 +224,35 @@ public class Agent {
 
 
 
-
-
-
     }
 
 
-    public static void init(ClassLoader cl) {
+    public static void init(ClassLoader cl,String jarPathIn) {
         classLoader=cl;
+        jarPath=jarPathIn;
         isAgent=true;
+        //Class<?> agentClass = Agent.findClass("com.fun.client.FunGhostClient");
+        //System.out.println("clientcl:" + agentClass.getClassLoader());
+        //Class<?> agentClass = Agent.findClass("com.fun.inject.Agent");
+        //System.out.println("agentcl:"+agentClass.getClassLoader());
 
 
-        //logger.info("start init");
-        FunGhostClient.init();
-
-
-        ConfigModule.loadConfig();
-        TCPClient.send(Main.SERVERPORT,"mcpath "+ System.getProperty("user.dir"));
-        TCPServer.startServer(SERVERPORT);
-        FontManager.init();
-
-        logger.info("o god start!");
-
+        MinecraftWrapper.get().addScheduledTask(()->{
+            try {
+                System.out.println("client init start");
+                FunGhostClient.init();
+                System.out.println("client init successful");
+                ConfigModule.loadConfig();
+                System.out.println("config loaded");
+                TCPClient.send(Main.SERVERPORT, "mcpath " + System.getProperty("user.dir"));
+                TCPServer.startServer(SERVERPORT);
+                FontManager.init();
+                System.out.println("fish ghost client start!");
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
 
 
 
@@ -175,14 +268,14 @@ public class Agent {
                     transformer.oldBytes = classfileBuffer;
 
                     try {
-                        FileUtils.writeByteArrayToFile(new File(System.getProperty("user.dir"),transformer.getName() + "Old.class"), classfileBuffer);
+                        FileUtils.writeByteArrayToFile(new File(System.getProperty("user.home"),transformer.getName() + "Old.class"), classfileBuffer);
                     } catch (IOException e) {
 
                     }
                     ClassNode node = Transformers.node(transformer.oldBytes);
 
                     for (Method method : transformer.getClass().getDeclaredMethods()) {
-                        //Agent.logger.info(method.toString());
+                        //Agent.System.out.println(method.toString());
                         if (method.isAnnotationPresent(Inject.class)) {
     
                             if (method.getParameterCount() != 1 || !MethodNode.class.isAssignableFrom(method.getParameterTypes()[0]))
@@ -202,11 +295,11 @@ public class Agent {
 
                         // huh???
                             for (MethodNode mNode : node.methods) {
-                                //logger.info(mNode.name+mNode.desc);
+                                //System.out.println(mNode.name+mNode.desc);
                                 if (mNode.name.equals(obfName) && (Transformers.contains(desc.split(" "), mNode.desc) || desc.isEmpty() || mNode.desc.equals(desc))) {
                                     try {
                                         method.invoke(transformer, mNode);
-                                        //logger.info("transformed "+method.getName());
+                                        //System.out.println("transformed "+method.getName());
     
                                     } catch (IllegalAccessException | InvocationTargetException e) {
                                         //logger.error("Failed to invoke method {} {}", e.getMessage(), e.getStackTrace()[0]);
@@ -218,7 +311,7 @@ public class Agent {
                             }
                         }
                         else if(method.isAnnotationPresent(Mixin.class)){
-                            if (method.getParameterCount() != 1 || !MethodNode.class.isAssignableFrom(method.getParameterTypes()[0]))
+                            if (method.getParameterCount() != 1|| !MethodNode.class.isAssignableFrom(method.getParameterTypes()[0]))
                                 continue;
 
                             Mixin inject = method.getAnnotation(Mixin.class);
@@ -227,13 +320,13 @@ public class Agent {
                             String desc=methodInfo.getDescriptor();
 
                             for (MethodNode mNode : node.methods) {
-                                //logger.info(mNode.name+mNode.desc);
-                                //Agent.logger.info(mNode.name);
+                                //System.out.println(mNode.name+mNode.desc);
+                                //Agent.System.out.println(mNode.name);
 
                                 if (mNode.name.equals(name) && mNode.desc.equals(desc)) {
                                     try {
                                         method.invoke(transformer, mNode);
-                                        //logger.info("transformed "+method.getName());
+                                        //System.out.println("transformed "+method.getName());
 
                                     } catch (IllegalAccessException | InvocationTargetException e) {
                                         //logger.error("Failed to invoke method {} {}", e.getMessage(), e.getStackTrace()[0]);
@@ -252,8 +345,8 @@ public class Agent {
                         logger.error(className+" rewriteClass failed");
                         return null;
                     }
-                    File fo = new File(System.getProperty("user.dir"),transformer.getName() + ".class");
-                    File fdo = new File(System.getProperty("user.dir"),transformer.getName() + "DeObf.class");
+                    File fo = new File(System.getProperty("user.home"),transformer.getName() + ".class");
+                    File fdo = new File(System.getProperty("user.home"),transformer.getName() + "DeObf.class");
 
 
                     try {
@@ -263,7 +356,7 @@ public class Agent {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    logger.info("transformer:" + transformer.getName() + " bytes in " + fo.getAbsolutePath());
+                    System.out.println("transformer:" + transformer.getName() + " bytes in " + fo.getAbsolutePath());
 
                     transformer.newBytes = newBytes;
                     return transformer.newBytes;

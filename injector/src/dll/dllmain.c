@@ -137,22 +137,15 @@ extern JNIEXPORT void JNICALL classFileLoadHook(jvmtiEnv * jvmti_env, JNIEnv * e
                                unsigned char **new_class_data
 )
 {
-    if(name==NULL||(name[0]=='f'&&
-                    name[1]=='u'&&
-                    name[2]=='n')||(
-                    name[0]=='j'&&
-                    name[1]=='a'&&
-                    name[2]=='v'&&
-                    name[3]=='a')){
-        *new_class_data=class_data;
-        *new_class_data_len=class_data_len;
-        return;
-    }
+    //MessageBoxA(NULL,"transhook","FishCient",0);
+
 //MessageBoxA(NULL, name, "FunGhostClient", NULL);
     //MessageBoxA(NULL, "ReTrans", "FunGhostClient", 0);
-    jclass nativeUtils = findClass(env, "com.fun.inject.NativeUtils");
+    jclass nativeUtils = //(*env)->FindClass(env,"com/fun/inject/NativeUtils");
+    findClass(env, "com.fun.inject.NativeUtils");
 
     if(!nativeUtils){
+        MessageBoxA(NULL,"NativeUtils was null","Fish",0);
         return;
     }
     jmethodID transform = (*env)->GetStaticMethodID(env,nativeUtils, "transform",
@@ -408,6 +401,8 @@ extern DWORD JNICALL Inject(JAVA java){
     free(c);*/
     //MessageBoxA(NULL,"Start ADDURL","Fish",0);
     //MessageBoxA(NULL,"Start ADDURL","Fish",0);
+    //(*java.jvmtiEnv)->AddToBootstrapClassLoaderSearch(java.jvmtiEnv,buffer);//loadJarToSystemClassLoader(buffer);
+
     (*java.jvmtiEnv)->AddToSystemClassLoaderSearch(java.jvmtiEnv,buffer);//loadJarToSystemClassLoader(buffer);
     //MessageBoxA(NULL,"Start ADDURL SUCCESSFUL","Fish",0);
     if(printEx()){
@@ -417,7 +412,7 @@ extern DWORD JNICALL Inject(JAVA java){
     //
 
     //MessageBoxA(NULL, "JNI_OnLoad3", "FunGhostClient", 0);
-    jclass nativeUtils = //(*Java->jniEnv)->FindClass(Java->jniEnv,"fun/inject/NativeUtils");
+    jclass nativeUtils = //(*Java->jniEnv)->FindClass(Java->jniEnv,"com/fun/inject/NativeUtils");
     findClass(Java->jniEnv, "com.fun.inject.NativeUtils");
     if(printEx()){
         MessageBoxA(NULL,buffer,"Fish",0);
@@ -463,10 +458,9 @@ extern DWORD JNICALL Inject(JAVA java){
     if(nativeUtils){
         (*Java->jniEnv)->RegisterNatives(Java->jniEnv,nativeUtils, methods, 8);
 
-        //MessageBoxA(NULL,"reg natives","FishCient",0);
     }
 
-    jclass agent = //(*Java->jniEnv)->FindClass(Java->jniEnv,"fun/inject/Agent");
+    jclass agent = //(*Java->jniEnv)->FindClass(Java->jniEnv,"com/fun/inject/Agent");
     findClass(java.jniEnv, "com.fun.inject.Agent");
 
     if (!agent) {
@@ -477,7 +471,6 @@ extern DWORD JNICALL Inject(JAVA java){
 
     (*Java->jniEnv)->CallStaticVoidMethod(Java->jniEnv,agent, start);
     //MessageBoxA(NULL, "started", "FunGhostClient", 0);
-    (*Java->jniEnv)->DefineClass
 
     //if(!hook)
     return 0;

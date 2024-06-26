@@ -1,8 +1,8 @@
 package com.fun.inject.inject.asm.transformers;
 
 
-import com.darkmagician6.eventapi.EventManager;
-import com.darkmagician6.eventapi.event.events.EventPacket;
+import com.fun.eventapi.EventManager;
+import com.fun.eventapi.event.events.EventPacket;
 import com.fun.inject.inject.asm.api.Inject;
 import com.fun.inject.inject.asm.api.Transformer;
 import org.objectweb.asm.tree.*;

@@ -1,9 +1,9 @@
 package com.fun.inject.inject.asm.transformers;
 
 
-import com.darkmagician6.eventapi.EventManager;
-import com.darkmagician6.eventapi.event.events.EventAttackReach;
-import com.darkmagician6.eventapi.event.events.EventBlockReach;
+import com.fun.eventapi.EventManager;
+import com.fun.eventapi.event.events.EventAttackReach;
+import com.fun.eventapi.event.events.EventBlockReach;
 import com.fun.client.FunGhostClient;
 import com.fun.inject.inject.asm.api.Inject;
 import com.fun.inject.inject.asm.api.Transformer;

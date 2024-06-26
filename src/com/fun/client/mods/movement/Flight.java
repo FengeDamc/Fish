@@ -1,6 +1,6 @@
 package com.fun.client.mods.movement;
 
-import com.darkmagician6.eventapi.event.events.EventUpdate;
+import com.fun.eventapi.event.events.EventUpdate;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
 

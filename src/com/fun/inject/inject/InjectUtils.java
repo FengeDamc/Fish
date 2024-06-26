@@ -20,13 +20,13 @@ import java.lang.reflect.InvocationTargetException;
 public class InjectUtils {
 
     public static String getSrg(MinecraftVersion ver, MinecraftType type) {
-        return "/assets/mappings/" + type.getType() + "_" + ver.getVer() + ".srg";
+        return "assets/mappings/" + type.getType() + "_" + ver.getVer() + ".srg";
     }
     public static String getCvsM(MinecraftVersion ver) {
-        return "/assets/mappings/" +"methods" + ver.getVer() + ".csv";
+        return "assets/mappings/" +"methods" + ver.getVer() + ".csv";
     }
     public static String getCvsF(MinecraftVersion ver) {
-        return "/assets/mappings/" +"fields" + ver.getVer() + ".csv";
+        return "assets/mappings/" +"fields" + ver.getVer() + ".csv";
     }
 
     public static int getMinecraftProcessId() throws InterruptedException {
@@ -95,6 +95,13 @@ public class InjectUtils {
         String className = c.getName();
         String classAsPath = className.replace('.', '/') + ".class";
         InputStream stream = c.getClassLoader().getResourceAsStream(classAsPath);
+        byte[] bs= stream == null ? null : IOUtils.toByteArray(stream);
+        return bs;
+    }
+    public static byte[] getClassBytes(ClassLoader cl,String name) throws IOException {
+        String className = name;
+        String classAsPath = className.replace('.', '/') + ".class";
+        InputStream stream = cl.getResourceAsStream(classAsPath);
         byte[] bs= stream == null ? null : IOUtils.toByteArray(stream);
         return bs;
     }

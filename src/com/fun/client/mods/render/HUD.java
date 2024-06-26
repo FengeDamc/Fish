@@ -1,6 +1,6 @@
 package com.fun.client.mods.render;
 
-import com.darkmagician6.eventapi.event.events.EventRender2D;
+import com.fun.eventapi.event.events.EventRender2D;
 import com.fun.client.FunGhostClient;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
@@ -30,10 +30,12 @@ public class HUD extends Module {
     @Override
     public void onRender2D(EventRender2D event) {
         super.onRender2D(event);
-
+        //System.out.println("1");
             //drawRect(2, 2, 100, 14, ColorUtils.getRainbow((int) 3872.0f, (int) (10*1E7)));
         FontManager.tenacity.drawStringWithShadow("FISH", 4, 4, new Color(78, 255, 166, 235).getRGB());
-            //fm.arraylist.drawString("FPS: " + , 4, 25, Color.white.getRGB());
+        //System.out.println("2");
+
+        //fm.arraylist.drawString("FPS: " + , 4, 25, Color.white.getRGB());
         renderArrayList();
             //FengeGG.onRenderer();
 
@@ -54,7 +56,7 @@ public class HUD extends Module {
 
 
         }
-        for(Module mod:running)
+        for(Module ignored :running)
             for (int i = 0, runningSize = running.size(); i < runningSize; i++) {
                 Module m = running.get(i);
                 if (i<runningSize-1&&FontManager.tenacity.getStringWidth(m.getName())<FontManager.tenacity.getStringWidth(running.get(i+1).getName())){
@@ -63,6 +65,7 @@ public class HUD extends Module {
 
                 }
             }
+
         for(Module m:running){
             ScaledResolutionWrapper sr=new ScaledResolutionWrapper(mc);
             double offset = yCount * (mc.getFontRenderer().getHeight() + 6);
@@ -79,5 +82,6 @@ public class HUD extends Module {
                 }
             }
         }
+        //System.out.println("hud");
     }
 }

@@ -30,7 +30,7 @@ public class Dynamics {
                         0,
                         bytes.length
                 );
-                //Lepton.logger.info("Successful define dynamic class: {}", clazz.getName());
+                //Lepton.System.out.println("Successful define dynamic class: {}", clazz.getName());
             } catch (Exception e) {
                 e.printStackTrace();
             }

@@ -1,7 +1,7 @@
 package com.fun.client.mods.combat;
 
-import com.darkmagician6.eventapi.event.events.EventMoment;
-import com.darkmagician6.eventapi.event.events.EventPacket;
+import com.fun.eventapi.event.events.EventMoment;
+import com.fun.eventapi.event.events.EventPacket;
 import com.fun.utils.Classes;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
@@ -39,12 +39,12 @@ public class Velocity extends Module {
         super.onPacket(packet);
 
         if(Classes.S12PACKET_ENTITY_VELOCITY.getVClass().isInstanceof(packet.packet)){
-            //Agent.logger.info(Mappings.getUnobfClass(packet.packet));
+            //Agent.System.out.println(Mappings.getUnobfClass(packet.packet));
             S12PacketEntityVelocity packetVelocity=null;
             try{
-                //Agent.logger.info("s12");
+                //Agent.System.out.println("s12");
                 packetVelocity=new S12PacketEntityVelocity(packet.packet);
-                //Agent.logger.info("entityid:{} playerid:{}",packetVelocity.getEntityID(),mc.getPlayer().getEntityID());
+                //Agent.System.out.println("entityid:{} playerid:{}",packetVelocity.getEntityID(),mc.getPlayer().getEntityID());
                 if(packetVelocity.getEntityID()==mc.getPlayer().getEntityID()) {
                     if (this.mode.sval.equalsIgnoreCase("Vanilla")) {
                         packetVelocity.setMotionX((int) (packetVelocity.getMotionX()*x.getValDouble()));
@@ -60,7 +60,7 @@ public class Velocity extends Module {
 
 
         }
-        //Agent.logger.info(mode.getValString());
+        //Agent.System.out.println(mode.getValString());
 
     }
 

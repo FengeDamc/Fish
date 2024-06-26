@@ -1,8 +1,8 @@
 package com.fun.client.mods.combat;
 
-import com.darkmagician6.eventapi.event.events.EventStrafe;
+import com.fun.eventapi.event.events.EventStrafe;
 import com.fun.utils.MathHelper;
-import com.fun.utils.Vec3;
+import com.fun.utils.vecmath.Vec3;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
 import com.fun.client.settings.Setting;
@@ -10,7 +10,9 @@ import com.fun.client.utils.Rotation.Rotation;
 import com.fun.inject.inject.Mappings;
 import com.fun.inject.inject.wrapper.impl.entity.EntityPlayerSPWrapper;
 import com.fun.inject.inject.wrapper.impl.entity.EntityWrapper;
-import org.lwjgl.util.vector.Vector2f;
+//import javax.vecmath.Vector2f;
+
+import javax.vecmath.Vector2f;
 
 import static com.fun.client.FunGhostClient.moduleManager;
 
@@ -23,16 +25,7 @@ public class AimBot extends Module {
     public Setting onAttack=new Setting("OnAttack",this,false);
 
     public Setting speed=new Setting("Speed",this,50,0,180,false);
-    public boolean isEntityLivingBase(Object instance){
-        Class<?> c = instance.getClass();
-        while (c.getSuperclass() != null) {
-            //Agent.logger.info(c.getName());
-            if(c.getName().equals(Mappings.getObfClass("net/minecraft/entity/EntityLivingBase").replace('/','.')))
-                return true;
-            c = c.getSuperclass();
-        }
-        return false;
-    }
+
 
 
     @Override

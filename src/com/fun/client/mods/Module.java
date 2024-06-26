@@ -1,6 +1,6 @@
 package com.fun.client.mods;
 
-import com.darkmagician6.eventapi.event.events.*;
+import com.fun.eventapi.event.events.*;
 import com.fun.client.FunGhostClient;
 import com.fun.client.config.ConfigModule;
 import com.fun.client.settings.Setting;
@@ -67,7 +67,7 @@ public class Module {
     }
 
     public void onUpdate(EventUpdate event) {
-        //Agent.logger.info(this);
+        //Agent.System.out.println(this);
     }
 
     public void onPacket(EventPacket packet) {

@@ -1,6 +1,6 @@
 package com.fun.client.mods.combat;
 
-import com.darkmagician6.eventapi.event.events.EventStrafe;
+import com.fun.eventapi.event.events.EventStrafe;
 import com.fun.utils.Classes;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
@@ -41,7 +41,7 @@ public class Target extends Module {
 
 
         //playersp.setYaw(0);
-        //Agent.logger.info(mc.getWorld().worldObj);
+        //Agent.System.out.println(mc.getWorld().worldObj);
         for (EntityWrapper player : onlyPlayer.getValBoolean()?
                 mc.getWorld().getLoadedPlayers()
                 :mc.getWorld().getLoadedEntities()) {
@@ -50,7 +50,7 @@ public class Target extends Module {
                     && Classes.EntityLivingBase.isInstanceof(player.entityObj)) {
                 target = player;
                 dist=d1;
-                //Agent.logger.info(+":{}",);
+                //Agent.System.out.println(+":{}",);
             }
         }
         try {
@@ -110,7 +110,7 @@ public class Target extends Module {
     public boolean isEntityLivingBase(Object instance){
         Class<?> c = instance.getClass();
         while (c.getSuperclass() != null) {
-            //Agent.logger.info(c.getName());
+            //Agent.System.out.println(c.getName());
             if(c.getName().equals(Mappings.getObfClass("net/minecraft/entity/EntityLivingBase").replace('/','.')))
                 return true;
             c = c.getSuperclass();

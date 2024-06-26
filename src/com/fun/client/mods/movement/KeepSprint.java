@@ -1,6 +1,6 @@
 package com.fun.client.mods.movement;
 
-import com.darkmagician6.eventapi.event.events.EventUpdate;
+import com.fun.eventapi.event.events.EventUpdate;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
 import com.fun.client.settings.Setting;
@@ -20,7 +20,7 @@ public class KeepSprint extends Module {
     @Override
     public void onUpdate(EventUpdate event) {
         super.onUpdate(event);
-        //Agent.logger.info("update");
+        //Agent.System.out.println("update");
         mc.getPlayer().setSprinting(true);
     }
 }

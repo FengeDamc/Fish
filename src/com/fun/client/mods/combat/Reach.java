@@ -1,7 +1,7 @@
 package com.fun.client.mods.combat;
 
-import com.darkmagician6.eventapi.event.events.EventAttackReach;
-import com.darkmagician6.eventapi.event.events.EventBlockReach;
+import com.fun.eventapi.event.events.EventAttackReach;
+import com.fun.eventapi.event.events.EventBlockReach;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
 import com.fun.client.settings.Setting;

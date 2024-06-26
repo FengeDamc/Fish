@@ -7,11 +7,15 @@ import com.fun.inject.inject.Mappings;
 
 public class Transformer {
 
-    public final String name, obfName;
+    public String name, obfName;
     public byte[] oldBytes;
     public byte[] newBytes;
 
     public Class<?> clazz;
+
+    public Transformer() {
+        super();
+    }
 
     public Transformer(String name) {
         this.name = name;

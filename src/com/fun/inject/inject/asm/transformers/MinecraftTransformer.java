@@ -1,7 +1,7 @@
 package com.fun.inject.inject.asm.transformers;
 
-import com.darkmagician6.eventapi.EventManager;
-import com.darkmagician6.eventapi.event.events.EventTick;
+import com.fun.eventapi.EventManager;
+import com.fun.eventapi.event.events.EventTick;
 import com.fun.inject.inject.asm.api.Mixin;
 import com.fun.inject.inject.asm.api.Transformer;
 import com.fun.utils.Classes;

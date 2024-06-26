@@ -18,13 +18,13 @@ public class NativeUtils {
                                             Class<?>            classBeingRedefined,
                                             ProtectionDomain protectionDomain,
                                             byte[]              classfileBuffer) throws IllegalClassFormatException {
-        //logger.info("trans:"+ Mappings.getUnobfClass(className));
         try {
             if (!Mappings.getUnobfClass(className).startsWith("net/minecraft")) return classfileBuffer;
             for (Agent.ClassTransformer t : transformers) {
                 byte[] b = t.transform(loader, className, classBeingRedefined, protectionDomain, classfileBuffer);
                 if (b != null) {
                     classDefiners.add(new ClassDefiner(classBeingRedefined,b));
+                    //System.out.println("trans:"+ Mappings.getUnobfClass(className));
                     return classfileBuffer;
                 }
             }

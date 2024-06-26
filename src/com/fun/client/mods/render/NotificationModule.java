@@ -1,12 +1,13 @@
 package com.fun.client.mods.render;
 
-import com.darkmagician6.eventapi.event.events.EventRender2D;
-import com.darkmagician6.eventapi.event.events.EventTick;
+import com.fun.eventapi.event.events.EventRender2D;
+import com.fun.eventapi.event.events.EventTick;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
 import com.fun.utils.render.Notification;
-import org.lwjgl.util.vector.Vector2f;
 
+
+import javax.vecmath.Vector2f;
 import java.util.ArrayList;
 
 public class NotificationModule extends Module {

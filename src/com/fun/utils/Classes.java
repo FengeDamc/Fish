@@ -36,7 +36,9 @@ public enum Classes {
     MovementInput(new VClass("net/minecraft/util/MovementInput")),
     ChatComponentText(new VClass("net/minecraft/util/ChatComponentText").version(MinecraftVersion.VER_189),
             new VClass("net/minecraft/util/text/TextComponentString")),
-    GameState(new VClass("com/netease/mc/mod/network/common/GameState"));//net/minecraft/util/ChatComponentTexts
+    GameState(new VClass("com/netease/mc/mod/network/common/GameState")),
+    Mousse(new VClass("org/lwjgl/input/Mouse")),
+    GL11(new VClass("org/lwjgl/opengl/GL11"));//net/minecraft/util/ChatComponentTexts
     //com.netease.mc.mod.network.common.GameState
     public String obf_name ="";
     public String friendly_name ="";

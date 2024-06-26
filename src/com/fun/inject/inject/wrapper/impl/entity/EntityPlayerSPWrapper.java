@@ -7,7 +7,7 @@ import com.fun.inject.inject.wrapper.impl.world.BlockPosWrapper;
 import com.fun.utils.Classes;
 import com.fun.utils.Fields;
 import com.fun.utils.Methods;
-import com.fun.utils.Vec3;
+import com.fun.utils.vecmath.Vec3;
 import com.fun.inject.inject.Mappings;
 import com.fun.inject.inject.ReflectionUtils;
 

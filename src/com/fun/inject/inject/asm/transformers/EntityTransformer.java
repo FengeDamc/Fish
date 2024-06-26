@@ -1,7 +1,7 @@
 package com.fun.inject.inject.asm.transformers;
 
-import com.darkmagician6.eventapi.EventManager;
-import com.darkmagician6.eventapi.event.events.EventStrafe;
+import com.fun.eventapi.EventManager;
+import com.fun.eventapi.event.events.EventStrafe;
 import com.fun.inject.inject.asm.api.Mixin;
 import com.fun.inject.inject.asm.api.Transformer;
 import com.fun.utils.Classes;
@@ -24,7 +24,7 @@ public class EntityTransformer extends Transformer {
         final int ASTRAFE = Agent.minecraftVersion== MinecraftVersion.VER_189||
                 Agent.minecraftVersion== MinecraftVersion.VER_1710?0:1;
         InsnList list = new InsnList();
-        //Agent.logger.info("moveFlying");
+        //Agent.System.out.println("moveFlying");
         int j =0;
         list.add(new VarInsnNode(Opcodes.ALOAD,0));
 
@@ -41,21 +41,21 @@ public class EntityTransformer extends Transformer {
         list.add(new FieldInsnNode(Opcodes.GETFIELD,Mappings.getObfClass("net/minecraft/entity/Entity"), Mappings.getObfField("field_70177_z"),"F"));
         //event参数
 
-        list.add(new MethodInsnNode(Opcodes.INVOKESTATIC, Type.getInternalName(EntityTransformer.class),"onStrafe","(Ljava/lang/Object;FFFF)Lcom/darkmagician6/eventapi/event/events/EventStrafe;"));
+        list.add(new MethodInsnNode(Opcodes.INVOKESTATIC, Type.getInternalName(EntityTransformer.class),"onStrafe","(Ljava/lang/Object;FFFF)Lcom./un/eventapi/event/events/EventStrafe;"));
         list.add(new VarInsnNode(Opcodes.ASTORE,4+ASTRAFE));
         j++;
         list.add(new VarInsnNode(Opcodes.ALOAD,4+ASTRAFE));
-        list.add(new FieldInsnNode(Opcodes.GETFIELD,"com/darkmagician6/eventapi/event/events/EventStrafe","strafe","F"));
+        list.add(new FieldInsnNode(Opcodes.GETFIELD,"com./un/eventapi/event/events/EventStrafe","strafe","F"));
 
         list.add(new VarInsnNode(Opcodes.FSTORE,1));
 
         list.add(new VarInsnNode(Opcodes.ALOAD,4+ASTRAFE));
-        list.add(new FieldInsnNode(Opcodes.GETFIELD,"com/darkmagician6/eventapi/event/events/EventStrafe","forward","F"));
+        list.add(new FieldInsnNode(Opcodes.GETFIELD,"com./un/eventapi/event/events/EventStrafe","forward","F"));
 
         list.add(new VarInsnNode(Opcodes.FSTORE,2+ASTRAFE));
 
         list.add(new VarInsnNode(Opcodes.ALOAD,4+ASTRAFE));
-        list.add(new FieldInsnNode(Opcodes.GETFIELD,"com/darkmagician6/eventapi/event/events/EventStrafe","friction","F"));
+        list.add(new FieldInsnNode(Opcodes.GETFIELD,"com./un/eventapi/event/events/EventStrafe","friction","F"));
         list.add(new VarInsnNode(Opcodes.FSTORE,3+ASTRAFE));
 
         ArrayList<AbstractInsnNode> rl=new ArrayList<>();
@@ -80,7 +80,7 @@ public class EntityTransformer extends Transformer {
         int bound = rl.size();
         for (int x = 0; x < bound; x++) {
                 AbstractInsnNode node = rl.get(x);
-                methodNode.instructions.insert(node, new FieldInsnNode(Opcodes.GETFIELD, "com/darkmagician6/eventapi/event/events/EventStrafe", "yaw", "F"));
+                methodNode.instructions.insert(node, new FieldInsnNode(Opcodes.GETFIELD, "com./un/eventapi/event/events/EventStrafe", "yaw", "F"));
                 methodNode.instructions.remove(node);
         }
 

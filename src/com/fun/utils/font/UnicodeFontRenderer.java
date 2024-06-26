@@ -1,15 +1,18 @@
 package com.fun.utils.font;
 
+import com.fun.inject.Agent;
 import com.fun.inject.inject.wrapper.impl.MinecraftWrapper;
 import com.fun.inject.inject.wrapper.impl.gui.ScaledResolutionWrapper;
 import com.fun.inject.inject.wrapper.impl.render.GlStateManagerWrapper;
 
 
+import net.minecraft.launchwrapper.Launch;
 import org.lwjgl.opengl.GL11;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.UnicodeFont;
 import org.newdawn.slick.font.HieroSettings;
 import org.newdawn.slick.font.effects.ColorEffect;
+import sun.misc.Launcher;
 
 import java.awt.*;
 
@@ -51,7 +54,7 @@ public class UnicodeFontRenderer {
       if (string == null) {
          return 0.0F;
       } else {
-
+         //Thread.currentThread().setContextClassLoader(Agent.classLoader);
          load(string);
          GL11.glPushMatrix();
          GL11.glScaled(
@@ -73,11 +76,11 @@ public class UnicodeFontRenderer {
          if (texture) {
             GL11.glDisable(3553);
          }
-
+         //ClassLoader
          x *= (float)this.sr.getScaleFactor();
          y *= (float)this.sr.getScaleFactor();
 
-         this.font.drawString(x, y, string, new org.newdawn.slick.Color(color));
+         this.font.drawString((int)x, (int)y, string, new org.newdawn.slick.Color(color));
          if (texture) {
             GL11.glEnable(3553);
          }

@@ -1,6 +1,6 @@
 package com.fun.client.mods.combat;
 
-import com.darkmagician6.eventapi.event.events.EventTick;
+import com.fun.eventapi.event.events.EventTick;
 import com.fun.utils.Fields;
 import com.fun.utils.Methods;
 import com.fun.client.mods.Category;
@@ -36,6 +36,7 @@ public class AutoClicker extends Module {
     @Override
     public void onTick(EventTick event) {
         super.onTick(event);
+
         if(Math.random()< lcps.getValDouble()/20){
             if(mc.getGameSettings().getKey("key.attack").isPressed()&&left.getValBoolean()){
                 //NativeUtils.clickMouse(MOUSEEVENTF_LEFTDOWN);
@@ -49,12 +50,14 @@ public class AutoClicker extends Module {
 
 
         }
+        //System.out.println("aimbot2");
         if(Math.random()< rcps.getValDouble()/20)
             if(mc.getGameSettings().getKey("key.use").isPressed()&&right.getValBoolean())
                 if(!mc.getPlayer().isUsingItem()){
                     sendClick(mc.getGameSettings().getKey("key.use"),true);
                     //sendClick(1,false);//tClickMouse();//MD: wn/bS ()Z net/minecraft/entity/player/EntityPlayer/func_71039_bw ()Z
                 }
+
     }
 
     public void sendClick(final KeyBindingWrapper button, final boolean state) {

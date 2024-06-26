@@ -1,8 +1,8 @@
 package com.fun.client.mods;
 
-import com.darkmagician6.eventapi.EventManager;
-import com.darkmagician6.eventapi.EventTarget;
-import com.darkmagician6.eventapi.event.events.*;
+import com.fun.eventapi.EventManager;
+import com.fun.eventapi.EventTarget;
+import com.fun.eventapi.event.events.*;
 import com.fun.client.mods.combat.*;
 import com.fun.client.mods.movement.Flight;
 import com.fun.client.mods.movement.KeepSprint;
@@ -13,6 +13,7 @@ import com.fun.client.FunGhostClient;
 import com.fun.client.config.ConfigModule;
 import com.fun.client.mods.combat.*;
 import com.fun.inject.inject.wrapper.impl.setting.GameSettingsWrapper;
+import com.fun.utils.Methods;
 import com.fun.utils.render.Notification;
 import org.lwjgl.input.Mouse;
 
@@ -56,9 +57,9 @@ public class ModuleManager {
 
     @EventTarget
     public void onUpdate(EventUpdate event) {
-
+        //System.out.println("update");
         for (Module m : FunGhostClient.moduleManager.mods) {
-            //Agent.logger.info(m.getName());
+            //System.out.println(m.getName());
 
             if (m.running) {
                 m.onUpdate(event);
@@ -79,7 +80,7 @@ public class ModuleManager {
 
     @EventTarget
     public synchronized void onPacket(EventPacket event) {
-        //Agent.logger.info(Mappings.getUnobfClass(event.packet.getClass().getName()));
+        //Agent.System.out.println(Mappings.getUnobfClass(event.packet.getClass().getName()));
         for (Module m : mods) {
             if (m.running) m.onPacket(event);
 
@@ -88,14 +89,14 @@ public class ModuleManager {
     }
     @EventTarget
     public void onStrafe(EventStrafe event) {
-        //Agent.logger.info("onStrafe yaw:{} forward:{} strafe:{}",event.yaw,event.forward,event.strafe);
+        //Agent.System.out.println("onStrafe yaw:{} forward:{} strafe:{}",event.yaw,event.forward,event.strafe);
         for (Module m : mods) {
             if (m.running) m.onStrafe(event);
         }
     }
     @EventTarget
     public void onMotion(EventMotion event) {
-        //Agent.logger.info("onStrafe yaw:{} forward:{} strafe:{}",event.yaw,event.forward,event.strafe);
+        //Agent.System.out.println("onStrafe yaw:{} forward:{} strafe:{}",event.yaw,event.forward,event.strafe);
         for (Module m : mods) {
             if (m.running) m.onMotion(event);
         }
@@ -123,7 +124,7 @@ public class ModuleManager {
 
     @EventTarget
     public void onRender2D(EventRender2D event) {
-
+        //System.out.println("render2d");
         for (Module m : mods) {
             if (m.running) m.onRender2D(event);
         }
@@ -151,8 +152,8 @@ public class ModuleManager {
     }
     @EventTarget
     public void onTick(EventTick event){
-        mc.getGameSettings().getKey(GameSettingsWrapper.USE).setPressed(Mouse.isButtonDown(1));
-        mc.getGameSettings().getKey(GameSettingsWrapper.ATTACK).setPressed(Mouse.isButtonDown(0));
+        mc.getGameSettings().getKey(GameSettingsWrapper.USE).setPressed((boolean)Methods.isButtonDown.invoke(null,1));
+        mc.getGameSettings().getKey(GameSettingsWrapper.ATTACK).setPressed((boolean)Methods.isButtonDown.invoke(null,0));
         for (Module m : mods) {
             if (m.running){
 

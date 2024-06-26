@@ -1,7 +1,7 @@
 package com.fun.client.mods.world;
 
-import com.darkmagician6.eventapi.event.events.EventMoment;
-import com.fun.utils.Vec3;
+import com.fun.eventapi.event.events.EventMoment;
+import com.fun.utils.vecmath.Vec3;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
 import com.fun.client.mods.combat.AimBot;
@@ -29,21 +29,21 @@ public class Eagle extends Module {
         HitResult hitResult=mc.getHitResult();
         BlockPosWrapper blockPos=hitResult.getBlockPos();
         if(blockPos==null||hitResult.face==null)return;
-        //Agent.logger.info("eagle");
-        //Agent.logger.info("target x:{} y:{} z:{}",blockPos.x,blockPos.y,blockPos.z);
+        //Agent.System.out.println("eagle");
+        //Agent.System.out.println("target x:{} y:{} z:{}",blockPos.x,blockPos.y,blockPos.z);
         BlockPosWrapper playerDownPos= mc.getPlayer().getPos().add(0,-1,0);
-        //Agent.logger.info("player x:{} y:{} z:{}",playerDownPos.x,playerDownPos.y,playerDownPos.z);
-        //Agent.logger.info(playerDownPos.get().equals(blockPos.get()));
+        //Agent.System.out.println("player x:{} y:{} z:{}",playerDownPos.x,playerDownPos.y,playerDownPos.z);
+        //Agent.System.out.println(playerDownPos.get().equals(blockPos.get()));
 
         //int xDiff=playerDownPos.x-blockPos.x;
         //int yDiff=playerDownPos.y- blockPos.y;
         //int zDiff=playerDownPos.z- blockPos.z;
         //System.out.println(hitResult.face.offset);
-        //Agent.logger.info("{}",blockPos.add(hitResult.face.offset).equals(playerDownPos));
+        //Agent.System.out.println("{}",blockPos.add(hitResult.face.offset).equals(playerDownPos));
         //BlockPosWrapper targetPos=blockPos.add(hitResult.face.offset);
         Vec3 target=blockPos.toVec3();
         Vec3 player=mc.getPlayer().getPosVec().addVector(0,-0.5,0);
-        //Agent.logger.info("{} {} {}",posIn(target,player,0.5),target,player);
+        //Agent.System.out.println("{} {} {}",posIn(target,player,0.5),target,player);
         if(posIn(target,player,1)){
             if(mc.getWorld().isAir(playerDownPos.get())){
                 if(!mc.getPlayer().getMovementInputObj().getSneak()){

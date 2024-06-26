@@ -1,9 +1,9 @@
 package com.fun.inject.inject.asm.transformers;
 
-import com.darkmagician6.eventapi.EventManager;
-import com.darkmagician6.eventapi.event.events.EventMoment;
-import com.darkmagician6.eventapi.event.events.EventMotion;
-import com.darkmagician6.eventapi.event.events.EventUpdate;
+import com.fun.eventapi.EventManager;
+import com.fun.eventapi.event.events.EventMoment;
+import com.fun.eventapi.event.events.EventMotion;
+import com.fun.eventapi.event.events.EventUpdate;
 import com.fun.inject.inject.asm.api.Mixin;
 import com.fun.inject.inject.asm.api.Transformer;
 import com.fun.utils.Classes;
@@ -25,15 +25,15 @@ public class EntityPlayerSP extends Transformer {
     }
 
     public static void onUpdateEvent() {
-        //Agent.logger.info("update");
-        //Agent.logger.info(EventManager.REGISTRY_MAP);
+        //Agent.System.out.println("update");
+        //Agent.System.out.println(EventManager.REGISTRY_MAP);
         EventManager.call(new EventUpdate());
     }
     //func_175161_p,onUpdateWalkingPlayer,0,called every tick when the player is on foot. Performs all the things that normally happen during movement.
 
     public static void onLivingUpdateEvent() {
-        //Agent.logger.info("livingupdate");
-        //Agent.logger.info(EventManager.REGISTRY_MAP);
+        //Agent.System.out.println("livingupdate");
+        //Agent.System.out.println(EventManager.REGISTRY_MAP);
         EventManager.call(new EventMoment());
     }
     /*
@@ -144,7 +144,7 @@ public class EntityPlayerSP extends Transformer {
         list.add(new FieldInsnNode(Opcodes.GETFIELD, Mappings.getObfClass("net/minecraft/entity/Entity"), Mappings.getObfField("field_70177_z"), "F"));//yaw
         list.add(new VarInsnNode(Opcodes.ALOAD, 0));
         list.add(new FieldInsnNode(Opcodes.GETFIELD, Mappings.getObfClass("net/minecraft/entity/Entity"), Mappings.getObfField("field_70125_A"), "F"));//pitch
-        list.add(new MethodInsnNode(Opcodes.INVOKESTATIC, Type.getInternalName(EntityPlayerSP.class), "onMotion", "(DDDFF)Lcom/darkmagician6/eventapi/event/events/EventMotion;"));
+        list.add(new MethodInsnNode(Opcodes.INVOKESTATIC, Type.getInternalName(EntityPlayerSP.class), "onMotion", "(DDDFF)Lcom/fun/eventapi/event/events/EventMotion;"));
         list.add(new VarInsnNode(Opcodes.ASTORE, 1));
         j++;
         //ArrayList<AbstractInsnNode> rl=new ArrayList<>();
@@ -163,7 +163,7 @@ public class EntityPlayerSP extends Transformer {
                 AbstractInsnNode aload_0 = methodNode.instructions.get(i - 1);
                 if (aload_0 instanceof VarInsnNode) {
                     ((VarInsnNode) aload_0).var = 1;
-                    methodNode.instructions.insert(node, new FieldInsnNode(Opcodes.GETFIELD, "com/darkmagician6/eventapi/event/events/EventMotion", "yaw", "F"));
+                    methodNode.instructions.insert(node, new FieldInsnNode(Opcodes.GETFIELD, "com/fun/eventapi/event/events/EventMotion", "yaw", "F"));
                     methodNode.instructions.remove(node);
                     //rl.add(node);
                 }
@@ -173,7 +173,7 @@ public class EntityPlayerSP extends Transformer {
                 AbstractInsnNode aload_0 = methodNode.instructions.get(i - 1);
                 if (aload_0 instanceof VarInsnNode) {
                     ((VarInsnNode) aload_0).var = 1;
-                    methodNode.instructions.insert(node, new FieldInsnNode(Opcodes.GETFIELD, "com/darkmagician6/eventapi/event/events/EventMotion", "pitch", "F"));
+                    methodNode.instructions.insert(node, new FieldInsnNode(Opcodes.GETFIELD, "com/fun/eventapi/event/events/EventMotion", "pitch", "F"));
                     methodNode.instructions.remove(node);
                     //rl.add(node);
                 }
@@ -183,7 +183,7 @@ public class EntityPlayerSP extends Transformer {
                 AbstractInsnNode aload_0 = methodNode.instructions.get(i - 1);
                 if (aload_0 instanceof VarInsnNode) {
                     ((VarInsnNode) aload_0).var = 1;
-                    methodNode.instructions.insert(node, new FieldInsnNode(Opcodes.GETFIELD, "com/darkmagician6/eventapi/event/events/EventMotion", "x", "D"));
+                    methodNode.instructions.insert(node, new FieldInsnNode(Opcodes.GETFIELD, "com/fun/eventapi/event/events/EventMotion", "x", "D"));
                     methodNode.instructions.remove(node);
                     //rl.add(node);
                 }
@@ -193,7 +193,7 @@ public class EntityPlayerSP extends Transformer {
                 AbstractInsnNode aload_0 = methodNode.instructions.get(i - 1);
                 if (aload_0 instanceof VarInsnNode) {
                     ((VarInsnNode) aload_0).var = 1;
-                    methodNode.instructions.insert(node, new FieldInsnNode(Opcodes.GETFIELD, "com/darkmagician6/eventapi/event/events/EventMotion", "z", "D"));
+                    methodNode.instructions.insert(node, new FieldInsnNode(Opcodes.GETFIELD, "com/fun/eventapi/event/events/EventMotion", "z", "D"));
                     methodNode.instructions.remove(node);
                     //rl.add(node);
                 }
@@ -210,7 +210,7 @@ public class EntityPlayerSP extends Transformer {
                                 AbstractInsnNode aload_1 = methodNode.instructions.get(finalI - 1);
                                 if (aload_0 instanceof VarInsnNode) {
                                     ((VarInsnNode) aload_0).var = 1;
-                                    methodNode.instructions.insert(node, new FieldInsnNode(Opcodes.GETFIELD, "com/darkmagician6/eventapi/event/events/EventMotion", "y", "D"));
+                                    methodNode.instructions.insert(node, new FieldInsnNode(Opcodes.GETFIELD, "com/fun/eventapi/event/events/EventMotion", "y", "D"));
                                     methodNode.instructions.remove(node);
                                     methodNode.instructions.remove(aload_1);
 
@@ -226,12 +226,12 @@ public class EntityPlayerSP extends Transformer {
                                 if (aload_4 instanceof VarInsnNode&&((VarInsnNode) aload_4).var==4) {
                                     //methodNode.instructions.insert(node,new VarInsnNode(Opcodes.ALOAD,1));
                                     ((VarInsnNode) aload_4).var=1;
-                                    methodNode.instructions.insert(node, new FieldInsnNode(Opcodes.GETFIELD, "com/darkmagician6/eventapi/event/events/EventMotion", "y", "D"));
+                                    methodNode.instructions.insert(node, new FieldInsnNode(Opcodes.GETFIELD, "com/fun/eventapi/event/events/EventMotion", "y", "D"));
                                     methodNode.instructions.remove(node);
                                     //methodNode.instructions.remove(aload_4);
 
                                     //rl.add(node);
-                                    //Agent.logger.info("1.12.2");
+                                    //Agent.System.out.println("1.12.2");
 
 
                                 }

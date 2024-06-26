@@ -1,8 +1,8 @@
 package com.fun.client.mods.combat;
 
-import com.darkmagician6.eventapi.event.events.EventTick;
-import com.darkmagician6.eventapi.event.events.EventUpdate;
-import com.fun.utils.Vec3;
+import com.fun.eventapi.event.events.EventTick;
+import com.fun.eventapi.event.events.EventUpdate;
+import com.fun.utils.vecmath.Vec3;
 import com.fun.client.FunGhostClient;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
@@ -10,7 +10,7 @@ import com.fun.client.settings.Setting;
 import com.fun.inject.inject.wrapper.impl.entity.EntityPlayerSPWrapper;
 import com.fun.inject.inject.wrapper.impl.entity.EntityWrapper;
 import com.fun.inject.inject.wrapper.impl.setting.GameSettingsWrapper;
-import org.lwjgl.util.vector.Vector2f;
+import javax.vecmath.Vector2f;
 
 public class AutoBlocking extends Module {
     public AutoBlocking() {

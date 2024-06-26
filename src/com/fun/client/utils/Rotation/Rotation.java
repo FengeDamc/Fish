@@ -3,7 +3,7 @@ package com.fun.client.utils.Rotation;
 
 import com.fun.utils.MathHelper;
 import com.fun.inject.inject.wrapper.impl.MinecraftWrapper;
-import org.lwjgl.util.vector.Vector2f;
+import javax.vecmath.Vector2f;
 
 public class Rotation {
     public static MinecraftWrapper mc=MinecraftWrapper.get();
