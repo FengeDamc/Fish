@@ -58,7 +58,7 @@ public class AutoBlocking extends Module {
             return;
         }
         EntityPlayerSPWrapper playersp=mc.getPlayer();
-        Vector2f v= AimBot.aim(new Vec3(target.getX(),target.getY()+ target.getEyeHeight(),target.getZ()),
+        Vector2f v= AimAssist.aim(new Vec3(target.getX(),target.getY()+ target.getEyeHeight(),target.getZ()),
                 new Vec3(playersp.getX(), playersp.getY()+ playersp.getEyeHeight(), playersp.getZ()));
 
         if(Math.abs(v.y-target.getYaw())<fov.getValDouble()) block=mc.getPlayer().getHurtTime()< blockHurtTime.getValDouble();

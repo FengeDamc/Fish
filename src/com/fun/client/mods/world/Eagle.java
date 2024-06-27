@@ -4,7 +4,7 @@ import com.fun.eventapi.event.events.EventMoment;
 import com.fun.utils.vecmath.Vec3;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
-import com.fun.client.mods.combat.AimBot;
+import com.fun.client.mods.combat.AimAssist;
 import com.fun.inject.inject.wrapper.impl.HitResult;
 import com.fun.inject.inject.wrapper.impl.world.BlockPosWrapper;
 
@@ -14,7 +14,7 @@ public class Eagle extends Module {
         super("Eagle",Category.World);
     }
     public float getMotionYaw(){
-        float y1= AimBot.aim(new Vec3(0,0,0),new Vec3(mc.getPlayer().getMotionX(),mc.getPlayer().getMotionY(),mc.getPlayer().getMotionZ())).y;
+        float y1= AimAssist.aim(new Vec3(0,0,0),new Vec3(mc.getPlayer().getMotionX(),mc.getPlayer().getMotionY(),mc.getPlayer().getMotionZ())).y;
         int time= Math.round(y1/45.0f);
         y1=time*45;
 

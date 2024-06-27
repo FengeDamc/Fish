@@ -16,7 +16,6 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 public class EntityPlayerSPWrapper extends EntityPlayerWrapper {
-    private Object playerObj;
     private Object sendQueueObj;
 
     private MovementInputWrapper movementInputObj;
@@ -26,17 +25,17 @@ public class EntityPlayerSPWrapper extends EntityPlayerWrapper {
     }
 
     public boolean isNull() {
-        return playerObj == null;
+        return entityObj == null;
     }
     public IChatComponentWrapper getDisplayName() {
-        return new IChatComponentWrapper(Methods.getDisplayName_EntityPlayer.invoke(playerObj));
+        return new IChatComponentWrapper(Methods.getDisplayName_EntityPlayer.invoke(entityObj));
     }
 
     public double getX() {
         // FD: pk/s net/minecraft/entity/Entity/field_70165_t
 
         String notch = Fields.posX_Entity.getName();
-        Object value = ReflectionUtils.getFieldValue(playerObj, notch);
+        Object value = ReflectionUtils.getFieldValue(entityObj, notch);
         return value == null ? 0.0 : (Double) value;
     }
     //movementInput FD: bew/b net/minecraft/client/entity/EntityPlayerSP/field_71158_b
@@ -46,7 +45,7 @@ public class EntityPlayerSPWrapper extends EntityPlayerWrapper {
         // FD: pk/s net/minecraft/entity/Entity/field_70165_t
 
         String notch = Fields.posY_Entity.getName();
-        Object value = ReflectionUtils.getFieldValue(playerObj, notch);
+        Object value = ReflectionUtils.getFieldValue(entityObj, notch);
         return value == null ? 0.0 : (Double) value;
     }
 
@@ -54,65 +53,65 @@ public class EntityPlayerSPWrapper extends EntityPlayerWrapper {
         // FD: pk/s net/minecraft/entity/Entity/field_70165_t
 
         String notch = Fields.posZ_Entity.getName();
-        Object value = ReflectionUtils.getFieldValue(playerObj, notch);
+        Object value = ReflectionUtils.getFieldValue(entityObj, notch);
         return value == null ? 0.0 : (Double) value;
     }
 
     public int getHurtTime() {
-        return (Integer) ReflectionUtils.getFieldValue(playerObj, Mappings.getObfField("field_70737_aN"));
+        return (Integer) ReflectionUtils.getFieldValue(entityObj, Mappings.getObfField("field_70737_aN"));
     }
 
     public double getMotionX() {
-        return (Double) ReflectionUtils.getFieldValue(playerObj, Fields.MotionX.getName());
+        return (Double) ReflectionUtils.getFieldValue(entityObj, Fields.MotionX.getName());
     }
 
     public double getMotionY() {
-        return (Double) ReflectionUtils.getFieldValue(playerObj, Fields.MotionY.getName());
+        return (Double) ReflectionUtils.getFieldValue(entityObj, Fields.MotionY.getName());
     }
 
     public double getMotionZ() {
-        return (Double) ReflectionUtils.getFieldValue(playerObj, Fields.MotionZ.getName());
+        return (Double) ReflectionUtils.getFieldValue(entityObj, Fields.MotionZ.getName());
     }
 
     public void setMotionX(double motionX) {
-        ReflectionUtils.setFieldValue(playerObj, Fields.MotionX.getName(), motionX);
+        ReflectionUtils.setFieldValue(entityObj, Fields.MotionX.getName(), motionX);
     }
 
     public void setMotionY(double motionY) {
-        ReflectionUtils.setFieldValue(playerObj, Fields.MotionY.getName(), motionY);
+        ReflectionUtils.setFieldValue(entityObj, Fields.MotionY.getName(), motionY);
     }
 
     public void setMotionZ(double motionZ) {
-        ReflectionUtils.setFieldValue(playerObj,Fields.MotionZ.getName(), motionZ);
+        ReflectionUtils.setFieldValue(entityObj,Fields.MotionZ.getName(), motionZ);
     }
 
     public boolean isOnGround() {
         // FD: pk/C net/minecraft/entity/Entity/field_70122_E
-        return (Boolean) ReflectionUtils.getFieldValue(playerObj,Fields.OnGround_Entity.getName());
+        return (Boolean) ReflectionUtils.getFieldValue(entityObj,Fields.OnGround_Entity.getName());
     }
 
     public float getFallDistance() {
-        return (Float) ReflectionUtils.getFieldValue(playerObj, Mappings.getObfField("field_70143_R"));
+        return (Float) ReflectionUtils.getFieldValue(entityObj, Mappings.getObfField("field_70143_R"));
     }
 
     public void setFallDistance(float fallDistance) {
-        ReflectionUtils.setFieldValue(playerObj, Mappings.getObfField("field_70143_R"), fallDistance);
+        ReflectionUtils.setFieldValue(entityObj, Mappings.getObfField("field_70143_R"), fallDistance);
     }
 
     public float getSpeedInAir() {
-        return (Float) ReflectionUtils.getFieldValue(playerObj, Mappings.getObfField("field_71102_ce"));
+        return (Float) ReflectionUtils.getFieldValue(entityObj, Mappings.getObfField("field_71102_ce"));
     }
 
     public void setSpeedInAir(float speedInAir) {
-        ReflectionUtils.setFieldValue(playerObj, Mappings.getObfField("field_71102_ce"), speedInAir);
+        ReflectionUtils.setFieldValue(entityObj, Mappings.getObfField("field_71102_ce"), speedInAir);
     }
 
     public boolean isInWater() {
-        return (Boolean) ReflectionUtils.invokeMethod(playerObj, Mappings.getObfMethod("func_70090_H"));
+        return (Boolean) ReflectionUtils.invokeMethod(entityObj, Mappings.getObfMethod("func_70090_H"));
     }
 
     public boolean isInLava() {
-        return (Boolean) ReflectionUtils.invokeMethod(playerObj, Mappings.getObfMethod("func_180799_ab"));
+        return (Boolean) ReflectionUtils.invokeMethod(entityObj, Mappings.getObfMethod("func_180799_ab"));
     }
 
     public boolean isMoving() {
@@ -120,7 +119,7 @@ public class EntityPlayerSPWrapper extends EntityPlayerWrapper {
     }
 
     public void jump() {
-        ReflectionUtils.invokeMethod(playerObj, Mappings.getObfMethod("func_70664_aZ"));
+        ReflectionUtils.invokeMethod(entityObj, Mappings.getObfMethod("func_70664_aZ"));
     }
 
     public BlockPosWrapper getPos() {
@@ -151,24 +150,24 @@ public class EntityPlayerSPWrapper extends EntityPlayerWrapper {
 
     public float getYaw() {
         // FD: pk/y net/minecraft/entity/Entity/field_70177_z
-        Object value = ReflectionUtils.getFieldValue(playerObj, Fields.Yaw_Entity.getName());
+        Object value = ReflectionUtils.getFieldValue(entityObj, Fields.Yaw_Entity.getName());
         return value == null ? 0.0f : (Float) value;
     }
 
     public float getPitch() {
         // FD: pk/z net/minecraft/entity/Entity/field_70125_A
-        Object value = ReflectionUtils.getFieldValue(playerObj, Fields.Pitch_Entity.getName());
+        Object value = ReflectionUtils.getFieldValue(entityObj, Fields.Pitch_Entity.getName());
         return value == null ? 0.0f : (Float) value;
     }
     public void setYaw(float yaw) {
         // FD: pk/y net/minecraft/entity/Entity/field_70177_z
-        ReflectionUtils.setFieldValue(playerObj, Fields.Yaw_Entity.getName(), yaw);
+        ReflectionUtils.setFieldValue(entityObj, Fields.Yaw_Entity.getName(), yaw);
         //return value == null ? 0.0f : (Float) value;
     }
 
     public void setPitch(float pitch) {
         // FD: pk/z net/minecraft/entity/Entity/field_70125_A
-        ReflectionUtils.setFieldValue(playerObj, Fields.Pitch_Entity.getName(),pitch);
+        ReflectionUtils.setFieldValue(entityObj, Fields.Pitch_Entity.getName(),pitch);
         //return value == null ? 0.0f : (Float) value;
     }
 
@@ -185,30 +184,30 @@ public class EntityPlayerSPWrapper extends EntityPlayerWrapper {
     }
 
     public void setSprinting(boolean value) {
-        if (playerObj == null) return;
+        if (entityObj == null) return;
 
         // MD: bew/d (Z)V net/minecraft/client/entity/EntityPlayerSP/func_70031_b (Z)V
 
         /*String notch = Methods.setSprinting.getName(); // setSprinting
         try {
             Method m = getClazz().getMethod(notch, boolean.class);
-            m.invoke(playerObj, value);
+            m.invoke(entityObj, value);
         } catch (Exception e) {
             e.printStackTrace();
 
         }*/
-        ReflectionUtils.invokeMethod(playerObj,Classes.EntityPlayerSP,Methods.setSprinting,true);
+        ReflectionUtils.invokeMethod(entityObj,Classes.EntityPlayerSP,Methods.setSprinting,true);
     }
 
     public boolean isSprinting() {
-        if (playerObj == null) return false;
+        if (entityObj == null) return false;
 
         // MD: pk/aw ()Z net/minecraft/entity/Entity/func_70051_ag ()Z
 
         String notch = Mappings.getObfMethod("func_70051_ag"); // isSprinting
         try {
             Method m = getClazz().getDeclaredMethod(notch);
-            Object value = m.invoke(playerObj);
+            Object value = m.invoke(entityObj);
             return value != null && (Boolean) value;
         } catch (Exception e) {
             e.printStackTrace();
@@ -219,7 +218,7 @@ public class EntityPlayerSPWrapper extends EntityPlayerWrapper {
     }
 
     public boolean isSneaking() {
-        return (boolean)Methods.isSneaking_EntityPlayerSP.invoke(playerObj);
+        return (boolean)Methods.isSneaking_EntityPlayerSP.invoke(entityObj);
     }
 
     public Object getSendQueue() {
@@ -227,7 +226,7 @@ public class EntityPlayerSPWrapper extends EntityPlayerWrapper {
             try {
                 String notch = Fields.sendQueueSP.getName(); // sendQueue
                 Field field = getClazz().getField(notch);
-                sendQueueObj = field.get(playerObj);
+                sendQueueObj = field.get(entityObj);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -236,23 +235,23 @@ public class EntityPlayerSPWrapper extends EntityPlayerWrapper {
     }
 
     public MovementInputWrapper getMovementInputObj() {
-        return new MovementInputWrapper(ReflectionUtils.getFieldValue(playerObj, Mappings.getObfField("field_71158_b")));
+        return new MovementInputWrapper(ReflectionUtils.getFieldValue(entityObj, Mappings.getObfField("field_71158_b")));
     }
 
     public void addChatMessage(Object chatComponentText) {
-        ReflectionUtils.invokeMethod(playerObj, Mappings.getObfMethod("func_145747_a"), new Class[]{chatComponentText.getClass()}, chatComponentText);
+        ReflectionUtils.invokeMethod(entityObj, Mappings.getObfMethod("func_145747_a"), new Class[]{chatComponentText.getClass()}, chatComponentText);
     }
 
     public void sendChatMessage(String message) {
-        ReflectionUtils.invokeMethod(playerObj, Mappings.getObfMethod("func_71165_d"), new Class[]{String.class}, message);
+        ReflectionUtils.invokeMethod(entityObj, Mappings.getObfMethod("func_71165_d"), new Class[]{String.class}, message);
     }
 
-    public void setPlayerObj(Object playerObj) {
-        this.playerObj = playerObj;
+    public void setEntityObj(Object entityObj) {
+        this.entityObj = entityObj;
     }
 
-    public Object getPlayerObj() {
-        return playerObj;
+    public Object getEntityObj() {
+        return entityObj;
     }
 
     public boolean isInFluid() {
@@ -260,11 +259,11 @@ public class EntityPlayerSPWrapper extends EntityPlayerWrapper {
     }
 
     public int getEntityID() {
-        return (int) ReflectionUtils.invokeMethod(playerObj, Methods.getEntityID_Entity.getName());
+        return (int) ReflectionUtils.invokeMethod(entityObj, Methods.getEntityID_Entity.getName());
     }
 
     public boolean isUsingItem() {
-        return (boolean)ReflectionUtils.invokeMethod(playerObj, Methods.isUsing.getName());
+        return (boolean)ReflectionUtils.invokeMethod(entityObj, Methods.isUsing.getName());
 
     }
 }

@@ -30,7 +30,7 @@ public class UnicodeFontRenderer {
       hieroSettings.setFontSize((int)((float)awtFont.getSize() / 2.0F * (float)this.sr.getScaleFactor()));
       this.font = new UnicodeFont(awtFont, hieroSettings);//神B
       //this.font.addAsciiGlyphs();
-
+      //this.font.set
       font.getEffects().add(new ColorEffect(Color.WHITE));
 
 
@@ -54,13 +54,14 @@ public class UnicodeFontRenderer {
       if (string == null) {
          return 0.0F;
       } else {
+         //this.sr = new ScaledResolutionWrapper(MinecraftWrapper.get());
          //Thread.currentThread().setContextClassLoader(Agent.classLoader);
          load(string);
          GL11.glPushMatrix();
          GL11.glScaled(
-            (double)(1.0F / (float)this.sr.getScaleFactor()),
-            (double)(1.0F / (float)this.sr.getScaleFactor()),
-            (double)(1.0F / (float)this.sr.getScaleFactor())
+            (double)(1.0F / (int)this.sr.getScaleFactor()),
+            (double)(1.0F / (int)this.sr.getScaleFactor()),
+            (double)(1.0F / (int)this.sr.getScaleFactor())
          );
          boolean blend = GL11.glIsEnabled(3042);
          boolean lighting = GL11.glIsEnabled(2896);

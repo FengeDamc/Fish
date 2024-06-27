@@ -1,5 +1,6 @@
 package com.fun.gui;
 
+import com.formdev.flatlaf.FlatDarculaLaf;
 import com.formdev.flatlaf.FlatLightLaf;
 import com.fun.inject.Agent;
 import com.fun.inject.Main;
@@ -38,7 +39,7 @@ public class Injector extends JFrame {
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
                 // 绘制背景图片
-                Image backgroundImage = new ImageIcon(Injector.class.getResource("/assets/texture/injector1.png")).getImage();
+                Image backgroundImage = new ImageIcon(Injector.class.getResource("/assets/texture/injector.png")).getImage();
                 g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
             }
         };

@@ -11,11 +11,9 @@ import com.fun.client.mods.render.NotificationModule;
 import com.fun.client.mods.world.Eagle;
 import com.fun.client.FunGhostClient;
 import com.fun.client.config.ConfigModule;
-import com.fun.client.mods.combat.*;
 import com.fun.inject.inject.wrapper.impl.setting.GameSettingsWrapper;
 import com.fun.utils.Methods;
 import com.fun.utils.render.Notification;
-import org.lwjgl.input.Mouse;
 
 import java.util.ArrayList;
 
@@ -29,7 +27,7 @@ public class ModuleManager {
 
     public HUD hud;
     public Reach reach;
-    public AimBot aimBot;
+    public AimAssist aimAssist;
     public Flight flight;
     public AutoClicker autoClicker;
     public Eagle eagle;
@@ -45,7 +43,7 @@ public class ModuleManager {
         hud = new HUD("HUD");
         reach = new Reach();
         autoClicker=new AutoClicker();
-        aimBot = new AimBot();
+        aimAssist = new AimAssist();
         flight = new Flight("Flight",Category.Movement);
         eagle=new Eagle();
         velocity=new Velocity();
@@ -90,6 +88,7 @@ public class ModuleManager {
     @EventTarget
     public void onStrafe(EventStrafe event) {
         //Agent.System.out.println("onStrafe yaw:{} forward:{} strafe:{}",event.yaw,event.forward,event.strafe);
+        //System.out.println("onStrafe2");
         for (Module m : mods) {
             if (m.running) m.onStrafe(event);
         }

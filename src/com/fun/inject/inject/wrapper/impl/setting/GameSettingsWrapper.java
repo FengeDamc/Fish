@@ -3,6 +3,7 @@ package com.fun.inject.inject.wrapper.impl.setting;
 
 import com.fun.inject.inject.Mappings;
 import com.fun.inject.inject.wrapper.Wrapper;
+import com.fun.utils.Fields;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;
@@ -29,6 +30,13 @@ public class GameSettingsWrapper extends Wrapper {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    //field_74341_c,mouseSensitivity,0,
+    public float geMouseSensitivity(){
+        return (float)Fields.mouseSensitivity.get(gameSettingsObj);
+    }
+    public boolean isInvertMouse(){
+        return (boolean) Fields.invertMouse.get(gameSettingsObj);
     }
 
     public KeyBindingWrapper getKey(String name) {

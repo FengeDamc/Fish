@@ -38,7 +38,16 @@ public enum Classes {
             new VClass("net/minecraft/util/text/TextComponentString")),
     GameState(new VClass("com/netease/mc/mod/network/common/GameState")),
     Mousse(new VClass("org/lwjgl/input/Mouse")),
-    GL11(new VClass("org/lwjgl/opengl/GL11"));//net/minecraft/util/ChatComponentTexts
+    GL11(new VClass("org/lwjgl/opengl/GL11")),
+    MouseHelper(new VClass("net/minecraft/util/MouseHelper"));/*
+    net/minecraft/util/Timer net/minecraft/util/Timer
+	elapsedPartialTicks field_194148_c
+	elapsedTicks field_74280_b
+	lastSyncSysClock field_74277_g
+	renderPartialTicks field_194147_b
+	tickLength field_194149_e
+	updateTimer ()V func_74275_a
+    */
     //com.netease.mc.mod.network.common.GameState
     public String obf_name ="";
     public String friendly_name ="";

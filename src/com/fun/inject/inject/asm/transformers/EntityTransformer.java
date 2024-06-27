@@ -41,21 +41,21 @@ public class EntityTransformer extends Transformer {
         list.add(new FieldInsnNode(Opcodes.GETFIELD,Mappings.getObfClass("net/minecraft/entity/Entity"), Mappings.getObfField("field_70177_z"),"F"));
         //event参数
 
-        list.add(new MethodInsnNode(Opcodes.INVOKESTATIC, Type.getInternalName(EntityTransformer.class),"onStrafe","(Ljava/lang/Object;FFFF)Lcom./un/eventapi/event/events/EventStrafe;"));
+        list.add(new MethodInsnNode(Opcodes.INVOKESTATIC, Type.getInternalName(EntityTransformer.class),"onStrafe","(Ljava/lang/Object;FFFF)Lcom/fun/eventapi/event/events/EventStrafe;"));
         list.add(new VarInsnNode(Opcodes.ASTORE,4+ASTRAFE));
         j++;
         list.add(new VarInsnNode(Opcodes.ALOAD,4+ASTRAFE));
-        list.add(new FieldInsnNode(Opcodes.GETFIELD,"com./un/eventapi/event/events/EventStrafe","strafe","F"));
+        list.add(new FieldInsnNode(Opcodes.GETFIELD,"com/fun/eventapi/event/events/EventStrafe","strafe","F"));
 
         list.add(new VarInsnNode(Opcodes.FSTORE,1));
 
         list.add(new VarInsnNode(Opcodes.ALOAD,4+ASTRAFE));
-        list.add(new FieldInsnNode(Opcodes.GETFIELD,"com./un/eventapi/event/events/EventStrafe","forward","F"));
+        list.add(new FieldInsnNode(Opcodes.GETFIELD,"com/fun/eventapi/event/events/EventStrafe","forward","F"));
 
         list.add(new VarInsnNode(Opcodes.FSTORE,2+ASTRAFE));
 
         list.add(new VarInsnNode(Opcodes.ALOAD,4+ASTRAFE));
-        list.add(new FieldInsnNode(Opcodes.GETFIELD,"com./un/eventapi/event/events/EventStrafe","friction","F"));
+        list.add(new FieldInsnNode(Opcodes.GETFIELD,"com/fun/eventapi/event/events/EventStrafe","friction","F"));
         list.add(new VarInsnNode(Opcodes.FSTORE,3+ASTRAFE));
 
         ArrayList<AbstractInsnNode> rl=new ArrayList<>();
@@ -80,7 +80,7 @@ public class EntityTransformer extends Transformer {
         int bound = rl.size();
         for (int x = 0; x < bound; x++) {
                 AbstractInsnNode node = rl.get(x);
-                methodNode.instructions.insert(node, new FieldInsnNode(Opcodes.GETFIELD, "com./un/eventapi/event/events/EventStrafe", "yaw", "F"));
+                methodNode.instructions.insert(node, new FieldInsnNode(Opcodes.GETFIELD, "com/fun/eventapi/event/events/EventStrafe", "yaw", "F"));
                 methodNode.instructions.remove(node);
         }
 
@@ -117,6 +117,8 @@ public class EntityTransformer extends Transformer {
 
      */
     public static EventStrafe onStrafe(Object entity,float f0, float f1, float f2, float f){
+        //System.out.println("onStrafe1");
+        System.out.println("onStrafe");
         EventStrafe eventStrafe=new EventStrafe(f1,f0,f,f2);
         if(entity.getClass().getName().equals(Mappings.getObfClass("net/minecraft/client/entity/EntityPlayerSP").replace('/','.'))) EventManager.call(eventStrafe);
         return eventStrafe;

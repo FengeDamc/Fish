@@ -1,6 +1,7 @@
 package com.fun.client.mods.combat;
 
 import com.fun.eventapi.event.events.EventStrafe;
+import com.fun.eventapi.event.events.EventUpdate;
 import com.fun.utils.Classes;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
@@ -31,7 +32,11 @@ public class Target extends Module {
 
     @Override
     public void onStrafe(EventStrafe event) {
-        super.onStrafe(event);
+
+    }
+
+    @Override
+    public void onUpdate(EventUpdate event) {
 
         target=null;
         dist=Double.MAX_VALUE;
@@ -46,7 +51,7 @@ public class Target extends Module {
                 mc.getWorld().getLoadedPlayers()
                 :mc.getWorld().getLoadedEntities()) {
             double d1=mc.getPlayer().getDistance(player);
-            if (player.entityObj!=playersp.getPlayerObj()&&d1< range.getValDouble()&&d1<dist&&!player.isDead()
+            if (player.entityObj!=playersp.getEntityObj()&&d1< range.getValDouble()&&d1<dist&&!player.isDead()
                     && Classes.EntityLivingBase.isInstanceof(player.entityObj)) {
                 target = player;
                 dist=d1;

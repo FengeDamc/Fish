@@ -44,7 +44,8 @@ public enum Methods {
             ,new VMethod("func_191958_b","(FFFF)V").version(MinecraftVersion.VER_1122)),
     needNewCheck(new VMethod("needNewCheck","()Z")),
     isButtonDown(Classes.Mousse,new VMethod("isButtonDown","(I)Z")),
-    glPushMatrix(Classes.GL11,new VMethod("glPushMatrix","()V"));
+    glPushMatrix(Classes.GL11,new VMethod("glPushMatrix","()V")),
+    setAngles_Entity(Classes.Entity,new VMethod("func_70082_c","(FF)V"));//func_70082_c (FF)V
 
 
 

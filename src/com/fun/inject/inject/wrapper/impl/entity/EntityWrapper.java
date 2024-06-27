@@ -2,6 +2,7 @@ package com.fun.inject.inject.wrapper.impl.entity;
 
 
 import com.fun.inject.inject.wrapper.impl.world.BlockPosWrapper;
+import com.fun.utils.Classes;
 import com.fun.utils.Fields;
 import com.fun.utils.Methods;
 import com.fun.inject.inject.Mappings;
@@ -17,6 +18,11 @@ public class EntityWrapper extends Wrapper {
         super("net/minecraft/entity/Entity");
         this.entityObj = entityObj;
     }
+
+    public EntityWrapper(Classes c) {
+        super(c);
+    }
+
     public UUID getUniqueID(){
         return (UUID) Methods.getUniqueID.invoke(entityObj);
     }
@@ -27,6 +33,9 @@ public class EntityWrapper extends Wrapper {
         super(clazz);
 
         this.entityObj = entityObj;
+    }
+    public void setAngles(float yaw,float pitch) {
+        Methods.setAngles_Entity.invoke(entityObj, yaw, pitch);
     }
     public float getEyeHeight(){
         //func_70047_e getEyeHeight

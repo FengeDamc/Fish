@@ -172,7 +172,7 @@ public class Agent {
                     }
                 }
                 System.out.println("jarPath:"+jarPath);
-                if(classLoader.getClass().getClassLoader()!=null)injectClassLoader(classLoader);
+                if(classLoader.getClass().getName().contains("launchwrapper"))injectClassLoader(classLoader);
                 try {
                     if (Agent.class.getClassLoader()!=(classLoader)) {
 

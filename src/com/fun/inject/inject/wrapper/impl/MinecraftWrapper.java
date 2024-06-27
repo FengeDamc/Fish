@@ -9,6 +9,7 @@ import com.fun.inject.inject.wrapper.impl.render.FontRendererWrapper;
 import com.fun.inject.inject.wrapper.impl.render.FramebufferWrapper;
 import com.fun.inject.inject.wrapper.impl.render.RenderManagerWrapper;
 import com.fun.inject.inject.wrapper.impl.setting.GameSettingsWrapper;
+import com.fun.inject.inject.wrapper.impl.util.MouseHelperWrapper;
 import com.fun.inject.inject.wrapper.impl.world.WorldClientWrapper;
 import com.fun.utils.Fields;
 import com.fun.utils.Methods;
@@ -115,13 +116,17 @@ public class MinecraftWrapper extends Wrapper {
 
         try {
             Object value = ReflectionUtils.getFieldValue(minecraftObj, Fields.player.getName());
-            thePlayer.setPlayerObj(value);
+            thePlayer.setEntityObj(value);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         return thePlayer;
     }
+    public MouseHelperWrapper getMouseHelper() {
+        return new MouseHelperWrapper(Fields.mouseHelper.get(minecraftObj));
+    }
+
 
 
     public WorldClientWrapper getWorld() {

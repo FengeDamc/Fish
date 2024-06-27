@@ -4,6 +4,7 @@ package com.fun.inject.inject.wrapper.impl.other;
 import com.fun.inject.inject.Mappings;
 import com.fun.inject.inject.ReflectionUtils;
 import com.fun.inject.inject.wrapper.Wrapper;
+import com.fun.utils.Fields;
 
 public class TimerWrapper extends Wrapper {
     private final Object timerObj;
@@ -19,6 +20,9 @@ public class TimerWrapper extends Wrapper {
 
     public void setTimerSpeed(Float speed) {
         ReflectionUtils.setFieldValue(timerObj, Mappings.getObfField("field_74278_d"), speed);
+    }
+    public float getRenderPartialTicks(){
+        return (float) Fields.renderPartialTicks.get(timerObj);
     }
 
 }
