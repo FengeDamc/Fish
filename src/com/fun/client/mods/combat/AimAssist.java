@@ -63,7 +63,7 @@ public class AimAssist extends Module {
         final float gcd = f * f * f * 8.0F;
 
         int i = mc.getGameSettings().isInvertMouse() ? -1 : 1;
-        float f2 = this.mc.getMouseHelper().getDeltaX() + ((rotations.x - mc.getPlayer().getYaw()) * (strength / 400) -
+        float f2 = this.mc.getMouseHelper().getDeltaX() + (MathHelper.wrapAngleTo180_float(rotations.x - mc.getPlayer().getYaw()) * (strength / 400) -
                 this.mc.getMouseHelper().getDeltaX()) * gcd;
         float f3 = this.mc.getMouseHelper().getDeltaY() - this.mc.getMouseHelper().getDeltaY() * gcd;
 

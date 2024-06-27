@@ -9,30 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="更新了注入网易(all)">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/fenge.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/launchwrapper_1_12__4_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/texture/injector2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/util/MouseHelperWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/ModuleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/ModuleManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/combat/AimBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/combat/AimAssist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/combat/AutoBlocking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/combat/AutoBlocking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/combat/Target.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/combat/Target.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/world/Eagle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/world/Eagle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/gui/Injector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/gui/Injector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/Agent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/EntityTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/EntityTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/MinecraftWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/MinecraftWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/entity/EntityPlayerSPWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/entity/EntityPlayerSPWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/entity/EntityWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/entity/EntityWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/other/TimerWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/other/TimerWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/setting/GameSettingsWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/setting/GameSettingsWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/Classes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/Classes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/Fields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/Fields.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/Methods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/font/UnicodeFontRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/font/UnicodeFontRenderer.java" afterDir="false" />
+    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="add AimAssist">
+      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/combat/AimAssist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/combat/AimAssist.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -424,7 +402,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718630088744</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="add AimAssist">
+      <option name="closed" value="true" />
+      <created>1719495864470</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1719495864470</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -463,7 +449,8 @@
     <MESSAGE value="更新一点" />
     <MESSAGE value="更新了注入网易" />
     <MESSAGE value="更新了注入网易(all)" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新了注入网易(all)" />
+    <MESSAGE value="add AimAssist" />
+    <option name="LAST_COMMIT_MESSAGE" value="add AimAssist" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
