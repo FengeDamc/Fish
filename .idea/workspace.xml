@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="add AimAssist">
+    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="add Backtrack">
       <change afterPath="$PROJECT_DIR$/src/com/fun/client/mods/world/Backtrack.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/entity/EntityLivingBaseWrapper.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/network/INetHandler.java" afterDir="false" />
@@ -27,6 +27,7 @@
       <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/render/HUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/render/HUD.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/render/NotificationModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/render/NotificationModule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/fun/inject/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/Agent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/InjectUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/InjectUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/Mappings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/Mappings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/ReflectionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/ReflectionUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/EntityTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/EntityTransformer.java" afterDir="false" />
@@ -301,7 +302,7 @@
       <workItem from="1718597292866" duration="7255000" />
       <workItem from="1718770688284" duration="8759000" />
       <workItem from="1718856903080" duration="17111000" />
-      <workItem from="1719666463512" duration="186000" />
+      <workItem from="1719666463512" duration="466000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -455,7 +456,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719496314415</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="add Backtrack">
+      <option name="closed" value="true" />
+      <created>1719720599561</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1719720599561</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,7 +504,8 @@
     <MESSAGE value="更新了注入网易" />
     <MESSAGE value="更新了注入网易(all)" />
     <MESSAGE value="add AimAssist" />
-    <option name="LAST_COMMIT_MESSAGE" value="add AimAssist" />
+    <MESSAGE value="add Backtrack" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Backtrack" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
