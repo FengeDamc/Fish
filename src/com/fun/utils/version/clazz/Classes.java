@@ -44,7 +44,10 @@ public enum Classes {
     Tessellator(new VClass("net/minecraft/client/renderer/Tessellator")),
     WorldRenderer(new VClass("net/minecraft/client/renderer/WorldRenderer"),
             new VClass("net/minecraft/client/renderer/BufferBuilder").version(MinecraftVersion.VER_1122)),
-    DefaultVertexFormats(new VClass("net/minecraft/client/renderer/vertex/DefaultVertexFormats"));/*
+    DefaultVertexFormats(new VClass("net/minecraft/client/renderer/vertex/DefaultVertexFormats")),
+    S18PacketEntityTeleport(new VClass("net/minecraft/network/play/server/S18PacketEntityTeleport"),
+            new VClass("net/minecraft/network/play/server/SPacketEntityTeleport").version(MinecraftVersion.VER_1122));/*
+    net/minecraft/network/play/server/S18PacketEntityTeleport
     net/minecraft/client/renderer/vertex/DefaultVertexFormats
     net/minecraft/client/renderer/BufferBuilder
     net/minecraft/client/renderer/WorldRenderer

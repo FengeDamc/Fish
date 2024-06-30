@@ -66,8 +66,9 @@ public enum Methods {
     draw_Tessellator(Classes.Tessellator,new VMethod("func_78381_a","()V")),
     enableTexture2D_GlStateManager(Classes.GlStateManager,new VMethod("func_179098_w","()V")),
     disableBlend_GlStateManager(Classes.GlStateManager,new VMethod("func_179084_k","()V")),
-    endVertex(new VMethod("func_181675_d","()V"));
-    //	endVertex ()V func_181675_d
+    endVertex(new VMethod("func_181675_d","()V")),
+    getEntityId_S18PacketEntityTeleport(Classes.S18PacketEntityTeleport,new VMethod("func_149451_c","()I"));
+    //getEntityId ()I func_149451_c
 
 
 

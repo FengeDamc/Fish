@@ -74,8 +74,8 @@ public class HUD extends Module {
             if (m.running) {
                 if (!modBlacklist.contains(m.getClass().getName())) {
                     int color=ColorUtils.mixColors(new Color((int) mixColor1.getValDouble()),new Color((int) mixColor2.getValDouble()),ColorUtils.getBlendFactor(new Vector2d(sr.getScaledWidth() - FontManager.tenacity.getStringWidth(m.getName())-6, (int) offset))).getRGB();
-                    GuiWrapper.drawRect(sr.getScaledWidth() -4, (int) (4 + offset),sr.getScaledWidth(),(int) (4 + offset+FontManager.tenacity.getHeight()),color);
-                    RenderUtils.drawRoundedRect(sr.getScaledWidth() - FontManager.tenacity.getStringWidth(m.getName())-6, (int) offset+8, sr.getScaledWidth(), (int) (FontManager.tenacity.getHeight() + offset+4),5,new Color(255,255,225, 35).getRGB());
+                    RenderUtils.drawRoundedRect(sr.getScaledWidth(), (int) (6 + offset),sr.getScaledWidth()+2,(int) (2 + offset+FontManager.tenacity.getHeight()),3,color);
+                    RenderUtils.drawRoundedRect(sr.getScaledWidth() - FontManager.tenacity.getStringWidth(m.getName())-6, (int) offset+6, sr.getScaledWidth(), (int) (FontManager.tenacity.getHeight() + offset+4),5,new Color(255,255,225, 35).getRGB());
                     FontManager.tenacity.drawStringWithShadow( m.getName(), sr.getScaledWidth() -FontManager.tenacity.getStringWidth(m.getName())-4, (int) (4 + offset),color);
                     yCount++;
                     index++;
