@@ -1,13 +1,15 @@
-package com.fun.utils;
+package com.fun.utils.version.methods;
 
 import com.fun.inject.inject.Mappings;
 import com.fun.inject.inject.MinecraftType;
 import com.fun.inject.inject.MinecraftVersion;
+import com.fun.utils.version.Version;
+import com.fun.utils.version.clazz.Classes;
 import org.objectweb.asm.Type;
 
 import java.lang.reflect.Method;
 
-public class VMethod extends Version{
+public class VMethod extends Version {
     public String obf_name ="";
     public String friendly_name ="";
     public Method method=null;

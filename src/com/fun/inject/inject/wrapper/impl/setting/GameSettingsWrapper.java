@@ -3,7 +3,7 @@ package com.fun.inject.inject.wrapper.impl.setting;
 
 import com.fun.inject.inject.Mappings;
 import com.fun.inject.inject.wrapper.Wrapper;
-import com.fun.utils.Fields;
+import com.fun.utils.version.fields.Fields;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;

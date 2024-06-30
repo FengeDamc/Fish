@@ -3,13 +3,14 @@ package com.fun.inject.inject.wrapper.impl.entity;
 
 import com.fun.inject.inject.wrapper.impl.MinecraftWrapper;
 import com.fun.inject.inject.wrapper.impl.world.BlockPosWrapper;
-import com.fun.utils.Classes;
-import com.fun.utils.Fields;
-import com.fun.utils.Methods;
+import com.fun.utils.version.clazz.Classes;
+import com.fun.utils.version.fields.Fields;
+import com.fun.utils.version.methods.Methods;
 import com.fun.inject.inject.Mappings;
 import com.fun.inject.inject.ReflectionUtils;
 import com.fun.inject.inject.wrapper.Wrapper;
 
+import java.lang.reflect.Method;
 import java.util.UUID;
 
 public class EntityWrapper extends Wrapper {
@@ -38,6 +39,9 @@ public class EntityWrapper extends Wrapper {
         super(clazz);
 
         this.obj = entityObj;
+    }
+    public boolean isSprinting() {
+        return (boolean) Methods.isSprinting_Entity.invoke(obj);
     }
     public void setAngles(float yaw,float pitch) {
         Methods.setAngles_Entity.invoke(obj, yaw, pitch);

@@ -4,11 +4,9 @@ package com.fun.inject.inject.asm.transformers;
 import com.fun.eventapi.EventManager;
 import com.fun.eventapi.event.events.EventPacket;
 import com.fun.inject.Agent;
-import com.fun.inject.inject.Mappings;
-import com.fun.inject.inject.asm.api.Inject;
 import com.fun.inject.inject.asm.api.Mixin;
 import com.fun.inject.inject.asm.api.Transformer;
-import com.fun.utils.Methods;
+import com.fun.utils.version.methods.Methods;
 import org.objectweb.asm.tree.*;
 import org.objectweb.asm.Type;
 

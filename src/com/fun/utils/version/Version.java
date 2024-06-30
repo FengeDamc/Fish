@@ -1,4 +1,4 @@
-package com.fun.utils;
+package com.fun.utils.version;
 
 import com.fun.inject.inject.MinecraftType;
 import com.fun.inject.inject.MinecraftVersion;

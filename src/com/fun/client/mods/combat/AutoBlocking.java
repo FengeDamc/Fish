@@ -2,7 +2,7 @@ package com.fun.client.mods.combat;
 
 import com.fun.eventapi.event.events.EventTick;
 import com.fun.eventapi.event.events.EventUpdate;
-import com.fun.utils.vecmath.Vec3;
+import com.fun.utils.math.vecmath.Vec3;
 import com.fun.client.FunGhostClient;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;

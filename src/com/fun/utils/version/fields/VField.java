@@ -1,12 +1,13 @@
-package com.fun.utils;
+package com.fun.utils.version.fields;
 
 import com.fun.inject.inject.Mappings;
 import com.fun.inject.inject.MinecraftType;
 import com.fun.inject.inject.MinecraftVersion;
+import com.fun.utils.version.Version;
 
 import java.lang.reflect.Field;
 
-public class VField extends Version{
+public class VField extends Version {
     public Field field;
     public String friendly_name;
     public String obf_name;

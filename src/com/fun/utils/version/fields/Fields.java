@@ -1,9 +1,10 @@
-package com.fun.utils;
+package com.fun.utils.version.fields;
 
 import com.fun.inject.Agent;
 import com.fun.inject.inject.MinecraftType;
 import com.fun.inject.inject.MinecraftVersion;
 import com.fun.inject.inject.ReflectionUtils;
+import com.fun.utils.version.clazz.Classes;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;

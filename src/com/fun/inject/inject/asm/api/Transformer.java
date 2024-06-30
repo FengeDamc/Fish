@@ -1,7 +1,7 @@
 package com.fun.inject.inject.asm.api;
 
 
-import com.fun.utils.Classes;
+import com.fun.utils.version.clazz.Classes;
 import com.fun.inject.Agent;
 import com.fun.inject.inject.Mappings;
 

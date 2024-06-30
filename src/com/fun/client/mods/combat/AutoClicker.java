@@ -1,8 +1,8 @@
 package com.fun.client.mods.combat;
 
 import com.fun.eventapi.event.events.EventTick;
-import com.fun.utils.Fields;
-import com.fun.utils.Methods;
+import com.fun.utils.version.fields.Fields;
+import com.fun.utils.version.methods.Methods;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
 import com.fun.client.settings.Setting;

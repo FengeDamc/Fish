@@ -2,7 +2,7 @@ package com.fun.client.mods.combat;
 
 import com.fun.eventapi.event.events.EventStrafe;
 import com.fun.eventapi.event.events.EventUpdate;
-import com.fun.utils.Classes;
+import com.fun.utils.version.clazz.Classes;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
 import com.fun.client.settings.Setting;

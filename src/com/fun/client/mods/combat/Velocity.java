@@ -2,9 +2,7 @@ package com.fun.client.mods.combat;
 
 import com.fun.eventapi.event.events.EventMoment;
 import com.fun.eventapi.event.events.EventPacket;
-import com.fun.inject.Agent;
-import com.fun.inject.inject.Mappings;
-import com.fun.utils.Classes;
+import com.fun.utils.version.clazz.Classes;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
 import com.fun.client.settings.Setting;

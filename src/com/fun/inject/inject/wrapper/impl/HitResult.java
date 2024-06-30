@@ -2,8 +2,8 @@ package com.fun.inject.inject.wrapper.impl;
 
 import com.fun.inject.inject.wrapper.impl.world.BlockPosWrapper;
 import com.fun.inject.inject.wrapper.impl.world.Vec3Wrapper;
-import com.fun.utils.Fields;
-import com.fun.utils.vecmath.Vec3i;
+import com.fun.utils.version.fields.Fields;
+import com.fun.utils.math.vecmath.Vec3i;
 import com.fun.inject.inject.Mappings;
 import com.fun.inject.inject.ReflectionUtils;
 

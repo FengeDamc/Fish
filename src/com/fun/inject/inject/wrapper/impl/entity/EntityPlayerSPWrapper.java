@@ -4,10 +4,10 @@ package com.fun.inject.inject.wrapper.impl.entity;
 import com.fun.inject.inject.wrapper.impl.other.IChatComponentWrapper;
 import com.fun.inject.inject.wrapper.impl.other.MovementInputWrapper;
 import com.fun.inject.inject.wrapper.impl.world.BlockPosWrapper;
-import com.fun.utils.Classes;
-import com.fun.utils.Fields;
-import com.fun.utils.Methods;
-import com.fun.utils.vecmath.Vec3;
+import com.fun.utils.version.clazz.Classes;
+import com.fun.utils.version.fields.Fields;
+import com.fun.utils.version.methods.Methods;
+import com.fun.utils.math.vecmath.Vec3;
 import com.fun.inject.inject.Mappings;
 import com.fun.inject.inject.ReflectionUtils;
 
@@ -198,23 +198,7 @@ public class EntityPlayerSPWrapper extends EntityPlayerWrapper {
         ReflectionUtils.invokeMethod(obj,Classes.EntityPlayerSP,Methods.setSprinting,true);
     }
 
-    public boolean isSprinting() {
-        if (obj == null) return false;
 
-        // MD: pk/aw ()Z net/minecraft/entity/Entity/func_70051_ag ()Z
-
-        String notch = Mappings.getObfMethod("func_70051_ag"); // isSprinting
-        try {
-            Method m = getClazz().getDeclaredMethod(notch);
-            Object value = m.invoke(obj);
-            return value != null && (Boolean) value;
-        } catch (Exception e) {
-            e.printStackTrace();
-
-        }
-
-        return false;
-    }
 
     public boolean isSneaking() {
         return (boolean)Methods.isSneaking_EntityPlayerSP.invoke(obj);

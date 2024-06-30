@@ -222,11 +222,11 @@ public class Mappings {
                             .split(" ");
 
 
-                    if (parts2[0].contains("C")) { // class name
+                    if (parts2[0].startsWith("C")) { // class name
 
                         unobfClass.put(parts[0], parts[1]);
                         obfClass.put(parts[1], parts[0]);
-                    } else if (parts2[0].contains("F")) { // field name
+                    } else if (parts2[0].startsWith("F")) { // field name
                         String notch = parts[0].split("/")[1];
 
                         String[] split = parts[1].split("/");
@@ -236,7 +236,7 @@ public class Mappings {
                         unObfFields.put(notch, searge);
                         obfFullFields.put(searge, parts[0]);
                         unObfFullFields.put(parts[0], searge);
-                    } else if (parts2[0].contains("M")) { // method name
+                    } else if (parts2[0].startsWith("M")) { // method name
 
                         String notch = parts[0].split("/")[1];
 

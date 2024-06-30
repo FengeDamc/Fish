@@ -5,8 +5,8 @@ import com.fun.inject.inject.Mappings;
 import com.fun.inject.inject.ReflectionUtils;
 import com.fun.inject.inject.wrapper.Wrapper;
 import com.fun.inject.inject.wrapper.impl.network.packets.PacketWrapper;
-import com.fun.utils.Fields;
-import com.fun.utils.Methods;
+import com.fun.utils.version.fields.Fields;
+import com.fun.utils.version.methods.Methods;
 import io.netty.channel.Channel;
 
 public class NetworkManagerWrapper extends Wrapper {

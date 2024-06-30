@@ -1,10 +1,9 @@
-package com.fun.utils;
+package com.fun.utils.version.clazz;
 
 import com.fun.inject.Agent;
 import com.fun.inject.inject.Mappings;
 import com.fun.inject.inject.MinecraftType;
 import com.fun.inject.inject.MinecraftVersion;
-import com.netease.mc.mod.network.common.GameState;
 
 import java.util.HashMap;
 

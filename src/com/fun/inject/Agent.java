@@ -11,21 +11,18 @@ import com.fun.inject.inject.asm.api.Transformer;
 import com.fun.inject.inject.asm.api.Transformers;
 import com.fun.inject.inject.asm.transformers.ClassLoaderTransformer;
 import com.fun.inject.inject.wrapper.impl.MinecraftWrapper;
-import com.fun.utils.Methods;
+import com.fun.utils.version.methods.Methods;
 import com.fun.gui.FishFrame;
 
 import com.fun.network.TCPClient;
 import com.fun.network.TCPServer;
 import com.fun.utils.font.FontManager;
 
-import net.minecraft.launchwrapper.Launch;
 import org.objectweb.asm.*;
 import org.objectweb.asm.tree.*;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import sun.misc.IOUtils;
-import sun.misc.Launcher;
 
 import java.io.*;
 import java.lang.instrument.*;
@@ -34,7 +31,6 @@ import java.lang.reflect.Method;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLClassLoader;
-import java.nio.charset.StandardCharsets;
 import java.security.ProtectionDomain;
 import java.util.HashMap;
 

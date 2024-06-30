@@ -1,7 +1,7 @@
 package com.fun.inject.inject.wrapper.impl.other;
 
 
-import com.fun.utils.Fields;
+import com.fun.utils.version.fields.Fields;
 import com.fun.inject.inject.Mappings;
 import com.fun.inject.inject.ReflectionUtils;
 import com.fun.inject.inject.wrapper.Wrapper;

@@ -1,9 +1,9 @@
 package com.fun.inject.inject.wrapper.impl.network.packets;
 
 import com.fun.inject.inject.wrapper.impl.network.INetHandler;
-import com.fun.utils.Classes;
+import com.fun.utils.version.clazz.Classes;
 import com.fun.inject.inject.wrapper.Wrapper;
-import com.fun.utils.Methods;
+import com.fun.utils.version.methods.Methods;
 
 public class PacketWrapper extends Wrapper {
 

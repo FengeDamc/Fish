@@ -1,7 +1,7 @@
 package com.fun.inject.inject.wrapper.impl.gui;
 
-import com.fun.utils.Classes;
-import com.fun.utils.Methods;
+import com.fun.utils.version.clazz.Classes;
+import com.fun.utils.version.methods.Methods;
 import com.fun.inject.inject.ReflectionUtils;
 import com.fun.inject.inject.wrapper.Wrapper;
 

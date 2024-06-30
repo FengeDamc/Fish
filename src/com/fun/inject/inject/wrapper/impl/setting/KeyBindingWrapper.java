@@ -1,7 +1,7 @@
 package com.fun.inject.inject.wrapper.impl.setting;
 
 
-import com.fun.utils.Methods;
+import com.fun.utils.version.methods.Methods;
 import com.fun.inject.inject.Mappings;
 import com.fun.inject.inject.wrapper.Wrapper;
 

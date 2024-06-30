@@ -2,7 +2,7 @@ package com.fun.inject.inject.wrapper.impl.network.packets.server;
 
 import com.fun.client.utils.Rotation.Rotation;
 import com.fun.inject.inject.wrapper.impl.entity.EntityWrapper;
-import com.fun.utils.Classes;
+import com.fun.utils.version.clazz.Classes;
 import com.fun.inject.inject.Mappings;
 import com.fun.inject.inject.ReflectionUtils;
 import com.fun.inject.inject.wrapper.impl.network.packets.PacketWrapper;

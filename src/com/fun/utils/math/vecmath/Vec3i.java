@@ -1,6 +1,6 @@
-package com.fun.utils.vecmath;
+package com.fun.utils.math.vecmath;
 
-import com.fun.utils.MathHelper;
+import com.fun.utils.math.MathHelper;
 import com.google.common.base.Objects;
 
 public class Vec3i implements Comparable<Vec3i>

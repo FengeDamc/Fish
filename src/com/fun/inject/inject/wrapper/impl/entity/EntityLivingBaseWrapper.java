@@ -2,7 +2,7 @@ package com.fun.inject.inject.wrapper.impl.entity;
 
 import com.fun.inject.inject.Mappings;
 import com.fun.inject.inject.ReflectionUtils;
-import com.fun.utils.Classes;
+import com.fun.utils.version.clazz.Classes;
 
 public class EntityLivingBaseWrapper extends EntityWrapper {
     public EntityLivingBaseWrapper(Object entity) {

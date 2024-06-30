@@ -1,9 +1,9 @@
 package com.fun.inject.inject;
 
 
-import com.fun.utils.Classes;
-import com.fun.utils.Fields;
-import com.fun.utils.Methods;
+import com.fun.utils.version.clazz.Classes;
+import com.fun.utils.version.fields.Fields;
+import com.fun.utils.version.methods.Methods;
 import com.fun.inject.Agent;
 
 

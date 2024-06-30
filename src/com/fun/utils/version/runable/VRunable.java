@@ -1,8 +1,9 @@
-package com.fun.utils;
+package com.fun.utils.version.runable;
 
 import com.fun.inject.Agent;
 import com.fun.inject.inject.MinecraftType;
 import com.fun.inject.inject.MinecraftVersion;
+import com.fun.utils.version.Version;
 
 public abstract class VRunable extends Version implements Runnable{
     @Override

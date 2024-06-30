@@ -1,6 +1,6 @@
-package com.fun.utils.vecmath;
+package com.fun.utils.math.vecmath;
 
-import com.fun.utils.MathHelper;
+import com.fun.utils.math.MathHelper;
 
 public class Vec3
 {

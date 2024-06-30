@@ -1,9 +1,10 @@
-package com.fun.utils;
+package com.fun.utils.version.methods;
 
 import com.fun.inject.Agent;
 import com.fun.inject.inject.MinecraftType;
 import com.fun.inject.inject.MinecraftVersion;
 import com.fun.inject.inject.ReflectionUtils;
+import com.fun.utils.version.clazz.Classes;
 
 import java.lang.reflect.Method;
 import java.util.HashMap;
@@ -48,9 +49,10 @@ public enum Methods {
     setAngles_Entity(Classes.Entity,new VMethod("func_70082_c","(FF)V")),
     channelRead0NoEvent_NetworkManager(new VMethod("channelRead0NoEvent","(Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Object;)V")),
     sendPacket_NetworkManager(new VMethod("func_179290_a","(Lnet/minecraft/network/Packet;)V")),
-    channelRead0_NetworkManager(new VMethod("func_channelRead0","(Lio/netty/channel/ChannelHandlerContext;Lnet/minecraft/network/Packet;)V")),
-    channelRead0_OBJ_NetworkManager(new VMethod("channelRead0","(Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Object;)V")),
-    processPacket_Packet(new VMethod("func_148833_a","(Lnet/minecraft/network/INetHandler;)V"));//func_148833_a (Lnet/minecraft/network/INetHandler;)V
+    channelRead0_NetworkManager(new VMethod("channelRead0","(Lio/netty/channel/ChannelHandlerContext;Lnet/minecraft/network/Packet;)V")),
+    //channelRead0_OBJ_NetworkManager(new VMethod("channelRead0","(Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Object;)V")),
+    processPacket_Packet(new VMethod("func_148833_a","(Lnet/minecraft/network/INetHandler;)V")),
+    isSprinting_Entity(new VMethod("func_70051_ag","()Z"));//func_148833_a (Lnet/minecraft/network/INetHandler;)V
 //func_70082_c (FF)V
 //channelRead0 (Lio/netty/channel/ChannelHandlerContext;Lnet/minecraft/network/Packet;)V
 

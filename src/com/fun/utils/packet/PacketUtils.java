@@ -2,7 +2,6 @@ package com.fun.utils.packet;
 
 import com.fun.inject.inject.wrapper.impl.MinecraftWrapper;
 import com.fun.inject.inject.wrapper.impl.network.packets.PacketWrapper;
-import com.fun.utils.Methods;
 
 public class PacketUtils {
     public static MinecraftWrapper mc=MinecraftWrapper.get();

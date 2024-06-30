@@ -1,9 +1,9 @@
 package com.fun.inject.inject.wrapper.impl.world;
 
 
-import com.fun.utils.Classes;
-import com.fun.utils.vecmath.Vec3;
-import com.fun.utils.vecmath.Vec3i;
+import com.fun.utils.version.clazz.Classes;
+import com.fun.utils.math.vecmath.Vec3;
+import com.fun.utils.math.vecmath.Vec3i;
 import com.fun.inject.inject.Mappings;
 import com.fun.inject.inject.ReflectionUtils;
 import com.fun.inject.inject.wrapper.Wrapper;

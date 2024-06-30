@@ -3,8 +3,8 @@ package com.fun.inject.inject.wrapper.impl.entity;
 
 import com.fun.inject.inject.wrapper.impl.other.IChatComponentWrapper;
 import com.fun.inject.inject.wrapper.impl.other.TeamWrapper;
-import com.fun.utils.Classes;
-import com.fun.utils.Methods;
+import com.fun.utils.version.clazz.Classes;
+import com.fun.utils.version.methods.Methods;
 import com.fun.inject.inject.Mappings;
 import com.fun.inject.inject.ReflectionUtils;
 

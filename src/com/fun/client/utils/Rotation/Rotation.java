@@ -1,7 +1,7 @@
 package com.fun.client.utils.Rotation;
 
 
-import com.fun.utils.MathHelper;
+import com.fun.utils.math.MathHelper;
 import com.fun.inject.inject.wrapper.impl.MinecraftWrapper;
 import javax.vecmath.Vector2f;
 

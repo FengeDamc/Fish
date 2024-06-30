@@ -13,8 +13,7 @@ import com.fun.client.mods.world.Eagle;
 import com.fun.client.FunGhostClient;
 import com.fun.client.config.ConfigModule;
 import com.fun.inject.inject.wrapper.impl.setting.GameSettingsWrapper;
-import com.fun.utils.Methods;
-import com.fun.utils.render.Notification;
+import com.fun.utils.version.methods.Methods;
 
 import java.util.ArrayList;
 

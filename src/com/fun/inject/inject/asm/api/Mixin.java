@@ -1,6 +1,6 @@
 package com.fun.inject.inject.asm.api;
 
-import com.fun.utils.Methods;
+import com.fun.utils.version.methods.Methods;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
