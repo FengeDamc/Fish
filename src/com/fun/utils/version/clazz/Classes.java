@@ -40,7 +40,15 @@ public enum Classes {
     MouseHelper(new VClass("net/minecraft/util/MouseHelper")),
     S14PacketEntity(new VClass("net.minecraft.network.play.server.S14PacketEntity"),
             new VClass("net.minecraft.network.play.server.SPacketEntity").version(MinecraftVersion.VER_1122)),
-    INetHandler(new VClass("net/minecraft/network/INetHandler"));/*
+    INetHandler(new VClass("net/minecraft/network/INetHandler")),
+    Tessellator(new VClass("net/minecraft/client/renderer/Tessellator")),
+    WorldRenderer(new VClass("net/minecraft/client/renderer/WorldRenderer"),
+            new VClass("net/minecraft/client/renderer/BufferBuilder").version(MinecraftVersion.VER_1122)),
+    DefaultVertexFormats(new VClass("net/minecraft/client/renderer/vertex/DefaultVertexFormats"));/*
+    net/minecraft/client/renderer/vertex/DefaultVertexFormats
+    net/minecraft/client/renderer/BufferBuilder
+    net/minecraft/client/renderer/WorldRenderer
+    net/minecraft/client/renderer/Tessellator
     net/minecraft/network/INetHandler
     net/minecraft/util/Timer net/minecraft/util/Timer
 	elapsedPartialTicks field_194148_c

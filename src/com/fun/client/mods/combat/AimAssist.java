@@ -1,6 +1,7 @@
 package com.fun.client.mods.combat;
 
 import com.fun.eventapi.event.events.EventRender2D;
+import com.fun.eventapi.event.events.EventRender3D;
 import com.fun.eventapi.event.events.EventUpdate;
 import com.fun.utils.math.MathHelper;
 import com.fun.utils.math.vecmath.Vec3;
@@ -30,7 +31,7 @@ public class AimAssist extends Module {
     //    private final BooleanValue onRotate = new BooleanValue("Only on mouse movement", this, true);
 
 
-    public Setting speed=new Setting("Speed",this,50,0,180,false);
+    public Setting speed=new Setting("Speed",this,50,0,100,false);
 
     @Override
     public void onUpdate(EventUpdate event) {
@@ -50,8 +51,8 @@ public class AimAssist extends Module {
     }
 
     @Override
-    public void onRender2D(EventRender2D event) {
-        super.onRender2D(event);
+    public void onRender3D(EventRender3D event) {
+        super.onRender3D(event);
         EntityPlayerSPWrapper playersp=mc.getPlayer();
 
         if(rotations==null||lastRotations==null||(mc.getMouseHelper().getDeltaY()==0&&mc.getMouseHelper().getDeltaX()==0&&onRotate.getValBoolean()))return;
@@ -63,7 +64,7 @@ public class AimAssist extends Module {
         final float gcd = f * f * f * 8.0F;
 
         int i = mc.getGameSettings().isInvertMouse() ? -1 : 1;
-        float f2 = this.mc.getMouseHelper().getDeltaX() + (MathHelper.wrapAngleTo180_float(rotations.x - mc.getPlayer().getYaw()) * (strength / 400) -
+        float f2 = this.mc.getMouseHelper().getDeltaX() + (MathHelper.wrapAngleTo180_float(rotations.x - mc.getPlayer().getYaw()) * (strength / 100) -
                 this.mc.getMouseHelper().getDeltaX()) * gcd;
         float f3 = this.mc.getMouseHelper().getDeltaY() - this.mc.getMouseHelper().getDeltaY() * gcd;
 
@@ -71,7 +72,7 @@ public class AimAssist extends Module {
         //EntityPlayerSPWrapper player= mc.getPlayer();
 
         playersp.setAngles(f2, f3 * (float) i);
-        //System.out.printf("render2d %s %s%n",f2,f3*i);
+
     }
 
     public static float getAngleDifference(final float a, final float b) {

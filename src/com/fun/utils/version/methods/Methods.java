@@ -52,9 +52,23 @@ public enum Methods {
     channelRead0_NetworkManager(new VMethod("channelRead0","(Lio/netty/channel/ChannelHandlerContext;Lnet/minecraft/network/Packet;)V")),
     //channelRead0_OBJ_NetworkManager(new VMethod("channelRead0","(Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Object;)V")),
     processPacket_Packet(new VMethod("func_148833_a","(Lnet/minecraft/network/INetHandler;)V")),
-    isSprinting_Entity(new VMethod("func_70051_ag","()Z"));//func_148833_a (Lnet/minecraft/network/INetHandler;)V
-//func_70082_c (FF)V
-//channelRead0 (Lio/netty/channel/ChannelHandlerContext;Lnet/minecraft/network/Packet;)V
+    isSprinting_Entity(new VMethod("func_70051_ag","()Z")),
+    getInstance_Tessellator(Classes.Tessellator,new VMethod("func_178181_a","()Lnet/minecraft/client/renderer/Tessellator;")),
+    getWorldRenderer_Tessellator(Classes.Tessellator,new VMethod("func_178180_c","()Lnet/minecraft/client/renderer/WorldRenderer;"),
+            new VMethod("func_178180_c","()Lnet/minecraft/client/renderer/BufferBuilder;").version(MinecraftVersion.VER_1122)),
+    color_4f_GlStateManager(Classes.GlStateManager,new VMethod("func_179131_c","(FFFF)V")),
+    enableBlend_GlStateManager(Classes.GlStateManager,new VMethod("func_179147_l","()V")),
+    disableTexture2D_GlStateManager(Classes.GlStateManager,new VMethod("func_179090_x","()V")),
+    tryBlendFuncSeparate_GlStateManager(Classes.GlStateManager,new VMethod("func_179120_a","(IIII)V")),
+    begin_WorldRenderer(Classes.WorldRenderer,new VMethod("func_181668_a","(ILnet/minecraft/client/renderer/vertex/VertexFormat;)V")),
+    pos_WorldRenderer(Classes.WorldRenderer,new VMethod("func_181662_b","(DDD)Lnet/minecraft/client/renderer/WorldRenderer;"),
+            new VMethod("func_181662_b","(DDD)Lnet/minecraft/client/renderer/BufferBuilder;").version(MinecraftVersion.VER_1122)),
+    draw_Tessellator(Classes.Tessellator,new VMethod("func_78381_a","()V")),
+    enableTexture2D_GlStateManager(Classes.GlStateManager,new VMethod("func_179098_w","()V")),
+    disableBlend_GlStateManager(Classes.GlStateManager,new VMethod("func_179084_k","()V")),
+    endVertex(new VMethod("func_181675_d","()V"));
+    //	endVertex ()V func_181675_d
+
 
 
     public String obf_name ="";

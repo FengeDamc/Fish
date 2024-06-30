@@ -39,7 +39,8 @@ public enum Fields {
     renderPartialTicks(new VField("field_74281_c"),new VField("field_194147_b").version(MinecraftVersion.VER_1122)),
     entityId_S14PacketEntity(Classes.S14PacketEntity,new VField("field_149074_a")),
     channel_NetworkManager(new VField("field_150746_k")),
-    packetListener_NetworkManager(new VField("field_150744_m"));//field_74281_c,renderPartialTicks
+    packetListener_NetworkManager(new VField("field_150744_m")),
+    POSITION_DefaultVertexFormats(Classes.DefaultVertexFormats,new VField("field_181705_e"));//POSITION field_181705_e
     //field_150744_m,packetListener
 
         public Field field;

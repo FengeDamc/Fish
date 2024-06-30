@@ -9,6 +9,7 @@ import com.fun.client.utils.ColorUtils;
 import com.fun.inject.inject.wrapper.impl.gui.GuiWrapper;
 import com.fun.inject.inject.wrapper.impl.gui.ScaledResolutionWrapper;
 import com.fun.utils.font.FontManager;
+import com.fun.utils.render.RenderUtils;
 import org.lwjgl.input.Keyboard;
 
 import javax.vecmath.Vector2d;
@@ -74,7 +75,7 @@ public class HUD extends Module {
                 if (!modBlacklist.contains(m.getClass().getName())) {
                     int color=ColorUtils.mixColors(new Color((int) mixColor1.getValDouble()),new Color((int) mixColor2.getValDouble()),ColorUtils.getBlendFactor(new Vector2d(sr.getScaledWidth() - FontManager.tenacity.getStringWidth(m.getName())-6, (int) offset))).getRGB();
                     GuiWrapper.drawRect(sr.getScaledWidth() -4, (int) (4 + offset),sr.getScaledWidth(),(int) (4 + offset+FontManager.tenacity.getHeight()),color);
-                    //GuiWrapper.drawRect(sr.getScaledWidth() - mc.getFontRenderer().getStringWidth(m.getName())-6, (int) offset, sr.getScaledWidth(), (int) (6 + mc.getFontRenderer().getHeight() + offset), new Color(255,255,200, 35).getRGB());
+                    RenderUtils.drawRoundedRect(sr.getScaledWidth() - FontManager.tenacity.getStringWidth(m.getName())-6, (int) offset+8, sr.getScaledWidth(), (int) (FontManager.tenacity.getHeight() + offset+4),5,new Color(255,255,225, 35).getRGB());
                     FontManager.tenacity.drawStringWithShadow( m.getName(), sr.getScaledWidth() -FontManager.tenacity.getStringWidth(m.getName())-4, (int) (4 + offset),color);
                     yCount++;
                     index++;
