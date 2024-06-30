@@ -51,8 +51,8 @@ public class Target extends Module {
                 mc.getWorld().getLoadedPlayers()
                 :mc.getWorld().getLoadedEntities()) {
             double d1=mc.getPlayer().getDistance(player);
-            if (player.entityObj!=playersp.getEntityObj()&&d1< range.getValDouble()&&d1<dist&&!player.isDead()
-                    && Classes.EntityLivingBase.isInstanceof(player.entityObj)) {
+            if (player.obj !=playersp.getEntityObj()&&d1< range.getValDouble()&&d1<dist&&!player.isDead()
+                    && Classes.EntityLivingBase.isInstanceof(player.obj)) {
                 target = player;
                 dist=d1;
                 //Agent.System.out.println(+":{}",);
@@ -62,41 +62,41 @@ public class Target extends Module {
             if (antiBot.getValBoolean()) {
                 bots.clear();
                 for (EntityPlayerWrapper p : mc.getWorld().getLoadedPlayers()) {
-                    if (p.entityObj == null) {
+                    if (p.obj == null) {
 
                         continue;
                     }
-                    if (Classes.EntityPlayerSP.isInstanceof(p.entityObj)) {
+                    if (Classes.EntityPlayerSP.isInstanceof(p.obj)) {
                         continue;
                     }
                     //"§"
 
                     if (p.getDisplayName().getUnformattedText().startsWith(mc.getPlayer().getDisplayName().getUnformattedText().substring(1, 3))) {
-                        bots.add(p.entityObj);
+                        bots.add(p.obj);
 
                         continue;
                     }
                     if (mc.getNetHandler().getPlayerInfo(p.getUniqueID()) == null) {
-                        bots.add(p.entityObj);
+                        bots.add(p.obj);
 
 
                         continue;
                     }
                     if (p.isInvisible()) {
-                        bots.add(p.entityObj);
+                        bots.add(p.obj);
 
 
 
                         continue;
                     }
                     if (p.getTeam().obj != null && mc.getPlayer().getTeam().obj != null && p.getTeam().isSameTeam(mc.getPlayer().getTeam())) {
-                        bots.add(p.entityObj);
+                        bots.add(p.obj);
 
                     }
 
 
                 }
-                if (target!=null&&bots.contains(target.entityObj)) target = null;
+                if (target!=null&&bots.contains(target.obj)) target = null;
 
             }
         }

@@ -8,8 +8,8 @@ public enum Category {
     Combat,
     None,
     Movement,
-    MISC,
-    RENDER,
+    Misc,
+    Render,
     Player,
     World,
     CLIENT

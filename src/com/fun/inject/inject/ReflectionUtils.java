@@ -26,11 +26,12 @@ public class ReflectionUtils {
                 field.setAccessible(true);
                 return field.get(instance);
             } catch (IllegalAccessException | NoSuchFieldException e) {
-                e.printStackTrace();
+                //e.printStackTrace();
             }
 
             c = c.getSuperclass();
         }
+
         Agent.logger.error("cant find {} {}",instance.getClass().getName(),name);
         return null;
     }

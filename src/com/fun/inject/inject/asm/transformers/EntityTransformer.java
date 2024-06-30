@@ -118,7 +118,7 @@ public class EntityTransformer extends Transformer {
      */
     public static EventStrafe onStrafe(Object entity,float f0, float f1, float f2, float f){
         //System.out.println("onStrafe1");
-        System.out.println("onStrafe");
+        //System.out.println("onStrafe");
         EventStrafe eventStrafe=new EventStrafe(f1,f0,f,f2);
         if(entity.getClass().getName().equals(Mappings.getObfClass("net/minecraft/client/entity/EntityPlayerSP").replace('/','.'))) EventManager.call(eventStrafe);
         return eventStrafe;

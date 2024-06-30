@@ -14,7 +14,7 @@ public class TCPClient {
         String host = "localhost"; // 服务器地址
 
         try (Socket socket = new Socket(host, port)) {
-            System.out.println("已连接到服务器：" + host + "，端口：" + port);
+            //System.out.println("已连接到服务器：" + host + "，端口：" + port);
 
             // 创建输入输出流
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
@@ -27,11 +27,11 @@ public class TCPClient {
             out.println(info);
             String r=in.readLine();
             review(r);
-            System.out.println("接收到服务器的回显：" + r);
+            //System.out.println("接收到服务器的回显：" + r);
             socket.close();
 
         } catch (UnknownHostException e) {
-            System.err.println("无法识别的主机或客户端还未初始化完成: " + host);
+            //System.err.println("无法识别的主机或客户端还未初始化完成: " + host);
         } catch (Exception e) {
         }
     }

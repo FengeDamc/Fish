@@ -55,13 +55,8 @@ public class Agent {
 
     public static ClassLoader classLoader=null;
     public static Logger logger= LogManager.getLogger("FunClient");
-    public static Class<?> findClass(String name) {
-        try {
-            return classLoader.loadClass(name.replace('/','.'));
-        } catch (ClassNotFoundException e) {
-
-        }
-        return null;
+    public static Class<?> findClass(String name) throws ClassNotFoundException {
+      return classLoader.loadClass(name.replace('/','.'));
     }
     public static void injectClassLoader(ClassLoader classLoader) {
         ClassLoaderTransformer classLoaderTransformer=new ClassLoaderTransformer(classLoader);
@@ -261,6 +256,16 @@ public class Agent {
 
     }
     public static class ClassTransformer {
+        public static ClassNode node(byte[] bytes) {
+            if (bytes != null && bytes.length != 0) {
+                ClassReader reader = new ClassReader(bytes);
+                ClassNode node = new ClassNode();
+                reader.accept(node, ClassReader.EXPAND_FRAMES);
+                return node;
+            }
+
+            return null;
+        }
 
         public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined, ProtectionDomain protectionDomain, byte[] classfileBuffer) throws IllegalClassFormatException {
             for (Transformer transformer : Transformers.transformers) {
@@ -311,29 +316,40 @@ public class Agent {
                             }
                         }
                         else if(method.isAnnotationPresent(Mixin.class)){
-                            if (method.getParameterCount() != 1|| !MethodNode.class.isAssignableFrom(method.getParameterTypes()[0]))
+                            if (method.getParameterCount() != 1)
                                 continue;
 
                             Mixin inject = method.getAnnotation(Mixin.class);
                             Methods methodInfo=inject.method();
                             String name=methodInfo.getName();
                             String desc=methodInfo.getDescriptor();
-
+                            boolean trans=false;
                             for (MethodNode mNode : node.methods) {
-                                //System.out.println(mNode.name+mNode.desc);
-                                //Agent.System.out.println(mNode.name);
+
 
                                 if (mNode.name.equals(name) && mNode.desc.equals(desc)) {
                                     try {
                                         method.invoke(transformer, mNode);
+
+                                        trans=true;
                                         //System.out.println("transformed "+method.getName());
 
                                     } catch (IllegalAccessException | InvocationTargetException e) {
-                                        //logger.error("Failed to invoke method {} {}", e.getMessage(), e.getStackTrace()[0]);
-                                        e.printStackTrace();
+                                        logger.error("Failed to invoke method {} {}", e.getMessage(), e.getStackTrace()[0]);
+                                        //e.printStackTrace();
                                     }
 
                                     break;
+                                }
+                            }
+                            if(!trans){
+                                logger.info("method {}{} not trans", name,desc);
+                                try {
+                                    MethodNode mn=(MethodNode)method.invoke(transformer,node(transformer.oldBytes));
+                                    node.methods.add(mn);
+                                } catch (Exception e) {
+                                    logger.error("Failed to add method {} {}", method.getParameterTypes(), method.getName());
+
                                 }
                             }
                         }

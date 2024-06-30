@@ -10,7 +10,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="add AimAssist">
+      <change afterPath="$PROJECT_DIR$/src/com/fun/client/mods/world/Backtrack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/entity/EntityLivingBaseWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/network/INetHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/network/packets/server/S14EntityPacket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/fun/utils/packet/PacketUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/mappings/vanilla_1.8.9.srg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/mappings/vanilla_1.8.9.srg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/client/FunGhostClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/FunGhostClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/ModuleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/ModuleManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/combat/AimAssist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/combat/AimAssist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/combat/Target.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/combat/Target.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/combat/Velocity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/combat/Velocity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/render/HUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/render/HUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/render/NotificationModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/client/mods/render/NotificationModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/Agent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/Mappings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/Mappings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/ReflectionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/ReflectionUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/EntityTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/EntityTransformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/NetworkHandlerTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/NetworkHandlerTransformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/NetworkManagerTransFormer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/NetworkManagerTransFormer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/WYGameState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/MinecraftWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/MinecraftWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/entity/EntityPlayerSPWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/entity/EntityPlayerSPWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/entity/EntityPlayerWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/entity/EntityPlayerWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/entity/EntityWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/entity/EntityWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/network/NetworkManagerWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/network/NetworkManagerWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/network/packets/PacketWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/network/packets/PacketWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/network/packets/server/S12PacketEntityVelocity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/network/packets/server/S12PacketEntityVelocity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/network/TCPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/network/TCPClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/network/TCPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/network/TCPServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/Classes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/Classes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/Fields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/Fields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/Methods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/PacketUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/VClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fun/utils/VClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,10 +132,10 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15234375&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.5940023&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
     &quot;应用程序.JNAUtils.executor&quot;: &quot;Run&quot;,
     &quot;应用程序.Main.executor&quot;: &quot;Run&quot;,
@@ -265,6 +301,7 @@
       <workItem from="1718597292866" duration="7255000" />
       <workItem from="1718770688284" duration="8759000" />
       <workItem from="1718856903080" duration="17111000" />
+      <workItem from="1719666463512" duration="186000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -410,7 +447,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719495864470</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="add AimAssist">
+      <option name="closed" value="true" />
+      <created>1719496314415</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1719496314415</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

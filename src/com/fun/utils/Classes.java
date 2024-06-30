@@ -35,11 +35,14 @@ public enum Classes {
     NetworkPlayerInfo(new VClass("net/minecraft/client/network/NetworkPlayerInfo")),
     MovementInput(new VClass("net/minecraft/util/MovementInput")),
     ChatComponentText(new VClass("net/minecraft/util/ChatComponentText").version(MinecraftVersion.VER_189),
-            new VClass("net/minecraft/util/text/TextComponentString")),
-    GameState(new VClass("com/netease/mc/mod/network/common/GameState")),
+            new VClass("net/minecraft/util/text/TextComponentString").version(MinecraftVersion.VER_1122)),
     Mousse(new VClass("org/lwjgl/input/Mouse")),
     GL11(new VClass("org/lwjgl/opengl/GL11")),
-    MouseHelper(new VClass("net/minecraft/util/MouseHelper"));/*
+    MouseHelper(new VClass("net/minecraft/util/MouseHelper")),
+    S14PacketEntity(new VClass("net.minecraft.network.play.server.S14PacketEntity"),
+            new VClass("net.minecraft.network.play.server.SPacketEntity").version(MinecraftVersion.VER_1122)),
+    INetHandler(new VClass("net/minecraft/network/INetHandler"));/*
+    net/minecraft/network/INetHandler
     net/minecraft/util/Timer net/minecraft/util/Timer
 	elapsedPartialTicks field_194148_c
 	elapsedTicks field_74280_b
@@ -47,6 +50,7 @@ public enum Classes {
 	renderPartialTicks field_194147_b
 	tickLength field_194149_e
 	updateTimer ()V func_74275_a
+	net.minecraft.network.INetHandler
     */
     //com.netease.mc.mod.network.common.GameState
     public String obf_name ="";
@@ -58,7 +62,11 @@ public enum Classes {
     Classes(String name){
         this.obf_name =Mappings.getObfClass(name);
         this.friendly_name=name;
-        this.clazz = Agent.findClass(this.obf_name);
+        try {
+            this.clazz = Agent.findClass(this.obf_name);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
 
 
     }
@@ -68,6 +76,10 @@ public enum Classes {
         }
         for(VClass vClass:vClasses){
             map.get(vClass.minecraftType).put(vClass.minecraftVersion,vClass);
+        }
+        if(getVClass().clazz==null){
+            Agent.logger.info("cant find class:{}",getVClass().obf_name);
+
         }
     }
     public String getName(){
@@ -104,6 +116,7 @@ public enum Classes {
                 return true;
             c = c.getSuperclass();
         }
+        //Agent.logger.info(instance.getClass().getName());
         return false;
     }
 }

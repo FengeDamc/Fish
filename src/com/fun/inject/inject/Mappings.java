@@ -61,11 +61,11 @@ public class Mappings {
                 }
 
             } catch (Exception e) {
-
+                e.printStackTrace();
             }
             TCPClient.send(Main.SERVERPORT,"mcver");
 
-            System.out.printf("it's %s %s client%n",Agent.minecraftVersion.getVer(),Agent.minecraftType.getType());
+            Agent.logger.info(String.format("it's %s %s client%n",Agent.minecraftVersion.getVer(),Agent.minecraftType.getType()));
             try {
                 readMappings(Agent.minecraftVersion,Agent.minecraftType);
             } catch (IOException e) {

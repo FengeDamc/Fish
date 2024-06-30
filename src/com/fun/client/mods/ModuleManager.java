@@ -1,5 +1,6 @@
 package com.fun.client.mods;
 
+import com.fun.client.mods.world.Backtrack;
 import com.fun.eventapi.EventManager;
 import com.fun.eventapi.EventTarget;
 import com.fun.eventapi.event.events.*;
@@ -35,6 +36,7 @@ public class ModuleManager {
     public AutoBlocking autoBlocking;
     public NotificationModule notification;
     public Target target;
+    public Backtrack backtrack;
 
     public void init() {
         mods.clear();
@@ -50,7 +52,8 @@ public class ModuleManager {
         autoBlocking=new AutoBlocking();
         notification=new NotificationModule();
         target=new Target();
-        notification.post(new Notification("Fish Injected", Notification.Type.WHITE));
+        backtrack=new Backtrack();
+
     }
 
     @EventTarget

@@ -24,25 +24,25 @@ public class S12PacketEntityVelocity extends PacketWrapper {
        return Rotation.mc.getWorld().getEntityByID(getEntityID());
     }
     public int getEntityID(){
-        return (int)ReflectionUtils.getFieldValue(packetObj,Mappings.getObfField("field_149417_a"));
+        return (int)ReflectionUtils.getFieldValue(obj,Mappings.getObfField("field_149417_a"));
     }
     public int getMotionX(){
-        return (int)ReflectionUtils.getFieldValue(packetObj,Mappings.getObfField("field_149415_b"));
+        return (int)ReflectionUtils.getFieldValue(obj,Mappings.getObfField("field_149415_b"));
     }
     public int getMotionY(){
-        return (int)ReflectionUtils.getFieldValue(packetObj,Mappings.getObfField("field_149416_c"));
+        return (int)ReflectionUtils.getFieldValue(obj,Mappings.getObfField("field_149416_c"));
     }
     public int getMotionZ(){
-        return (int)ReflectionUtils.getFieldValue(packetObj,Mappings.getObfField("field_149414_d"));
+        return (int)ReflectionUtils.getFieldValue(obj,Mappings.getObfField("field_149414_d"));
     }
     public void setMotionX(int x){
-        ReflectionUtils.setFieldValue(packetObj,Mappings.getObfField("field_149415_b"),x);
+        ReflectionUtils.setFieldValue(obj,Mappings.getObfField("field_149415_b"),x);
     }
     public void setMotionY(int x){
-        ReflectionUtils.setFieldValue(packetObj,Mappings.getObfField("field_149416_c"),x);
+        ReflectionUtils.setFieldValue(obj,Mappings.getObfField("field_149416_c"),x);
     }
     public void setMotionZ(int x){
-        ReflectionUtils.setFieldValue(packetObj,Mappings.getObfField("field_149414_d"),x);
+        ReflectionUtils.setFieldValue(obj,Mappings.getObfField("field_149414_d"),x);
     }
 
 

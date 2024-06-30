@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class NotificationModule extends Module {
     public ArrayList<Notification> notifications=new ArrayList<>();
     public NotificationModule() {
-        super("Notification",Category.RENDER);
+        super("Notification",Category.Render);
     }
     public void post(Notification notification){
         if(notification.type== Notification.Type.WHITE||isRunning())notifications.add(notification);

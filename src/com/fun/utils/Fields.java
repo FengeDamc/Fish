@@ -35,8 +35,11 @@ public enum Fields {
     deltaY(Classes.MouseHelper,new VField("field_74375_b")),
     mouseSensitivity(new VField("field_74341_c")),
     invertMouse(new VField("field_74338_d")),
-    renderPartialTicks(new VField("field_74281_c"),new VField("field_194147_b").version(MinecraftVersion.VER_1122));//field_74281_c,renderPartialTicks
-    //field_74338_d,invertMouse,0,
+    renderPartialTicks(new VField("field_74281_c"),new VField("field_194147_b").version(MinecraftVersion.VER_1122)),
+    entityId_S14PacketEntity(Classes.S14PacketEntity,new VField("field_149074_a")),
+    channel_NetworkManager(new VField("field_150746_k")),
+    packetListener_NetworkManager(new VField("field_150744_m"));//field_74281_c,renderPartialTicks
+    //field_150744_m,packetListener
 
         public Field field;
         public String friendly_name;

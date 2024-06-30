@@ -48,13 +48,13 @@ public class TCPServer {
         public void run() {
             super.run();
             try (ServerSocket serverSocket = new ServerSocket(portIn)) {
-                System.out.println("服务器启动，监听端口：" + portIn);
+                //System.out.println("服务器启动，监听端口：" + portIn);
 
                 while (true) {
                     // 等待客户端连接
                     try {
                         Socket clientSocket = serverSocket.accept();
-                        System.out.println("客户端已连接：" + clientSocket);
+                        //System.out.println("客户端已连接：" + clientSocket);
 
                         // 创建输入输出流
                         BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
@@ -63,10 +63,10 @@ public class TCPServer {
                         // 读取客户端发送的消息，并回显
                         String inputLine;
                         while ((inputLine = in.readLine()) != null) {
-                            System.out.println("收到消息：" + inputLine);
+                            //System.out.println("收到消息：" + inputLine);
                             String r=review(inputLine);
                             out.println(r); // 回显消息
-                            System.out.println("回显消息：" + r);
+                            //System.out.println("回显消息：" + r);
 
                             receive(inputLine);
                         }

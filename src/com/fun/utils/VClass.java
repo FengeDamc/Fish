@@ -14,14 +14,17 @@ public class VClass extends Version{
             name=name.replace('.','/');
             this.obf_name = Mappings.getObfClass(name);
             this.friendly_name=name;
-            this.clazz = Agent.findClass(this.obf_name);
-            if(this.clazz == null){
-                try {
-                    this.clazz = Class.forName(this.obf_name);
-                } catch (ClassNotFoundException e) {
-
+            try {
+                this.clazz = Agent.findClass(this.obf_name);
+            } catch (ClassNotFoundException e) {
+                if(this.clazz == null){
+                    try {
+                        this.clazz = Class.forName(this.obf_name);
+                    } catch (ClassNotFoundException e1) {
+                    }
                 }
             }
+
 
     }
 

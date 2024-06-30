@@ -5,6 +5,7 @@ import com.fun.eventapi.event.events.EventRender3D;
 import com.fun.client.mods.ModuleManager;
 import com.fun.client.settings.SettingsManager;
 import com.fun.inject.inject.asm.api.Transformers;
+import com.fun.utils.render.Notification;
 
 public class FunGhostClient {
     public static SettingsManager settingsManager;
@@ -14,6 +15,8 @@ public class FunGhostClient {
                 settingsManager=new SettingsManager();
                 moduleManager=new ModuleManager();
                 moduleManager.init();
+                moduleManager.notification.post(new Notification("Fish Injected", Notification.Type.WHITE));
+
             }
             catch (Exception e){
                 e.printStackTrace();

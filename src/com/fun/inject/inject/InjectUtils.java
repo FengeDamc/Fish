@@ -81,7 +81,7 @@ public class InjectUtils {
         });
         try {
             Agent.findClass("com.fun.client.FunGhostClient").getDeclaredMethod("destroyClient").invoke(null);
-        } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
+        } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException | ClassNotFoundException e) {
             e.printStackTrace();
 
         }

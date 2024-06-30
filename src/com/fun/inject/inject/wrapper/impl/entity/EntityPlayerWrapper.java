@@ -9,11 +9,12 @@ import com.fun.inject.inject.Mappings;
 import com.fun.inject.inject.ReflectionUtils;
 
 
-public class EntityPlayerWrapper extends EntityWrapper {
+public class EntityPlayerWrapper extends EntityLivingBaseWrapper {
     //private final Object entityObj;
 
     public EntityPlayerWrapper(Object entityObj) {
-        super(entityObj,"net/minecraft/entity/player/EntityPlayer");
+        super(Classes.EntityPlayer);
+        this.obj =entityObj;
         //this.entityObj = entityObj;
     }
     public EntityPlayerWrapper(Classes c){
@@ -21,14 +22,14 @@ public class EntityPlayerWrapper extends EntityWrapper {
     }
 
     public TeamWrapper getTeam(){
-        return new TeamWrapper(Methods.getTeam.invoke(entityObj));
+        return new TeamWrapper(Methods.getTeam.invoke(obj));
     }
 
     public double getX() {
         // FD: pk/s net/minecraft/entity/Entity/field_70165_t
 
         String notch = Mappings.getObfField("field_70165_t");
-        Object value = ReflectionUtils.getFieldValue(entityObj, notch);
+        Object value = ReflectionUtils.getFieldValue(obj, notch);
         return value == null ? 0.0 : (Double) value;
     }
 
@@ -37,7 +38,7 @@ public class EntityPlayerWrapper extends EntityWrapper {
         // FD: pk/s net/minecraft/entity/Entity/field_70165_t
 
         String notch = Mappings.getObfField("field_70163_u");
-        Object value = ReflectionUtils.getFieldValue(entityObj, notch);
+        Object value = ReflectionUtils.getFieldValue(obj, notch);
         return value == null ? 0.0 : (Double) value;
     }
 
@@ -45,11 +46,11 @@ public class EntityPlayerWrapper extends EntityWrapper {
         // FD: pk/s net/minecraft/entity/Entity/field_70165_t
 
         String notch = Mappings.getObfField("field_70161_v");
-        Object value = ReflectionUtils.getFieldValue(entityObj, notch);
+        Object value = ReflectionUtils.getFieldValue(obj, notch);
         return value == null ? 0.0 : (Double) value;
     }
 
     public IChatComponentWrapper getDisplayName() {
-        return new IChatComponentWrapper(Methods.getDisplayName_EntityPlayer.invoke(entityObj));
+        return new IChatComponentWrapper(Methods.getDisplayName_EntityPlayer.invoke(obj));
     }
 }

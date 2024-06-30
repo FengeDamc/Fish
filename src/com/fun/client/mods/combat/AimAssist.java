@@ -46,7 +46,7 @@ public class AimAssist extends Module {
                 new Vec3(target.getX(),target.getY()+ target.getEyeHeight(),target.getZ()));
 
         this.rotations =new Rotation(v);//limitAngleChange(Rotation.player(),new Rotation(v), 1800);
-        System.out.println("update rotations: "+rotations);
+        //System.out.println("update rotations: "+rotations);
     }
 
     @Override

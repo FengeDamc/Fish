@@ -28,8 +28,8 @@ public class MinecraftWrapper extends Wrapper {
 
     private Object currentScreenObj;
 
-    private final EntityPlayerSPWrapper thePlayer = new EntityPlayerSPWrapper();
-    private final WorldClientWrapper theWorld = new WorldClientWrapper();
+    private EntityPlayerSPWrapper thePlayer=null;
+    private WorldClientWrapper theWorld=null;
 
     private EntityRendererWrapper entityRenderer;
     private RenderManagerWrapper renderManager;
@@ -113,7 +113,7 @@ public class MinecraftWrapper extends Wrapper {
     }
 
     public EntityPlayerSPWrapper getPlayer() {
-
+        if(thePlayer==null)thePlayer=new EntityPlayerSPWrapper();
         try {
             Object value = ReflectionUtils.getFieldValue(minecraftObj, Fields.player.getName());
             thePlayer.setEntityObj(value);
@@ -130,6 +130,8 @@ public class MinecraftWrapper extends Wrapper {
 
 
     public WorldClientWrapper getWorld() {
+
+        if(theWorld==null)theWorld=new WorldClientWrapper();
         try {
             Object value = ReflectionUtils.getFieldValue(minecraftObj, Mappings.getObfField("field_71441_e"));
             theWorld.setWorldObj(value);
@@ -231,16 +233,10 @@ public class MinecraftWrapper extends Wrapper {
     }
 
     public static MinecraftWrapper get() {
-        if (instance == null) {
-            try {
-
-                instance = new MinecraftWrapper(ReflectionUtils.invokeMethod(Agent.findClass(Mappings.getObfClass(CLASS)), Mappings.getObfMethod("func_71410_x")));
-            } catch (Exception e) {
-
-
-            }
+        try {
+            return new MinecraftWrapper(ReflectionUtils.invokeMethod(Agent.findClass(Mappings.getObfClass(CLASS)), Mappings.getObfMethod("func_71410_x")));
         }
-
-        return instance;
+        catch (Exception e) {}
+        return null;
     }
 }

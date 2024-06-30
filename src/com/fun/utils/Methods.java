@@ -45,9 +45,14 @@ public enum Methods {
     needNewCheck(new VMethod("needNewCheck","()Z")),
     isButtonDown(Classes.Mousse,new VMethod("isButtonDown","(I)Z")),
     glPushMatrix(Classes.GL11,new VMethod("glPushMatrix","()V")),
-    setAngles_Entity(Classes.Entity,new VMethod("func_70082_c","(FF)V"));//func_70082_c (FF)V
-
-
+    setAngles_Entity(Classes.Entity,new VMethod("func_70082_c","(FF)V")),
+    channelRead0NoEvent_NetworkManager(new VMethod("channelRead0NoEvent","(Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Object;)V")),
+    sendPacket_NetworkManager(new VMethod("func_179290_a","(Lnet/minecraft/network/Packet;)V")),
+    channelRead0_NetworkManager(new VMethod("func_channelRead0","(Lio/netty/channel/ChannelHandlerContext;Lnet/minecraft/network/Packet;)V")),
+    channelRead0_OBJ_NetworkManager(new VMethod("channelRead0","(Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Object;)V")),
+    processPacket_Packet(new VMethod("func_148833_a","(Lnet/minecraft/network/INetHandler;)V"));//func_148833_a (Lnet/minecraft/network/INetHandler;)V
+//func_70082_c (FF)V
+//channelRead0 (Lio/netty/channel/ChannelHandlerContext;Lnet/minecraft/network/Packet;)V
 
 
     public String obf_name ="";

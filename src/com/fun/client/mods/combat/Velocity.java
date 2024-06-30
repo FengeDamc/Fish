@@ -2,6 +2,8 @@ package com.fun.client.mods.combat;
 
 import com.fun.eventapi.event.events.EventMoment;
 import com.fun.eventapi.event.events.EventPacket;
+import com.fun.inject.Agent;
+import com.fun.inject.inject.Mappings;
 import com.fun.utils.Classes;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
@@ -37,8 +39,7 @@ public class Velocity extends Module {
     @Override
     public void onPacket(EventPacket packet) {
         super.onPacket(packet);
-
-        if(Classes.S12PACKET_ENTITY_VELOCITY.getVClass().isInstanceof(packet.packet)){
+        if(Classes.S12PACKET_ENTITY_VELOCITY.isInstanceof(packet.packet)){
             //Agent.System.out.println(Mappings.getUnobfClass(packet.packet));
             S12PacketEntityVelocity packetVelocity=null;
             try{

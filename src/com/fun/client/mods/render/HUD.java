@@ -20,7 +20,7 @@ import java.util.HashSet;
 
 public class HUD extends Module {
     public HUD(String nameIn) {
-        super(Keyboard.KEY_F,nameIn, Category.RENDER);
+        super(Keyboard.KEY_F,nameIn, Category.Render);
         this.running=true;
     }
     public Setting mixColor1=new Setting("MixColor1",this,0xffffff,0x000000,0xffffff,true);
