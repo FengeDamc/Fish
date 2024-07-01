@@ -5,16 +5,26 @@ import com.fun.eventapi.event.events.EventBlockReach;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
 import com.fun.client.settings.Setting;
-import com.fun.inject.inject.wrapper.impl.MinecraftWrapper;
 import org.lwjgl.input.Keyboard;
 
+import java.util.Random;
+
 public class Reach extends Module {
-    public Setting attackRange = new Setting("AttackRange", this, 6.0, 3.0, 6.0, false);
+    private final Random random = new Random();
+    private long lastRandomUpdateTime = 0;
+    private double currentRange;
+
+    public Setting rangeMin = new Setting("RangeMin", this, 3.0, 3.0, 6.0, false);
+    public Setting rangeMax = new Setting("RangeMax", this, 6.0, 3.0, 6.0, false);
     public Setting blockRange = new Setting("BlockRange", this, 6.0, 4.5, 6.0, false);
     public Setting sprintCheck = new Setting("SprintCheck", this, true);
+    public Setting chance = new Setting("Chance", this, 100.0, 0.0, 100.0, true);
+    public Setting verticalCheck = new Setting("VerticalCheck", this, true);
+    public Setting waterCheck = new Setting("WaterCheck", this, true);
 
     public Reach() {
         super(Keyboard.KEY_G, "Reach", Category.Combat);
+        updateRandomRange();
     }
 
     @Override
@@ -22,7 +32,14 @@ public class Reach extends Module {
         super.onAttackReach(event);
         if (mc.getPlayer() != null) {
             if (!sprintCheck.getValBoolean() || mc.getPlayer().isSprinting()) {
-                event.reach = attackRange.getValDouble();
+                long currentTime = System.currentTimeMillis();
+                if (currentTime - lastRandomUpdateTime >= 1000 + random.nextInt(1001)) {
+                    updateRandomRange();
+                    lastRandomUpdateTime = currentTime;
+                }
+                if (random.nextDouble() * 100 < chance.getValDouble() && shouldApplyReach()) {
+                    event.reach = currentRange;
+                }
             }
         }
     }
@@ -35,5 +52,24 @@ public class Reach extends Module {
                 event.reach = blockRange.getValDouble();
             }
         }
+    }
+
+    private void updateRandomRange() {
+        double min = rangeMin.getValDouble();
+        double max = rangeMax.getValDouble();
+        currentRange = min + (max - min) * random.nextDouble();
+    }
+
+    private boolean shouldApplyReach() {
+        if (waterCheck.getValBoolean() && mc.getPlayer().isInWater()) {
+            return false;
+        }
+
+        if (verticalCheck.getValBoolean()) {
+            float pitch = mc.getPlayer().rotationPitch; // 获取玩家视角的俯仰角
+            return !(pitch > 45.0f) && !(pitch < -45.0f);
+        }
+
+        return true;
     }
 }

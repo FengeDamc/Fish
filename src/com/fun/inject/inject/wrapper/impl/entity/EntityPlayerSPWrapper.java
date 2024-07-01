@@ -16,6 +16,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 public class EntityPlayerSPWrapper extends EntityPlayerWrapper {
+    public float rotationPitch;
     private Object sendQueueObj;
 
     private MovementInputWrapper movementInputObj;
