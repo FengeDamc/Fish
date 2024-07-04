@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FunGhostClient.iml" filepath="$PROJECT_DIR$/FunGhostClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Client.iml" filepath="$PROJECT_DIR$/Client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/Injection1_8_9-1_12_2.iml" filepath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/Injection1_8_9-1_12_2.iml" />
     </modules>
   </component>
 </project>
