@@ -4,7 +4,8 @@ import com.fun.eventapi.event.events.EventTick;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
 import com.fun.client.settings.Setting;
-import com.fun.inject.inject.wrapper.impl.setting.KeyBindingWrapper;
+
+import com.fun.inject.injection.wrapper.impl.setting.KeyBindingWrapper;
 import com.fun.utils.version.fields.Fields;
 import com.fun.utils.version.methods.Methods;
 

@@ -9,187 +9,763 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="add hud background">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/1_8_9_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/Injection1_8_9-1_12_2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fish/inject.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fish/injections/1.8.9-1.12.2.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/FunGhostClient_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/FunGhostClient_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FunGhostClient.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fish/FunGhostClient.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/FunGhostClient.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fish/launcher.exe" beforeDir="false" afterPath="$PROJECT_DIR$/fish/launcher.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fish/libagent.dll" beforeDir="false" afterPath="$PROJECT_DIR$/fish/libagent.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fish/libinjector.dll" beforeDir="false" afterPath="$PROJECT_DIR$/fish/libinjector.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Inkfree.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/fonts/Inkfree.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/corbel.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/fonts/corbel.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/corbelb.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/fonts/corbelb.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/corbeli.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/fonts/corbeli.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/corbell.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/fonts/corbell.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/corbelli.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/fonts/corbelli.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/corbelz.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/fonts/corbelz.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/simkai.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/fonts/simkai.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/tenacity.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/fonts/tenacity.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/mappings/1.16.5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/mappings/1.16.5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/mappings/fields1.12.2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/mappings/fields1.12.2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/mappings/fields1.7.10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/mappings/fields1.7.10.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/mappings/fields1.8.9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/mappings/fields1.8.9.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/mappings/mcp_1.12.2.tsrg" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/mappings/mcp_1.12.2.tsrg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/mappings/mcp_1.16.5.srg" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/mappings/mcp_1.16.5.srg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/mappings/methods1.12.2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/mappings/methods1.12.2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/mappings/methods1.7.10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/mappings/methods1.7.10.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/mappings/methods1.8.9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/mappings/methods1.8.9.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/mappings/vanilla_1.12.2.srg" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/mappings/vanilla_1.12.2.srg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/mappings/vanilla_1.16.5.srg" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/mappings/vanilla_1.16.5.srg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/mappings/vanilla_1.7.10.srg" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/mappings/vanilla_1.7.10.srg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/mappings/vanilla_1.8.9.srg" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/mappings/vanilla_1.8.9.srg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/texture/augx.png" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/texture/augx.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/texture/fish.png" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/texture/fish.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/texture/fishico.png" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/texture/fishico.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/texture/injector.png" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/texture/injector.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/texture/injector1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/texture/injector1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/texture/injector2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/assets/texture/injector2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/FunGhostClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/FunGhostClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/command/CommandHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/command/CommandHandle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/config/ConfigModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/config/ConfigModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/mods/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/Module.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/mods/Module.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/ModuleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/mods/ModuleManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/combat/AimAssist.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/mods/combat/AimAssist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/combat/AutoBlocking.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/mods/combat/AutoBlocking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/combat/AutoClicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/mods/combat/AutoClicker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/combat/Reach.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/mods/combat/Reach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/combat/Target.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/mods/combat/Target.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/combat/Velocity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/mods/combat/Velocity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/movement/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/mods/movement/Flight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/movement/KeepSprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/mods/movement/KeepSprint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/render/HUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/mods/render/HUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/render/NotificationModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/mods/render/NotificationModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/world/Backtrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/mods/world/Backtrack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/mods/world/Eagle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/mods/world/Eagle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/settings/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/settings/Setting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/settings/SettingsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/settings/SettingsManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/utils/ColorUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/utils/ColorUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/client/utils/Rotation/Rotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/utils/Rotation/Rotation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/eventapi/EventAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/EventAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/eventapi/EventManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/EventManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/eventapi/EventTarget.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/EventTarget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/eventapi/event/Cancellable.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/event/Cancellable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/eventapi/event/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/event/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/eventapi/event/EventStoppable.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/event/EventStoppable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/eventapi/event/Typed.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/event/Typed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/eventapi/event/callables/EventCancellable.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/event/callables/EventCancellable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/eventapi/event/callables/EventTyped.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/event/callables/EventTyped.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/eventapi/event/events/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/event/events/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/eventapi/event/events/EventAttackReach.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/event/events/EventAttackReach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/eventapi/event/events/EventBlockReach.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/event/events/EventBlockReach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/eventapi/event/events/EventKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/event/events/EventKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/eventapi/event/events/EventMoment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/event/events/EventMoment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/eventapi/event/events/EventMotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/event/events/EventMotion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/eventapi/event/events/EventPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/event/events/EventPacket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/eventapi/event/events/EventRender2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/event/events/EventRender2D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/eventapi/event/events/EventRender3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/event/events/EventRender3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/eventapi/event/events/EventStrafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/event/events/EventStrafe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/eventapi/event/events/EventTick.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/event/events/EventTick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/eventapi/event/events/EventUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/event/events/EventUpdate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/eventapi/types/EventType.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/types/EventType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/eventapi/types/Priority.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/types/Priority.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/gui/FishFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/gui/FishFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/gui/Injector.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/gui/Injector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/gui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/gui/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/gui/VerticalFlowLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/gui/VerticalFlowLayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/Agent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/InjectorUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/InjectorUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/Loader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/Native.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/Native.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/NativeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/NativeUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/file/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/file/FileUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/IOUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/file/IOUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/InjectUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/InjectUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/Mappings.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/Mappings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/MinecraftType.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/MinecraftType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/MinecraftVersion.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/MinecraftVersion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/ReflectionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/utils/ReflectionUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/ViaVersionHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/WindowEnumerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/jna/WindowEnumerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/FishClassWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/asm/FishClassWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/api/Inject.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/asm/api/Inject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/api/Mixin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/asm/api/Mixin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/api/Transformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/asm/api/Transformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/api/Transformers.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/asm/api/Transformers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/ClassLoaderTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/asm/transformers/ClassLoaderTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/EntityPlayerSP.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/asm/transformers/EntityPlayerSP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/EntityRendererTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/asm/transformers/EntityRendererTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/EntityTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/asm/transformers/EntityTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/GuiIngameTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/asm/transformers/GuiIngameTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/GuiScreenTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/asm/transformers/GuiScreenTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/KeyBindTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/asm/transformers/KeyBindTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/MinecraftTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/asm/transformers/MinecraftTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/NetworkHandlerTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/asm/transformers/NetworkHandlerTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/asm/transformers/NetworkManagerTransFormer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/asm/transformers/NetworkManagerTransFormer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/dynamic/Dynamic.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/dynamic/Dynamic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/dynamic/Dynamics.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/dynamic/Dynamics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/dynamic/impl/gui/GuiScreenDynamic.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/dynamic/impl/gui/GuiScreenDynamic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/Wrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/Wrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/HitResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/HitResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/MinecraftWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/MinecraftWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/entity/EntityLivingBaseWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/entity/EntityLivingBaseWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/entity/EntityPlayerSPWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/entity/EntityPlayerSPWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/entity/EntityPlayerWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/entity/EntityPlayerWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/entity/EntityWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/entity/EntityWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/gui/GuiWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/gui/GuiWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/gui/ScaledResolutionWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/gui/ScaledResolutionWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/network/INetHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/network/INetHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/network/NetHandlerPlayClientWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/network/NetHandlerPlayClientWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/network/NetworkManagerWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/network/NetworkManagerWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/network/packets/PacketWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/network/packets/PacketWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/network/packets/server/S12PacketEntityVelocity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/network/packets/server/S12PacketEntityVelocity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/network/packets/server/S14EntityPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/network/packets/server/S14EntityPacket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/network/packets/server/S18PacketEntityTeleport.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/network/packets/server/S18PacketEntityTeleport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/other/IChatComponentWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/other/IChatComponentWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/other/MovementInputWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/other/MovementInputWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/other/TeamWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/other/TeamWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/other/TimerWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/other/TimerWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/render/DefaultVertexFormats.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/render/DefaultVertexFormats.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/render/EntityRendererWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/render/EntityRendererWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/render/FontRendererWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/render/FontRendererWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/render/FramebufferWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/render/FramebufferWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/render/GlStateManagerWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/render/GlStateManagerWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/render/RenderManagerWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/render/RenderManagerWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/render/Tessellator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/render/Tessellator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/render/WorldRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/render/WorldRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/setting/GameSettingsWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/setting/GameSettingsWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/setting/KeyBindingWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/setting/KeyBindingWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/util/MouseHelperWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/util/MouseHelperWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/world/BlockPosWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/world/BlockPosWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/world/BlockWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/world/BlockWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/world/IBlockStateWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/world/IBlockStateWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/world/MaterialWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/world/MaterialWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/world/Vec3Wrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/world/Vec3Wrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/inject/inject/wrapper/impl/world/WorldClientWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject/injection/wrapper/impl/world/WorldClientWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/network/TCPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/network/TCPClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/network/TCPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/network/TCPServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/font/FontManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/font/FontManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/font/UnicodeFontRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/font/UnicodeFontRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/math/AxisAlignedBB.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/math/AxisAlignedBB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/math/MathHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/math/MathHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/math/vecmath/Vec3.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/math/vecmath/Vec3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/math/vecmath/Vec3i.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/math/vecmath/Vec3i.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/packet/PacketUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/packet/PacketUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/render/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/render/Notification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/render/RenderUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/render/RenderUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/version/Version.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/version/Version.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/version/clazz/Classes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/version/clazz/Classes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/version/clazz/VClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/version/clazz/VClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/version/fields/Fields.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/version/fields/Fields.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/version/fields/VField.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/version/fields/VField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/version/methods/Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/version/methods/Methods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/version/methods/VMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/version/methods/VMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fun/utils/version/runable/VRunable.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/version/runable/VRunable.java" afterDir="false" />
+    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="重构一下为跨1.16.5做准备">
+      <change afterPath="$PROJECT_DIR$/fish/java8/COPYRIGHT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/README.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/THIRDPARTYLICENSEREADME-JAVAFX.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/THIRDPARTYLICENSEREADME.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/include/classfile_constants.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/include/jawt.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/include/jdwpTransport.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/include/jni.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/include/jvmti.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/include/jvmticmlr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/include/win32/bridge/AccessBridgeCallbacks.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/include/win32/bridge/AccessBridgeCalls.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/include/win32/bridge/AccessBridgeCalls.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/include/win32/bridge/AccessBridgePackages.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/include/win32/jawt_md.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/include/win32/jni_md.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/javafx-src.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jmc.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/COPYRIGHT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/THIRDPARTYLICENSEREADME-JAVAFX.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/THIRDPARTYLICENSEREADME.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/Welcome.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/javafx/directshow.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/javafx/glib.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/javafx/gstreamer.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/javafx/icu_web.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/javafx/jpeg_fx.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/javafx/libffi.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/javafx/libxml2.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/javafx/libxslt.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/javafx/mesa3d.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/javafx/public_suffix.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/javafx/webkit.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/asm.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/bcel.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/cldr.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/colorimaging.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/cryptix.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/dom.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/dynalink.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/ecc.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/freebxml.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/giflib.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/icu.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/jcup.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/joni.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/jopt-simple.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/jpeg.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/lcms.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/libpng.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/mesa3d.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/pkcs11cryptotoken.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/pkcs11wrapper.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/relaxngcc.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/relaxngdatatype.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/relaxngom.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/santuario.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/thaidict.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/unicode.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/xalan.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/xerces.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/xmlresolver.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/legal/jdk/zlib.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/accessibility.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/amd64/jvm.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/calendars.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/charsets.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/classlist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/cmm/CIEXYZ.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/cmm/GRAY.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/cmm/LINEAR_RGB.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/cmm/PYCC.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/cmm/sRGB.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/content-types.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/currency.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/deploy.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/deploy/ffjcext.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/deploy/messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/deploy/messages_de.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/deploy/messages_es.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/deploy/messages_fr.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/deploy/messages_it.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/deploy/messages_ja.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/deploy/messages_ko.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/deploy/messages_pt_BR.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/deploy/messages_sv.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/deploy/messages_zh_CN.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/deploy/messages_zh_HK.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/deploy/messages_zh_TW.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/deploy/splash.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/deploy/splash@2x.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/deploy/splash_11-lic.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/deploy/splash_11@2x-lic.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/ext/access-bridge-64.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/ext/cldrdata.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/ext/dnsns.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/ext/jaccess.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/ext/jfxrt.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/ext/localedata.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/ext/meta-index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/ext/nashorn.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/ext/sunec.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/ext/sunjce_provider.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/ext/sunmscapi.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/ext/sunpkcs11.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/ext/zipfs.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/flavormap.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/fontconfig.bfc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/fontconfig.properties.src" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/fonts/LucidaBrightDemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/fonts/LucidaBrightDemiItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/fonts/LucidaBrightItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/fonts/LucidaBrightRegular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/fonts/LucidaSansDemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/fonts/LucidaSansRegular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/fonts/LucidaTypewriterBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/fonts/LucidaTypewriterRegular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/hijrah-config-umalqura.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/images/cursors/cursors.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/images/cursors/invalid32x32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/images/cursors/win32_CopyDrop32x32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/images/cursors/win32_CopyNoDrop32x32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/images/cursors/win32_LinkDrop32x32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/images/cursors/win32_LinkNoDrop32x32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/images/cursors/win32_MoveDrop32x32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/images/cursors/win32_MoveNoDrop32x32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/javafx.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/javaws.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/jce.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/jfr.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/jfr/default.jfc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/jfr/profile.jfc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/jfxswt.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/jsse.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/jvm.hprof.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/logging.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/management-agent.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/management/jmxremote.access" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/management/jmxremote.password.template" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/management/management.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/management/snmp.acl.template" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/meta-index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/net.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/plugin.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/psfont.properties.ja" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/psfontj2d.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/resources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/rt.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/security/blacklist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/security/blacklisted.certs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/security/cacerts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/security/java.policy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/security/java.security" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/security/javaws.policy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/security/policy/limited/US_export_policy.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/security/policy/limited/local_policy.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/security/policy/unlimited/US_export_policy.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/security/policy/unlimited/local_policy.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/security/public_suffix_list.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/security/trusted.libraries" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/sound.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/tzdb.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/jre/lib/tzmappings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/javafx/directshow.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/javafx/glib.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/javafx/gstreamer.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/javafx/icu_web.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/javafx/jpeg_fx.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/javafx/libffi.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/javafx/libxml2.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/javafx/libxslt.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/javafx/mesa3d.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/javafx/public_suffix.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/javafx/webkit.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/asm.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/bcel.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/cldr.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/colorimaging.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/cryptix.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/dom.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/dynalink.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/ecc.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/freebxml.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/giflib.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/icu.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/jcup.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/joni.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/jopt-simple.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/jpeg.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/lcms.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/libpng.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/mesa3d.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/pkcs11cryptotoken.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/pkcs11wrapper.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/relaxngcc.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/relaxngdatatype.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/relaxngom.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/santuario.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/thaidict.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/unicode.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/xalan.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/xerces.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/xmlresolver.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/legal/jdk/zlib.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/ant-javafx.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/ct.sym" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/dt.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/ir.idl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/javafx-mx.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/jawt.lib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/jconsole.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/jvm.lib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/orb.idl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/packager.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/sa-jdi.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/tools.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/etc/visualvm.clusters" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/etc/visualvm.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/.lastModified" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/VERSION.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/ModuleAutoDeps/org-netbeans-core.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/ModuleAutoDeps/org-netbeans-modules-options-api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/ModuleAutoDeps/org-netbeans-modules-queries.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/ModuleAutoDeps/org-openide-execution.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/ModuleAutoDeps/org-openide-explorer.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/ModuleAutoDeps/org-openide-filesystems.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/ModuleAutoDeps/org-openide-loaders.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/ModuleAutoDeps/org-openide-modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/ModuleAutoDeps/org-openide-nodes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/ModuleAutoDeps/org-openide-text.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/ModuleAutoDeps/org-openide-util.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-api-annotations-common.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-api-progress.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-api-search.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-api-visual.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-core-execution.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-core-io-ui.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-core-multitabs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-core-multiview.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-core-output2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-core-ui.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-core-windows.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-core.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-lib-uihandler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-applemenu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-autoupdate-cli.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-autoupdate-services.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-autoupdate-ui.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-core-kit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-editor-mimelookup-impl.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-editor-mimelookup.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-favorites.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-javahelp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-keyring-fallback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-keyring-impl.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-keyring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-masterfs-nio2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-masterfs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-options-api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-options-keymap.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-print.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-progress-ui.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-queries.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-sampler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-sendopts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-spi-actions.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-templates.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-modules-uihandler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-spi-quicksearch.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-swing-outline.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-swing-plaf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-netbeans-swing-tabcontrol.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-openide-actions.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-openide-awt.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-openide-compat.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-openide-dialogs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-openide-execution.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-openide-explorer.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-openide-io.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-openide-loaders.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-openide-nodes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-openide-options.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-openide-text.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-openide-util-enumerations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/config/Modules/org-openide-windows.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/core/core.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/core/locale/core_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/core/locale/core_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/core/locale/org-openide-filesystems_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/core/locale/org-openide-filesystems_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/core/org-openide-filesystems.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/lib/boot.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/lib/locale/boot_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/lib/locale/boot_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/lib/locale/org-openide-modules_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/lib/locale/org-openide-modules_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/lib/locale/org-openide-util-lookup_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/lib/locale/org-openide-util-lookup_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/lib/locale/org-openide-util_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/lib/locale/org-openide-util_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/lib/nbexec.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/lib/nbexec.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/lib/nbexec64.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/lib/nbexec64.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/lib/org-openide-modules.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/lib/org-openide-util-lookup.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/lib/org-openide-util.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/ext/jhall-2.0_05.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/ext/locale/updater_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/ext/locale/updater_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/ext/updater.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-api-annotations-common_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-api-annotations-common_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-api-progress_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-api-progress_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-api-search_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-api-search_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-api-visual_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-api-visual_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-execution_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-execution_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-io-ui_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-io-ui_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-multitabs_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-multitabs_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-multiview_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-multiview_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-output2_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-output2_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-ui_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-ui_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-windows_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-windows_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-lib-uihandler_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-lib-uihandler_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-applemenu_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-applemenu_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-autoupdate-cli_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-autoupdate-cli_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-autoupdate-services_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-autoupdate-services_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-autoupdate-ui_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-autoupdate-ui_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-core-kit_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-core-kit_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-editor-mimelookup-impl_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-editor-mimelookup-impl_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-editor-mimelookup_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-editor-mimelookup_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-favorites_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-favorites_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-javahelp_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-javahelp_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-keyring-fallback_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-keyring-fallback_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-keyring-impl_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-keyring-impl_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-keyring_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-keyring_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-masterfs-nio2_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-masterfs-nio2_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-masterfs_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-masterfs_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-options-api_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-options-api_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-options-keymap_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-options-keymap_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-print_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-print_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-progress-ui_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-progress-ui_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-queries_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-queries_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-sampler_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-sampler_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-sendopts_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-sendopts_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-settings_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-settings_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-spi-actions_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-spi-actions_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-templates_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-templates_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-uihandler_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-uihandler_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-spi-quicksearch_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-spi-quicksearch_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-swing-outline_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-swing-outline_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-swing-plaf_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-swing-plaf_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-swing-tabcontrol_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-swing-tabcontrol_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-actions_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-actions_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-awt_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-awt_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-compat_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-compat_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-dialogs_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-dialogs_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-execution_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-execution_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-explorer_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-explorer_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-io_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-io_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-loaders_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-loaders_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-nodes_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-nodes_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-options_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-options_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-text_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-text_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-util-enumerations_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-util-enumerations_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-windows_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/locale/org-openide-windows_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-api-annotations-common.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-api-progress.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-api-search.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-api-visual.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-core-execution.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-core-io-ui.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-core-multitabs.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-core-multiview.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-core-output2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-core-ui.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-core-windows.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-core.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-lib-uihandler.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-applemenu.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-autoupdate-cli.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-autoupdate-services.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-autoupdate-ui.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-core-kit.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-editor-mimelookup-impl.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-editor-mimelookup.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-favorites.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-javahelp.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-keyring-fallback.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-keyring-impl.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-keyring.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-masterfs-nio2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-masterfs.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-options-api.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-options-keymap.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-print.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-progress-ui.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-queries.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-sampler.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-sendopts.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-settings.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-spi-actions.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-templates.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-uihandler.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-spi-quicksearch.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-swing-outline.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-swing-plaf.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-netbeans-swing-tabcontrol.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-openide-actions.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-openide-awt.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-openide-compat.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-openide-dialogs.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-openide-execution.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-openide-explorer.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-openide-io.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-openide-loaders.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-openide-nodes.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-openide-options.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-openide-text.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-openide-util-enumerations.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/modules/org-openide-windows.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-api-annotations-common.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-api-progress.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-api-search.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-api-visual.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-bootstrap.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-core-execution.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-core-io-ui.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-core-multitabs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-core-multiview.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-core-output2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-core-startup.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-core-ui.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-core-windows.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-core.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-lib-uihandler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-applemenu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-autoupdate-cli.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-autoupdate-services.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-autoupdate-ui.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-core-kit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-editor-mimelookup-impl.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-editor-mimelookup.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-favorites.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-javahelp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-keyring-fallback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-keyring-impl.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-keyring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-masterfs-nio2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-masterfs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-options-api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-options-keymap.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-print.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-progress-ui.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-queries.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-sampler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-sendopts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-spi-actions.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-templates.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-modules-uihandler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-spi-quicksearch.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-swing-outline.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-swing-plaf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-netbeans-swing-tabcontrol.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-openide-actions.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-openide-awt.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-openide-compat.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-openide-dialogs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-openide-execution.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-openide-explorer.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-openide-filesystems.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-openide-io.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-openide-loaders.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-openide-modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-openide-nodes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-openide-options.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-openide-text.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-openide-util-enumerations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-openide-util-lookup.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-openide-util.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/platform/update_tracking/org-openide-windows.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/.lastModified" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/VERSION.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/config/Modules/org-netbeans-lib-profiler-charts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/config/Modules/org-netbeans-lib-profiler-common.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/config/Modules/org-netbeans-lib-profiler-ui.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/config/Modules/org-netbeans-lib-profiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/config/Modules/org-netbeans-modules-profiler-api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/config/Modules/org-netbeans-modules-profiler-attach.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/config/Modules/org-netbeans-modules-profiler-heapwalker.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/config/Modules/org-netbeans-modules-profiler-oql.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/config/Modules/org-netbeans-modules-profiler-selector-api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/config/Modules/org-netbeans-modules-profiler-selector-ui.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/config/Modules/org-netbeans-modules-profiler-snaptracer.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/config/Modules/org-netbeans-modules-profiler-utilities.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/config/Modules/org-netbeans-modules-profiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/lib/deployed/jdk15/windows-amd64/profilerinterface.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/lib/deployed/jdk16/windows-amd64/profilerinterface.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/lib/jfluid-server-15.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/lib/jfluid-server.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/lib/locale/jfluid-server_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/lib/locale/jfluid-server_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-lib-profiler-charts_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-lib-profiler-charts_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-lib-profiler-common_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-lib-profiler-common_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-lib-profiler-ui_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-lib-profiler-ui_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-lib-profiler_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-lib-profiler_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-api_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-api_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-attach_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-attach_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-heapwalker_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-heapwalker_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-oql_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-oql_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-selector-api_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-selector-api_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-selector-ui_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-selector-ui_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-snaptracer_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-snaptracer_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-utilities_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-utilities_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/org-netbeans-lib-profiler-charts.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/org-netbeans-lib-profiler-common.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/org-netbeans-lib-profiler-ui.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/org-netbeans-lib-profiler.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/org-netbeans-modules-profiler-api.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/org-netbeans-modules-profiler-attach.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/org-netbeans-modules-profiler-heapwalker.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/org-netbeans-modules-profiler-oql.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/org-netbeans-modules-profiler-selector-api.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/org-netbeans-modules-profiler-selector-ui.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/org-netbeans-modules-profiler-snaptracer.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/org-netbeans-modules-profiler-utilities.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/modules/org-netbeans-modules-profiler.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/update_tracking/org-netbeans-lib-profiler-charts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/update_tracking/org-netbeans-lib-profiler-common.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/update_tracking/org-netbeans-lib-profiler-ui.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/update_tracking/org-netbeans-lib-profiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/update_tracking/org-netbeans-modules-profiler-api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/update_tracking/org-netbeans-modules-profiler-attach.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/update_tracking/org-netbeans-modules-profiler-heapwalker.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/update_tracking/org-netbeans-modules-profiler-oql.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/update_tracking/org-netbeans-modules-profiler-selector-api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/update_tracking/org-netbeans-modules-profiler-selector-ui.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/update_tracking/org-netbeans-modules-profiler-snaptracer.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/update_tracking/org-netbeans-modules-profiler-utilities.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/profiler/update_tracking/org-netbeans-modules-profiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/.lastModified" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-api-caching.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-application-views.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-application.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-attach.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-charts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-core.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-coredump.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-heapdump.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-host-remote.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-host-views.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-host.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-jmx.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-jvm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-jvmstat.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-modules-appui.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-profiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-profiling.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-sa.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-sampler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-threaddump.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-tools.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-uisupport.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/org-netbeans-api-visual.xml_hidden" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/org-netbeans-core-execution.xml_hidden" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/org-netbeans-core-io-ui.xml_hidden" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/org-netbeans-core-output2.xml_hidden" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/org-netbeans-lib-uihandler.xml_hidden" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/org-netbeans-modules-core-kit.xml_hidden" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/org-netbeans-modules-favorites.xml_hidden" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/org-netbeans-modules-options-keymap.xml_hidden" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/org-netbeans-modules-print.xml_hidden" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/org-netbeans-modules-spi-actions.xml_hidden" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/org-netbeans-modules-templates.xml_hidden" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/org-netbeans-modules-uihandler.xml_hidden" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/org-openide-compat.xml_hidden" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/org-openide-execution.xml_hidden" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/org-openide-options.xml_hidden" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/config/Modules/org-openide-util-enumerations.xml_hidden" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/core/com-sun-tools-visualvm-modules-startup.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/core/locale/com-sun-tools-visualvm-modules-startup_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/core/locale/com-sun-tools-visualvm-modules-startup_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/core/locale/core_visualvm.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-api-caching.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-application-views.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-application.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-attach.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-charts.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-core.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-coredump.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-heapdump.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-host-remote.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-host-views.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-host.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-jmx.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-jvm.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-jvmstat.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-modules-appui.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-profiler.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-profiling.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-sa.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-sampler.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-threaddump.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-tools.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-uisupport.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-api-caching_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-api-caching_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-application-views_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-application-views_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-application_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-application_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-attach_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-attach_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-charts_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-charts_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-core_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-core_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-coredump_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-coredump_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-heapdump_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-heapdump_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-host-remote_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-host-remote_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-host-views_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-host-views_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-host_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-host_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-jmx_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-jmx_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-jvm_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-jvm_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-jvmstat_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-jvmstat_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-modules-appui_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-modules-appui_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-profiler_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-profiler_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-profiling_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-profiling_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-sa_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-sa_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-sampler_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-sampler_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-threaddump_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-threaddump_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-tools_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-tools_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-uisupport_ja.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-uisupport_zh_CN.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/org-netbeans-core-windows_visualvm.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/org-netbeans-core_visualvm.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/modules/locale/org-netbeans-modules-profiler_visualvm.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-api-caching.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-application-views.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-application.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-attach.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-charts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-core.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-coredump.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-heapdump.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-host-remote.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-host-views.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-host.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-jmx.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-jvm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-jvmstat.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-modules-appui.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-modules-startup.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-profiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-profiling.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-sa.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-sampler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-threaddump.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-tools.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-uisupport.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/release" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fish/java8/src.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/injector/cmake-build-debug/.cmake/api/v1/reply/cache-v2-15468713f32846acfe38.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/injector/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-5c659ac0c26fe726fee8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/injector/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-6b25cbd450c36601b5a8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/injector/cmake-build-debug/.cmake/api/v1/reply/index-2024-07-01T13-23-16-0042.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/injector/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-81c4b6b06e13aad5e8f8.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,39 +828,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Run",
-    "Application.WindowEnumerator.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "true",
-    "JAR 应用程序.FunGhostClient.jar (1).executor": "Run",
-    "JAR 应用程序.FunGhostClient.jar.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/FengeGG/Fish/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "工件",
-    "project.structure.proportion": "0.15234375",
-    "project.structure.side.proportion": "0.5940023",
-    "settings.editor.selected.configurable": "preferences.fileTypes",
-    "vue.rearranger.settings.migration": "true",
-    "应用程序.JNAUtils.executor": "Run",
-    "应用程序.Main.executor": "Run",
-    "应用程序.fun.inject.Main.executor": "Run"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.WindowEnumerator.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;JAR 应用程序.FunGhostClient.jar (1).executor&quot;: &quot;Run&quot;,
+    &quot;JAR 应用程序.FunGhostClient.jar.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/FengeGG/Fish/Injections/1.8.9-1.12.2/Injection1_8_9-1_12_2/src/com/fun/inject&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;工件&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15234375&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.5940023&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;应用程序.JNAUtils.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.Main.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.fun.inject.Main.executor&quot;: &quot;Run&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="fun.client.utils.Rotation" />
@@ -455,7 +1031,7 @@
       <workItem from="1719666463512" duration="9476000" />
       <workItem from="1719743066607" duration="795000" />
       <workItem from="1719743878634" duration="246000" />
-      <workItem from="1719744136076" duration="13993000" />
+      <workItem from="1719744136076" duration="14607000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -657,7 +1233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719753350578</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="重构一下为跨1.16.5做准备">
+      <option name="closed" value="true" />
+      <created>1720067243891</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1720067243891</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -728,7 +1312,8 @@
     <MESSAGE value="fix forge" />
     <MESSAGE value="fix forge&#10;add Reach-SprintCheck" />
     <MESSAGE value="add hud background" />
-    <option name="LAST_COMMIT_MESSAGE" value="add hud background" />
+    <MESSAGE value="重构一下为跨1.16.5做准备" />
+    <option name="LAST_COMMIT_MESSAGE" value="重构一下为跨1.16.5做准备" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
