@@ -15,6 +15,7 @@ import javax.vecmath.Vector3f;
 import java.lang.reflect.Field;
 
 public class EntityPlayerSPWrapper extends EntityPlayerWrapper {
+    public float rotationPitch;
     private Object sendQueueObj;
 
     private MovementInputWrapper movementInputObj;
