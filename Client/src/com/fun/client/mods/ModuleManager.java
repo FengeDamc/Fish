@@ -21,6 +21,7 @@ import static com.fun.client.utils.Rotation.Rotation.mc;
 
 public class ModuleManager {
     public ArrayList<Module> mods = new ArrayList<>();
+    public VModuleManager vModuleManager;
 
     public KeepSprint keepSprint;
 
@@ -40,6 +41,7 @@ public class ModuleManager {
     public void init() {
         mods.clear();
         EventManager.register(this);
+        vModuleManager=new VModuleManager();
         keepSprint = new KeepSprint("KeepSprint");
         hud = new HUD("HUD");
         reach = new Reach();
@@ -51,7 +53,7 @@ public class ModuleManager {
         autoBlocking=new AutoBlocking();
         notification=new NotificationModule();
         target=new Target();
-        backtrack=new Backtrack();
+        vModuleManager.init();
 
     }
 

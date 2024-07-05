@@ -66,6 +66,15 @@
     <orderEntry type="library" name="flatlaf-3.1.1" level="project" />
     <orderEntry type="library" name="launchwrapper-1.12 (3)" level="project" />
     <orderEntry type="library" name="launchwrapper-1.12 (4)" level="project" />
-    <orderEntry type="module" module-name="Injection1_8_9-1_12_2" />
+    <orderEntry type="module" module-name="Injection1_8_9" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/annotations-24.0.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

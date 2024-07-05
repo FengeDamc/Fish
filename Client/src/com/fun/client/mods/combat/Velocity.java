@@ -6,7 +6,7 @@ import com.fun.utils.version.clazz.Classes;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
 import com.fun.client.settings.Setting;
-import com.fun.inject.injection.wrapper.impl.network.packets.server.S12PacketEntityVelocity;
+import com.fun.inject.injection.wrapper.impl.network.packets.server.S12PacketEntityVelocityWrapper;
 
 import java.util.Random;
 
@@ -52,7 +52,7 @@ public class Velocity extends Module {
         super.onPacket(packet);
         if (Classes.S12PACKET_ENTITY_VELOCITY.isInstanceof(packet.packet)) {
             try {
-                S12PacketEntityVelocity packetVelocity = new S12PacketEntityVelocity(packet.packet);
+                S12PacketEntityVelocityWrapper packetVelocity = new S12PacketEntityVelocityWrapper(packet.packet);
                 if (packetVelocity.getEntityID() == mc.getPlayer().getEntityID()) {
                     if (this.mode.getValString().equalsIgnoreCase("Vanilla")) {
                         double horizontalMultiplier = getRandomMultiplier(horizontalMin.getValDouble(), horizontalMax.getValDouble()) / 100.0;

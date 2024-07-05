@@ -49,21 +49,6 @@ public class Mappings {
     public static final Map<String, String> unFriendMethods = new HashMap<>();
     static {
         if(Agent.isAgent){
-            /*try {
-                Class<?> c=Agent.findClass("net.minecraft.client.Minecraft");
-                if(c!=null) {
-                    Agent.minecraftType = MinecraftType.MCP;
-                    if (ReflectionUtils.invokeMethod(Agent.findClass("net/minecraft/client/Minecraft"),"func_71410_x") != null)
-                        Agent.minecraftType = MinecraftType.FORGE;
-                }
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            TCPClient.send(Main.SERVERPORT,"mcver");
-
-            Agent.logger.info(String.format("it's %s %s client%n",Agent.minecraftVersion.getVer(),Agent.minecraftType.getType()));
-            */
             try {
                 readMappings(Agent.minecraftVersion,Agent.minecraftType);
             } catch (IOException e) {

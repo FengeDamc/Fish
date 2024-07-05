@@ -10,6 +10,7 @@ import com.fun.inject.injection.asm.api.Transformer;
 import com.fun.inject.injection.asm.api.Transformers;
 import com.fun.inject.injection.asm.transformers.ClassLoaderTransformer;
 import com.fun.inject.injection.wrapper.impl.MinecraftWrapper;
+import com.fun.inject.mapper.Mapper;
 import com.fun.inject.utils.ReflectionUtils;
 import com.fun.utils.version.methods.Methods;
 import com.fun.gui.FishFrame;
@@ -151,6 +152,7 @@ public class Agent {
     }
 
     public static synchronized void start() throws URISyntaxException, IOException, InterruptedException {
+                //if(true)throw new RuntimeException("hehe");
                 isAgent =true;
                 System.out.println("attached!!");
 
@@ -181,36 +183,37 @@ public class Agent {
                 System.out.println("jarPath:"+jarPath);
                 File injection=new File(new File(jarPath).getParent(),"/injections/"+minecraftVersion.injection);
                 System.out.println(injection.getAbsolutePath());
+                injection=Mapper.mapJar(injection,minecraftType);
                 NativeUtils.addToSystemClassLoaderSearch(injection.getAbsolutePath());
-
                 if(classLoader.getClass().getName().contains("launchwrapper"))injectClassLoader(classLoader);
-                    try {
-                        if (Agent.class.getClassLoader()!=(classLoader)) {
+                try {
+                    if (Agent.class.getClassLoader() != (classLoader)) {
 
-                            try {
-                                //loadJar((URLClassLoader)Thread.currentThread().getContextClassLoader(),new File(new File(jarPath).getParent(),"/injections/"+minecraftVersion.injection).toURI().toURL());
-                                loadJar((URLClassLoader) classLoader,injection.toURI().toURL());
-                                loadJar((URLClassLoader) classLoader,new File(jarPath).toURI().toURL());
+                        try {
+                            //loadJar((URLClassLoader)Thread.currentThread().getContextClassLoader(),new File(new File(jarPath).getParent(),"/injections/"+minecraftVersion.injection).toURI().toURL());
+                            loadJar((URLClassLoader) classLoader, injection.toURI().toURL());
+                            loadJar((URLClassLoader) classLoader, new File(jarPath).toURI().toURL());
 
-                            } catch (Throwable e) {
-                                e.printStackTrace();
-                            }
-                            System.out.println("added URL To CL");
+                        } catch (Throwable e) {
+                            e.printStackTrace();
                         }
+                        System.out.println("added URL To CL");
+                    }
 
 
-                        Class<?> agentClass = Agent.findClass("com.fun.inject.Agent");
-                        for (Method m : agentClass.getDeclaredMethods()) {
-                            if (m.getName().equals("init")) {
-                                m.invoke(null, classLoader,jarPath);
-                            }
+                    Class<?> agentClass = Agent.findClass("com.fun.inject.Agent");
+                    for (Method m : agentClass.getDeclaredMethods()) {
+                        if (m.getName().equals("init")) {
+                            m.invoke(null, classLoader, jarPath);
                         }
+                    }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
                 //NativeUtils.messageBox("pcl:"+classLoader.getParent(),"Fish");
                 //init(classLoader,jarPath);
-               transform();
+                transform();
+
 
 
     }

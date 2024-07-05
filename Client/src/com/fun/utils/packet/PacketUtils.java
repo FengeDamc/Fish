@@ -10,6 +10,7 @@ public class PacketUtils {
         mc.getNetHandler().getNetworkManager().processPacketNoEvent(packet);
 
     }
+
     public static void sendPacketNoEvent(PacketWrapper packet){
         mc.getNetHandler().getNetworkManager().sendPacket(packet);
     }

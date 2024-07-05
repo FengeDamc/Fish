@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Injection1_8_9:jar">
+    <output-path>$PROJECT_DIR$/fish/injections</output-path>
+    <root id="archive" name="1.8.9.jar">
+      <element id="module-output" name="Injection1_8_9" />
+    </root>
+  </artifact>
+</component>

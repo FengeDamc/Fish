@@ -35,13 +35,14 @@ public class AimAssist extends Module {
     @Override
     public void onUpdate(EventUpdate event) {
         super.onUpdate(event);
+
         lastRotations = rotations;
         rotations = null;
         if(onAttack.getValBoolean()&&!mc.getGameSettings().getKey("key.attack").isPressed())return;
         target= moduleManager.target.target;
         EntityPlayerSPWrapper playersp=mc.getPlayer();
 
-        if(target==null)return;
+        if(target==null||playersp.isOpenGui())return;
         Vector2f v= aim(new Vec3(playersp.getX(), playersp.getY()+ playersp.getEyeHeight(), playersp.getZ()),
                 new Vec3(target.getX(),target.getY()+ target.getEyeHeight(),target.getZ()));
 
@@ -70,7 +71,7 @@ public class AimAssist extends Module {
 
         //EntityPlayerSPWrapper player= mc.getPlayer();
 
-        playersp.setAngles(f2, f3 * (float) i);
+         playersp.setAngles(f2, f3 * (float) i);
 
     }
 

@@ -3,7 +3,8 @@ package com.fun.inject;
 public enum MinecraftType {
     VANILLA("vanilla"),
     FORGE("forge"),
-    MCP("mcp");
+    MCP("mcp"),
+    NONE("none");
 
     private final String type;
 

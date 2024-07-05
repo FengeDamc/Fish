@@ -3,6 +3,7 @@ package com.fun.network;
 import com.fun.client.FunGhostClient;
 import com.fun.client.config.ConfigModule;
 import com.fun.inject.*;
+import com.fun.inject.mapper.Mapper;
 import com.fun.utils.jna.WindowEnumerator;
 import com.fun.gui.FishFrame;
 
@@ -135,7 +136,7 @@ public class TCPServer {
                         try {
                             Main.mcPath = split[1];
                             Main.started = true;
-                            File injection=new File(new File(Main.path),"/injections/"+Agent.minecraftVersion.injection);
+                            File injection= Mapper.mapJar(new File(new File(Main.path),"/injections/"+Agent.minecraftVersion.injection),MinecraftType.NONE);
                             System.out.println("injection: "+injection.getAbsolutePath());
                             InjectorUtils.addToSystemClassLoaderSearch(injection.getAbsolutePath());
                             FunGhostClient.init();
