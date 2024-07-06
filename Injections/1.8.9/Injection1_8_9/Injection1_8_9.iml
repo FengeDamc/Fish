@@ -13,5 +13,8 @@
     <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="netty-all-4.0.23.Final" level="project" />
     <orderEntry type="library" name="minecraft-1.8.9" level="project" />
+    <orderEntry type="library" name="lwjgl_util-2.9.4-nightly-20150209" level="project" />
+    <orderEntry type="library" name="lwjgl-platform-2.9.4-nightly-20150209-natives-windows1" level="project" />
+    <orderEntry type="library" name="lwjgl-2.9.4-nightly-201502092" level="project" />
   </component>
 </module>

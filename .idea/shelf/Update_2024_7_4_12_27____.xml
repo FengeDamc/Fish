@@ -1,0 +1,64 @@
+<changelist name="在进行Update之前于_2024_7_4_下午12_27_取消提交了更改_[更改]" date="1720067250774" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_4_下午12_27_取消提交了更改_[更改]/shelved.patch" />
+  <option name="DESCRIPTION" value="在进行Update之前于 2024/7/4 下午12:27 取消提交了更改 [更改]" />
+  <binary>
+    <option name="BEFORE_PATH" value="injector/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/a.exe" />
+    <option name="AFTER_PATH" value="injector/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/a.exe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_4_下午12_27_取消提交了更改_[更改]/a.exe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="injector/cmake-build-debug/CMakeFiles/injector.dir/src/injector/Inject.c.obj" />
+    <option name="AFTER_PATH" value="injector/cmake-build-debug/CMakeFiles/injector.dir/src/injector/Inject.c.obj" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_4_下午12_27_取消提交了更改_[更改]/Inject.c.obj" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="injector/cmake-build-debug/CMakeFiles/agent.dir/src/dll/utils.c.obj" />
+    <option name="AFTER_PATH" value="injector/cmake-build-debug/CMakeFiles/agent.dir/src/dll/utils.c.obj" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_4_下午12_27_取消提交了更改_[更改]/utils.c.obj" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="injector/cmake-build-debug/CMakeFiles/injector.dir/src/injector/GetProcAddressR.c.obj" />
+    <option name="AFTER_PATH" value="injector/cmake-build-debug/CMakeFiles/injector.dir/src/injector/GetProcAddressR.c.obj" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_4_下午12_27_取消提交了更改_[更改]/GetProcAddressR.c.obj" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="injector/cmake-build-debug/CMakeFiles/agent.dir/src/dll/dllmain.c.obj" />
+    <option name="AFTER_PATH" value="injector/cmake-build-debug/CMakeFiles/agent.dir/src/dll/dllmain.c.obj" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_4_下午12_27_取消提交了更改_[更改]/dllmain.c.obj" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="injector/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_C.bin" />
+    <option name="AFTER_PATH" value="injector/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_C.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_4_下午12_27_取消提交了更改_[更改]/CMakeDetermineCompilerABI_C.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="injector/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdCXX/a.exe" />
+    <option name="AFTER_PATH" value="injector/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdCXX/a.exe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_4_下午12_27_取消提交了更改_[更改]/a1.exe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="injector/cmake-build-debug/CMakeFiles/injector.dir/src/injector/LoadLibraryR.c.obj" />
+    <option name="AFTER_PATH" value="injector/cmake-build-debug/CMakeFiles/injector.dir/src/injector/LoadLibraryR.c.obj" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_4_下午12_27_取消提交了更改_[更改]/LoadLibraryR.c.obj" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="injector/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_CXX.bin" />
+    <option name="AFTER_PATH" value="injector/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_CXX.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_4_下午12_27_取消提交了更改_[更改]/CMakeDetermineCompilerABI_CXX.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="injector/cmake-build-debug/CMakeFiles/agent.dir/src/dll/ReflectiveLoader.c.obj" />
+    <option name="AFTER_PATH" value="injector/cmake-build-debug/CMakeFiles/agent.dir/src/dll/ReflectiveLoader.c.obj" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_4_下午12_27_取消提交了更改_[更改]/ReflectiveLoader.c.obj" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="injector/cmake-build-debug/.ninja_deps" />
+    <option name="AFTER_PATH" value="injector/cmake-build-debug/.ninja_deps" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_4_下午12_27_取消提交了更改_[更改]/.ninja_deps" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="injector/cmake-build-debug/CMakeFiles/launcher.dir/src/launcher/main.c.obj" />
+    <option name="AFTER_PATH" value="injector/cmake-build-debug/CMakeFiles/launcher.dir/src/launcher/main.c.obj" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_4_下午12_27_取消提交了更改_[更改]/main.c.obj" />
+  </binary>
+</changelist>

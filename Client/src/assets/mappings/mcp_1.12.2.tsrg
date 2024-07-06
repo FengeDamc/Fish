@@ -7556,7 +7556,7 @@ net/minecraft/client/gui/chat/NarratorChatListener net/minecraft/client/gui/chat
 	narrator field_192580_a
 	announceMode (I)V func_193641_a
 	clear ()V func_193642_b
-	isActive ()Z func_193640_a
+	isVisible ()Z func_193640_a
 	say (Lnet/minecraft/util/text/ChatType;Lnet/minecraft/util/text/ITextComponent;)V func_192576_a
 net/minecraft/client/gui/chat/NormalChatListener net/minecraft/client/gui/chat/NormalChatListener
 	mc field_192581_a

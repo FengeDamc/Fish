@@ -20,25 +20,25 @@ public class Velocity extends Module {
     public Setting mode = new Setting("Mode", this, "Vanilla", new String[]{"Vanilla", "JumpReset"});
     public Setting horizontalMin = new Setting("Horizontal Min", this, 80.0, 0.0, 100.0, false) {
         @Override
-        public boolean isActive() {
+        public boolean isVisible() {
             return mode.getValString().equalsIgnoreCase("Vanilla");
         }
     };
     public Setting horizontalMax = new Setting("Horizontal Max", this, 100.0, 0.0, 100.0, false) {
         @Override
-        public boolean isActive() {
+        public boolean isVisible() {
             return mode.getValString().equalsIgnoreCase("Vanilla");
         }
     };
     public Setting verticalMin = new Setting("Vertical Min", this, 80.0, 0.0, 100.0, false) {
         @Override
-        public boolean isActive() {
+        public boolean isVisible() {
             return mode.getValString().equalsIgnoreCase("Vanilla");
         }
     };
     public Setting verticalMax = new Setting("Vertical Max", this, 100.0, 0.0, 100.0, false) {
         @Override
-        public boolean isActive() {
+        public boolean isVisible() {
             return mode.getValString().equalsIgnoreCase("Vanilla");
         }
     };

@@ -80,10 +80,10 @@ public class ConfigModule {
                 //Minecraft.getLogger().info(mod.name);
                 for(Module m:FunGhostClient.moduleManager.mods) {
                     if ((m.getName() + "-" + "running").equalsIgnoreCase(astring[0])) {
-                        m.running=Boolean.parseBoolean(astring[1]);
+                        m.setRunning(Boolean.parseBoolean(astring[1]));
                     }
                     if ((m.getName() + "-" + "key").equalsIgnoreCase(astring[0])) {
-                        m.key= Integer.parseInt(astring[1]);
+                        m.setKey(Integer.parseInt(astring[1]));
                     }
                 }
 

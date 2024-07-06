@@ -5,7 +5,9 @@ import com.fun.utils.version.clazz.Classes;
 import com.fun.inject.Agent;
 import com.fun.inject.Mappings;
 
-public class Wrapper {
+import java.io.Serializable;
+
+public class Wrapper implements Serializable {
 
     private final String name, obfName;
     public Class<?> clazz;

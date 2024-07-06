@@ -1,6 +1,7 @@
 package com.fun.client.settings;
 
 
+import com.fun.client.FunGhostClient;
 import com.fun.client.mods.Module;
 
 import java.util.ArrayList;
@@ -8,22 +9,23 @@ import java.util.ArrayList;
 // I have to delete all the comments for normal encoding
 
 public class SettingsManager {
-	private ArrayList<Setting> settings;
+	public ArrayList<Setting> settings;
 
 	public SettingsManager(){
 		this.settings = new ArrayList<Setting>();
 
 	}
 
-	public void rSetting(Setting in){
-			//this.settings.add(in);
-	}
+
 	public void reg(Setting in){
 		this.settings.add(in);
 	}
 
 	public ArrayList<Setting> getSettings(){
 		return this.settings;
+	}
+	public void onSettingChange(){
+		FunGhostClient.onValueChange();
 	}
 
 	public ArrayList<Setting> getSettingsByMod(Module mod){

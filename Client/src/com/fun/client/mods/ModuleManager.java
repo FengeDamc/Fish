@@ -41,19 +41,24 @@ public class ModuleManager {
     public void init() {
         mods.clear();
         EventManager.register(this);
-        vModuleManager=new VModuleManager();
-        keepSprint = new KeepSprint("KeepSprint");
-        hud = new HUD("HUD");
-        reach = new Reach();
-        autoClicker=new AutoClicker();
-        aimAssist = new AimAssist();
-        flight = new Flight("Flight",Category.Movement);
-        eagle=new Eagle();
-        velocity=new Velocity();
-        autoBlocking=new AutoBlocking();
-        notification=new NotificationModule();
-        target=new Target();
-        vModuleManager.init();
+        try {
+            vModuleManager = new VModuleManager();
+            keepSprint = new KeepSprint("KeepSprint");
+            hud = new HUD("HUD");
+            reach = new Reach();
+            autoClicker = new AutoClicker();
+            aimAssist = new AimAssist();
+            flight = new Flight("Flight", Category.Movement);
+            eagle = new Eagle();
+            velocity = new Velocity();
+            autoBlocking = new AutoBlocking();
+            notification = new NotificationModule();
+            target = new Target();
+            vModuleManager.init();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
 
     }
 

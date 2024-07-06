@@ -7,10 +7,7 @@ import com.fun.inject.mapper.Mapper;
 import com.fun.utils.jna.WindowEnumerator;
 import com.fun.gui.FishFrame;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -28,15 +25,7 @@ public class TCPServer {
     public static int getTargetPort(){
         return Agent.isAgent? Main.SERVERPORT:Agent.SERVERPORT;
     }
-    public static String review(String mess){
-        String[] split=mess.split(" ");
-        switch (split[0]){
-            case "mcver":
-                Agent.minecraftVersion= getVersion();
-                 return split[0]+String.format(" %d",Agent.minecraftVersion.ordinal());
-        }
-        return mess;
-    }
+
     public static class ServerThread extends Thread{
         public int portIn;
         public ServerThread(int portIn) {
@@ -53,31 +42,32 @@ public class TCPServer {
 
                 while (true) {
                     // 等待客户端连接
+                    Socket clientSocket = serverSocket.accept();
+                    //System.out.println("Connected to client: " + clientSocket.toString());
+                    ObjectInputStream ois = new ObjectInputStream(clientSocket.getInputStream());
+                    ObjectOutputStream oos = new ObjectOutputStream(clientSocket.getOutputStream());
+
                     try {
-                        Socket clientSocket = serverSocket.accept();
-                        System.out.println("客户端已连接：" + clientSocket);
+                        Object receivedObject = ois.readObject();
+                        System.out.println("Received object: " + receivedObject);
 
-                        // 创建输入输出流
-                        BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-                        PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
-
-                        // 读取客户端发送的消息，并回显
-                        String inputLine;
-                        while ((inputLine = in.readLine()) != null) {
-                            System.out.println("收到消息：" + inputLine);
-                            String r=review(inputLine);
-                            out.println(r); // 回显消息
-                            System.out.println("回显消息：" + r);
-
-                            receive(inputLine);
+                        if (receivedObject instanceof IPacket) {
+                            receive((IPacket) receivedObject);
+                            if (receivedObject instanceof IReviewable) {
+                                oos.writeObject(((IReviewable) receivedObject).getClone());
+                            }
+                        } else {
+                            throw new RuntimeException("object not instance of IPacket");
                         }
 
-                        // 关闭连接
-                        clientSocket.close();
+                        // 处理接收到的对象
                     }
                     catch (Exception e){
                         e.printStackTrace();
+                    }finally {
+                        clientSocket.close();
                     }
+
                 }
 
 
@@ -103,8 +93,9 @@ public class TCPServer {
         }
         return MinecraftVersion.VER_189;
     }
-    public static void receive(String info){
-            String[] split = info.split(" ");
+    public static void receive(IPacket info){
+            info.process();
+            /*String[] split = info.split(" ");
 
 
             try{
@@ -158,7 +149,7 @@ public class TCPServer {
             }
             catch (Exception e){
 
-            }
+            }*/
 
 
 

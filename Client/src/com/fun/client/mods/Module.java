@@ -8,15 +8,19 @@ import com.fun.inject.Agent;
 import com.fun.inject.injection.wrapper.impl.MinecraftWrapper;
 import com.fun.network.TCPClient;
 import com.fun.network.TCPServer;
+import com.fun.network.packets.PacketAddModule;
+import com.fun.network.packets.PacketSetKey;
+import com.fun.network.packets.PacketSetRun;
 import com.fun.utils.render.Notification;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Module {
+public class Module{
     public int key;
     public Category category;
     public String name;
-    public int toggleTick=0;
+
     public MinecraftWrapper mc;
     public ConfigModule configModule =null;
 
@@ -28,7 +32,14 @@ public class Module {
         //EventManager.register(this);
         category=categoryIn;
         configModule=new ConfigModule(this);
-        if(Agent.isAgent)mc=MinecraftWrapper.get();
+        if(Agent.isAgent){
+            mc=MinecraftWrapper.get();
+            TCPClient.send(TCPServer.getTargetPort(),new PacketAddModule(this));
+        }
+    }
+
+    public Module() {
+        super();
     }
 
     public boolean isRunning() {
@@ -38,19 +49,20 @@ public class Module {
     public void setRunning(boolean running) {
         if(running!=this.running) {
             this.running = running;
+            FunGhostClient.onValueChange();
             if(Agent.isAgent){
                 if (running) onEnable();
                 else onDisable();
             }
             if (!TCPServer.isNetworkThread()) {
-                TCPClient.send(TCPServer.getTargetPort(), "setrun " + FunGhostClient.moduleManager.mods.indexOf(this) + " " + running);
+                TCPClient.send(TCPServer.getTargetPort(), new PacketSetRun(FunGhostClient.moduleManager.mods.indexOf(this),running));
             }
         }
     }
     public void setKey(int key){
         this.key=key;
         if (!TCPServer.isNetworkThread()) {
-            TCPClient.send(TCPServer.getTargetPort(), "setkey " + FunGhostClient.moduleManager.mods.indexOf(this) + " " + key);
+            TCPClient.send(TCPServer.getTargetPort(), new PacketSetKey(FunGhostClient.moduleManager.mods.indexOf(this),key));
         }
     }
 

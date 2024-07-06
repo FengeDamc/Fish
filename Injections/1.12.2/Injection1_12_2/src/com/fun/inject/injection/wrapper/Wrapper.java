@@ -4,6 +4,8 @@ package com.fun.inject.injection.wrapper;
 import com.fun.utils.version.clazz.Classes;
 import com.fun.inject.Agent;
 import com.fun.inject.Mappings;
+import net.minecraft.client.Minecraft;
+import net.minecraft.util.EnumHand;
 
 public class Wrapper {
 
@@ -13,8 +15,8 @@ public class Wrapper {
 
     public Wrapper(String name) {
         this.name = name;
-
         obfName = Mappings.getObfClass(name);
+
         if (obfName != null) {
             try {
                 clazz = Agent.findClass(obfName);

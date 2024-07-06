@@ -12,6 +12,9 @@ import com.fun.inject.injection.asm.transformers.ClassLoaderTransformer;
 import com.fun.inject.injection.wrapper.impl.MinecraftWrapper;
 import com.fun.inject.mapper.Mapper;
 import com.fun.inject.utils.ReflectionUtils;
+import com.fun.network.packets.PacketInit;
+import com.fun.network.packets.PacketMCPath;
+import com.fun.network.packets.PacketMCVer;
 import com.fun.utils.version.methods.Methods;
 import com.fun.gui.FishFrame;
 
@@ -142,7 +145,7 @@ public class Agent {
         } catch (Exception e) {
             //e.printStackTrace();
         }
-        TCPClient.send(Main.SERVERPORT,"mcver");
+        TCPClient.send(Main.SERVERPORT,new PacketMCVer(null));
     }
 
 
@@ -266,11 +269,12 @@ public class Agent {
         MinecraftWrapper.get().addScheduledTask(()->{
             try {
                 System.out.println("client init start");
+                TCPClient.send(TCPServer.getTargetPort(),new PacketInit());
                 FunGhostClient.init();
                 System.out.println("client init successful");
                 ConfigModule.loadConfig();
                 System.out.println("config loaded");
-                TCPClient.send(Main.SERVERPORT, "mcpath " + System.getProperty("user.dir"));
+                TCPClient.send(Main.SERVERPORT, new PacketMCPath(System.getProperty("user.dir")));//"mcpath " +
                 TCPServer.startServer(SERVERPORT);
                 FontManager.init();
                 System.out.println("fish ghost client start!");

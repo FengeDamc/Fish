@@ -12,7 +12,7 @@ public class KeepSprint extends Module {
     }
     public Setting setting=new Setting("Test",this,false){
         @Override
-        public boolean isActive() {
+        public boolean isVisible() {
             return !running;
         }
     };

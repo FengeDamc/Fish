@@ -3,6 +3,7 @@ package com.fun.inject;
 
 import com.fun.inject.injection.asm.api.Transformers;
 
+import com.fun.network.packets.PacketDestroy;
 import com.sun.jna.platform.win32.User32;
 import com.sun.jna.platform.win32.WinDef;
 import com.sun.jna.ptr.IntByReference;
@@ -68,7 +69,7 @@ public class InjectUtils {
 
     public static void destroyClient() {
         if(!Agent.isAgent){
-            TCPClient.send(Agent.SERVERPORT,"destroy");
+            TCPClient.send(Agent.SERVERPORT,new PacketDestroy());
             return;
         }
         Agent.instrumentation.removeTransformer(Agent.transformer);

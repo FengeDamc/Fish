@@ -82,6 +82,7 @@ public class Mapper {
             classReader.accept(classNode, ClassReader.EXPAND_FRAMES);
             ArrayList<MethodNode> removeMethods = new ArrayList<>();
             ArrayList<FieldNode> removeField = new ArrayList<>();
+
             for (MethodNode methodNode : classNode.methods) {
                 if(methodNode.visibleAnnotations!=null){
                     for (AnnotationNode annotationNode : methodNode.visibleAnnotations) {
@@ -102,8 +103,10 @@ public class Mapper {
                 }
                 methodNode.name = getObfMethod(methodNode.name, classNode.name, methodNode.desc);
                 methodNode.desc = getObfMethodDesc(methodNode.desc);
+
                 for (AbstractInsnNode insnNode : methodNode.instructions) {
                     if (insnNode instanceof MethodInsnNode) {
+
                         ((MethodInsnNode) insnNode).name = getObfMethod(((MethodInsnNode) insnNode).name,
                                 ((MethodInsnNode) insnNode).owner, ((MethodInsnNode) insnNode).desc);
                         ((MethodInsnNode) insnNode).desc = getObfMethodDesc(((MethodInsnNode) insnNode).desc);
