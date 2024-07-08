@@ -23,21 +23,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35ea5eb3-44a7-45cc-b4aa-d201e785f06d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Client/src/com/fun/utils/math/MathUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Injections/1.8.9/Injection1_8_9/src/com/fun/client/mods/render/ESP.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fish/injection_mcp.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fish/injection_none.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fish/injection_vanilla.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/com/fun/client/FunGhostClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/fun/client/FunGhostClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/com/fun/inject/mapper/Mapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/fun/inject/mapper/Mapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Injections/1.12.2/Injection1_12_2/Injection1_12_2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Injections/1.12.2/Injection1_12_2/Injection1_12_2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Injections/1.8.9/Injection1_8_9/Injection1_8_9.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Injections/1.8.9/Injection1_8_9/Injection1_8_9.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Injections/1.8.9/Injection1_8_9/src/com/fun/client/mods/VModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Injections/1.8.9/Injection1_8_9/src/com/fun/client/mods/VModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Injections/1.8.9/Injection1_8_9/src/com/fun/client/mods/VModuleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Injections/1.8.9/Injection1_8_9/src/com/fun/client/mods/VModuleManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/com/fun/inject/InjectUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/fun/inject/InjectUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fish/FunGhostClient.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../fish/FunGhostClient.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fish/injections/1.12.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../fish/injections/1.12.2.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fish/injections/1.8.9.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../fish/injections/1.8.9.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-be27ed76806a83ed1fc8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-76e4b43ecfe0289e1077.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-6c96f6eb1c5c3bf88ff1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-06-19T04-14-17-0511.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-06-22T03-53-49-0443.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-07-01T13-23-16-0042.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-415ae38d55f64cdf6599.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeRCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeRCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdCXX/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/agent.dir/src/dll/ReflectiveLoader.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/agent.dir/src/dll/ReflectiveLoader.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/agent.dir/src/dll/dllmain.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/agent.dir/src/dll/dllmain.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/agent.dir/src/dll/utils.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/agent.dir/src/dll/utils.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/injector.dir/src/injector/GetProcAddressR.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/injector.dir/src/injector/GetProcAddressR.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/injector.dir/src/injector/Inject.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/injector.dir/src/injector/Inject.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/injector.dir/src/injector/LoadLibraryR.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/injector.dir/src/injector/LoadLibraryR.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/launcher.dir/src/launcher/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/launcher.dir/src/launcher/main.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dll/dllmain.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/dll/dllmain.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,30 +97,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "C/C++ File.main.cpp.executor": "Run",
-    "CMake Application.hook.executor": "Run",
-    "CMake Application.launcher.executor": "Run",
-    "CMake Debug.injector.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/AHN/Fish/injector",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.CMake",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;C/C++ File.main.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.hook.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.launcher.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Debug.injector.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/AHN/Fish/injector&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.CMake&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\FengeGG\Fish\injector\src\hook" />
@@ -112,6 +135,11 @@
     </key>
   </component>
   <component name="RunManager" selected="C/C++ File.main.cpp">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="injector" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory" temporary="true">
       <method v="2" />
     </configuration>
@@ -189,6 +217,7 @@
       <workItem from="1718425017469" duration="1840000" />
       <workItem from="1718514084270" duration="11562000" />
       <workItem from="1719028426110" duration="1000" />
+      <workItem from="1720436719904" duration="66000" />
     </task>
     <servers />
   </component>

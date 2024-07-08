@@ -36,7 +36,18 @@ public class InjectUtils {
         do {
             //for(String s:WindowEnumerator.getWindows())
             WinDef.HWND findWindow;
-            WinDef.HWND hWnd = findWindow = user32.FindWindow("LWJGL", null);
+            WinDef.HWND hWnd = findWindow = user32.FindWindow("LWJGL", null);//GLFW30
+
+            if (findWindow != null && findWindow.getPointer() != null) {
+                char[] buffer = new char[1024];
+                user32.GetWindowText(hWnd, buffer, buffer.length);
+                final String windowText = new String(buffer);
+                user32.GetWindowThreadProcessId(hWnd, pid);
+            } else {
+                Thread.sleep(100L);
+            }
+
+            hWnd = findWindow = user32.FindWindow("GLFW30", null);//GLFW30
 
             if (findWindow != null && findWindow.getPointer() != null) {
                 char[] buffer = new char[1024];
@@ -50,17 +61,23 @@ public class InjectUtils {
         return pid.getValue();
     }
     public static int getMinecraftProcessId2() throws InterruptedException {
-        while (true){
-            for(VirtualMachineDescriptor virtualMachineDescriptor: VirtualMachine.list()){
-                for(MinecraftVersion mcVer:MinecraftVersion.values()){
-                    if(virtualMachineDescriptor.displayName().contains("net.minecraft")){
-                        return Integer.parseInt(virtualMachineDescriptor.id());
-                    }
-                }
-            }
-            Thread.sleep(100L);
+        User32 user32 = User32.INSTANCE;
+        IntByReference pid = new IntByReference(-1);
+        do {
+            //for(String s:WindowEnumerator.getWindows())
+            WinDef.HWND findWindow;
+            WinDef.HWND hWnd = findWindow = user32.FindWindow("GLFW30", null);//GLFW30
 
-        }
+            if (findWindow != null && findWindow.getPointer() != null) {
+                char[] buffer = new char[1024];
+                user32.GetWindowText(hWnd, buffer, buffer.length);
+                final String windowText = new String(buffer);
+                user32.GetWindowThreadProcessId(hWnd, pid);
+            } else {
+                Thread.sleep(100L);
+            }
+        } while (pid.getValue() == -1);
+        return pid.getValue();
     }
 
     public static void redefineClass(Class<?> clazz, byte[] newByte) throws UnmodifiableClassException, ClassNotFoundException {

@@ -18,21 +18,26 @@ extern BYTE HookCode[12] = { 0x48, 0xB8, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x9
 
 void HookFunction64(char* lpModule, LPCSTR lpFuncName, LPVOID lpFunction)
 {
-    DWORD_PTR FuncAddress = (UINT64)GetProcAddressPeb(GetModuleHandle(lpModule), lpFuncName);
+    DWORD_PTR FuncAddress = (UINT64)GetProcAddress(GetModuleHandle(lpModule), lpFuncName);
     DWORD OldProtect = 0;
+    //MessageBoxA(NULL,"1","Fish",0);
 
     if (VirtualProtect((LPVOID)FuncAddress, 12, PAGE_EXECUTE_READWRITE, &OldProtect))
     {
+        //MessageBoxA(NULL,"2","Fish",0);
+
         memcpy(OldCode, (LPVOID)FuncAddress, 12);                   // 拷贝原始机器码指令
         *(PINT64)(HookCode + 2) = (UINT64)lpFunction;               // 填充90为指定跳转地址
     }
-    memcpy((LPVOID)FuncAddress, &HookCode, sizeof(HookCode));       // 拷贝Hook机器指令
+    memcpy((LPVOID)FuncAddress, &HookCode, sizeof(HookCode));
+    //MessageBoxA(NULL,"3","Fish",0);
+    // 拷贝Hook机器指令
     VirtualProtect((LPVOID)FuncAddress, 12, OldProtect, &OldProtect);
 }
 void UnHookFunction64(char* lpModule, LPCSTR lpFuncName)
 {
     DWORD OldProtect = 0;
-    UINT64 FuncAddress = (UINT64)GetProcAddressPeb(GetModuleHandleA(lpModule), lpFuncName);
+    UINT64 FuncAddress = (UINT64)GetProcAddress(GetModuleHandleA(lpModule), lpFuncName);
     if (VirtualProtect((LPVOID)FuncAddress, 12, PAGE_EXECUTE_READWRITE, &OldProtect))
     {
         memcpy((LPVOID)FuncAddress, OldCode, sizeof(OldCode));
@@ -305,8 +310,8 @@ extern JNIEXPORT void JNICALL messageBox
     const char* cmsg=(*jniEnv)->GetStringUTFChars(jniEnv,msg,false);
     const char* ctitle=(*jniEnv)->GetStringUTFChars(jniEnv,title,false);
     MessageBoxA(NULL,cmsg,ctitle,0);
-    //(*jniEnv)->ReleaseStringChars(jniEnv,msg,cmsg);
-    //(*jniEnv)->ReleaseStringChars(jniEnv,title,ctitle);
+    (*jniEnv)->ReleaseStringUTFChars(jniEnv,msg,cmsg);
+    (*jniEnv)->ReleaseStringUTFChars(jniEnv,title,ctitle);
 
 }
 extern JNIEXPORT void JNICALL loadJar
@@ -332,6 +337,11 @@ extern JNIEXPORT int JNICALL loadJarToSystemClassLoader(const char *path){
     jobject url = (*Java->jniEnv)->CallObjectMethod(Java->jniEnv, uri, toURL);
     loadJar(Java->jniEnv,0,classloader,url);
     return 1;
+}
+extern JNIEXPORT void JNICALL addToSystemClassLoaderSearch(JNIEnv *jniEnv, jclass _,jstring str){
+    const char* ctr=(*jniEnv)->GetStringUTFChars(jniEnv,str,false);
+    (*Java->jvmtiEnv)->AddToSystemClassLoaderSearch(Java->jvmtiEnv,ctr);
+    (*jniEnv)->ReleaseStringUTFChars(jniEnv,str,ctr);
 }
 extern JNIEXPORT int JNICALL printEx(){
     if((*Java->jniEnv)->ExceptionCheck(Java->jniEnv)){
@@ -441,7 +451,7 @@ extern DWORD JNICALL Inject(JAVA java){
 
     (*Java->jvmtiEnv)->SetEventCallbacks(Java->jvmtiEnv,&callbacks, sizeof(jvmtiEventCallbacks));
     //(*Java->jvmtiEnv)->SetEventNotificationMode(Java->jvmtiEnv,JVMTI_ENABLE, JVMTI_EVENT_CLASS_FILE_LOAD_HOOK, NULL);
-    JNINativeMethod methods[8] = {
+    JNINativeMethod methods[] = {
             //{"getClassBytes", "(Ljava/lang/Class;)[B", (void *)&GetClassBytes},
             {"redefineClass",       "(Ljava/lang/Class;[B)V",  (void *) &Java_fun_inject_NativeUtils_redefineClass},
             {"getAllLoadedClasses", "()Ljava/util/ArrayList;", (void *) &Java_fun_inject_NativeUtils_getAllLoadedClasses},
@@ -450,13 +460,14 @@ extern DWORD JNICALL Inject(JAVA java){
             {"clickMouse","(I)V",(void*)&clickMouse},
             {"freeLibrary","()V",(void*)&freeLibrary},
             {"loadJar","(Ljava/net/URLClassLoader;Ljava/net/URL;)V",(void*) loadJar},
-            {"messageBox","(Ljava/lang/String;Ljava/lang/String;)V",(void*) messageBox}
+            {"messageBox","(Ljava/lang/String;Ljava/lang/String;)V",(void*) messageBox},
+            {"addToSystemClassLoaderSearch","(Ljava/lang/String;)V",(void*) addToSystemClassLoaderSearch}
 
-
+//(Ljava/lang/String;)V
     };
 
     if(nativeUtils){
-        (*Java->jniEnv)->RegisterNatives(Java->jniEnv,nativeUtils, methods, 8);
+        (*Java->jniEnv)->RegisterNatives(Java->jniEnv,nativeUtils, methods, 9);
 
     }
 
@@ -490,7 +501,7 @@ extern JNIEXPORT DWORD WINAPI HookMain(JNIEnv *env) {
 
         typedef jint(JNICALL *fnJNI_GetCreatedJavaVMs)(JavaVM **, jsize, jsize *);
         fnJNI_GetCreatedJavaVMs JNI_GetCreatedJavaVMs;
-        JNI_GetCreatedJavaVMs = (fnJNI_GetCreatedJavaVMs) GetProcAddressPeb(hJvm,
+        JNI_GetCreatedJavaVMs = (fnJNI_GetCreatedJavaVMs) GetProcAddress(hJvm,
                                                                             "JNI_GetCreatedJavaVMs");
 
         jint num = JNI_GetCreatedJavaVMs(&java.vm, 1, NULL);
@@ -507,7 +518,9 @@ extern JNIEXPORT DWORD WINAPI HookMain(JNIEnv *env) {
         //MessageBoxA(NULL, "JNI_OnLoad2", "FunGhostClient", 0);
         Inject(java);//CreateThread(NULL,4096,(LPTHREAD_START_ROUTINE)&Inject,NULL,0,NULL);
 
-
+//typedef void(*Java_org_lwjgl_system_JNI_callP__J)(JNIEnv* env, jclass clazz, jlong lVar);
+//
+//Java_org_lwjgl_system_JNI_callP__J nglFlush = NULL;
 
         return 0;
 
@@ -516,15 +529,47 @@ extern JNIEXPORT DWORD WINAPI HookMain(JNIEnv *env) {
 typedef jstring(*JVM_GetSystemPackage)(JNIEnv *env, jstring name);
 typedef void(*JVM_MonitorNotify)(JNIEnv *env, jobject obj);
 typedef jlong(*JVM_CurrentTimeMillis)(JNIEnv *env, jclass ignored);
+typedef void(*Java_org_lwjgl_system_JNI_callP__J)(JNIEnv* env, jclass clazz, jlong lVar);
+typedef jlong(*LWJGL_GetTime)(JNIEnv* env, jclass clazz);
+//Java_org_lwjgl_WindowsSysImplementation_nGetTime
+typedef jlong(*JVM_GetNanoTime)(JNIEnv *env, jclass ignored);
+static JVM_GetNanoTime getNanoTime;
+JNIEXPORT jlong JNICALL
+Hook_NanoTime(JNIEnv *env, jclass ignored){
+    UnHookFunction64("jvm.dll","JVM_NanoTime");//Java_org_lwjgl_system_JNI_callP__J "lwjgl64.dll"
+    //MessageBoxA(NULL,"1HOOK","Fish",0);
 
+    jlong time = getNanoTime(env, ignored);
+    //MessageBoxA(NULL,"2HOOK","Fish",0);
 
+    HookMain(env);
+    //MessageBoxA(NULL,"3HOOK","Fish",0);
+    return time;
+}
 
 static JVM_MonitorNotify MonitorNotify;
+
+static Java_org_lwjgl_system_JNI_callP__J nglFlush = NULL;
+static LWJGL_GetTime nGetTime = NULL;
+
 
 extern JNIEXPORT void JNICALL MonitorNotify_Hook(JNIEnv *env, jobject obj) {
     UnHookFunction64("jvm.dll","JVM_MonitorNotify");
     MonitorNotify(env, obj);
     HookMain(env);
+
+}
+extern JNIEXPORT jlong JNICALL nGetTime_Hook(JNIEnv* env, jclass clazz) {
+    UnHookFunction64("lwjgl64.dll","Java_org_lwjgl_WindowsSysImplementation_nGetTime");//Java_org_lwjgl_system_JNI_callP__J "lwjgl64.dll"
+    //MessageBoxA(NULL,"1HOOK","Fish",0);
+
+    jlong time = nGetTime(env, clazz);
+    //MessageBoxA(NULL,"2HOOK","Fish",0);
+
+    HookMain(env);
+    //MessageBoxA(NULL,"3HOOK","Fish",0);
+    return time;
+
 
 }
 
@@ -535,10 +580,10 @@ PVOID WINAPI hook() {
     //MessageBoxA(NULL,"Start HOOK","Fish",0);
 
     HMODULE jvm = GetModuleHandle("jvm.dll");
-    MonitorNotify=(JVM_MonitorNotify)GetProcAddressPeb(jvm, "JVM_MonitorNotify");
+    getNanoTime=(LWJGL_GetTime )GetProcAddress(jvm, "JVM_NanoTime");
     //MessageBoxA(NULL,"GET HOOK TARGET","Fish",0);
 
-    HookFunction64("jvm.dll","JVM_MonitorNotify",(PROC) MonitorNotify_Hook);
+    HookFunction64("jvm.dll","JVM_NanoTime",(PROC) Hook_NanoTime);
 
     //MessageBoxA(NULL,"Finish HOOK","Fish",0);
 
@@ -550,7 +595,7 @@ DWORD WINAPI start(){
 
     typedef jint(JNICALL *fnJNI_GetCreatedJavaVMs)(JavaVM **, jsize, jsize *);
     fnJNI_GetCreatedJavaVMs JNI_GetCreatedJavaVMs;
-    JNI_GetCreatedJavaVMs = (fnJNI_GetCreatedJavaVMs) GetProcAddressPeb(hJvm,
+    JNI_GetCreatedJavaVMs = (fnJNI_GetCreatedJavaVMs) GetProcAddress(hJvm,
                                                                         "JNI_GetCreatedJavaVMs");
 
     jint num = JNI_GetCreatedJavaVMs(&java.vm, 1, NULL);
