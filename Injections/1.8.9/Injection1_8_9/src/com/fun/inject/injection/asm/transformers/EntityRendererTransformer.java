@@ -20,7 +20,7 @@ public class EntityRendererTransformer extends Transformer {
         super("net/minecraft/client/renderer/EntityRenderer");
     }
 
-    @Inject(method = "func_175068_a", descriptor = "(IFJ)V")
+    @Inject(method = "renderWorldPass", descriptor = "(IFJ)V")//renderWorldPass
     public void renderWorldPass(MethodNode methodNode) {
         AbstractInsnNode ldcNode = null;
         for (int i = 0; i < methodNode.instructions.size(); ++i) {
@@ -54,7 +54,7 @@ public class EntityRendererTransformer extends Transformer {
 
     }
 
-    @Inject(method = "func_78473_a", descriptor = "(F)V")
+    @Inject(method = "getMouseOver", descriptor = "(F)V")
     public void getMouseOver(MethodNode methodNode) {
 
         InsnList list = new InsnList();

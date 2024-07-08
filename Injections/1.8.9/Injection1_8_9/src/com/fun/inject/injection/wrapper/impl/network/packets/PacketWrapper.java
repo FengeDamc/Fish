@@ -19,6 +19,6 @@ public class PacketWrapper extends Wrapper {
         this.obj =obj;
     }
     public void processPacket(INetHandler handler) {
-        Methods.processPacket_Packet.invoke(obj, handler);
+        Methods.processPacket_Packet.invoke(obj, handler.obj);
     }
 }

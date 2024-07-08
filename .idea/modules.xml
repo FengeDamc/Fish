@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Client.iml" filepath="$PROJECT_DIR$/Client.iml" />
       <module fileurl="file://$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/Injection1_12_2.iml" filepath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/Injection1_12_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/Injection1_18_1.iml" filepath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/Injection1_18_1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/Injection1_8_9.iml" filepath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/Injection1_8_9.iml" />
     </modules>
   </component>

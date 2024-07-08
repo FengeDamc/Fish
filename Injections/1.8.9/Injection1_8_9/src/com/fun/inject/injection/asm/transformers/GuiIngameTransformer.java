@@ -22,7 +22,7 @@ public class GuiIngameTransformer extends Transformer {
     }
 
 
-    @Inject(method = "func_175180_a", descriptor = "(F)V")
+    @Inject(method = "renderGameOverlay", descriptor = "(F)V")
     public void renderGameOverlay(MethodNode methodNode) {
         InsnList list = new InsnList();
 

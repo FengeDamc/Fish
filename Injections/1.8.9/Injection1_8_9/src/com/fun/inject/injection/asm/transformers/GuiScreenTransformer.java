@@ -11,7 +11,7 @@ public class GuiScreenTransformer extends Transformer {
     public GuiScreenTransformer() {
         super("net/minecraft/client/gui/GuiScreen");
     }
-    @Inject(method = "func_175281_b",descriptor = "(Ljava/lang/String;Z)V")
+    @Inject(method = "sendChatMessage",descriptor = "(Ljava/lang/String;Z)V")
     public void onMessage(MethodNode methodNode){
         InsnList list=new InsnList();
         LabelNode label=new LabelNode();

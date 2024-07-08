@@ -16,7 +16,7 @@ public class NetworkHandlerTransformer extends Transformer {
     }
 
 
-    @Inject(method = "func_147297_a",descriptor = "net/minecraft/network/Packet")
+    @Inject(method = "addToSendQueue",descriptor = "(Lnet/minecraft/network/Packet;)V")//addToSendQueue (Lnet/minecraft/network/Packet;)V
     public void sendPacket(MethodNode mn) {
         InsnList list = new InsnList();
         LabelNode label = new LabelNode();

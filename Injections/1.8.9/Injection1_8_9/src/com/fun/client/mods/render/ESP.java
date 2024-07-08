@@ -125,9 +125,14 @@ public class ESP extends VModule{
     public void onRender2D(EventRender2D event) {
         super.onRender2D(event);
         for(Entity e:mc.theWorld.getLoadedEntityList()){
-            Vector4f v=getEntityPositionsOn2D(e);
-            RenderUtils.drawRoundedRect((int) v.x, (int) v.y, (int) v.z, (int) v.w,5,
-                    e instanceof EntityPlayer ? Color.PINK.getRGB() : Color.lightGray.getRGB());
+            //Vector4f v=getEntityPositionsOn2D(e);
+            //RenderUtils.drawRoundedRect((int) v.x, (int) v.y, (int) v.z, (int) v.w,5,
+                    //);
+            AxisAlignedBB aabb=e.getCollisionBoundingBox();
+            Color color=e instanceof EntityPlayer ? Color.PINK : Color.lightGray;
+            com.fun.utils.v189.RenderUtils.glColor(color.getRed(),color.getGreen(),color.getBlue(),color.getAlpha());
+            RenderUtils.drawBoundingBox(new com.fun.utils.math.AxisAlignedBB(aabb.minX,aabb.minY,aabb.minZ,
+                    aabb.maxX,aabb.maxY,aabb.maxZ));//
         }
     }
 }

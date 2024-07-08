@@ -15,7 +15,7 @@ public class KeyBindTransformer extends Transformer {
     public KeyBindTransformer() {
         super("net/minecraft/client/settings/KeyBinding");
     }
-    @Inject(method = "func_74507_a",descriptor = "(I)V")
+    @Inject(method = "onTick",descriptor = "(I)V")
     public void onKey(MethodNode methodNode) {
         InsnList list = new InsnList();
         list.add(new VarInsnNode(Opcodes.ILOAD,0));
