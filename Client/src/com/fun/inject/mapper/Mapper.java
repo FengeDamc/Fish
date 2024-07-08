@@ -123,6 +123,14 @@ public class Mapper {
                     if (insnNode instanceof TypeInsnNode) {
                         ((TypeInsnNode) insnNode).desc = getObfClass(((TypeInsnNode) insnNode).desc);
                     }
+                    if(insnNode instanceof LdcInsnNode)
+                    {
+                        if(((LdcInsnNode) insnNode).cst instanceof Type){
+                            ((LdcInsnNode) insnNode).cst=Type.getType(getObfFieldDesc(((Type) ((LdcInsnNode) insnNode).cst).getDescriptor()));
+                        }
+                       //System.out.println(((LdcInsnNode) insnNode).cst+" "+((LdcInsnNode) insnNode).cst.getClass().getName());
+
+                    }
                 }
             }
             for(FieldNode fieldNode : classNode.fields){
@@ -261,12 +269,15 @@ public class Mapper {
                             .split(" ");
                     if(line.startsWith("CL")){
                         classMap.put(parts[1], parts[0]);
+                        classMap.put(parts[0], parts[1]);
                     }
                     if(line.startsWith("FD")){
                         fieldMap.put(parts[1], parts[0]);
+                        fieldMap.put(parts[0], parts[1]);
                     }
                     if(line.startsWith("MD")){
                         methodMap.put(parts[2]+" "+parts[3], parts[0]+" "+parts[1]);
+                        methodMap.put(parts[0]+" "+parts[1],parts[2]+" "+parts[3]);
                     }
 
                 }

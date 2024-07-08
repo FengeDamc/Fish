@@ -8,48 +8,21 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="AutomaticModuleUnloader">
+    <loaded-modules>
+      <module name="Client" />
+      <module name="Injection1_8_9" />
+      <module name="Injection1_12_2" />
+      <module name="Injection1_18_1" />
+    </loaded-modules>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="提交">
-      <change afterPath="$PROJECT_DIR$/injector/cmake-build-debug/.cmake/api/v1/reply/index-2024-07-08T11-06-11-0243.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/inject/InjectUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/InjectUtils.java" afterDir="false" />
+    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="我手贱给回滚了">
+      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/inject/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/Agent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/inject/Mappings.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/Mappings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/inject/MinecraftVersion.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/MinecraftVersion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/FunGhostClient.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/FunGhostClient.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fish/injections/1.12.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injections/1.12.2.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fish/libagent.dll" beforeDir="false" afterPath="$PROJECT_DIR$/fish/libagent.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/injector/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/.cmake/api/v1/reply/cache-v2-be27ed76806a83ed1fc8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-76e4b43ecfe0289e1077.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-6c96f6eb1c5c3bf88ff1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/.cmake/api/v1/reply/index-2024-06-19T04-14-17-0511.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/.cmake/api/v1/reply/index-2024-06-22T03-53-49-0443.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/.cmake/api/v1/reply/index-2024-07-01T13-23-16-0042.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-415ae38d55f64cdf6599.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/3.28.1/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/3.28.1/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/3.28.1/CMakeRCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/3.28.1/CMakeRCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/3.28.1/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/3.28.1/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/a.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdCXX/a.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/agent.dir/src/dll/ReflectiveLoader.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/agent.dir/src/dll/ReflectiveLoader.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/agent.dir/src/dll/dllmain.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/agent.dir/src/dll/dllmain.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/agent.dir/src/dll/utils.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/agent.dir/src/dll/utils.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/injector.dir/src/injector/GetProcAddressR.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/injector.dir/src/injector/GetProcAddressR.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/injector.dir/src/injector/Inject.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/injector.dir/src/injector/Inject.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/injector.dir/src/injector/LoadLibraryR.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/injector.dir/src/injector/LoadLibraryR.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/launcher.dir/src/launcher/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/launcher.dir/src/launcher/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/src/dll/dllmain.c" beforeDir="false" afterPath="$PROJECT_DIR$/injector/src/dll/dllmain.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fish/injection_vanilla.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injection_vanilla.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +109,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "库",
+    "project.structure.last.edited": "模块",
     "project.structure.proportion": "0.15234375",
     "project.structure.side.proportion": "0.4013841",
     "settings.editor.selected.configurable": "preferences.fileTypes",
@@ -550,7 +523,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720436355368</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="我手贱给回滚了">
+      <option name="closed" value="true" />
+      <created>1720436934793</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1720436934793</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -625,7 +606,8 @@
     <MESSAGE value="整理代码" />
     <MESSAGE value="巨大的更新添加了重映射" />
     <MESSAGE value="提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交" />
+    <MESSAGE value="我手贱给回滚了" />
+    <option name="LAST_COMMIT_MESSAGE" value="我手贱给回滚了" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -109,13 +109,13 @@ public class Mappings {
         return sb.toString();
     }
 
-
+    public static int countCharUsingSplit(String str, char c) {
+        return str.split(String.valueOf(c)).length - 1;
+    }
 
     public static void readMappings(MinecraftVersion mcVer, MinecraftType mcType) throws IOException {
         JarFile jar=new JarFile(Agent.jarPath);
-        if (mcType == MinecraftType.FORGE) {
-        }
-        else if (mcType == MinecraftType.MCP) {
+        if (mcType == MinecraftType.MCP) {
             if (mcVer == MinecraftVersion.VER_1710 || mcVer == MinecraftVersion.VER_189) {
                 InputStream f = IOUtils.getEntryFromJar(jar, InjectUtils.getCvsF(mcVer));
                 InputStream m = IOUtils.getEntryFromJar(jar,InjectUtils.getCvsM(mcVer));
@@ -140,7 +140,8 @@ public class Mappings {
                 bufferedreader.close();
                 f.close();
                 m.close();
-            } else {
+            }
+            else {
                 InputStream mcp = IOUtils.getEntryFromJar(jar,InjectUtils.getSrg(mcVer, mcType));
 
                 BufferedReader bufferedreader = new BufferedReader(
@@ -151,7 +152,7 @@ public class Mappings {
                 while ((line = bufferedreader.readLine()) != null) {
                     String[] split = line.split(" ");
                     try {
-                        if (line.startsWith("\t")) {
+                        if (countCharUsingSplit(line,'\t')==1) {//line.startsWith("\t")
                             if (split.length > 2) {//method
                                 //0   1    2
                                 //mcp desc srg
@@ -167,7 +168,7 @@ public class Mappings {
                                 unObfFields.put(split[0].substring(1),split[1]);
 
                             }
-                        } else {
+                        } else if(countCharUsingSplit(line,'\t')==0){
                             //class
                             //0   1
                             //mcp friendly
@@ -185,10 +186,9 @@ public class Mappings {
 
 
         }
-        else{
+        else if(mcType == MinecraftType.VANILLA){
             InputStream fileIn = IOUtils.getEntryFromJar(jar,InjectUtils.getSrg(mcVer, mcType));
-            InputStream f = IOUtils.getEntryFromJar(jar,InjectUtils.getCvsF(mcVer));
-            InputStream m = IOUtils.getEntryFromJar(jar,InjectUtils.getCvsM(mcVer));
+
 
             BufferedReader bufferedreader = new BufferedReader(
                     new InputStreamReader(fileIn,
@@ -196,6 +196,8 @@ public class Mappings {
 
             String line = "";
             if (mcVer == MinecraftVersion.VER_189) {
+                InputStream f = IOUtils.getEntryFromJar(jar,InjectUtils.getCvsF(mcVer));
+                InputStream m = IOUtils.getEntryFromJar(jar,InjectUtils.getCvsM(mcVer));
 
                 while ((line = bufferedreader.readLine()) != null) {
 
@@ -254,13 +256,15 @@ public class Mappings {
                 fileIn.close();
                 //Agent.System.out.println(getObfClass("net/minecraft/client/Minecraft"));
 
-            } else {
+            }
+            else if(mcVer==MinecraftVersion.VER_1122) {
 
 
                 while ((line = bufferedreader.readLine()) != null) {
+                    //System.out.println(line+countCharUsingSplit(line,'\t'));
                     String[] split = line.split(" ");
                     try {
-                        if (line.startsWith("\t")) {
+                        if (countCharUsingSplit(line,'\t')==1) {
                             if (split.length > 2) {//method
                                 //0   1    2
                                 //obf desc srg
@@ -276,7 +280,9 @@ public class Mappings {
                                 unObfFields.put(split[0].substring(1), split[1]);
 
                             }
-                        } else {
+                        }
+                        else if(countCharUsingSplit(line,'\t')==0){
+
                             //class
                             //0   1
                             //obf friendly
@@ -287,11 +293,50 @@ public class Mappings {
                         }
                     } catch (Exception e) {
                         e.printStackTrace();
+
                     }
                 }
                 bufferedreader.close();
         }
-            System.out.println("readmappings");
+            else if(mcVer==MinecraftVersion.VER_1181){
+                while ((line = bufferedreader.readLine()) != null) {
+                    //System.out.println(line+countCharUsingSplit(line,'\t'));
+                    String[] split = line.split(" ");
+                    try {
+                        if (countCharUsingSplit(line,'\t')==1) {
+                            if (split.length > 2) {//method
+                                //0   1    2
+                                //obf desc srg
+                                obfMethods.put(split[2], split[0].substring(1));
+                                unObfMethods.put(split[0].substring(1), split[2]);
+
+
+                            } else {
+                                //field
+                                //0   1
+                                //obf srg
+                                obfFields.put(split[1], split[0].substring(1));
+                                unObfFields.put(split[0].substring(1), split[1]);
+
+                            }
+                        }
+                        else if(countCharUsingSplit(line,'\t')==0){
+                            //class
+                            //0   1
+                            //obf friendly
+                            obfClass.put(split[1], split[0]);
+                            unobfClass.put(split[0], split[1]);
+
+
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+
+                    }
+                }
+                bufferedreader.close();
+            }
+            System.out.println("readmappings："+getObfMethod("m_183582_"));
 
         //BufferedReader =new BufferedReader(new FileReader());
     }

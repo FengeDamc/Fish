@@ -43,7 +43,7 @@ public class Agent {
     public static Native instrumentation;
 
     public static FishFrame fishFrame;
-    public static final String VERSION="1.1";
+    public static final String VERSION="1.2";
     public static String jarPath;
     public static boolean isAgent =false;
     public static ClassTransformer transformer;
@@ -174,7 +174,7 @@ public class Agent {
                 while (running) {
                     for (Object o : Thread.getAllStackTraces().keySet().toArray()) {
                         Thread thread = (Thread) o;
-                        if (thread.getName().equals("Client thread")) {
+                        if (thread.getName().equals("Client thread")||thread.getName().equals("Render thread")) {
 
                             classLoader=thread.getContextClassLoader();
                             running = false;
@@ -260,6 +260,12 @@ public class Agent {
         jarPath=jarPathIn;
         isAgent=true;
         getVersion();
+        File injection=new File(new File(jarPath).getParent(),"/injections/"+minecraftVersion.injection);
+        try {
+            Mapper.readMappings(injection.getAbsolutePath(),minecraftType);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         //Class<?> agentClass = Agent.findClass("com.fun.client.FunGhostClient");
         //System.out.println("clientcl:" + agentClass.getClassLoader());
         //Class<?> agentClass = Agent.findClass("com.fun.inject.Agent");
@@ -317,16 +323,17 @@ public class Agent {
                     for (Method method : transformer.getClass().getDeclaredMethods()) {
                         //Agent.System.out.println(method.toString());
                         if (method.isAnnotationPresent(Inject.class)) {
-    
+
                             if (method.getParameterCount() != 1 || !MethodNode.class.isAssignableFrom(method.getParameterTypes()[0]))
                                 continue;
-    
+
                             Inject inject = method.getAnnotation(Inject.class);
-    
+
                             String methodToModify = inject.method();
                             String desc = inject.descriptor();
-    
-                            String obfName = Mappings.getObfMethod(methodToModify);
+
+                            String obfName = Mapper.getObfMethod(methodToModify,transformer.getName(),desc);
+                            String obfDesc=Mapper.getObfMethodDesc(desc);//Mappings.getObfMethod(methodToModify);
                             if (obfName == null || obfName.isEmpty()) {
                                 logger.error("Could not find {} in class {}", methodToModify, transformer.getName());
                                 continue;
@@ -336,17 +343,13 @@ public class Agent {
                         // huh???
                             for (MethodNode mNode : node.methods) {
                                 //System.out.println(mNode.name+mNode.desc);
-                                if (mNode.name.equals(obfName) && (Transformers.contains(desc.split(" "), mNode.desc) || desc.isEmpty() || mNode.desc.equals(desc))) {
+                                if(mNode.name.equals(obfName)&&mNode.desc.equals(obfDesc)){
                                     try {
                                         method.invoke(transformer, mNode);
-                                        //System.out.println("transformed "+method.getName());
-    
                                     } catch (IllegalAccessException | InvocationTargetException e) {
-                                        //logger.error("Failed to invoke method {} {}", e.getMessage(), e.getStackTrace()[0]);
                                         e.printStackTrace();
                                     }
-    
-                                    break;
+
                                 }
                             }
                         }
@@ -388,8 +391,8 @@ public class Agent {
                                 }
                             }
                         }
-                        
-                    
+
+
                     }
                     byte[] newBytes = Transformers.rewriteClass(node);
                     if(newBytes==null){
