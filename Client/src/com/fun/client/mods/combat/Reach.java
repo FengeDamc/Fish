@@ -20,6 +20,7 @@ public class Reach extends Module {
     public Setting sprintCheck = new Setting("SprintCheck", this, true);
     public Setting chance = new Setting("Chance", this, 100.0, 0.0, 100.0, true);
     public Setting verticalCheck = new Setting("VerticalCheck", this, true);
+    public Setting verticalAngle = new Setting("VerticalAngle", this, 45.0, 0.0, 90.0, true);
     public Setting waterCheck = new Setting("WaterCheck", this, true);
 
     public Reach() {
@@ -66,8 +67,9 @@ public class Reach extends Module {
         }
 
         if (verticalCheck.getValBoolean()) {
-            float pitch = mc.getPlayer().rotationPitch; // 获取玩家视角的俯仰角
-            return !(pitch > 45.0f) && !(pitch < -45.0f);
+            float pitch = mc.getPlayer().getPitch(); // 获取玩家视角的俯仰角
+            float maxAngle = (float) verticalAngle.getValDouble();
+            return !(pitch > maxAngle) && !(pitch < -maxAngle);
         }
 
         return true;
