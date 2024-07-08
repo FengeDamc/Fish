@@ -1,9 +1,11 @@
 package com.fun.inject.injection.asm.api;
 
 
+import com.fun.inject.mapper.Mapper;
 import com.fun.utils.version.clazz.Classes;
 import com.fun.inject.Agent;
 import com.fun.inject.Mappings;
+import org.objectweb.asm.Type;
 
 public class Transformer {
 
@@ -30,6 +32,9 @@ public class Transformer {
                 e.printStackTrace();
             }
         }
+    }
+    public Transformer(Class<?>clazz){
+        this(Mapper.getObfClass(Type.getInternalName(clazz)));
     }
     public Transformer(Classes classes){
         this.name=classes.getVClass().friendly_name;

@@ -56,14 +56,14 @@ public class Transformers {
         Transformers.transformers.clear();
         transformers.add(new EntityPlayerSP());
 //
-        transformers.add(new GuiIngameTransformer());
-        transformers.add(new NetworkManagerTransFormer());
-        transformers.add(new NetworkHandlerTransformer());
-        transformers.add(new EntityRendererTransformer());
-        transformers.add(new KeyBindTransformer());
-        transformers.add(new GuiScreenTransformer());
-        transformers.add(new EntityTransformer());
-        transformers.add(new MinecraftTransformer());
+        //transformers.add(new GuiIngameTransformer());
+        //transformers.add(new NetworkManagerTransFormer());
+        //transformers.add(new NetworkHandlerTransformer());
+        //transformers.add(new EntityRendererTransformer());
+        //transformers.add(new KeyBindTransformer());
+        //transformers.add(new GuiScreenTransformer());
+        //transformers.add(new EntityTransformer());
+        //transformers.add(new MinecraftTransformer());
 
 
     }

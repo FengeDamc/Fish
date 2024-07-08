@@ -10,7 +10,7 @@ public class PacketAddSetting implements IPacket {
         this.mod= FunGhostClient.moduleManager.mods.indexOf(m);
         if(s.isSlider()){
             this.set=new Setting();//s.name,null,s.dval,s.min,s.max,s.onlyint
-            this.set.name=s.name;this.set.dval=s.dval;this.set.min=s.min;this.set.max=s.max;
+            this.set.name=s.name;this.set.dval=s.dval;this.set.min=s.min;this.set.max=s.max;this.set.onlyint=s.onlyint;
         }
         else if(s.isCheck()){
             this.set=new Setting();//s.name,null,s.bval

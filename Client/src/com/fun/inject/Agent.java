@@ -339,7 +339,7 @@ public class Agent {
                                 continue;
                             }
 
-
+                        System.out.println(obfDesc+" "+obfName);
                         // huh???
                             for (MethodNode mNode : node.methods) {
                                 //System.out.println(mNode.name+mNode.desc);

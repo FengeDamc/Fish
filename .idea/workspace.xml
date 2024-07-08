@@ -17,12 +17,17 @@
     </loaded-modules>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="我手贱给回滚了">
-      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/inject/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/Agent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/inject/Mappings.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/Mappings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/inject/MinecraftVersion.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/MinecraftVersion.java" afterDir="false" />
+    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="我手贱给回滚了1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/network/packets/PacketAddSetting.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/network/packets/PacketAddSetting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/api/Transformers.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/api/Transformers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/EntityPlayerSP.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/EntityPlayerSP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/wrapper/impl/entity/EntityPlayerSPWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/wrapper/impl/entity/EntityPlayerSPWrapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/FunGhostClient.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/FunGhostClient.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fish/injection_mcp.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injection_mcp.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fish/injection_none.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injection_none.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/injection_vanilla.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injection_vanilla.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fish/injections/1.18.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injections/1.18.1.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -531,7 +536,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720436934793</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="我手贱给回滚了1">
+      <option name="closed" value="true" />
+      <created>1720437581465</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1720437581465</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -607,7 +620,8 @@
     <MESSAGE value="巨大的更新添加了重映射" />
     <MESSAGE value="提交" />
     <MESSAGE value="我手贱给回滚了" />
-    <option name="LAST_COMMIT_MESSAGE" value="我手贱给回滚了" />
+    <MESSAGE value="我手贱给回滚了1" />
+    <option name="LAST_COMMIT_MESSAGE" value="我手贱给回滚了1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

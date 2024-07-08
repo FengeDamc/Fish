@@ -22,7 +22,7 @@ import org.objectweb.asm.tree.*;
 
 public class EntityPlayerSP extends Transformer {
     public EntityPlayerSP() {
-        super(Type.getInternalName(LocalPlayer.class));
+        super(LocalPlayer.class);
     }
 
     public static EventMotion onMotion(double x, double y, double z, float yaw, float pitch) {
@@ -140,19 +140,20 @@ public class EntityPlayerSP extends Transformer {
     public void onUpdateWalking(MethodNode methodNode) {
         InsnList list = new InsnList();
         int j = 0;
+        list.add(new VarInsnNode(Opcodes.ALOAD, 0));//net.minecraft.world.entity.Entity
+        list.add(new MethodInsnNode(Opcodes.INVOKEVIRTUAL,
+                Mapper.getObfClass("net/minecraft/world/entity/Entity"), Mapper.getObfMethod("getX","net/minecraft/world/entity/Entity","()D"), "()D"));//"field_70165_t" Mapper.getObfClass("net/minecraft/world/entity/Entity")
         list.add(new VarInsnNode(Opcodes.ALOAD, 0));
-        list.add(new FieldInsnNode(Opcodes.INVOKEVIRTUAL, Type.getInternalName(Entity.class), Mapper.getObfMethod("getX",Type.getInternalName(Entity.class),"()D"), "()D"));//"field_70165_t"
-        list.add(new VarInsnNode(Opcodes.ALOAD, 0));
-        list.add(new FieldInsnNode(Opcodes.INVOKEVIRTUAL , Type.getInternalName(Entity.class), Mapper.getObfMethod("getY",Type.getInternalName(Entity.class),"()D"), "()D"));
+        list.add(new MethodInsnNode(Opcodes.INVOKEVIRTUAL , Mapper.getObfClass("net/minecraft/world/entity/Entity"), Mapper.getObfMethod("getY",Mapper.getObfClass(Entity.class),"()D"), "()D"));
         //field_70163_u,posY,2,Entity position Y
         //FD: pk/t net/minecraft/world/entity/Entity/field_70163_u
         list.add(new VarInsnNode(Opcodes.ALOAD, 0));
-        list.add(new FieldInsnNode(Opcodes.INVOKEVIRTUAL , Type.getInternalName(Entity.class), Mapper.getObfMethod("getZ",Type.getInternalName(Entity.class),"()D"), "()D"));
+        list.add(new MethodInsnNode(Opcodes.INVOKEVIRTUAL , Mapper.getObfClass("net/minecraft/world/entity/Entity"), Mapper.getObfMethod("getZ","net/minecraft/world/entity/Entity","()D"), "()D"));
         list.add(new VarInsnNode(Opcodes.ALOAD, 0));
-        list.add(new FieldInsnNode(Opcodes.INVOKEVIRTUAL,Type.getInternalName(Entity.class), Mapper.getObfMethod("getYRot",Type.getInternalName(Entity.class),"()F"), "()F"));//yaw
+        list.add(new MethodInsnNode(Opcodes.INVOKEVIRTUAL,Mapper.getObfClass("net/minecraft/world/entity/Entity"), Mapper.getObfMethod("getYRot","net/minecraft/world/entity/Entity","()F"), "()F"));//yaw
         list.add(new VarInsnNode(Opcodes.ALOAD, 0));
-        list.add(new FieldInsnNode(Opcodes.INVOKEVIRTUAL, Type.getInternalName(Entity.class), Mapper.getObfMethod("getXRot",Type.getInternalName(Entity.class),"()F"), "()F"));//pitch
-        list.add(new MethodInsnNode(Opcodes.INVOKESTATIC, Type.getInternalName(EntityPlayerSP.class), "onMotion", "(DDDFF)Lcom/fun/eventapi/event/events/EventMotion;"));
+        list.add(new MethodInsnNode(Opcodes.INVOKEVIRTUAL, Mapper.getObfClass("net/minecraft/world/entity/Entity"), Mapper.getObfMethod("getXRot","net/minecraft/world/entity/Entity","()F"), "()F"));//pitch
+        list.add(new MethodInsnNode(Opcodes.INVOKESTATIC, Mapper.getObfClass("net/minecraft/world/entity/Entity"), "onMotion", "(DDDFF)Lcom/fun/eventapi/event/events/EventMotion;"));
         list.add(new VarInsnNode(Opcodes.ASTORE, 1));
         j++;
         //ArrayList<AbstractInsnNode> rl=new ArrayList<>();
@@ -166,7 +167,7 @@ public class EntityPlayerSP extends Transformer {
             //FD: pk/u net/minecraft/world/entity/Entity/field_70161_v
             //FD: pk/y net/minecraft/world/entity/Entity/field_70177_z
             //FD: pk/z net/minecraft/world/entity/Entity/field_70125_A
-            if (node instanceof MethodInsnNode && ((MethodInsnNode) node).name.equals(Mapper.getObfMethod("getYRot",Type.getInternalName(Entity.class),"()F"))) {
+            if (node instanceof MethodInsnNode && ((MethodInsnNode) node).name.equals(Mapper.getObfMethod("getYRot",Mapper.getObfClass("net/minecraft/world/entity/Entity"),"()F"))) {
                 //标记替换yaw轴
                 AbstractInsnNode aload_0 = methodNode.instructions.get(i - 1);
                 if (aload_0 instanceof VarInsnNode) {
@@ -176,7 +177,7 @@ public class EntityPlayerSP extends Transformer {
                     //rl.add(node);
                 }
             }
-            if (node instanceof MethodInsnNode && ((MethodInsnNode) node).name.equals(Mapper.getObfMethod("getXRot",Type.getInternalName(Entity.class),"()F"))) {
+            if (node instanceof MethodInsnNode && ((MethodInsnNode) node).name.equals(Mapper.getObfMethod("getXRot",Mapper.getObfClass("net/minecraft/world/entity/Entity"),"()F"))) {
                 //标记替换yaw轴
                 AbstractInsnNode aload_0 = methodNode.instructions.get(i - 1);
                 if (aload_0 instanceof VarInsnNode) {
@@ -186,7 +187,7 @@ public class EntityPlayerSP extends Transformer {
                     //rl.add(node);
                 }
             }
-            if (node instanceof MethodInsnNode && ((MethodInsnNode) node).name.equals(Mapper.getObfMethod("getX",Type.getInternalName(Entity.class),"()D"))) {
+            if (node instanceof MethodInsnNode && ((MethodInsnNode) node).name.equals(Mapper.getObfMethod("getX",Mapper.getObfClass("net/minecraft/world/entity/Entity"),"()D"))) {
                 //标记替换yaw轴
                 AbstractInsnNode aload_0 = methodNode.instructions.get(i - 1);
                 if (aload_0 instanceof VarInsnNode) {
@@ -196,7 +197,7 @@ public class EntityPlayerSP extends Transformer {
                     //rl.add(node);
                 }
             }
-            if (node instanceof MethodInsnNode && ((MethodInsnNode) node).name.equals(Mapper.getObfMethod("getY",Type.getInternalName(Entity.class),"()D"))) {
+            if (node instanceof MethodInsnNode && ((MethodInsnNode) node).name.equals(Mapper.getObfMethod("getY",Mapper.getObfClass("net/minecraft/world/entity/Entity"),"()D"))) {
                 //标记替换yaw轴
                 AbstractInsnNode aload_0 = methodNode.instructions.get(i - 1);
                 if (aload_0 instanceof VarInsnNode) {
@@ -206,7 +207,7 @@ public class EntityPlayerSP extends Transformer {
                     //rl.add(node);
                 }
             }
-            if (node instanceof MethodInsnNode && ((MethodInsnNode) node).name.equals(Mapper.getObfMethod("getZ",Type.getInternalName(Entity.class),"()D"))) {
+            if (node instanceof MethodInsnNode && ((MethodInsnNode) node).name.equals(Mapper.getObfMethod("getZ",Mapper.getObfClass("net/minecraft/world/entity/Entity"),"()D"))) {
                 //标记替换yaw轴
                 AbstractInsnNode aload_0 = methodNode.instructions.get(i - 1);
                 if (aload_0 instanceof VarInsnNode) {

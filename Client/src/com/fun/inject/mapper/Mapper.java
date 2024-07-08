@@ -35,7 +35,9 @@ public class Mapper {
 
         return buffer.toByteArray();
     }
-
+    public static String getObfClass(Class<?> c){
+        return getObfClass(Type.getInternalName(c));
+    }
 
     public static File mapJar(File jarIn,MinecraftType mcType){
         File tj=new File(new File(jarIn.getParent()).getParent(),"/injection_"+mcType.getType()+".jar");
