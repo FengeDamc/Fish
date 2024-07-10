@@ -14,5 +14,6 @@
     <orderEntry type="library" name="ow2.asm.tree" level="project" />
     <orderEntry type="library" name="netty-all-4.0.23.Final" level="project" />
     <orderEntry type="library" name="brigadier-1.0.18" level="project" />
+    <orderEntry type="library" name="brigadier-1.0.18 (2)" level="project" />
   </component>
 </module>
