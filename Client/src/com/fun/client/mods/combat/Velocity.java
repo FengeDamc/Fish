@@ -42,6 +42,8 @@ public class Velocity extends Module {
             return mode.getValString().equalsIgnoreCase("Vanilla");
         }
     };
+    public Setting chance = new Setting("Chance", this, 100.0, 0.0, 100.0, true);
+    public Setting waterCheck = new Setting("WaterCheck", this, true);
 
     private double getRandomMultiplier(double min, double max) {
         return min + (max - min) * random.nextDouble();
@@ -55,11 +57,16 @@ public class Velocity extends Module {
                 S12PacketEntityVelocityWrapper packetVelocity = new S12PacketEntityVelocityWrapper(packet.packet);
                 if (packetVelocity.getEntityID() == mc.getPlayer().getEntityID()) {
                     if (this.mode.getValString().equalsIgnoreCase("Vanilla")) {
-                        double horizontalMultiplier = getRandomMultiplier(horizontalMin.getValDouble(), horizontalMax.getValDouble()) / 100.0;
-                        double verticalMultiplier = getRandomMultiplier(verticalMin.getValDouble(), verticalMax.getValDouble()) / 100.0;
-                        packetVelocity.setMotionX((int) (packetVelocity.getMotionX() * horizontalMultiplier));
-                        packetVelocity.setMotionY((int) (packetVelocity.getMotionY() * verticalMultiplier));
-                        packetVelocity.setMotionZ((int) (packetVelocity.getMotionZ() * horizontalMultiplier));
+                        if (waterCheck.getValBoolean() && mc.getPlayer().isInWater()) {
+                            return;
+                        }
+                        if (random.nextDouble() * 100 < chance.getValDouble()) {
+                            double horizontalMultiplier = getRandomMultiplier(horizontalMin.getValDouble(), horizontalMax.getValDouble()) / 100.0;
+                            double verticalMultiplier = getRandomMultiplier(verticalMin.getValDouble(), verticalMax.getValDouble()) / 100.0;
+                            packetVelocity.setMotionX((int) (packetVelocity.getMotionX() * horizontalMultiplier));
+                            packetVelocity.setMotionY((int) (packetVelocity.getMotionY() * verticalMultiplier));
+                            packetVelocity.setMotionZ((int) (packetVelocity.getMotionZ() * horizontalMultiplier));
+                        }
                     }
                 }
             } catch (NullPointerException e) {
@@ -73,7 +80,12 @@ public class Velocity extends Module {
         super.onMoment(event);
         if (mode.getValString().equalsIgnoreCase("JumpReset")) {
             if (mc.getPlayer().getHurtTime() == 9 && mc.getPlayer().isOnGround()) {
-                mc.getPlayer().getMovementInputObj().setJump(true);
+                if (waterCheck.getValBoolean() && mc.getPlayer().isInWater()) {
+                    return;
+                }
+                if (random.nextDouble() * 100 < chance.getValDouble()) {
+                    mc.getPlayer().getMovementInputObj().setJump(true);
+                }
             }
         }
     }
