@@ -17,17 +17,24 @@
     </loaded-modules>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="我手贱给回滚了1">
+    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="提交">
+      <change afterPath="$PROJECT_DIR$/fish/injection_forge.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/network/packets/PacketAddSetting.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/network/packets/PacketAddSetting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/api/Transformers.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/api/Transformers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/inject/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/Agent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/inject/NativeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/NativeUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/src/mappings/forge.srg" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/src/mappings/forge.srg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/ClassLoaderTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/ClassLoaderTransformer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/EntityPlayerSP.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/EntityPlayerSP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/wrapper/impl/entity/EntityPlayerSPWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/wrapper/impl/entity/EntityPlayerSPWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/inject/injection/asm/transformers/ClassLoaderTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/inject/injection/asm/transformers/ClassLoaderTransformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/inject/injection/asm/transformers/GuiIngameTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/inject/injection/asm/transformers/GuiIngameTransformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/mappings/forge.srg" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/mappings/forge.srg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/FunGhostClient.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/FunGhostClient.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/injection_mcp.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injection_mcp.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/injection_none.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injection_none.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/injection_vanilla.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injection_vanilla.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fish/injections/1.12.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injections/1.12.2.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/injections/1.18.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injections/1.18.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fish/injections/1.8.9.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injections/1.8.9.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +104,7 @@
     "Application.Main.executor": "Run",
     "Application.WindowEnumerator.executor": "Run",
     "Downloaded.Files.Path.Enabled": "true",
+    "JAR 应用程序.AugX-Registerer.jar.executor": "Run",
     "JAR 应用程序.FunGhostClient.jar (1).executor": "Run",
     "JAR 应用程序.FunGhostClient.jar.executor": "Run",
     "Repository.Attach.Annotations": "false",
@@ -108,7 +116,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/FengeGG/Fish/injector",
+    "last_opened_file_path": "D:/Yape/YolBi_Lite_Recode",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -137,6 +145,7 @@
       <recent name="D:\FengeGG\Fish\Injections\1.8.9\Injection1_8_9\src\mappings" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\FengeGG\Fish\Injections\1.18.1\Injection1_18_1\libs" />
       <recent name="D:\FengeGG\Fish\Client" />
       <recent name="D:\FengeGG\FunGhostClient\lib" />
       <recent name="D:\FengeGG\FunGhostClient\src" />
@@ -150,7 +159,7 @@
       <recent name="com.fun.client.mods.world" />
     </key>
   </component>
-  <component name="RunManager" selected="JAR 应用程序.FunGhostClient.jar">
+  <component name="RunManager" selected="JAR 应用程序.AugX-Registerer.jar">
     <configuration name="JNAUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="fun.inject.JNAUtils" />
       <module name="Client" />
@@ -190,12 +199,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FunGhostClient.jar (1)" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/FunGhostClient_jar2/FunGhostClient.jar" />
+    <configuration name="AugX-Registerer.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/libs/AugX-Registerer.jar" />
       <method v="2" />
     </configuration>
-    <configuration name="FunGhostClient.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/FunGhostClient_jar/FunGhostClient.jar" />
+    <configuration name="FunGhostClient.jar (1)" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/FunGhostClient_jar2/FunGhostClient.jar" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
@@ -211,6 +220,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JAR 应用程序.AugX-Registerer.jar" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -544,7 +558,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720437581465</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="提交">
+      <option name="closed" value="true" />
+      <created>1720441490104</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1720441490104</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -618,10 +640,10 @@
     <MESSAGE value="重构一下为跨1.16.5做准备" />
     <MESSAGE value="整理代码" />
     <MESSAGE value="巨大的更新添加了重映射" />
-    <MESSAGE value="提交" />
     <MESSAGE value="我手贱给回滚了" />
     <MESSAGE value="我手贱给回滚了1" />
-    <option name="LAST_COMMIT_MESSAGE" value="我手贱给回滚了1" />
+    <MESSAGE value="提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

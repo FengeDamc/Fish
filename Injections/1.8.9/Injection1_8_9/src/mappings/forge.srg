@@ -19851,6 +19851,7 @@ MD: net/minecraft/client/gui/FontRenderer/func_78259_e (Ljava/lang/String;I)I ne
 MD: net/minecraft/client/gui/GuiIngame$1/apply (Lnet/minecraft/scoreboard/Score;)Z net/minecraft/client/gui/GuiIngame$1/apply (Lnet/minecraft/scoreboard/Score;)Z
 MD: net/minecraft/client/gui/GuiIngame/func_175177_a ()V net/minecraft/client/gui/GuiIngame/setDefaultTitlesTimes ()V
 MD: net/minecraft/client/gui/GuiIngame/func_175180_a (F)V net/minecraft/client/gui/GuiIngame/renderGameOverlay (F)V
+MD: net/minecraftforge/client/GuiIngameForge/func_175180_a (F)V net/minecraftforge/client/GuiIngameForge/renderGameOverlay (F)V
 MD: net/minecraft/client/gui/GuiIngame/func_180480_a (FLnet/minecraft/client/gui/ScaledResolution;)V net/minecraft/client/gui/GuiIngame/renderVignette (FLnet/minecraft/client/gui/ScaledResolution;)V
 MD: net/minecraft/client/gui/GuiIngame/func_175184_a (IIIFLnet/minecraft/entity/player/EntityPlayer;)V net/minecraft/client/gui/GuiIngame/renderHotbarItem (IIIFLnet/minecraft/entity/player/EntityPlayer;)V
 MD: net/minecraft/client/gui/GuiIngame/func_180475_a (Lnet/minecraft/scoreboard/ScoreObjective;Lnet/minecraft/client/gui/ScaledResolution;)V net/minecraft/client/gui/GuiIngame/renderScoreboard (Lnet/minecraft/scoreboard/ScoreObjective;Lnet/minecraft/client/gui/ScaledResolution;)V

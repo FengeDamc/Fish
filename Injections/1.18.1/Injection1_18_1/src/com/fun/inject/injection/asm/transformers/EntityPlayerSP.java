@@ -13,6 +13,7 @@ import com.fun.utils.version.methods.Methods;
 import com.fun.utils.version.runable.VRunable;
 import com.fun.inject.Mappings;
 import com.fun.inject.MinecraftVersion;
+
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
@@ -22,7 +23,7 @@ import org.objectweb.asm.tree.*;
 
 public class EntityPlayerSP extends Transformer {
     public EntityPlayerSP() {
-        super(LocalPlayer.class);
+        super("net/minecraft/client/player/LocalPlayer");
     }
 
     public static EventMotion onMotion(double x, double y, double z, float yaw, float pitch) {
@@ -132,7 +133,7 @@ public class EntityPlayerSP extends Transformer {
         InsnList list = new InsnList();
         list.add(new MethodInsnNode(Opcodes.INVOKESTATIC, Type.getInternalName(EntityPlayerSP.class), "onUpdateEvent", "()V"));
         methodNode.instructions.insert(list);
-
+        //BuiltinClassLoader
 
     }
 
@@ -144,7 +145,7 @@ public class EntityPlayerSP extends Transformer {
         list.add(new MethodInsnNode(Opcodes.INVOKEVIRTUAL,
                 Mapper.getObfClass("net/minecraft/world/entity/Entity"), Mapper.getObfMethod("getX","net/minecraft/world/entity/Entity","()D"), "()D"));//"field_70165_t" Mapper.getObfClass("net/minecraft/world/entity/Entity")
         list.add(new VarInsnNode(Opcodes.ALOAD, 0));
-        list.add(new MethodInsnNode(Opcodes.INVOKEVIRTUAL , Mapper.getObfClass("net/minecraft/world/entity/Entity"), Mapper.getObfMethod("getY",Mapper.getObfClass(Entity.class),"()D"), "()D"));
+        list.add(new MethodInsnNode(Opcodes.INVOKEVIRTUAL , Mapper.getObfClass("net/minecraft/world/entity/Entity"), Mapper.getObfMethod("getY","net/minecraft/world/entity/Entity","()D"), "()D"));
         //field_70163_u,posY,2,Entity position Y
         //FD: pk/t net/minecraft/world/entity/Entity/field_70163_u
         list.add(new VarInsnNode(Opcodes.ALOAD, 0));
@@ -153,7 +154,7 @@ public class EntityPlayerSP extends Transformer {
         list.add(new MethodInsnNode(Opcodes.INVOKEVIRTUAL,Mapper.getObfClass("net/minecraft/world/entity/Entity"), Mapper.getObfMethod("getYRot","net/minecraft/world/entity/Entity","()F"), "()F"));//yaw
         list.add(new VarInsnNode(Opcodes.ALOAD, 0));
         list.add(new MethodInsnNode(Opcodes.INVOKEVIRTUAL, Mapper.getObfClass("net/minecraft/world/entity/Entity"), Mapper.getObfMethod("getXRot","net/minecraft/world/entity/Entity","()F"), "()F"));//pitch
-        list.add(new MethodInsnNode(Opcodes.INVOKESTATIC, Mapper.getObfClass("net/minecraft/world/entity/Entity"), "onMotion", "(DDDFF)Lcom/fun/eventapi/event/events/EventMotion;"));
+        list.add(new MethodInsnNode(Opcodes.INVOKESTATIC, Type.getInternalName(EntityPlayerSP.class), "onMotion", "(DDDFF)Lcom/fun/eventapi/event/events/EventMotion;"));
         list.add(new VarInsnNode(Opcodes.ASTORE, 1));
         j++;
         //ArrayList<AbstractInsnNode> rl=new ArrayList<>();

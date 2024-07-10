@@ -17,7 +17,7 @@ public class NativeUtils {
                                             ProtectionDomain protectionDomain,
                                             byte[]              classfileBuffer) throws IllegalClassFormatException {
         try {
-            if (!Mappings.getUnobfClass(className).startsWith("net/minecraft")) return classfileBuffer;
+            if (className==null||!Mappings.getUnobfClass(className).startsWith("net/minecraft")) return classfileBuffer;
             for (Agent.ClassTransformer t : transformers) {
                 byte[] b = t.transform(loader, className, classBeingRedefined, protectionDomain, classfileBuffer);
                 if (b != null) {

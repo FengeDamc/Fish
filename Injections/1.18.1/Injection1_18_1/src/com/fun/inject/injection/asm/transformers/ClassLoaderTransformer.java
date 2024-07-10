@@ -4,7 +4,10 @@ import com.fun.inject.injection.asm.api.Transformer;
 
 public class ClassLoaderTransformer extends Transformer {
     public ClassLoaderTransformer(ClassLoader classLoader) {
-        clazz=classLoader.getClass();
+        this(classLoader.getClass());
+    }
+    public ClassLoaderTransformer(Class<?> classLoader) {
+        clazz=classLoader;
         name=clazz.getName();
         obfName=clazz.getName();
     }

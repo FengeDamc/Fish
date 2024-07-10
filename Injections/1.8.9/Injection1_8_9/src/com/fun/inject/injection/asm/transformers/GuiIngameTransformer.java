@@ -59,7 +59,7 @@ public class GuiIngameTransformer extends Transformer {
     }
     public static void onRender2D(){
 
-
+        //System.out.println("Render 2D");
         EventManager.call(new EventRender2D());
     }
 }

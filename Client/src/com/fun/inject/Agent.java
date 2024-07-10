@@ -35,8 +35,13 @@ import java.lang.reflect.Method;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLClassLoader;
+import java.nio.file.Files;
 import java.security.ProtectionDomain;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.jar.JarFile;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
 
 
 public class Agent {
@@ -58,7 +63,29 @@ public class Agent {
     public static Class<?> findClass(String name) throws ClassNotFoundException {
       return classLoader.loadClass(name.replace('/','.'));
     }
-    public static void injectClassLoader(ClassLoader classLoader) {
+    public static final Map<String, byte[]> classes = new HashMap<>();
+    private static byte[] readStream(InputStream inStream) throws Exception {
+        ByteArrayOutputStream outStream = new ByteArrayOutputStream();
+        byte[] buffer = new byte[1024];
+        int len;
+        while ((len = inStream.read(buffer)) != -1)
+            outStream.write(buffer, 0, len);
+        outStream.close();
+        return outStream.toByteArray();
+    }
+
+    public static void cacheJar(File file) throws Exception {
+        try (ZipInputStream zis = new ZipInputStream(Files.newInputStream(file.toPath()))) {
+            ZipEntry entry;
+            while ((entry = zis.getNextEntry()) != null)
+                if (!entry.isDirectory())
+                    if (entry.getName().endsWith(".class"))
+                        classes.put(entry.getName().replace("/", ".").substring(0, entry.getName().length() - 6), readStream(zis));
+        }
+    }
+
+
+    public static void injectClassLoader(Class<?> classLoader) {
         ClassLoaderTransformer classLoaderTransformer=new ClassLoaderTransformer(classLoader);
         Transformers.transformers.add(classLoaderTransformer);
         try {
@@ -88,6 +115,9 @@ public class Agent {
                 insnList.add(l);
                 mn.instructions.insert(insnList);
             }
+            if (mn.name.equals("loadClass")) {
+
+            }
         }
         ClassWriter writer=new ClassWriter(ClassWriter.COMPUTE_FRAMES|ClassWriter.COMPUTE_MAXS);
         node.accept(writer);
@@ -106,11 +136,20 @@ public class Agent {
 
         return InjectUtils.getClassBytes(c);//(c.getName().replace('.', '/') + ".class"));
     }
+    public static boolean isSelfClass(String name){
+        for (String cname : selfClasses) {
+            if (name.replace('/', '.').startsWith(cname))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
     public static Class<?> hookFindClass(ClassLoader cl,String name) {
         for (String cname : selfClasses) {
             if (name.replace('/', '.').startsWith(cname))
                 try {
-                    byte[] bytes = InjectUtils.getClassBytes(cl, name);//IOUtils.readAllBytes(ClassLoader.getSystemResourceAsStream(name.replace('.', '/') + ".class"));
+                    byte[] bytes = classes.get(name);//InjectUtils.getClassBytes(cl, name);//IOUtils.readAllBytes(ClassLoader.getSystemResourceAsStream(name.replace('.', '/') + ".class"));
                     return (Class<?>) ReflectionUtils.invokeMethod(
                             cl,
                             "defineClass",
@@ -133,19 +172,23 @@ public class Agent {
         }
         return null;
     }
+
+
+
     public static void getVersion(){
+        TCPClient.send(Main.SERVERPORT,new PacketMCVer(null));
         try {
             Class<?> c=Agent.findClass("net.minecraft.client.Minecraft");
             if(c!=null) {
                 Agent.minecraftType = MinecraftType.MCP;
-                if (ReflectionUtils.invokeMethod(c,"func_71410_x") != null)
+                if (ReflectionUtils.invokeMethod(c, minecraftVersion == MinecraftVersion.VER_1181?"m_91087_":
+                        "func_71410_x") != null)//m_91087_
                     Agent.minecraftType = MinecraftType.FORGE;
             }
 
         } catch (Exception e) {
             //e.printStackTrace();
         }
-        TCPClient.send(Main.SERVERPORT,new PacketMCVer(null));
     }
 
 
@@ -168,7 +211,7 @@ public class Agent {
                     jarPath=line;
 
                 }
-                bufferedreader.close();
+                bufferedreader.close();//4efd1f021072263228d944e87c06a543
                 instrumentation = new Native();
                 boolean running = true;
                 while (running) {
@@ -180,6 +223,7 @@ public class Agent {
                             running = false;
                             break;
                         }
+                        //System.out.println(thread.getName()+" "+thread.getContextClassLoader());
                     }
                 }
                 getVersion();
@@ -188,17 +232,29 @@ public class Agent {
                 System.out.println(injection.getAbsolutePath());
                 injection=Mapper.mapJar(injection,minecraftType);
                 NativeUtils.addToSystemClassLoaderSearch(injection.getAbsolutePath());
-                if(classLoader.getClass().getName().contains("launchwrapper"))injectClassLoader(classLoader);
+                if(classLoader.getClass().getName().contains("launchwrapper"))injectClassLoader(classLoader.getClass());
+                if(classLoader.getClass().getSuperclass().getName().contains("ModuleClassLoader"))injectClassLoader(classLoader.getClass().getSuperclass());
+                //ModuleClassLoader
                 try {
                     if (Agent.class.getClassLoader() != (classLoader)) {
 
                         try {
+                            if(classLoader.getClass().getName().contains("launchwrapper")||classLoader.getClass().getSuperclass().getName().contains("ModuleClassLoader")){
+                                cacheJar(injection);
+                                cacheJar(new File(jarPath));
+                            }
+                            else{
+                                loadJar((URLClassLoader) classLoader, injection.toURI().toURL());
+                                loadJar((URLClassLoader) classLoader, new File(jarPath).toURI().toURL());
+                            }
+
                             //loadJar((URLClassLoader)Thread.currentThread().getContextClassLoader(),new File(new File(jarPath).getParent(),"/injections/"+minecraftVersion.injection).toURI().toURL());
-                            loadJar((URLClassLoader) classLoader, injection.toURI().toURL());
-                            loadJar((URLClassLoader) classLoader, new File(jarPath).toURI().toURL());
+                            //loadJar((URLClassLoader) classLoader, injection.toURI().toURL());
+                            //loadJar((URLClassLoader) classLoader, new File(jarPath).toURI().toURL());
 
                         } catch (Throwable e) {
                             e.printStackTrace();
+                            System.out.println(classLoader.getClass().getSuperclass().getName());
                         }
                         System.out.println("added URL To CL");
                     }
@@ -410,7 +466,7 @@ public class Agent {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    System.out.println("transformer:" + transformer.getName() + " bytes in " + fo.getAbsolutePath());
+                    System.out.println("transformer:" + transformer.getName() + " bytes in " + fo.getAbsolutePath()+" CL:"+transformer.clazz.getClassLoader());
 
                     transformer.newBytes = newBytes;
                     return transformer.newBytes;
