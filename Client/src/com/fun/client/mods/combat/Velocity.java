@@ -7,6 +7,10 @@ import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
 import com.fun.client.settings.Setting;
 import com.fun.inject.injection.wrapper.impl.network.packets.server.S12PacketEntityVelocityWrapper;
+import com.fun.inject.injection.wrapper.impl.entity.EntityWrapper;
+import javax.vecmath.Vector2f;
+
+import static com.fun.client.FunGhostClient.moduleManager;
 
 import java.util.Random;
 
@@ -16,6 +20,8 @@ public class Velocity extends Module {
     public Velocity() {
         super("Velocity", Category.Combat);
     }
+
+    public EntityWrapper target = null;
 
     public Setting mode = new Setting("Mode", this, "Vanilla", new String[]{"Vanilla", "JumpReset"});
     public Setting horizontalMin = new Setting("Horizontal Min", this, 80.0, 0.0, 100.0, false) {
@@ -56,6 +62,12 @@ public class Velocity extends Module {
             try {
                 S12PacketEntityVelocityWrapper packetVelocity = new S12PacketEntityVelocityWrapper(packet.packet);
                 if (packetVelocity.getEntityID() == mc.getPlayer().getEntityID()) {
+                    // 更新 target
+                    target = moduleManager.target.target;
+                    if (target == null) {
+                        return; // 如果没有目标，退出
+                    }
+
                     if (this.mode.getValString().equalsIgnoreCase("Vanilla")) {
                         if (waterCheck.getValBoolean() && mc.getPlayer().isInWater()) {
                             return;
@@ -78,6 +90,12 @@ public class Velocity extends Module {
     @Override
     public void onMoment(EventMoment event) {
         super.onMoment(event);
+        // 更新 target
+        target = moduleManager.target.target;
+        if (target == null) {
+            return; // 如果没有目标，退出
+        }
+
         if (mode.getValString().equalsIgnoreCase("JumpReset")) {
             if (mc.getPlayer().getHurtTime() == 9 && mc.getPlayer().isOnGround()) {
                 if (waterCheck.getValBoolean() && mc.getPlayer().isInWater()) {
