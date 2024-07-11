@@ -27,3 +27,7 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+fish/injection_forge.jar
+fish/injection_mcp.jar.jar
+fish/injection_vanilla.jar
+fish/injection_none.jar

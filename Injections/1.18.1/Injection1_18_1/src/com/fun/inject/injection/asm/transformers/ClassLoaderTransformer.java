@@ -1,6 +1,7 @@
 package com.fun.inject.injection.asm.transformers;
 
 import com.fun.inject.injection.asm.api.Transformer;
+import com.mojang.brigadier.Message;
 
 public class ClassLoaderTransformer extends Transformer {
     public ClassLoaderTransformer(ClassLoader classLoader) {
@@ -10,6 +11,7 @@ public class ClassLoaderTransformer extends Transformer {
         clazz=classLoader;
         name=clazz.getName();
         obfName=clazz.getName();
+
     }
 
 }

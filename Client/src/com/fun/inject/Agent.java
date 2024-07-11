@@ -38,6 +38,7 @@ import java.net.URLClassLoader;
 import java.nio.file.Files;
 import java.security.ProtectionDomain;
 import java.util.HashMap;
+import java.util.ListIterator;
 import java.util.Map;
 import java.util.jar.JarFile;
 import java.util.zip.ZipEntry;
@@ -105,7 +106,7 @@ public class Agent {
                 LabelNode l=new LabelNode();
                 InsnList insnList=new InsnList();
                 insnList.add(new VarInsnNode(Opcodes.ALOAD,0));
-                insnList.add(new VarInsnNode(Opcodes.ALOAD,1));
+                insnList.add(new VarInsnNode(Opcodes.ALOAD,getArgumentCount(mn.desc)));
                 insnList.add(new MethodInsnNode(Opcodes.INVOKESTATIC, Type.getInternalName(Agent.class),"hookFindClass","(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/Class;"));
                 insnList.add(new VarInsnNode(Opcodes.ASTORE,2));
                 insnList.add(new VarInsnNode(Opcodes.ALOAD,2));
@@ -116,27 +117,69 @@ public class Agent {
                 mn.instructions.insert(insnList);
             }
             if (mn.name.equals("loadClass")) {
+                LabelNode l = new LabelNode();
+                for (int i = 0; i < mn.instructions.size(); ++i) {
+                    AbstractInsnNode methodInsnNode = mn.instructions.get(i);
+                    if (methodInsnNode instanceof MethodInsnNode) {
+                        if (((MethodInsnNode) methodInsnNode).name.equals("containsKey")) {
+                            InsnList insnList = new InsnList();
+
+                            insnList.add(new JumpInsnNode(Opcodes.IFNE, l));
+                            insnList.add(new VarInsnNode(Opcodes.ALOAD,1));
+                            insnList.add(new MethodInsnNode(Opcodes.INVOKESTATIC, Type.getInternalName(Agent.class), "isSelfClass", "(Ljava/lang/Class;)Z"));
+                            AbstractInsnNode ifeq = methodInsnNode.getNext();
+                            mn.instructions.insert(methodInsnNode, insnList);
+                            mn.instructions.insert(ifeq,l);
+                            break;
+                        }
+                    }
+                }
 
             }
         }
+
         ClassWriter writer=new ClassWriter(ClassWriter.COMPUTE_FRAMES|ClassWriter.COMPUTE_MAXS);
-        node.accept(writer);
+        try {
+            node.accept(writer);
+
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
         byte[] bytes = writer.toByteArray();
         NativeUtils.redefineClass(classLoaderTransformer.clazz,bytes);
         classLoaderTransformer.newBytes=bytes;
         try {
-            FileUtils.writeByteArrayToFile(new File(System.getProperty("user.home"),classLoaderTransformer.name + "Old.class"), bytes);
+            FileUtils.writeByteArrayToFile(new File(System.getProperty("user.home"),classLoaderTransformer.name+".class"), bytes);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
 
     }
+    public static int getArgumentCount(String methodDescriptor) {
+        int argumentCount = 0;
+
+        for(int currentOffset = 1; methodDescriptor.charAt(currentOffset) != ')'; ++argumentCount) {
+            while(methodDescriptor.charAt(currentOffset) == '[') {
+                ++currentOffset;
+            }
+
+            if (methodDescriptor.charAt(currentOffset++) == 'L') {
+                int semiColumnOffset = methodDescriptor.indexOf(59, currentOffset);
+                currentOffset = Math.max(currentOffset, semiColumnOffset + 1);
+            }
+        }
+
+        return argumentCount;
+    }
+
     public static byte[] readClazzBytes(Class<?> c) throws IOException {
 
         return InjectUtils.getClassBytes(c);//(c.getName().replace('.', '/') + ".class"));
     }
     public static boolean isSelfClass(String name){
+        System.out.println(name+" hook");
         for (String cname : selfClasses) {
             if (name.replace('/', '.').startsWith(cname))
             {
@@ -173,8 +216,15 @@ public class Agent {
         return null;
     }
 
-
-
+    public static boolean b;
+    public static void _(){
+        if(isAgent||b){
+            System.out.println("jii");
+        }
+        else{
+            System.out.println("j22");
+        }
+    }
     public static void getVersion(){
         TCPClient.send(Main.SERVERPORT,new PacketMCVer(null));
         try {
