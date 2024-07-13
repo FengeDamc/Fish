@@ -4,6 +4,7 @@ package com.fun.inject;
 
 import com.fun.client.FunGhostClient;
 import com.fun.client.config.ConfigModule;
+import com.fun.inject.define.Definer;
 import com.fun.inject.injection.asm.api.Inject;
 import com.fun.inject.injection.asm.api.Mixin;
 import com.fun.inject.injection.asm.api.Transformer;
@@ -22,6 +23,7 @@ import com.fun.network.TCPClient;
 import com.fun.network.TCPServer;
 import com.fun.utils.font.FontManager;
 
+import org.newdawn.slick.tests.NavMeshTest;
 import org.objectweb.asm.*;
 import org.objectweb.asm.tree.*;
 import org.apache.commons.io.FileUtils;
@@ -57,7 +59,7 @@ public class Agent {
     public static MinecraftVersion minecraftVersion=MinecraftVersion.VER_189;
     public static HashMap<String,Class<?>> classesMap=new HashMap<>();
     public static final int SERVERPORT=11451;
-    public static final String[] selfClasses=new String[]{"com.fun","org.newdawn","javax.vecmath"};
+    public static final String[] selfClasses=new String[]{"com.fun","org.newdawn"};
 
     public static ClassLoader classLoader=null;
     public static Logger logger= LogManager.getLogger("FunClient");
@@ -121,17 +123,36 @@ public class Agent {
                 for (int i = 0; i < mn.instructions.size(); ++i) {
                     AbstractInsnNode methodInsnNode = mn.instructions.get(i);
                     if (methodInsnNode instanceof MethodInsnNode) {
-                        if (((MethodInsnNode) methodInsnNode).name.equals("containsKey")) {
+                        /*if (((MethodInsnNode) methodInsnNode).name.equals("containsKey")) {
                             InsnList insnList = new InsnList();
 
                             insnList.add(new JumpInsnNode(Opcodes.IFNE, l));
                             insnList.add(new VarInsnNode(Opcodes.ALOAD,1));
-                            insnList.add(new MethodInsnNode(Opcodes.INVOKESTATIC, Type.getInternalName(Agent.class), "isSelfClass", "(Ljava/lang/Class;)Z"));
+                            insnList.add(new MethodInsnNode(Opcodes.INVOKESTATIC, Type.getInternalName(Agent.class), "isSelfClass", "(Ljava/lang/String;)Z"));
                             AbstractInsnNode ifeq = methodInsnNode.getNext();
                             mn.instructions.insert(methodInsnNode, insnList);
                             mn.instructions.insert(ifeq,l);
                             break;
-                        }
+                        }*/
+
+                    }
+                    if(methodInsnNode.getOpcode()==Opcodes.GOTO&&methodInsnNode instanceof JumpInsnNode){
+                        LabelNode l2 = new LabelNode();
+                        l= (LabelNode) methodInsnNode.getNext();
+                        InsnList insnList=new InsnList();
+                        insnList.add(new VarInsnNode(Opcodes.ALOAD,1));
+                        insnList.add(new MethodInsnNode(Opcodes.INVOKESTATIC, Type.getInternalName(Agent.class), "isSelfClass", "(Ljava/lang/String;)Z"));
+                        insnList.add(new JumpInsnNode(Opcodes.IFEQ,l2));
+                        insnList.add(new VarInsnNode(Opcodes.ALOAD,0));
+                        insnList.add(new VarInsnNode(Opcodes.ALOAD,1));
+                        insnList.add(new MethodInsnNode(Opcodes.INVOKESTATIC,Type.getInternalName(Agent.class),"hookFindClass","(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/Class;"));
+                        insnList.add(new VarInsnNode(Opcodes.ASTORE,4));
+                        //todo findClass
+                        insnList.add(new JumpInsnNode(Opcodes.GOTO,((JumpInsnNode) methodInsnNode).label));
+                        insnList.add(l2);
+                        mn.instructions.insert(l,insnList);
+                        break;
+
                     }
                 }
 
@@ -179,7 +200,8 @@ public class Agent {
         return InjectUtils.getClassBytes(c);//(c.getName().replace('.', '/') + ".class"));
     }
     public static boolean isSelfClass(String name){
-        System.out.println(name+" hook");
+        //NativeUtils.messageBox(name,"Fish");
+        //System.out.println(name+" hook");
         for (String cname : selfClasses) {
             if (name.replace('/', '.').startsWith(cname))
             {
@@ -207,6 +229,7 @@ public class Agent {
                             0,
                             bytes.length
                     );
+
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -217,12 +240,16 @@ public class Agent {
     }
 
     public static boolean b;
+    public static boolean b1;
     public static void _(){
-        if(isAgent||b){
+        if(isAgent||!b){
             System.out.println("jii");
         }
-        else{
+        else if(b1){
             System.out.println("j22");
+        }
+        else{
+            System.out.println("j23");
         }
     }
     public static void getVersion(){
@@ -243,10 +270,14 @@ public class Agent {
 
 
 
-    private static void loadJar(URLClassLoader urlClassLoader, URL jar) throws Throwable {
+    private static void loadJar(URLClassLoader urlClassLoader, URL jar) {
         NativeUtils.loadJar(urlClassLoader, jar);
     }
-
+    private static void defineClassesInCache(){
+        for(String s:classes.keySet()){
+            Definer.defineClass(s);
+        }
+    }
     public static synchronized void start() throws URISyntaxException, IOException, InterruptedException {
                 //if(true)throw new RuntimeException("hehe");
                 isAgent =true;
@@ -282,30 +313,21 @@ public class Agent {
                 System.out.println(injection.getAbsolutePath());
                 injection=Mapper.mapJar(injection,minecraftType);
                 NativeUtils.addToSystemClassLoaderSearch(injection.getAbsolutePath());
-                if(classLoader.getClass().getName().contains("launchwrapper"))injectClassLoader(classLoader.getClass());
-                if(classLoader.getClass().getSuperclass().getName().contains("ModuleClassLoader"))injectClassLoader(classLoader.getClass().getSuperclass());
+                //if(classLoader.getClass().getName().contains("launchwrapper"))injectClassLoader(classLoader.getClass());
+                //if(classLoader.getClass().getSuperclass().getName().contains("ModuleClassLoader"))injectClassLoader(classLoader.getClass().getSuperclass());
                 //ModuleClassLoader
                 try {
                     if (Agent.class.getClassLoader() != (classLoader)) {
-
-                        try {
-                            if(classLoader.getClass().getName().contains("launchwrapper")||classLoader.getClass().getSuperclass().getName().contains("ModuleClassLoader")){
-                                cacheJar(injection);
-                                cacheJar(new File(jarPath));
-                            }
-                            else{
-                                loadJar((URLClassLoader) classLoader, injection.toURI().toURL());
-                                loadJar((URLClassLoader) classLoader, new File(jarPath).toURI().toURL());
-                            }
-
-                            //loadJar((URLClassLoader)Thread.currentThread().getContextClassLoader(),new File(new File(jarPath).getParent(),"/injections/"+minecraftVersion.injection).toURI().toURL());
-                            //loadJar((URLClassLoader) classLoader, injection.toURI().toURL());
-                            //loadJar((URLClassLoader) classLoader, new File(jarPath).toURI().toURL());
-
-                        } catch (Throwable e) {
-                            e.printStackTrace();
-                            System.out.println(classLoader.getClass().getSuperclass().getName());
+                        if(classLoader.getClass().getName().contains("launchwrapper")||classLoader.getClass().getSuperclass().getName().contains("ModuleClassLoader")){
+                            cacheJar(injection);
+                            cacheJar(new File(jarPath));
+                            defineClassesInCache();
                         }
+                        else{
+                            loadJar((URLClassLoader) classLoader, injection.toURI().toURL());
+                            loadJar((URLClassLoader) classLoader, new File(jarPath).toURI().toURL());
+                        }
+
                         System.out.println("added URL To CL");
                     }
 
@@ -380,8 +402,8 @@ public class Agent {
 
         MinecraftWrapper.get().addScheduledTask(()->{
             try {
-                System.out.println("client init start");
                 TCPClient.send(TCPServer.getTargetPort(),new PacketInit());
+                System.out.println("client init start");
                 FunGhostClient.init();
                 System.out.println("client init successful");
                 ConfigModule.loadConfig();

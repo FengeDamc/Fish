@@ -7,7 +7,7 @@ public class TCPClient {
         String host = "localhost"; // 服务器地址
         System.out.println("send"+info);
         try (Socket socket = new Socket(host, port)) {
-            System.out.println(info);
+            //System.out.println(info);
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
             ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
             oos.writeObject(info);

@@ -213,7 +213,30 @@ extern JNIEXPORT jobject JNICALL Java_fun_inject_NativeUtils_getAllLoadedClasses
     return list;
 
 }
+extern JNIEXPORT int JNICALL printEx(){
+    if((*Java->jniEnv)->ExceptionCheck(Java->jniEnv)){
+        jthrowable e=(*Java->jniEnv)->ExceptionOccurred((Java->jniEnv));
+        jclass e_class=(*Java->jniEnv)->GetObjectClass(Java->jniEnv,e);
+        jmethodID e_toString_methodID = (*Java->jniEnv)->GetMethodID(Java->jniEnv, e_class, "toString", "()Ljava/lang/String;");
 
+
+
+        jstring e_string_object = (*Java->jniEnv)->CallObjectMethod(Java->jniEnv, e, e_toString_methodID);
+
+
+
+        MessageBoxA(NULL,(*Java->jniEnv)->GetStringUTFChars(Java->jniEnv, e_string_object, NULL),"FishCient",0);
+        //MessageBoxA(NULL,buffer,"Fish",0);
+
+        (*Java->jniEnv)->ExceptionClear(Java->jniEnv);
+        return 1;
+    }
+    return 0;
+}
+extern JNIEXPORT void *allocate(jlong size) {
+    void *resultBuffer = malloc(size);
+    return resultBuffer;
+}
 /*
  * Class:     fun_inject_NativeUtils
  * Method:    redefineClass
@@ -251,10 +274,7 @@ extern JNIEXPORT void JNICALL Java_fun_inject_NativeUtils_redefineClass
     (*env)->ReleaseByteArrayElements(env,bytes, classByteArray, 0);
 }
 
-extern JNIEXPORT void *allocate(jlong size) {
-    void *resultBuffer = malloc(size);
-    return resultBuffer;
-}
+
 
 
 
@@ -343,25 +363,13 @@ extern JNIEXPORT void JNICALL addToSystemClassLoaderSearch(JNIEnv *jniEnv, jclas
     (*Java->jvmtiEnv)->AddToSystemClassLoaderSearch(Java->jvmtiEnv,ctr);
     (*jniEnv)->ReleaseStringUTFChars(jniEnv,str,ctr);
 }
-extern JNIEXPORT int JNICALL printEx(){
-    if((*Java->jniEnv)->ExceptionCheck(Java->jniEnv)){
-        jthrowable e=(*Java->jniEnv)->ExceptionOccurred((Java->jniEnv));
-        jclass e_class=(*Java->jniEnv)->GetObjectClass(Java->jniEnv,e);
-        jmethodID e_toString_methodID = (*Java->jniEnv)->GetMethodID(Java->jniEnv, e_class, "toString", "()Ljava/lang/String;");
-
-
-
-        jstring e_string_object = (*Java->jniEnv)->CallObjectMethod(Java->jniEnv, e, e_toString_methodID);
-
-
-
-        MessageBoxA(NULL,(*Java->jniEnv)->GetStringUTFChars(Java->jniEnv, e_string_object, NULL),"FishCient",0);
-        //MessageBoxA(NULL,buffer,"Fish",0);
-
-        (*Java->jniEnv)->ExceptionClear(Java->jniEnv);
-        return 1;
-    }
-    return 0;
+JNIEXPORT jclass JNICALL DefineClass(JNIEnv *env, jclass _, jobject classLoader, jbyteArray bytes)
+{
+    jclass clClass = (*env)->FindClass(env, "java/lang/ClassLoader");
+    jmethodID defineClass = (*env)->GetMethodID(env, clClass, "defineClass", "([BII)Ljava/lang/Class;");
+    jobject classDefined = (*env)->CallObjectMethod(env, classLoader, defineClass, bytes, 0,
+                                                    (*env)->GetArrayLength(env, bytes));
+    return (jclass)classDefined;
 }
 
 
@@ -461,13 +469,14 @@ extern DWORD JNICALL Inject(JAVA java){
             {"freeLibrary","()V",(void*)&freeLibrary},
             {"loadJar","(Ljava/net/URLClassLoader;Ljava/net/URL;)V",(void*) loadJar},
             {"messageBox","(Ljava/lang/String;Ljava/lang/String;)V",(void*) messageBox},
-            {"addToSystemClassLoaderSearch","(Ljava/lang/String;)V",(void*) addToSystemClassLoaderSearch}
+            {"addToSystemClassLoaderSearch","(Ljava/lang/String;)V",(void*) addToSystemClassLoaderSearch},
+            {"defineClass","(Ljava/lang/ClassLoader;[B)Ljava/lang/Class;",(void*)DefineClass}
 
 //(Ljava/lang/String;)V
     };
 
     if(nativeUtils){
-        (*Java->jniEnv)->RegisterNatives(Java->jniEnv,nativeUtils, methods, 9);
+        (*Java->jniEnv)->RegisterNatives(Java->jniEnv,nativeUtils, methods, 10);
 
     }
 

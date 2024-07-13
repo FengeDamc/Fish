@@ -55,6 +55,7 @@ public class NativeUtils {
     public static native void loadJar(URLClassLoader cl, URL url);
     public static native void messageBox(String msg,String title);
     public static native void addToSystemClassLoaderSearch(String path);
+    public static native Class<?> defineClass(ClassLoader cl,byte[] bytes);
 
 
 

@@ -26,11 +26,13 @@ public class PacketInit implements IPacket{
 
     @Override
     public void process() {
-        File injection= Mapper.mapJar(new File(new File(Main.path),"/injections/"+ Agent.minecraftVersion.injection), MinecraftType.NONE);
-        System.out.println("injection: "+injection.getAbsolutePath());
-        InjectorUtils.addToSystemClassLoaderSearch(injection.getAbsolutePath());
-        FunGhostClient.moduleManager=new ModuleManager();
-        FunGhostClient.settingsManager=new SettingsManager();
+        if(!Agent.isAgent) {
+            File injection = Mapper.mapJar(new File(new File(Main.path), "/injections/" + Agent.minecraftVersion.injection), MinecraftType.NONE);
+            System.out.println("injection: " + injection.getAbsolutePath());
+            InjectorUtils.addToSystemClassLoaderSearch(injection.getAbsolutePath());
+            FunGhostClient.moduleManager = new ModuleManager();
+            FunGhostClient.settingsManager = new SettingsManager();
+        }
 
 
     }

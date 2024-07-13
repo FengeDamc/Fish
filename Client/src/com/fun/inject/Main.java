@@ -99,15 +99,4 @@ public class Main {
         return sb.toString();
     }
 
-    public static class HackMonitor extends  PerfStringMonitor{
-
-        public HackMonitor(String s, Variability variability, boolean b, ByteBuffer byteBuffer) {
-            super(s, variability, b, byteBuffer);
-        }
-
-        @Override
-        public String stringValue() {
-            return  "1";
-        }
-    }
 }
