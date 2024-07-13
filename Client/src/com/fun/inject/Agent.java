@@ -59,7 +59,7 @@ public class Agent {
     public static MinecraftVersion minecraftVersion=MinecraftVersion.VER_189;
     public static HashMap<String,Class<?>> classesMap=new HashMap<>();
     public static final int SERVERPORT=11451;
-    public static final String[] selfClasses=new String[]{"com.fun","org.newdawn"};
+    public static final String[] selfClasses=new String[]{"com.fun","org.newdawn","javax.vecmath"};
 
     public static ClassLoader classLoader=null;
     public static Logger logger= LogManager.getLogger("FunClient");
@@ -350,18 +350,14 @@ public class Agent {
     }
 
     public static void transform() {
-        ClassLoader loader = ClassLoader.getSystemClassLoader();
-        try {
-            loader.loadClass("com.fun.inject.injection.asm.api.Transformers");
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
+
         Transformers.init();
         transformer = new ClassTransformer();
         instrumentation.addTransformer(transformer, true);
 
-
+        System.out.println("1");
         NativeUtils.setEventNotificationMode(1,54);
+        System.out.println("1.5");
         //NativeUtils.messageBox("native cl:"+NativeUtils.class.getClassLoader(),"Fish");
 
         for (Transformer transformer : Transformers.transformers) {
@@ -377,8 +373,10 @@ public class Agent {
                 e.printStackTrace();
             }
         }
+        System.out.println("2");
         NativeUtils.setEventNotificationMode(0,54);
         instrumentation.doneTransform();
+        System.out.println("3");
         System.out.println("Transform classes successfully");
 
     }
@@ -437,6 +435,7 @@ public class Agent {
         }
 
         public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined, ProtectionDomain protectionDomain, byte[] classfileBuffer) throws IllegalClassFormatException {
+
             for (Transformer transformer : Transformers.transformers) {
                 if (transformer.clazz == classBeingRedefined && loader == classLoader) {
                     transformer.oldBytes = classfileBuffer;
@@ -444,7 +443,7 @@ public class Agent {
                     try {
                         FileUtils.writeByteArrayToFile(new File(System.getProperty("user.home"),transformer.getName() + "Old.class"), classfileBuffer);
                     } catch (IOException e) {
-
+                        e.printStackTrace();
                     }
                     ClassNode node = Transformers.node(transformer.oldBytes);
 
@@ -467,7 +466,7 @@ public class Agent {
                                 continue;
                             }
 
-                        System.out.println(obfDesc+" "+obfName);
+                            System.out.println(obfDesc+" "+obfName);
                         // huh???
                             for (MethodNode mNode : node.methods) {
                                 //System.out.println(mNode.name+mNode.desc);
@@ -528,17 +527,15 @@ public class Agent {
                         return null;
                     }
                     File fo = new File(System.getProperty("user.home"),transformer.getName() + ".class");
-                    File fdo = new File(System.getProperty("user.home"),transformer.getName() + "DeObf.class");
 
 
                     try {
-                        FileUtils.writeByteArrayToFile(fdo,Mappings.deobfClass(newBytes));
 
                         FileUtils.writeByteArrayToFile(fo, newBytes.clone());
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    System.out.println("transformer:" + transformer.getName() + " bytes in " + fo.getAbsolutePath()+" CL:"+transformer.clazz.getClassLoader());
+                    System.out.println("transformer:" + transformer.getName() + " bytes in " + fo.getAbsolutePath());
 
                     transformer.newBytes = newBytes;
                     return transformer.newBytes;

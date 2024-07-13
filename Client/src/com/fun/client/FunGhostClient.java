@@ -14,11 +14,18 @@ public class FunGhostClient {
     public static ModuleManager moduleManager;
     public static void init(){
             try{
+
                 settingsManager=new SettingsManager();
+
+
                 moduleManager=new ModuleManager();
+
+
                 moduleManager.init();
 
+
                 moduleManager.notification.post(new Notification("Fish Injected", Notification.Type.WHITE));
+
 
             }
             catch (Exception e){

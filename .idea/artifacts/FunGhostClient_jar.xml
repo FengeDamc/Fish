@@ -13,6 +13,7 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/asm-tree-9.7.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/flatlaf-3.1.1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/libraries/org/apache/logging/log4j/log4j-api/2.0-beta9/log4j-api-2.0-beta9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/libraries/commons-io/commons-io/2.4/commons-io-2.4.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
