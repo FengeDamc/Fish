@@ -233,7 +233,7 @@ extern JNIEXPORT int JNICALL printEx(){
     }
     return 0;
 }
-extern JNIEXPORT void *allocate(jlong size) {
+extern JNIEXPORT void JNICALL *allocate(jlong size) {
     void *resultBuffer = malloc(size);
     return resultBuffer;
 }
