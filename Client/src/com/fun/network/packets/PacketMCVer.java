@@ -19,6 +19,7 @@ public class PacketMCVer implements IPacket, IReviewable {
     public void process() {
         Agent.minecraftVersion= getVersion();
         ver= String.valueOf(Agent.minecraftVersion.ordinal());
+        System.out.println(ver);
     }
 
     @Override
@@ -26,8 +27,5 @@ public class PacketMCVer implements IPacket, IReviewable {
         Agent.minecraftVersion= MinecraftVersion.values()[Integer.parseInt(ver)];
     }
 
-    @Override
-    public IReviewable getClone() {
-        return new PacketMCVer(ver);
-    }
+
 }

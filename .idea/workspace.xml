@@ -19,18 +19,18 @@
   <component name="ChangeListManager">
     <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="提交classDefiner for inject1.18.1forge">
       <change afterPath="$PROJECT_DIR$/local_history_definer.patch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/FunGhostClient_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/FunGhostClient_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/client/FunGhostClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/FunGhostClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/com/fun/inject/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/Agent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/inject/NativeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/NativeUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fish/FunGhostClient.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/inject/MinecraftVersion.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/MinecraftVersion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/network/IReviewable.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/network/IReviewable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/network/TCPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/network/TCPServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/network/packets/PacketMCVer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/network/packets/PacketMCVer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fish/FunGhostClient.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/FunGhostClient.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/injection_forge.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injection_forge.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/injection_mcp.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injection_mcp.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/injection_none.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injection_none.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/injection_vanilla.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injection_vanilla.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/injections/1.18.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injections/1.18.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fish/libagent.dll" beforeDir="false" afterPath="$PROJECT_DIR$/fish/libagent.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/agent.dir/src/dll/dllmain.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/agent.dir/src/dll/dllmain.c.obj" afterDir="false" />
@@ -122,7 +122,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "工件",
+    "project.structure.last.edited": "库",
     "project.structure.proportion": "0.15234375",
     "project.structure.side.proportion": "0.4013841",
     "settings.editor.selected.configurable": "preferences.fileTypes",
@@ -297,7 +297,7 @@
       <workItem from="1719743878634" duration="246000" />
       <workItem from="1719744136076" duration="69489000" />
       <workItem from="1720601787620" duration="24339000" />
-      <workItem from="1720841191683" duration="4301000" />
+      <workItem from="1720841191683" duration="10898000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -611,7 +611,31 @@
       <option name="project" value="LOCAL" />
       <updated>1720841260663</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="提交classDefiner for inject1.18.1forge">
+      <option name="closed" value="true" />
+      <created>1720874420345</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1720874420345</updated>
+    </task>
+    <task id="LOCAL-00041" summary="提交classDefiner for inject1.18.1forge">
+      <option name="closed" value="true" />
+      <created>1720874474577</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1720874474577</updated>
+    </task>
+    <task id="LOCAL-00042" summary="提交classDefiner for inject1.18.1forge">
+      <option name="closed" value="true" />
+      <created>1720874483158</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1720874483158</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

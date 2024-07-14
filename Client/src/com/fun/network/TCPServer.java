@@ -54,7 +54,7 @@ public class TCPServer {
                         if (receivedObject instanceof IPacket) {
                             receive((IPacket) receivedObject);
                             if (receivedObject instanceof IReviewable) {
-                                oos.writeObject(((IReviewable) receivedObject).getClone());
+                                oos.writeObject(((IReviewable) receivedObject));
                             }
                         } else {
                             throw new RuntimeException("object not instance of IPacket");

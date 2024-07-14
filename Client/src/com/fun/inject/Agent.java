@@ -59,7 +59,7 @@ public class Agent {
     public static MinecraftVersion minecraftVersion=MinecraftVersion.VER_189;
     public static HashMap<String,Class<?>> classesMap=new HashMap<>();
     public static final int SERVERPORT=11451;
-    public static final String[] selfClasses=new String[]{"com.fun","org.newdawn","javax.vecmath"};
+    public static final String[] selfClasses=new String[]{"com.fun","org.newdawn","javax.vecmath","com.sun.jna"};
 
     public static ClassLoader classLoader=null;
     public static Logger logger= LogManager.getLogger("FunClient");
@@ -398,7 +398,7 @@ public class Agent {
         //System.out.println("agentcl:"+agentClass.getClassLoader());
 
 
-        MinecraftWrapper.get().addScheduledTask(()->{
+        new Thread(() -> {
             try {
                 TCPClient.send(TCPServer.getTargetPort(),new PacketInit());
                 System.out.println("client init start");
@@ -414,7 +414,7 @@ public class Agent {
             catch (Exception e) {
                 e.printStackTrace();
             }
-        });
+        }).start();
 
 
 
