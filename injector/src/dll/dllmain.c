@@ -145,7 +145,7 @@ extern JNIEXPORT void JNICALL classFileLoadHook(jvmtiEnv * jvmti_env, JNIEnv * e
     //MessageBoxA(NULL,"transhook","FishCient",0);
 
 //MessageBoxA(NULL, name, "FunGhostClient", NULL);
-    //MessageBoxA(NULL, "ReTrans", "FunGhostClient", 0);
+    //MessageBoxA(NULL, name, "Fish", 0);
     jclass nativeUtils = //(*env)->FindClass(env,"com/fun/inject/NativeUtils");
     findClass(env, "com.fun.inject.NativeUtils");
 
