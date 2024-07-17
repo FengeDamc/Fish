@@ -5,6 +5,7 @@ import com.fun.inject.MinecraftType;
 import com.fun.utils.file.IOUtils;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;
+import org.objectweb.asm.Handle;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.*;
 
@@ -74,6 +75,15 @@ public class Mapper {
         }
         return null;
     }
+    public static boolean isMethodDesc(String desc){
+        return(desc.contains("(")&&desc.contains(")"));
+    }
+    public static String map(String mcpName,String owner,String desc){
+        if(isMethodDesc(desc)){
+            return getObfMethod(mcpName, owner, desc);
+        }
+        return getObfField(mcpName, owner);
+    }
     public static byte[] mapBytes(byte[] bytes,MinecraftType mT){
 
         ClassNode classNode=null;
@@ -133,6 +143,29 @@ public class Mapper {
                        //System.out.println(((LdcInsnNode) insnNode).cst+" "+((LdcInsnNode) insnNode).cst.getClass().getName());
 
                     }
+                    if(insnNode instanceof InvokeDynamicInsnNode){
+                        ((InvokeDynamicInsnNode) insnNode).desc=getObfMethodDesc(((InvokeDynamicInsnNode) insnNode).desc);
+                        Object[] bsmArgs = ((InvokeDynamicInsnNode) insnNode).bsmArgs;
+                        for (int i = 0, bsmArgsLength = bsmArgs.length; i < bsmArgsLength; i++) {
+                            Object a = bsmArgs[i];
+                            if (a instanceof Type) {
+                                Type b =Type.getType(getObfDesc(((Type) a).getDescriptor()));
+                                bsmArgs[i]= b;
+                                //System.out.println("type:"+b);//bsmArgs[i]=Type.getType(get)
+                            }
+                            if(a instanceof Handle){
+                                Handle b=new Handle(((Handle) a).getTag()
+                                        ,getObfClass(((Handle) a).getOwner()),
+                                        map(((Handle) a).getName(),((Handle) a).getOwner(),((Handle) a).getDesc()),
+                                        getObfDesc(((Handle) a).getDesc()),
+                                        ((Handle) a).isInterface());
+                                bsmArgs[i]=b;
+                                //System.out.println("handler:"+ ((Handle) a).getOwner()+" "+ ((Handle) a).getName()+" "+ ((Handle) a).getDesc());
+                            }
+                            //todo
+                        }
+                        //System.out.println("____"+((InvokeDynamicInsnNode) insnNode).name+" "+((InvokeDynamicInsnNode) insnNode).desc);
+                    }
                 }
             }
             for(FieldNode fieldNode : classNode.fields){
@@ -156,6 +189,9 @@ public class Mapper {
 
                 fieldNode.name=getObfField(fieldNode.name,classNode.name);
                 fieldNode.desc = getObfFieldDesc(fieldNode.desc);
+                //for(){
+                  //  fieldNode.signature
+                //}
             }
             classNode.methods.removeAll(removeMethods);
             classNode.fields.removeAll(removeField);
@@ -196,6 +232,12 @@ public class Mapper {
         String[] s=str.split("/");
         String t=s[s.length-1];
         return t==null?mcpName:t;
+    }
+    public static String getObfDesc(String desc){
+        if(isMethodDesc(desc)){
+            return getObfMethodDesc(desc);
+        }
+        return getObfFieldDesc(desc);
     }
     public static String getObfMethodDesc(String desc){
         org.objectweb.asm.Type[] args = org.objectweb.asm.Type.getArgumentTypes(desc);

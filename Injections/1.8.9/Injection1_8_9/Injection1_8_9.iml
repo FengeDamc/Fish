@@ -17,5 +17,6 @@
     <orderEntry type="library" name="lwjgl-platform-2.9.4-nightly-20150209-natives-windows1" level="project" />
     <orderEntry type="library" name="lwjgl-2.9.4-nightly-201502092" level="project" />
     <orderEntry type="library" name="authlib-1.5.21" level="project" />
+    <orderEntry type="library" name="commons-lang3-3.3.2" level="project" />
   </component>
 </module>

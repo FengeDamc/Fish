@@ -3,20 +3,23 @@ package com.fun.inject.injection.wrapper.impl.render;
 import com.fun.inject.injection.wrapper.Wrapper;
 import com.fun.utils.version.clazz.Classes;
 import com.fun.utils.version.methods.Methods;
+import com.mojang.blaze3d.vertex.Tesselator;
+import net.minecraft.client.renderer.entity.ItemRenderer;
 
 public class Tessellator extends Wrapper {
-    public Tessellator(Object instance) {
-        super(Classes.Tessellator);
+    public Tesselator obj;
+    public Tessellator(Tesselator instance) {
+        //super(Classes.Tessellator);
         obj=instance;
     }
     public static Tessellator getInstance() {
-        return new Tessellator(Methods.getInstance_Tessellator.invoke(null));
+        return new Tessellator(Tesselator.getInstance());
     }
     public WorldRenderer getWorldRenderer(){
-        return new WorldRenderer(Methods.getWorldRenderer_Tessellator.invoke(obj));
+        return new WorldRenderer(obj.getBuilder());
     }
 
     public void draw() {
-        Methods.draw_Tessellator.invoke(obj);
+        obj.end();//Methods.draw_Tessellator.invoke(obj);
     }
 }

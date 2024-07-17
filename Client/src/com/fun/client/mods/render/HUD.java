@@ -7,7 +7,7 @@ import com.fun.client.mods.Module;
 import com.fun.client.settings.Setting;
 import com.fun.client.utils.ColorUtils;
 import com.fun.inject.injection.wrapper.impl.gui.ScaledResolutionWrapper;
-import com.fun.utils.font.FontManager;
+import com.fun.client.font.FontManager;
 import com.fun.utils.render.RenderUtils;
 import org.lwjgl.input.Keyboard;
 

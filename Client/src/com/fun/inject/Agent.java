@@ -10,7 +10,6 @@ import com.fun.inject.injection.asm.api.Mixin;
 import com.fun.inject.injection.asm.api.Transformer;
 import com.fun.inject.injection.asm.api.Transformers;
 import com.fun.inject.injection.asm.transformers.ClassLoaderTransformer;
-import com.fun.inject.injection.wrapper.impl.MinecraftWrapper;
 import com.fun.inject.mapper.Mapper;
 import com.fun.inject.utils.ReflectionUtils;
 import com.fun.network.packets.PacketInit;
@@ -21,9 +20,8 @@ import com.fun.gui.FishFrame;
 
 import com.fun.network.TCPClient;
 import com.fun.network.TCPServer;
-import com.fun.utils.font.FontManager;
+import com.fun.client.font.FontManager;
 
-import org.newdawn.slick.tests.NavMeshTest;
 import org.objectweb.asm.*;
 import org.objectweb.asm.tree.*;
 import org.apache.commons.io.FileUtils;
@@ -40,9 +38,7 @@ import java.net.URLClassLoader;
 import java.nio.file.Files;
 import java.security.ProtectionDomain;
 import java.util.HashMap;
-import java.util.ListIterator;
 import java.util.Map;
-import java.util.jar.JarFile;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 

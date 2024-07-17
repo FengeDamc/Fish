@@ -1,30 +1,29 @@
 package com.fun.client;
 
+import com.fun.client.mods.RegisterManager;
 import com.fun.client.settings.Setting;
 import com.fun.eventapi.EventManager;
 import com.fun.eventapi.event.events.EventRender3D;
-import com.fun.client.mods.ModuleManager;
 import com.fun.client.settings.SettingsManager;
 import com.fun.inject.injection.asm.api.Transformers;
-import com.fun.utils.render.Notification;
-import org.lwjgl.opengl.GL11;
+import com.fun.client.mods.render.notify.Notification;
 
 public class FunGhostClient {
     public static SettingsManager settingsManager;
-    public static ModuleManager moduleManager;
+    public static RegisterManager registerManager;
     public static void init(){
             try{
 
                 settingsManager=new SettingsManager();
 
 
-                moduleManager=new ModuleManager();
+                registerManager =new RegisterManager();
 
 
-                moduleManager.init();
+                registerManager.init();
 
 
-                moduleManager.notification.post(new Notification("Fish Injected", Notification.Type.WHITE));
+                registerManager.vModuleManager.notification.post(new Notification("Fish Injected", Notification.Type.WHITE));
 
 
             }
@@ -38,7 +37,7 @@ public class FunGhostClient {
         }
     }
     public static void destroyClient() {
-        moduleManager.mods.clear();
+        registerManager.mods.clear();
         settingsManager.getSettings().clear();
         Transformers.transformers.clear();
     }

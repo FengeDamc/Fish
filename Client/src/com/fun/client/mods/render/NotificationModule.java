@@ -2,14 +2,12 @@ package com.fun.client.mods.render;
 
 import com.fun.eventapi.event.events.EventRender2D;
 import com.fun.eventapi.event.events.EventTick;
-import com.fun.client.mods.Category;
-import com.fun.client.mods.Module;
-import com.fun.utils.render.Notification;
-
+import com.fun.client.mods.render.notify.Notification;
 
 import javax.vecmath.Vector2f;
 import java.util.ArrayList;
-
+import com.fun.client.mods.Category;
+import com.fun.client.mods.Module;
 public class NotificationModule extends Module {
     public ArrayList<Notification> notifications=new ArrayList<>();
     public NotificationModule() {
@@ -25,6 +23,7 @@ public class NotificationModule extends Module {
         for (int i = 0, notificationsSize = notifications.size(); i < notificationsSize; i++) {
             Notification n = notifications.get(i);
             n.render();
+            System.out.println("render notify");
         }
     }
     public void tick(EventTick event) {

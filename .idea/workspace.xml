@@ -17,7 +17,57 @@
     </loaded-modules>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="提交classDefiner for inject1.18.1forge&#10;注入原版forge不起作用需要退出重进服务器/单人世界&#10;网易forge 原版 lunar均没有此问题" />
+    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="大更新">
+      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/libs/fastutil-8.5.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/libs/lwjgl-3.2.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/command/CommandHandle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/font/FontManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/font/FontRenderer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/font/Glyph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/font/GlyphMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/font/Texture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/font/UnicodeFontRenderer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/render/notify/Notification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/client/command/CommandHandle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/client/font/FontManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/client/font/UnicodeFontRenderer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/client/mods/render/notify/Notification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/client/FunGhostClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/FunGhostClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/client/command/CommandHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/src/com/fun/client/command/CommandHandle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/client/mods/Module.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/mods/Module.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/inject/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/Agent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/inject/mapper/Mapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/mapper/Mapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/utils/font/FontManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/src/com/fun/client/font/FontManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/utils/font/UnicodeFontRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/src/com/fun/client/font/UnicodeFontRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/utils/render/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/src/com/fun/client/mods/render/notify/Notification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/Injection1_12_2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/Injection1_12_2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/src/com/fun/client/mods/render/HUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/src/com/fun/client/mods/render/HUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/src/com/fun/client/mods/render/NotificationModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/src/com/fun/client/mods/render/NotificationModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/Injection1_18_1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/Injection1_18_1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/render/HUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/render/HUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/render/NotificationModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/render/NotificationModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/wrapper/impl/render/DefaultVertexFormats.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/wrapper/impl/render/DefaultVertexFormats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/wrapper/impl/render/Tessellator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/wrapper/impl/render/Tessellator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/wrapper/impl/render/WorldRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/wrapper/impl/render/WorldRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/utils/RenderManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/utils/RenderManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/mappings/forge.srg" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/mappings/forge.srg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/mappings/vanilla.srg" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/mappings/vanilla.srg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/Injection1_8_9.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/Injection1_8_9.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/client/mods/combat/KillAura.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/client/mods/combat/KillAura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/client/mods/render/HUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/client/mods/render/HUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/client/mods/render/NotificationModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/client/mods/render/NotificationModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fish/FunGhostClient.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/FunGhostClient.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fish/injection_forge.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injection_forge.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fish/injection_none.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injection_none.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fish/injection_vanilla.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injection_vanilla.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fish/injections/1.12.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injections/1.12.2.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fish/injections/1.18.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injections/1.18.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fish/injections/1.8.9.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injections/1.8.9.jar" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,8 +87,8 @@
         <option value="JavaFXApplication" />
         <option value="AnnotationType" />
         <option value="Interface" />
-        <option value="package-info" />
         <option value="Class" />
+        <option value="package-info" />
       </list>
     </option>
   </component>
@@ -67,6 +117,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="NamedScopeManager">
+    <scope name="minecraft" pattern="" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -81,51 +134,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Run",
-    "Application.WindowEnumerator.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "true",
-    "JAR 应用程序.AugX-Registerer.jar.executor": "Run",
-    "JAR 应用程序.FunGhostClient.jar (1).executor": "Run",
-    "JAR 应用程序.FunGhostClient.jar.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/FengeGG/Fish/lib/libraries/commons-io/commons-io/2.4/commons-io-2.4.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "库",
-    "project.structure.proportion": "0.15234375",
-    "project.structure.side.proportion": "0.4013841",
-    "settings.editor.selected.configurable": "preferences.fileTypes",
-    "vue.rearranger.settings.migration": "true",
-    "应用程序.JNAUtils.executor": "Run",
-    "应用程序.Main.executor": "Run",
-    "应用程序.fun.inject.Main.executor": "Run"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.WindowEnumerator.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;JAR 应用程序.AugX-Registerer.jar.executor&quot;: &quot;Run&quot;,
+    &quot;JAR 应用程序.FunGhostClient.jar (1).executor&quot;: &quot;Run&quot;,
+    &quot;JAR 应用程序.FunGhostClient.jar.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/FengeGG/Fish/Injections/1.18.1/Injection1_18_1/src/com/fun/client&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15234375&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.4013841&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;应用程序.JNAUtils.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.Main.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.fun.inject.Main.executor&quot;: &quot;Run&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="fun.client.utils.Rotation" />
       <recent name="com.darkmagician6.eventapi.event.events" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\FengeGG\Fish\Injections\1.18.1\Injection1_18_1\libs" />
-      <recent name="D:\FengeGG\Fish\Injections\1.12.2\Injection1_12_2\src\com\fun" />
-      <recent name="D:\FengeGG\Fish\Injections\1.12.2\Injection1_12_2\src\mappings" />
-      <recent name="D:\FengeGG\Fish\Injections\1.12.2\Injection1_12_2\libs" />
-      <recent name="D:\FengeGG\Fish\Injections\1.8.9\Injection1_8_9\libs" />
+      <recent name="D:\FengeGG\Fish\Injections\1.18.1\Injection1_18_1\src\com\fun\client" />
+      <recent name="D:\FengeGG\Fish\Injections\1.18.1\Injection1_18_1\src\com\fun\client\font" />
+      <recent name="D:\FengeGG\Fish\Injections\1.8.9\Injection1_8_9\src\com\fun\client" />
+      <recent name="D:\FengeGG\Fish\Injections\1.12.2\Injection1_12_2\src\com\fun\client" />
+      <recent name="D:\FengeGG\Fish\Injections\1.18.1\Injection1_18_1\src\com\fun\client\mods\render" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\FengeGG\Fish\Injections\1.18.1\Injection1_18_1\libs" />
@@ -134,13 +187,21 @@
       <recent name="D:\FengeGG\FunGhostClient\src" />
       <recent name="D:\FengeGG\FunGhostClient" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.fun.client.mods.render.notify" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.fun.client.command" />
+      <recent name="com.fun.utils" />
+      <recent name="com.fun.client.mods.combat" />
       <recent name="com.fun.network.packets" />
       <recent name="com.fun.utils.math" />
-      <recent name="com.fun.utils.packet" />
-      <recent name="com.fun.client.mods" />
-      <recent name="com.fun.client.mods.world" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mc." />
+    </option>
   </component>
   <component name="RunManager" selected="JAR 应用程序.AugX-Registerer.jar">
     <configuration name="JNAUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -280,7 +341,11 @@
       <workItem from="1719743878634" duration="246000" />
       <workItem from="1719744136076" duration="69489000" />
       <workItem from="1720601787620" duration="24339000" />
-      <workItem from="1720841191683" duration="11507000" />
+      <workItem from="1720841191683" duration="11731000" />
+      <workItem from="1720922874281" duration="1876000" />
+      <workItem from="1721020746933" duration="911000" />
+      <workItem from="1721021849734" duration="6786000" />
+      <workItem from="1721041164125" duration="40994000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -634,7 +699,31 @@
       <option name="project" value="LOCAL" />
       <updated>1720916735413</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="提交">
+      <option name="closed" value="true" />
+      <created>1720917083838</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1720917083838</updated>
+    </task>
+    <task id="LOCAL-00046" summary="大更新">
+      <option name="closed" value="true" />
+      <created>1721052103273</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1721052103273</updated>
+    </task>
+    <task id="LOCAL-00047" summary="大更新">
+      <option name="closed" value="true" />
+      <created>1721052661417</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1721052661417</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -710,10 +799,11 @@
     <MESSAGE value="巨大的更新添加了重映射" />
     <MESSAGE value="我手贱给回滚了" />
     <MESSAGE value="我手贱给回滚了1" />
-    <MESSAGE value="提交" />
     <MESSAGE value="提交classDefiner for inject1.18.1forge" />
     <MESSAGE value="提交classDefiner for inject1.18.1forge&#10;注入原版forge不起作用需要退出重进服务器/单人世界&#10;网易forge 原版 lunar均没有此问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交classDefiner for inject1.18.1forge&#10;注入原版forge不起作用需要退出重进服务器/单人世界&#10;网易forge 原版 lunar均没有此问题" />
+    <MESSAGE value="提交" />
+    <MESSAGE value="大更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="大更新" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -728,5 +818,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

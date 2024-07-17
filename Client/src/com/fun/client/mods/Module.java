@@ -11,7 +11,7 @@ import com.fun.network.TCPServer;
 import com.fun.network.packets.PacketAddModule;
 import com.fun.network.packets.PacketSetKey;
 import com.fun.network.packets.PacketSetRun;
-import com.fun.utils.render.Notification;
+import com.fun.client.mods.render.notify.Notification;
 
 import java.io.Serializable;
 import java.util.ArrayList;

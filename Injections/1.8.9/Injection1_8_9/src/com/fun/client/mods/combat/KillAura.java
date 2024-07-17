@@ -4,7 +4,7 @@ import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
 import com.fun.client.mods.VModule;
 import com.fun.eventapi.event.events.EventRender2D;
-import com.fun.utils.font.FontManager;
+import com.fun.client.font.FontManager;
 import com.fun.utils.math.PerlinNoise;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.gui.Gui;
