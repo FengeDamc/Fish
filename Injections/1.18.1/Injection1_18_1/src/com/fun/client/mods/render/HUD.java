@@ -12,6 +12,7 @@ import com.fun.client.font.FontManager;
 import com.fun.utils.render.RenderUtils;
 import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.EntityRenderer;
 
 import javax.vecmath.Vector2d;
 import java.awt.*;
@@ -79,6 +80,7 @@ public class HUD extends Module {
                     x++;
                 }
             }
+
         }
         //System.out.println("hud");
     }
