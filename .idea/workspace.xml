@@ -17,44 +17,21 @@
     </loaded-modules>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="添加了1.18.1的字体渲染">
-      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/combat/AimBot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/combat/AutoClicker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/world/Eagle.java" afterDir="false" />
+    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="修复了1.18.1原版bind失效的问题">
+      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/combat/Target.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/client/mods/RegisterManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/mods/RegisterManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/inject/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/Agent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/inject/Mappings.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/Mappings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/inject/mapper/Mapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/mapper/Mapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/src/com/fun/client/font/UnicodeFontRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/src/com/fun/client/font/UnicodeFontRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/src/com/fun/client/mods/render/NotificationModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/src/com/fun/client/mods/render/NotificationModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/src/com/fun/inject/injection/asm/FishClassWriter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/src/com/fun/inject/injection/asm/api/Transformers.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/src/com/fun/inject/injection/asm/api/Transformers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/command/CommandHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/command/CommandHandle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/font/FontRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/font/FontRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/client/FunGhostClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/FunGhostClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/client/settings/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/settings/Setting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/VModuleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/VModuleManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/combat/AimBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/combat/AimBot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/combat/Reach.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/combat/Reach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/render/HUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/render/HUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/render/NotificationModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/render/NotificationModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/render/notify/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/render/notify/Notification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/FishClassWriter.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/api/Transformers.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/api/Transformers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/EntityRendererTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/EntityRendererTransformer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/EntityTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/EntityTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/GuiScreenTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/GuiScreenTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/KeyBindTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/KeyBindTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/MinecraftTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/MinecraftTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/utils/RenderManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/utils/RenderManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/mappings/vanilla.srg" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/mappings/vanilla.srg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/client/font/UnicodeFontRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/client/font/UnicodeFontRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/client/mods/combat/AimBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/client/mods/combat/AimBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/client/mods/render/NotificationModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/client/mods/render/NotificationModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/inject/injection/asm/FishClassWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/utils/FishClassWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/inject/injection/asm/api/Transformers.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/inject/injection/asm/api/Transformers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/NetworkHandlerTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/NetworkHandlerTransformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/NetworkManagerTransFormer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/NetworkManagerTransFormer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/inject/injection/wrapper/impl/other/IChatComponentWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/inject/injection/wrapper/impl/other/IChatComponentWrapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/FunGhostClient.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/FunGhostClient.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fish/fish.zip" beforeDir="false" afterPath="$PROJECT_DIR$/fish/fish.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fish/injection_forge.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injection_forge.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fish/injection_mcp.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injection_mcp.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/injection_none.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injection_none.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/injection_vanilla.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injection_vanilla.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/injections/1.12.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injections/1.12.2.jar" afterDir="false" />
@@ -343,39 +320,7 @@
       <workItem from="1721283051210" duration="484000" />
       <workItem from="1721284019813" duration="15958000" />
       <workItem from="1721394902370" duration="1353000" />
-      <workItem from="1721396460902" duration="4957000" />
-    </task>
-    <task id="LOCAL-00001" summary="Initial commit">
-      <option name="closed" value="true" />
-      <created>1710043646930</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1710043646930</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Initial commit">
-      <option name="closed" value="true" />
-      <created>1710059485167</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1710059485167</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Initial commit">
-      <option name="closed" value="true" />
-      <created>1710061312418</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1710061312418</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Initial commit">
-      <option name="closed" value="true" />
-      <created>1710061657390</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1710061657390</updated>
+      <workItem from="1721396460902" duration="19599000" />
     </task>
     <task id="LOCAL-00005" summary="Initial commit">
       <option name="closed" value="true" />
@@ -729,7 +674,47 @@
       <option name="project" value="LOCAL" />
       <updated>1721213946597</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="更新了1.18.1hud">
+      <option name="closed" value="true" />
+      <created>1721449155851</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1721449155851</updated>
+    </task>
+    <task id="LOCAL-00050" summary="更新了1.18.1hud">
+      <option name="closed" value="true" />
+      <created>1721449177003</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1721449177003</updated>
+    </task>
+    <task id="LOCAL-00051" summary="更新了1.18.1hud">
+      <option name="closed" value="true" />
+      <created>1721449217349</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1721449217350</updated>
+    </task>
+    <task id="LOCAL-00052" summary="修复了1.18.1原版bind失效的问题">
+      <option name="closed" value="true" />
+      <created>1721449341239</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1721449341239</updated>
+    </task>
+    <task id="LOCAL-00053" summary="修复了1.18.1原版bind失效的问题">
+      <option name="closed" value="true" />
+      <created>1721449411650</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1721449411650</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -786,7 +771,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Initial commit" />
     <MESSAGE value="a" />
     <MESSAGE value="fix java17+" />
     <MESSAGE value="更新了一些东西" />
@@ -810,7 +794,9 @@
     <MESSAGE value="提交" />
     <MESSAGE value="大更新" />
     <MESSAGE value="添加了1.18.1的字体渲染" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加了1.18.1的字体渲染" />
+    <MESSAGE value="更新了1.18.1hud" />
+    <MESSAGE value="修复了1.18.1原版bind失效的问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复了1.18.1原版bind失效的问题" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,8 +1,8 @@
 package com.fun.inject.injection.asm.api;
 
 import com.fun.inject.Mappings;
-import com.fun.inject.injection.asm.FishClassWriter;
 import com.fun.inject.injection.asm.transformers.*;
+import com.fun.inject.utils.FishClassWriter;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.tree.ClassNode;
@@ -55,15 +55,14 @@ public class Transformers {
     public static void init(){
         Transformers.transformers.clear();
         transformers.add(new EntityPlayerSP());
-//
-        //transformers.add(new GuiIngameTransformer());
-        //transformers.add(new NetworkManagerTransFormer());
-        //transformers.add(new NetworkHandlerTransformer());
-        //transformers.add(new EntityRendererTransformer());
-        //transformers.add(new KeyBindTransformer());
-        //transformers.add(new GuiScreenTransformer());
-        //transformers.add(new EntityTransformer());
-        //transformers.add(new MinecraftTransformer());
+        transformers.add(new GuiIngameTransformer());
+        transformers.add(new NetworkManagerTransFormer());
+        transformers.add(new NetworkHandlerTransformer());
+        transformers.add(new EntityRendererTransformer());
+        transformers.add(new KeyBindTransformer());
+        transformers.add(new GuiScreenTransformer());
+        transformers.add(new EntityTransformer());
+        transformers.add(new MinecraftTransformer());
 
 
     }

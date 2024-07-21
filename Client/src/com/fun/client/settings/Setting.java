@@ -94,7 +94,7 @@ public class Setting implements Serializable {
 				JComponent jc = jComponents.get(i);
 				boolean b = isVisible() == jc.isVisible();
 				jc.setVisible(isVisible());
-				System.out.println(jc.getName() + " " + jc.isVisible());
+				//System.out.println(jc.getName() + " " + jc.isVisible());
 				if (!b) {
 					SwingUtilities.invokeLater(() ->
 							SwingUtilities.updateComponentTreeUI(Agent.fishFrame));

@@ -9,6 +9,7 @@ import com.fun.inject.injection.asm.api.Inject;
 import com.fun.inject.injection.asm.api.Transformer;
 import com.fun.inject.Mappings;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.*;
@@ -44,7 +45,7 @@ public class EntityRendererTransformer extends Transformer {
         //list.add(new MethodInsnNode(INVOKESTATIC, Type.getInternalName(Lepton.class), "getEventBus", "()Lcn/matrixaura/lepton/listener/bus/EventBus;", false));
         //list.add(new TypeInsnNode(NEW, Type.getInternalName(EventRender3D.class)));
         //list.add(new InsnNode(DUP));
-        list.add(new VarInsnNode(FLOAD, 2));
+        list.add(new VarInsnNode(FLOAD, 1));
         list.add(new MethodInsnNode(INVOKESTATIC,Type.getInternalName(FunGhostClient.class),"onRender3D","(F)V"));
         //list.add(new MethodInsnNode(INVOKESPECIAL, Type.getInternalName(EventRender3D.class), "<initFrame>", "(F)V", false));
         //list.add(new MethodInsnNode(INVOKEVIRTUAL, Type.getInternalName(EventBus.class), "dispatch", "(Ljava/lang/Object;)Z", false));
@@ -75,6 +76,7 @@ public class EntityRendererTransformer extends Transformer {
                 if (t.cst instanceof Double && ((Double) t.cst) == 3.0) {
                     ldc = t;
                 }
+
             }
         }
 

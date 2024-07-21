@@ -4,6 +4,7 @@ import com.fun.eventapi.EventManager;
 import com.fun.eventapi.event.events.EventPacket;
 import com.fun.inject.injection.asm.api.Inject;
 import com.fun.inject.injection.asm.api.Transformer;
+import net.minecraft.client.Minecraft;
 import org.objectweb.asm.Type;
 
 import static org.objectweb.asm.Opcodes.*;
@@ -12,11 +13,11 @@ import org.objectweb.asm.tree.*;
 
 public class NetworkHandlerTransformer extends Transformer {
     public NetworkHandlerTransformer() {
-        super("net/minecraft/client/network/NetHandlerPlayClient");
+        super("net/minecraft/client/multiplayer/ClientPacketListener");
     }
 
 
-    @Inject(method = "sendPacket",descriptor = "(Lnet/minecraft/network/Packet;)V")
+    @Inject(method = "send",descriptor = "(Lnet/minecraft/network/protocol/Packet;)V")
     public void sendPacket(MethodNode mn) {
         InsnList list = new InsnList();
         LabelNode label = new LabelNode();

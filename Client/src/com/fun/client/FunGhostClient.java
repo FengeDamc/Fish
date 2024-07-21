@@ -43,6 +43,7 @@ public class FunGhostClient {
     }
     public static void onRender3D(float f){
         EventManager.call(new EventRender3D((f)));
+
     }
 
 }

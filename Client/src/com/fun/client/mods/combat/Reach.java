@@ -4,12 +4,13 @@ import com.fun.eventapi.event.events.EventAttackReach;
 import com.fun.eventapi.event.events.EventBlockReach;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
+import com.fun.client.mods.VModule;
 import com.fun.client.settings.Setting;
 import org.lwjgl.input.Keyboard;
 
 import java.util.Random;
 
-public class Reach extends Module {
+public class Reach extends VModule {
     private final Random random = new Random();
     private long lastRandomUpdateTime = 0;
     private double currentRange;
@@ -31,8 +32,8 @@ public class Reach extends Module {
     @Override
     public void onAttackReach(EventAttackReach event) {
         super.onAttackReach(event);
-        if (mc.getPlayer() != null) {
-            if (!sprintCheck.getValBoolean() || mc.getPlayer().isSprinting()) {
+
+            if (!sprintCheck.getValBoolean() || mc.player.isSprinting()) {
                 long currentTime = System.currentTimeMillis();
                 if (currentTime - lastRandomUpdateTime >= 1000 + random.nextInt(1001)) {
                     updateRandomRange();
@@ -42,17 +43,18 @@ public class Reach extends Module {
                     event.reach = currentRange;
                 }
             }
-        }
+
+
     }
 
     @Override
     public void onBlockReach(EventBlockReach event) {
         super.onBlockReach(event);
-        if (mc.getPlayer() != null) {
-            if (!sprintCheck.getValBoolean() || mc.getPlayer().isSprinting()) {
+
+            if (!sprintCheck.getValBoolean() || mc.player.isSprinting()) {
                 event.reach = blockRange.getValDouble();
             }
-        }
+
     }
 
     private void updateRandomRange() {
@@ -62,12 +64,12 @@ public class Reach extends Module {
     }
 
     private boolean shouldApplyReach() {
-        if (waterCheck.getValBoolean() && mc.getPlayer().isInWater()) {
+        if (waterCheck.getValBoolean() && mc.player.isInWater()) {
             return false;
         }
 
         if (verticalCheck.getValBoolean()) {
-            float pitch = mc.getPlayer().getPitch(); // 获取玩家视角的俯仰角
+            float pitch = mc.player.getXRot(); // 获取玩家视角的俯仰角
             float maxAngle = (float) verticalAngle.getValDouble();
             return !(pitch > maxAngle) && !(pitch < -maxAngle);
         }

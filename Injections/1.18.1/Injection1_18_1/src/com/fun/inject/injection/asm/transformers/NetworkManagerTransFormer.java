@@ -4,6 +4,7 @@ package com.fun.inject.injection.asm.transformers;
 import com.fun.eventapi.EventManager;
 import com.fun.eventapi.event.events.EventPacket;
 import com.fun.inject.Agent;
+import com.fun.inject.injection.asm.api.Inject;
 import com.fun.inject.injection.asm.api.Mixin;
 import com.fun.inject.injection.asm.api.Transformer;
 import com.fun.utils.version.methods.Methods;
@@ -14,35 +15,22 @@ import org.objectweb.asm.tree.*;
 
 public class NetworkManagerTransFormer extends Transformer {
     public NetworkManagerTransFormer() {
-        super("net/minecraft/network/NetworkManager");
+        super("net/minecraft/network/Connection");
     }
 
     // MD: ek/a (Lio/netty/channel/ChannelHandlerContext;Lff;)V net/minecraft/network/NetworkManager/channelRead0 (Lio/netty/channel/ChannelHandlerContext;Lnet/minecraft/network/Packet;)V
-    @Mixin(method = Methods.channelRead0_NetworkManager)
+    @Inject(method = "genericsFtw",descriptor = "(Lnet/minecraft/network/protocol/Packet;Lnet/minecraft/network/PacketListener;)V")
     public void channelRead0(MethodNode mn) {
-        Agent.logger.info("channelRead0: {} {}",Methods.channelRead0_NetworkManager.getName(),
-                Methods.channelRead0_NetworkManager.getDescriptor());
         InsnList list = new InsnList();
         LabelNode label = new LabelNode();
-        AbstractInsnNode varNode=null;
-        for (int i = 0; i < mn.instructions.size(); ++i) {
-            AbstractInsnNode node = mn.instructions.get(i);
+        list.add(new VarInsnNode(ALOAD, 0));
 
-            if (node instanceof VarInsnNode&&((VarInsnNode) node).var==2) {
+        list.add(new MethodInsnNode(INVOKESTATIC,Type.getInternalName(NetworkManagerTransFormer.class),"onPacket","(Ljava/lang/Object;)Z"));
+        list.add(new JumpInsnNode(IFEQ, label));
+        list.add(new InsnNode(RETURN));
 
-                list.add(new VarInsnNode(ALOAD, 2));
-                //list.add(new InsnNode(ICONST_0));
-                varNode=node;
-                list.add(new MethodInsnNode(INVOKESTATIC,Type.getInternalName(NetworkManagerTransFormer.class),"onPacket","(Ljava/lang/Object;)Z"));
-                list.add(new JumpInsnNode(IFEQ, label));
-                list.add(new InsnNode(RETURN));
-
-                list.add(label);
-                break;
-
-            }
-        }
-        mn.instructions.insert(varNode,list);
+        list.add(label);
+        mn.instructions.insert(list);
 
 
     }
