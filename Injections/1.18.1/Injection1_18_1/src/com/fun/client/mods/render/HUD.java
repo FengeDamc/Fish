@@ -12,7 +12,14 @@ import com.fun.client.font.FontManager;
 import com.fun.utils.render.RenderUtils;
 import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.particle.GlowParticle;
+import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.GlowSquidRenderer;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.PotionItem;
+import net.minecraft.world.item.alchemy.Potions;
+import net.minecraftforge.client.EffectRenderer;
 
 import javax.vecmath.Vector2d;
 import java.awt.*;
@@ -80,7 +87,6 @@ public class HUD extends Module {
                     x++;
                 }
             }
-
         }
         //System.out.println("hud");
     }
