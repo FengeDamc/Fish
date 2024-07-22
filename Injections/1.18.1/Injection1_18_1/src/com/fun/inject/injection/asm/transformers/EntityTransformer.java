@@ -55,7 +55,7 @@ public class EntityTransformer extends Transformer {
         //System.out.println("onStrafe1");
         //System.out.println("onStrafe");
         if(!(moveVec instanceof Vec3))throw new RuntimeException("invalid vec");
-        System.out.println("strafe");
+
         EventStrafe eventStrafe=new EventStrafe((float) ((Vec3) moveVec).z, (float) ((Vec3) moveVec).x,yaw,friction);
         if(entity instanceof LocalPlayer) EventManager.call(eventStrafe);
         return new EventStructure(new Vec3(eventStrafe.strafe, ((Vec3) moveVec).y, eventStrafe.forward),
