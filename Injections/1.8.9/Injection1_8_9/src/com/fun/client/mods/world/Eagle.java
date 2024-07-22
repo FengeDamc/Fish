@@ -1,15 +1,14 @@
 package com.fun.client.mods.world;
 
+import com.fun.client.mods.combat.AimAssist;
 import com.fun.eventapi.event.events.EventMoment;
+import com.fun.inject.injection.wrapper.impl.HitResult;
+import com.fun.inject.injection.wrapper.impl.world.BlockPosWrapper;
 import com.fun.utils.math.vecmath.Vec3;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
-import com.fun.client.mods.combat.AimAssist;
-import com.fun.inject.injection.wrapper.impl.HitResult;
-import com.fun.inject.injection.wrapper.impl.world.BlockPosWrapper;
-
 public class Eagle extends Module {
-    private int dis=0;
+
     public Eagle() {
         super("Eagle",Category.World);
     }
@@ -26,6 +25,7 @@ public class Eagle extends Module {
     @Override
     public void onMoment(EventMoment event) {
         super.onMoment(event);
+        System.out.println("onMoment");
         HitResult hitResult=mc.getHitResult();
         BlockPosWrapper blockPos=hitResult.getBlockPos();
         if(blockPos==null||hitResult.face==null)return;

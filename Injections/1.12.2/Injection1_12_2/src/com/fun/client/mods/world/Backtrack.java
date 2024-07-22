@@ -8,8 +8,8 @@ import com.fun.eventapi.event.events.EventPacket;
 import com.fun.eventapi.event.events.EventTick;
 import com.fun.inject.injection.wrapper.impl.entity.EntityWrapper;
 import com.fun.inject.injection.wrapper.impl.network.packets.PacketWrapper;
-import com.fun.inject.injection.wrapper.impl.network.packets.server.S12PacketEntityVelocity;
-import com.fun.inject.injection.wrapper.impl.network.packets.server.S14EntityPacket;
+import com.fun.inject.injection.wrapper.impl.network.packets.server.S12PacketEntityVelocityWrapper;
+import com.fun.inject.injection.wrapper.impl.network.packets.server.S14EntityPacketWrapper;
 import com.fun.inject.mapper.SideOnly;
 import com.fun.utils.packet.PacketUtils;
 import com.fun.utils.version.clazz.Classes;
@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class Backtrack extends Module {
     public Backtrack() {
-        super("BackTrack",Category.World);
+        super("BackTrack", Category.World);
     }
     public Setting lag=new Setting("Lag",this,4,0,20,true);
     public double realX,realY,realZ;
@@ -59,8 +59,8 @@ public class Backtrack extends Module {
         //System.out.println("onpacket:"+ Mappings.getUnobfClass(packet.packet.getClass().getName()));
         if(Classes.S14PacketEntity.isInstanceof(packet.packet)){
             //System.out.println("onpacket1");
-            S14EntityPacket packetEntityVelocity = new S14EntityPacket(packet.packet);
-            if(packetEntityVelocity.getEntityID()== FunGhostClient.moduleManager.target.target.getEntityID()){
+            S14EntityPacketWrapper packetEntityVelocity = new S14EntityPacketWrapper(packet.packet);
+            if(packetEntityVelocity.getEntityID()== FunGhostClient.registerManager.vModuleManager.target.target.getEntityID()){
                 //System.out.println("onpacket2");
                 EntityWrapper entity =new EntityWrapper(packetEntityVelocity.getEntityID());
                 if(Classes.EntityLivingBase.isInstanceof(entity.obj)){
@@ -74,8 +74,8 @@ public class Backtrack extends Module {
         }
         if(Classes.S12PACKET_ENTITY_VELOCITY.isInstanceof(packet.packet)){
             //System.out.println("onpacket1");
-            S12PacketEntityVelocity packetEntityVelocity = new S12PacketEntityVelocity(packet.packet);
-            if(packetEntityVelocity.getEntityID()== FunGhostClient.moduleManager.target.target.getEntityID()){
+            S12PacketEntityVelocityWrapper packetEntityVelocity = new S12PacketEntityVelocityWrapper(packet.packet);
+            if(packetEntityVelocity.getEntityID()== FunGhostClient.registerManager.vModuleManager.target.target.getEntityID()){
                 //System.out.println("onpacket2");
                 EntityWrapper entity =new EntityWrapper(packetEntityVelocity.getEntityID());
                 if(Classes.EntityLivingBase.isInstanceof(entity.obj)){

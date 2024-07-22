@@ -32,6 +32,7 @@ public class KeyBindTransformer extends Transformer {
 
     }
     public static void onKey(int key){
+        System.out.println("key: "+key);
         EventManager.call(new EventKey(key));
     }
 }

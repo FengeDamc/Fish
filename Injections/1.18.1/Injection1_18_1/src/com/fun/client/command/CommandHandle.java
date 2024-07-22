@@ -19,7 +19,8 @@ public class CommandHandle {
                 }
                 for(Module m: FunGhostClient.registerManager.mods){
                     if(s1[1].equalsIgnoreCase(m.getName())){
-                        m.setKey(s1[2].equalsIgnoreCase("none")?0: InputConstants.getKey(s1[2].toUpperCase()).getValue());
+                        m.setKey(s1[2].equalsIgnoreCase("none")||
+                                s1[2].equalsIgnoreCase("null")?-1: InputConstants.getKey("key.keyboard."+s1[2].toLowerCase()).getValue());
                         return true;
                     }
                 }

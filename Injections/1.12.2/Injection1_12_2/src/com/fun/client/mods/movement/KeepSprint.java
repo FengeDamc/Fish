@@ -1,9 +1,9 @@
 package com.fun.client.mods.movement;
 
-import com.fun.eventapi.event.events.EventUpdate;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
 import com.fun.client.settings.Setting;
+import com.fun.eventapi.event.events.EventUpdate;
 import org.lwjgl.input.Keyboard;
 
 public class KeepSprint extends Module {

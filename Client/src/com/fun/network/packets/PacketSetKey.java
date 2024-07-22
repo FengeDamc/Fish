@@ -13,6 +13,6 @@ public class PacketSetKey implements IPacket {
     public int value;
     @Override
     public void process() {
-        FunGhostClient.moduleManager.mods.get(settingIndex).setKey(value);
+        FunGhostClient.registerManager.mods.get(settingIndex).setKey(value);
     }
 }

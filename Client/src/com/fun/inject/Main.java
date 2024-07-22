@@ -4,12 +4,9 @@ package com.fun.inject;
 import com.sun.tools.attach.VirtualMachine;
 import com.fun.gui.Injector;
 import com.fun.network.TCPServer;
-import sun.jvmstat.monitor.*;
-import sun.jvmstat.perfdata.monitor.PerfStringMonitor;
 
 import java.io.*;
 import java.lang.reflect.Method;
-import java.nio.ByteBuffer;
 import java.security.SecureRandom;
 import java.util.jar.Attributes;
 import java.util.jar.JarOutputStream;

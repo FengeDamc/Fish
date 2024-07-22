@@ -1,8 +1,7 @@
-package com.fun.inject.injection.asm;
+package com.fun.inject.utils;
 
 import com.fun.inject.Agent;
-import net.minecraft.network.play.client.CPacketPlayerTryUseItem;
-import net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock;
+
 import org.objectweb.asm.ClassReader;
 
 public class FishClassWriter extends org.objectweb.asm.ClassWriter {
@@ -13,8 +12,6 @@ public class FishClassWriter extends org.objectweb.asm.ClassWriter {
     public FishClassWriter(ClassReader classReader, int i) {
         super(classReader, i);
 
-        
-        
     }
 
     @Override

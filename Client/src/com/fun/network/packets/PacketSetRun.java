@@ -13,6 +13,6 @@ public class PacketSetRun implements IPacket {
     public boolean value;
     @Override
     public void process() {
-        FunGhostClient.moduleManager.mods.get(settingIndex).setRunning(value);
+        FunGhostClient.registerManager.mods.get(settingIndex).setRunning(value);
     }
 }

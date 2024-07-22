@@ -1,16 +1,8 @@
 package com.fun.network.packets;
 
-import com.fun.client.FunGhostClient;
-import com.fun.client.config.ConfigModule;
 import com.fun.gui.FishFrame;
-import com.fun.inject.Agent;
-import com.fun.inject.InjectorUtils;
 import com.fun.inject.Main;
-import com.fun.inject.MinecraftType;
-import com.fun.inject.mapper.Mapper;
 import com.fun.network.IPacket;
-
-import java.io.File;
 
 public class PacketMCPath implements IPacket
 {

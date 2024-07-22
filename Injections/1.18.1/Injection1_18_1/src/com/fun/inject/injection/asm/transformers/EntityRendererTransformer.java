@@ -20,19 +20,18 @@ import static org.objectweb.asm.Opcodes.INVOKESTATIC;
 
 public class EntityRendererTransformer extends Transformer {
     public EntityRendererTransformer() {
-        super("net/minecraft/client/renderer/EntityRenderer");
+        super("net/minecraft/client/renderer/GameRenderer");
     }
 
-    @Inject(method = "renderWorldPass", descriptor = "(IFJ)V")
+    @Inject(method = "renderLevel", descriptor = "(FJLcom/mojang/blaze3d/vertex/PoseStack;)V")
     public void renderWorldPass(MethodNode methodNode) {
         AbstractInsnNode ldcNode = null;
         for (int i = 0; i < methodNode.instructions.size(); ++i) {
             AbstractInsnNode a = methodNode.instructions.get(i);
             if (a instanceof MethodInsnNode) {
                 MethodInsnNode m = (MethodInsnNode) a;
-                if (m.owner.equals(Mappings.getObfClass("net/minecraft/profiler/Profiler"))
-                        && m.name.equals(Mappings.getObfMethod("func_76318_c"))) { // endStartSection
-
+                if (m.owner.equals(Mappings.getObfClass("net/minecraft/util/profiling/ProfilerFiller"))
+                        && m.name.equals(Mappings.getObfMethod("m_6182_"))) { // endStartSection
                     ldcNode = a;
                 }
             }
@@ -57,7 +56,7 @@ public class EntityRendererTransformer extends Transformer {
 
     }
 
-    @Inject(method = "getMouseOver", descriptor = "(F)V")
+    @Inject(method = "pick", descriptor = "(F)V")
     public void getMouseOver(MethodNode methodNode) {
 
         InsnList list = new InsnList();
@@ -66,8 +65,8 @@ public class EntityRendererTransformer extends Transformer {
         for (int i = 0; i < methodNode.instructions.size(); ++i) {
             AbstractInsnNode x = methodNode.instructions.get(i);
             if(x instanceof MethodInsnNode){//func_78757_d,getBlockReachDistance,0,player reach distance = 4F
-                if(Mappings.getObfMethod("func_78757_d").equals(((MethodInsnNode) x).name)&&
-                ((MethodInsnNode) x).owner.equals(Mappings.getObfClass("net/minecraft/client/multiplayer/PlayerControllerMP")))
+                if(Mappings.getObfMethod("m_105286_").equals(((MethodInsnNode) x).name)&&
+                ((MethodInsnNode) x).owner.equals(Mappings.getObfClass("net/minecraft/client/multiplayer/MultiPlayerGameMode")))
                     min= (MethodInsnNode) x;
             }
             if (x instanceof LdcInsnNode) {

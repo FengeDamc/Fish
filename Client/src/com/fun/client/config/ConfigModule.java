@@ -1,8 +1,8 @@
 package com.fun.client.config;
 
 
-import com.fun.client.mods.Module;
 import com.fun.client.FunGhostClient;
+import com.fun.client.mods.Module;
 import com.fun.client.settings.Setting;
 import com.fun.inject.Main;
 
@@ -43,7 +43,7 @@ public class ConfigModule {
 
             }
         }
-        for (Module mod :FunGhostClient.moduleManager.mods) {
+        for (Module mod :FunGhostClient.registerManager.mods) {
             mod.configModule.save(writer);
         }
         if (writer != null) {
@@ -78,7 +78,7 @@ public class ConfigModule {
                 String[] astring = s.split(":");
 
                 //Minecraft.getLogger().info(mod.name);
-                for(Module m:FunGhostClient.moduleManager.mods) {
+                for(Module m:FunGhostClient.registerManager.mods) {
                     if ((m.getName() + "-" + "running").equalsIgnoreCase(astring[0])) {
                         m.setRunning(Boolean.parseBoolean(astring[1]));
                     }

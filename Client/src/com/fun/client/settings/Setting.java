@@ -1,8 +1,8 @@
 package com.fun.client.settings;
 
 
-import com.fun.client.mods.Module;
 import com.fun.client.FunGhostClient;
+import com.fun.client.mods.Module;
 import com.fun.inject.Agent;
 import com.fun.network.TCPClient;
 import com.fun.network.TCPServer;

@@ -1,20 +1,21 @@
 package com.fun.client.mods.combat;
 
-import com.fun.eventapi.event.events.EventTick;
-import com.fun.eventapi.event.events.EventUpdate;
-import com.fun.utils.math.vecmath.Vec3;
 import com.fun.client.FunGhostClient;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
 import com.fun.client.settings.Setting;
+import com.fun.eventapi.event.events.EventTick;
+import com.fun.eventapi.event.events.EventUpdate;
 import com.fun.inject.injection.wrapper.impl.entity.EntityPlayerSPWrapper;
 import com.fun.inject.injection.wrapper.impl.entity.EntityWrapper;
 import com.fun.inject.injection.wrapper.impl.setting.GameSettingsWrapper;
+import com.fun.utils.math.vecmath.Vec3;
+
 import javax.vecmath.Vector2f;
 
 public class AutoBlocking extends Module {
     public AutoBlocking() {
-        super("AutoBlocking",Category.Combat);
+        super("AutoBlocking", Category.Combat);
 
     }
     public boolean block=false;
@@ -52,8 +53,8 @@ public class AutoBlocking extends Module {
     public void onUpdate(EventUpdate event) {
         super.onUpdate(event);
 
-        EntityWrapper target= FunGhostClient.moduleManager.target.target;
-        if(target==null||FunGhostClient.moduleManager.target.dist< minBlockRange.getValDouble()||FunGhostClient.moduleManager.target.dist>maxBlockRange.getValDouble()) {
+        EntityWrapper target= FunGhostClient.registerManager.vModuleManager.target.target;
+        if(target==null||FunGhostClient.registerManager.vModuleManager.target.dist< minBlockRange.getValDouble()||FunGhostClient.registerManager.vModuleManager.target.dist>maxBlockRange.getValDouble()) {
             block=false;
             return;
         }

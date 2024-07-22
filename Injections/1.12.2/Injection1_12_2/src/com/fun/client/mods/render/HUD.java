@@ -1,11 +1,11 @@
 package com.fun.client.mods.render;
 
-import com.fun.eventapi.event.events.EventRender2D;
 import com.fun.client.FunGhostClient;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
 import com.fun.client.settings.Setting;
 import com.fun.client.utils.ColorUtils;
+import com.fun.eventapi.event.events.EventRender2D;
 import com.fun.inject.injection.wrapper.impl.gui.ScaledResolutionWrapper;
 import com.fun.client.font.FontManager;
 import com.fun.utils.render.RenderUtils;
@@ -48,7 +48,7 @@ public class HUD extends Module {
         int yCount = 0;
         int index = 0;
         long x = 0;
-        ArrayList<Module> mods = FunGhostClient.moduleManager.mods;
+        ArrayList<Module> mods = FunGhostClient.registerManager.mods;
         ArrayList<Module> running=new ArrayList<Module>();
 
         for (Module m : mods) {

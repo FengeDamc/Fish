@@ -1,15 +1,9 @@
 package com.fun.client.mods;
 
-import com.fun.client.mods.world.Backtrack;
+
 import com.fun.eventapi.EventManager;
 import com.fun.eventapi.EventTarget;
 import com.fun.eventapi.event.events.*;
-import com.fun.client.mods.combat.*;
-import com.fun.client.mods.movement.Flight;
-import com.fun.client.mods.movement.KeepSprint;
-import com.fun.client.mods.render.HUD;
-import com.fun.client.mods.render.NotificationModule;
-import com.fun.client.mods.world.Eagle;
 import com.fun.client.FunGhostClient;
 import com.fun.client.config.ConfigModule;
 import com.fun.inject.injection.wrapper.impl.setting.GameSettingsWrapper;
@@ -19,41 +13,18 @@ import java.util.ArrayList;
 
 import static com.fun.client.utils.Rotation.Rotation.mc;
 
-public class ModuleManager {
+public class RegisterManager {
     public ArrayList<Module> mods = new ArrayList<>();
     public VModuleManager vModuleManager;
 
-    public KeepSprint keepSprint;
 
 
-    public HUD hud;
-    public Reach reach;
-    public AimAssist aimAssist;
-    public Flight flight;
-    public AutoClicker autoClicker;
-    public Eagle eagle;
-    public Velocity velocity;
-    public AutoBlocking autoBlocking;
-    public NotificationModule notification;
-    public Target target;
-    public Backtrack backtrack;
 
     public void init() {
         mods.clear();
         EventManager.register(this);
         try {
             vModuleManager = new VModuleManager();
-            keepSprint = new KeepSprint("KeepSprint");
-            hud = new HUD("HUD");
-            reach = new Reach();
-            autoClicker = new AutoClicker();
-            aimAssist = new AimAssist();
-            flight = new Flight("Flight", Category.Movement);
-            eagle = new Eagle();
-            velocity = new Velocity();
-            autoBlocking = new AutoBlocking();
-            notification = new NotificationModule();
-            target = new Target();
             vModuleManager.init();
         }
         catch (Exception e){
@@ -65,13 +36,14 @@ public class ModuleManager {
     @EventTarget
     public void onUpdate(EventUpdate event) {
         //System.out.println("update");
-        for (Module m : FunGhostClient.moduleManager.mods) {
+        for (Module m : FunGhostClient.registerManager.mods) {
             //System.out.println(m.getName());
 
             if (m.running) {
                 m.onUpdate(event);
             }
         }
+        vModuleManager.notification.tick();
 
 
     }
@@ -136,7 +108,7 @@ public class ModuleManager {
         for (Module m : mods) {
             if (m.running) m.onRender2D(event);
         }
-        notification.render(event);
+        vModuleManager.notification.render(event);
     }
 
     @EventTarget
@@ -160,15 +132,15 @@ public class ModuleManager {
     }
     @EventTarget
     public void onTick(EventTick event){
-        mc.getGameSettings().getKey(GameSettingsWrapper.USE).setPressed((boolean)Methods.isButtonDown.invoke(null,1));
-        mc.getGameSettings().getKey(GameSettingsWrapper.ATTACK).setPressed((boolean)Methods.isButtonDown.invoke(null,0));
+        vModuleManager.mouseFix();
         for (Module m : mods) {
             if (m.running){
 
                 m.onTick(event);
             }
         }
-        notification.tick(event);
+
+
 
     }
 

@@ -63,7 +63,7 @@ public class FishFrame extends JFrame {
         for(Category c:Category.values()){
             DefaultMutableTreeNode ct=new DefaultMutableTreeNode(c.name());
             settings.add(ct);
-            for (Module m: FunGhostClient.moduleManager.mods){
+            for (Module m: FunGhostClient.registerManager.mods){
                 if(m.category==c){
                     DefaultMutableTreeNode mt=new DefaultMutableTreeNode(m.getName());
 
@@ -102,7 +102,7 @@ public class FishFrame extends JFrame {
                     int i=0;
                     String name = ((DefaultMutableTreeNode) ((JTree) e.getSource()).getLastSelectedPathComponent()).getUserObject().toString();
                     if (name == null) return;
-                    Module m = FunGhostClient.moduleManager.getModule(name);
+                    Module m = FunGhostClient.registerManager.getModule(name);
                     if (m == null) return;
                     for(Component jc:jPanel.getComponents()){
                         for(ComponentListener cl:jc.getComponentListeners()){

@@ -50,8 +50,8 @@ public class Notification {
     public void render(){
 
 
-        RenderUtils.drawRoundedRect((int)currentPos.x-width,(int)currentPos.y-height,(int)currentPos.x,(int)currentPos.y,5,this.type.color.getRGB());
-        FontManager.tenacity20.drawCenteredString(RenderManager.currentPoseStack,text,(int)currentPos.x-width,(int)currentPos.y-height+3,Color.WHITE.getRGB());
+        RenderManager.drawRoundedRect((int)currentPos.x-width,(int)currentPos.y-height,(int)currentPos.x,(int)currentPos.y,5,this.type.color.getRGB());
+        FontManager.tenacity20.drawString(RenderManager.currentPoseStack,text,(int)currentPos.x-width,(int)currentPos.y-height+3,Color.WHITE.getRGB());
     }
     public static Vector2f limitPos(final Vector2f currentRotation, final Vector2f targetRotation) {
         float xDifference =  targetRotation.x-currentRotation.x;

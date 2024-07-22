@@ -30,4 +30,8 @@ public enum MinecraftVersion {
     public String[] getClientNames() {
         return clientNames;
     }
+
+    public String getInjection() {
+        return "/injections/"+injection;
+    }
 }

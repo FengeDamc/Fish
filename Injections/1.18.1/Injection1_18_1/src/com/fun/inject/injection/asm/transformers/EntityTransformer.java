@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 public class EntityTransformer extends Transformer {
     public EntityTransformer() {
-        super(Classes.Entity);
+        super("net/minecraft/world/entity/Entity");
     }
     @Inject(method = "moveRelative",descriptor = "(FLnet/minecraft/world/phys/Vec3;)V")
     public void onMoveFly(MethodNode methodNode) {

@@ -7,9 +7,9 @@ import com.fun.inject.Mappings;
 import com.fun.inject.utils.ReflectionUtils;
 import com.fun.inject.injection.wrapper.impl.network.packets.PacketWrapper;
 
-public class S12PacketEntityVelocity extends PacketWrapper {
+public class S12PacketEntityVelocityWrapper extends PacketWrapper {
 
-    public S12PacketEntityVelocity(Object obj) {
+    public S12PacketEntityVelocityWrapper(Object obj) {
         super(Classes.S12PACKET_ENTITY_VELOCITY, obj);
     }
     //FD: hm/a net/minecraft/network/play/server/S12PacketEntityVelocity/field_149417_a entityId

@@ -1,27 +1,18 @@
 package com.fun.client.mods.combat;
 
 import com.fun.client.mods.Category;
-import com.fun.client.mods.Module;
 import com.fun.client.mods.VModule;
 import com.fun.eventapi.event.events.EventRender2D;
 import com.fun.client.font.FontManager;
 import com.fun.utils.math.PerlinNoise;
-import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemSword;
-import net.minecraft.network.play.client.*;
-import net.minecraft.util.*;
-import net.minecraft.world.WorldSettings;
-import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.vector.Vector2f;
 
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.Objects;
 
 public class KillAura extends VModule {
     public float range = 6.2173613F;

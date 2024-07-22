@@ -73,15 +73,15 @@ public class HUD extends Module {
 
         for(Module m:running){
             ScaledResolutionWrapper sr=new ScaledResolutionWrapper(mc);
-            double offset = yCount * (FontManager.tenacity.getFontHeight("F") + 6);//Minecraft.getInstance().font.width(
+            double offset = yCount * (FontManager.tenacity.getFontHeight("F") + 2);//Minecraft.getInstance().font.width(
 
             if (m.running) {
                 if (!modBlacklist.contains(m.getClass().getName())) {
                     int color=ColorUtils.mixColors(new Color((int) mixColor1.getValDouble()),new Color((int) mixColor2.getValDouble()),ColorUtils.getBlendFactor(new Vector2d(sr.getScaledWidth() -FontManager.tenacity.getStringWidth(m.getName())-6, (int) offset))).getRGB();
-                    RenderManager.drawRoundedRect(sr.getScaledWidth(), (int) (2 + offset),sr.getScaledWidth()+2,(int) (-2 + offset+FontManager.tenacity.getFontHeight("F")),3,new Color(color).getRGB());
-                    RenderManager.drawRoundedRect((int) (sr.getScaledWidth() - FontManager.tenacity.getStringWidth(m.getName())-6), (int) offset+2, sr.getScaledWidth(), (int) (FontManager.tenacity.getFontHeight("F") + offset),5,new Color(225, 242, 255, 105).getRGB());
+                    RenderManager.drawRoundedRect(sr.getScaledWidth(), (int) (6 + offset),sr.getScaledWidth()+2,(int) (2 + offset+FontManager.tenacity.getFontHeight("F")),3,new Color(color).getRGB());
+                    RenderManager.drawRoundedRect((int) (sr.getScaledWidth() - FontManager.tenacity.getStringWidth(m.getName())-6), (int) offset+6, sr.getScaledWidth(), (int) (FontManager.tenacity.getFontHeight("F") + offset+4),5,new Color(225, 242, 255, 105).getRGB());
                     FontManager.tenacity.drawStringWithShadow(RenderManager.currentPoseStack,m.getName(),
-                            sr.getScaledWidth() -FontManager.tenacity.getStringWidth(m.getName())-4, (int) (offset+4),color);//FontManager.tenacity.drawStringWithShadow( m.getName(), sr.getScaledWidth() -FontManager.tenacity.getStringWidth(m.getName())-4, (int) (4 + offset),color);
+                            sr.getScaledWidth() -FontManager.tenacity.getStringWidth(m.getName())-4, (int) (offset+8),color);//FontManager.tenacity.drawStringWithShadow( m.getName(), sr.getScaledWidth() -FontManager.tenacity.getStringWidth(m.getName())-4, (int) (4 + offset),color);
                     yCount++;
                     index++;
                     x++;

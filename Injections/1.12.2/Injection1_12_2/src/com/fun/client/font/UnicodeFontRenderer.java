@@ -52,7 +52,7 @@ public class UnicodeFontRenderer {
          //this.sr = new ScaledResolutionWrapper(MinecraftWrapper.get());
          //Thread.currentThread().setContextClassLoader(Agent.classLoader);
          load(string);
-         //GL11.glPushMatrix();
+         GL11.glPushMatrix();
          GL11.glScaled(
             (double)(1.0F / (int)this.sr.getScaleFactor()),
             (double)(1.0F / (int)this.sr.getScaleFactor()),
@@ -64,7 +64,6 @@ public class UnicodeFontRenderer {
          if (!blend) {
             GL11.glEnable(3042);
          }
-
          if (lighting) {
             GL11.glDisable(2896);
          }
@@ -90,7 +89,7 @@ public class UnicodeFontRenderer {
          }
 
          GlStateManagerWrapper.color(0.0F, 0.0F, 0.0F);
-         //GL11.glPopMatrix();
+         GL11.glPopMatrix();
          GlStateManagerWrapper.bindTexture(0);
          return x;
       }

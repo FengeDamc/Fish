@@ -4,8 +4,8 @@ import com.fun.inject.injection.wrapper.impl.network.packets.PacketWrapper;
 import com.fun.utils.version.clazz.Classes;
 import com.fun.utils.version.methods.Methods;
 
-public class S18PacketEntityTeleport extends PacketWrapper {
-    public S18PacketEntityTeleport(Object in) {
+public class S18PacketEntityTeleportWrapper extends PacketWrapper {
+    public S18PacketEntityTeleportWrapper(Object in) {
         super(Classes.S18PacketEntityTeleport,in);
 
     }

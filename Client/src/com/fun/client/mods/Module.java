@@ -13,7 +13,6 @@ import com.fun.network.packets.PacketSetKey;
 import com.fun.network.packets.PacketSetRun;
 import com.fun.client.mods.render.notify.Notification;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Module{
@@ -28,7 +27,7 @@ public class Module{
     public Module(int keyIn,String nameIn,Category categoryIn){
         key=keyIn;
         name=nameIn;
-        FunGhostClient.moduleManager.mods.add(this);
+        FunGhostClient.registerManager.mods.add(this);
         //EventManager.register(this);
         category=categoryIn;
         configModule=new ConfigModule(this);
@@ -55,14 +54,14 @@ public class Module{
                 else onDisable();
             }
             if (!TCPServer.isNetworkThread()) {
-                TCPClient.send(TCPServer.getTargetPort(), new PacketSetRun(FunGhostClient.moduleManager.mods.indexOf(this),running));
+                TCPClient.send(TCPServer.getTargetPort(), new PacketSetRun(FunGhostClient.registerManager.mods.indexOf(this),running));
             }
         }
     }
     public void setKey(int key){
         this.key=key;
         if (!TCPServer.isNetworkThread()) {
-            TCPClient.send(TCPServer.getTargetPort(), new PacketSetKey(FunGhostClient.moduleManager.mods.indexOf(this),key));
+            TCPClient.send(TCPServer.getTargetPort(), new PacketSetKey(FunGhostClient.registerManager.mods.indexOf(this),key));
         }
     }
 
@@ -115,10 +114,10 @@ public class Module{
     public void onTick(EventTick event) {
     }
     public void onEnable(){
-        FunGhostClient.moduleManager.notification.post(new Notification("Enable "+getName(), Notification.Type.GREEN));
+        FunGhostClient.registerManager.vModuleManager.notification.post(new Notification("Enable "+getName(), Notification.Type.GREEN));
 
     }
     public void onDisable(){
-        FunGhostClient.moduleManager.notification.post(new Notification("Disable "+getName(), Notification.Type.RED));
+        FunGhostClient.registerManager.vModuleManager.notification.post(new Notification("Disable "+getName(), Notification.Type.RED));
     }
 }

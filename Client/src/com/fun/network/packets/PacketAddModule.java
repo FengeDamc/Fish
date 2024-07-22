@@ -24,8 +24,8 @@ public class PacketAddModule implements IPacket {
         Module m=new Module();
         m.name=name;
         m.key=key;
-        m.category=Category.values()[category];
+        m.category= Category.values()[category];
         m.configModule=new ConfigModule(m);
-        FunGhostClient.moduleManager.mods.add(m);//key,name,Category.values()[category]
+        FunGhostClient.registerManager.mods.add(m);//key,name,Category.values()[category]
     }
 }

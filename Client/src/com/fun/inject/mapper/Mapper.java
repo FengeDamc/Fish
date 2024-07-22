@@ -1,6 +1,7 @@
 package com.fun.inject.mapper;
 
 import com.fun.inject.Agent;
+import com.fun.inject.Mappings;
 import com.fun.inject.MinecraftType;
 import com.fun.utils.file.IOUtils;
 import org.objectweb.asm.ClassReader;
@@ -24,6 +25,7 @@ public class Mapper {
     public static HashMap<String,String> classMap = new HashMap<>();
     public static HashMap<String,String> methodMap = new HashMap<>();
     public static HashMap<String,String> fieldMap = new HashMap<>();
+    public static final String[] obfibleClasses=new String[]{"com/mojang","net/minecraft"};
     public static byte[] getAllBytes(InputStream inputStream) throws IOException {
         ByteArrayOutputStream buffer = new ByteArrayOutputStream();
         int nRead;
@@ -41,6 +43,7 @@ public class Mapper {
     }
 
     public static File mapJar(File jarIn,MinecraftType mcType){
+        //if(mcType==MinecraftType.NONE)return jarIn;
         File tj=new File(new File(jarIn.getParent()).getParent(),"/injection_"+mcType.getType()+".jar");
         System.out.println(tj.getAbsolutePath());
         try(JarFile jar = new JarFile(jarIn)){
@@ -94,7 +97,7 @@ public class Mapper {
             classReader.accept(classNode, ClassReader.EXPAND_FRAMES);
             ArrayList<MethodNode> removeMethods = new ArrayList<>();
             ArrayList<FieldNode> removeField = new ArrayList<>();
-
+            //System.out.println("start remap: "+classNode.name);
             for (MethodNode methodNode : classNode.methods) {
                 if(methodNode.visibleAnnotations!=null){
                     for (AnnotationNode annotationNode : methodNode.visibleAnnotations) {
@@ -113,23 +116,28 @@ public class Mapper {
                         }
                     }
                 }
+                if(mT==MinecraftType.NONE)continue;
                 methodNode.name = getObfMethod(methodNode.name, classNode.name, methodNode.desc);
                 methodNode.desc = getObfMethodDesc(methodNode.desc);
-
                 for (AbstractInsnNode insnNode : methodNode.instructions) {
                     if (insnNode instanceof MethodInsnNode) {
+                        if(isObfibleClass(((MethodInsnNode) insnNode).owner)) {
+                            Class<?> owner=Agent.findClass(getObfClass(((MethodInsnNode) insnNode).owner));
 
-                        ((MethodInsnNode) insnNode).name = getObfMethod(((MethodInsnNode) insnNode).name,
-                                ((MethodInsnNode) insnNode).owner, ((MethodInsnNode) insnNode).desc);
+                            ((MethodInsnNode) insnNode).name = getObfMethod(((MethodInsnNode) insnNode).name,
+                                    owner, ((MethodInsnNode) insnNode).desc);
+                            ((MethodInsnNode) insnNode).owner = getObfClass(((MethodInsnNode) insnNode).owner);
+
+                        }
                         ((MethodInsnNode) insnNode).desc = getObfMethodDesc(((MethodInsnNode) insnNode).desc);
-                        ((MethodInsnNode) insnNode).owner = getObfClass(((MethodInsnNode) insnNode).owner);
-                        desc=((MethodInsnNode) insnNode).desc;
-                        //System.out.println(String.format("name:%s owner:%s desc:%s",((MethodInsnNode) insnNode).name,((MethodInsnNode) insnNode).owner,((MethodInsnNode) insnNode).desc));
+                        desc = ((MethodInsnNode) insnNode).desc;
                     }
                     if (insnNode instanceof FieldInsnNode) {
-                        ((FieldInsnNode) insnNode).name = getObfField(((FieldInsnNode) insnNode).name, ((FieldInsnNode) insnNode).owner);
+                        if(isObfibleClass(((FieldInsnNode) insnNode).owner)) {
+                            ((FieldInsnNode) insnNode).name = getObfField(((FieldInsnNode) insnNode).name, ((FieldInsnNode) insnNode).owner);
+                            ((FieldInsnNode) insnNode).owner = getObfClass(((FieldInsnNode) insnNode).owner);
+                        }
                         ((FieldInsnNode) insnNode).desc = getObfFieldDesc(((FieldInsnNode) insnNode).desc);
-                        ((FieldInsnNode) insnNode).owner = getObfClass(((FieldInsnNode) insnNode).owner);
 
                     }
                     if (insnNode instanceof TypeInsnNode) {
@@ -186,7 +194,7 @@ public class Mapper {
                         }
                     }
                 }
-
+                if(mT==MinecraftType.NONE)continue;
                 fieldNode.name=getObfField(fieldNode.name,classNode.name);
                 fieldNode.desc = getObfFieldDesc(fieldNode.desc);
                 //for(){
@@ -195,10 +203,13 @@ public class Mapper {
             }
             classNode.methods.removeAll(removeMethods);
             classNode.fields.removeAll(removeField);
-            classNode.name = getObfClass(classNode.name);
-            classNode.superName = getObfClass(classNode.superName);
+            if(mT!=MinecraftType.NONE) {
+                classNode.name = getObfClass(classNode.name);
+                classNode.superName = getObfClass(classNode.superName);
+            }
             ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS | ClassWriter.COMPUTE_FRAMES);
             classNode.accept(writer);
+            //System.out.println(classNode.name);
             return writer.toByteArray();
 
         }
@@ -215,13 +226,49 @@ public class Mapper {
         return t==null?mcpName:t+(isArray?"[]":"");
     }
     public static String getObfMethod(String mcpName,String owner,String desc){
+        String s=getObfMethodOrNull(mcpName, owner, desc);
+        return s==null?mcpName:s;
+    }
+    public static boolean isObfibleClass(String name){
+        name=name.replace('.','/');
+        for (String cname : obfibleClasses) {
+            if (name.startsWith(cname))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    public static String getObfMethodOrNull(String mcpName,String owner,String desc){
+        owner=owner.replace('.','/');
         String str=methodMap.get(owner + "/" + mcpName + " " + desc);
         if(str==null){
-            return mcpName;
+            return null;
         }
         String[] s1=str.split(" ")[0].split("/");
-        String t= s1[s1.length-1];
-        return t==null?mcpName:t;
+        return s1[s1.length-1];
+    }
+    public static String getObfMethod(String mcpName,Class<?> owner,String desc)
+    {
+        String s;
+        //System.out.println(owner.getName());
+        s=getObfMethodOrNull(mcpName, Mappings.getUnobfClass(owner.getName()),desc);
+        if(s!=null)return s;
+        Class<?> c= owner;
+
+        while (c.getSuperclass()!=null){
+            s=getObfMethodOrNull(mcpName,Mappings.getUnobfClass(c.getName()),desc);
+            if(s!=null)return s;
+            c=c.getSuperclass();
+            //System.out.println("1"+c.getName());
+        }
+        //System.out.println("2"+owner.getName());
+        Class<?>[] is=owner.getInterfaces();
+        for (Class<?> i : is) {
+            s = getObfMethodOrNull(mcpName, Mappings.getUnobfClass(i.getName()), desc);
+            if (s != null) return s;
+        }
+        return mcpName;
     }
     public static String getObfField(String mcpName,String owner){
         String str=fieldMap.get(owner + "/" + mcpName);
@@ -326,6 +373,7 @@ public class Mapper {
 
                 }
             }
+
         }
         catch(IOException e){
 

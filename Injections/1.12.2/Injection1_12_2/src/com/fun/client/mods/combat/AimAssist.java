@@ -1,19 +1,19 @@
 package com.fun.client.mods.combat;
 
-import com.fun.eventapi.event.events.EventRender3D;
-import com.fun.eventapi.event.events.EventUpdate;
-import com.fun.utils.math.MathHelper;
-import com.fun.utils.math.vecmath.Vec3;
-import com.fun.client.mods.Category;
-import com.fun.client.mods.Module;
 import com.fun.client.settings.Setting;
 import com.fun.client.utils.Rotation.Rotation;
+import com.fun.eventapi.event.events.EventRender3D;
+import com.fun.eventapi.event.events.EventUpdate;
 import com.fun.inject.injection.wrapper.impl.entity.EntityPlayerSPWrapper;
 import com.fun.inject.injection.wrapper.impl.entity.EntityWrapper;
+import com.fun.utils.math.MathHelper;
+import com.fun.utils.math.vecmath.Vec3;
+
 import javax.vecmath.Vector2f;
 
-import static com.fun.client.FunGhostClient.moduleManager;
-
+import static com.fun.client.FunGhostClient.registerManager;
+import com.fun.client.mods.Category;
+import com.fun.client.mods.Module;
 public class AimAssist extends Module {
     public AimAssist() {
         super("AimAssist", Category.Combat);
@@ -36,7 +36,7 @@ public class AimAssist extends Module {
         rotations = null;
         if (onAttack.getValBoolean() && !mc.getGameSettings().getKey("key.attack").isPressed()) return;
 
-        target = moduleManager.target.target;
+        target = registerManager.vModuleManager.target.target;
         EntityPlayerSPWrapper playersp = mc.getPlayer();
 
         if (target == null || playersp.isOpenGui()) return;

@@ -1,7 +1,7 @@
 package com.fun.inject.injection.asm.api;
 
 import com.fun.inject.Mappings;
-import com.fun.inject.injection.asm.FishClassWriter;
+import com.fun.inject.utils.FishClassWriter;
 import com.fun.inject.injection.asm.transformers.*;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;

@@ -1,19 +1,18 @@
 package com.fun.client.mods.combat;
 
+import com.fun.client.settings.Setting;
 import com.fun.eventapi.event.events.EventMoment;
 import com.fun.eventapi.event.events.EventPacket;
-import com.fun.utils.version.clazz.Classes;
-import com.fun.client.mods.Category;
-import com.fun.client.mods.Module;
-import com.fun.client.settings.Setting;
-import com.fun.inject.injection.wrapper.impl.network.packets.server.S12PacketEntityVelocityWrapper;
 import com.fun.inject.injection.wrapper.impl.entity.EntityWrapper;
-import javax.vecmath.Vector2f;
 
-import static com.fun.client.FunGhostClient.moduleManager;
+import com.fun.inject.injection.wrapper.impl.network.packets.server.S12PacketEntityVelocityWrapper;
+import com.fun.utils.version.clazz.Classes;
 
 import java.util.Random;
 
+import static com.fun.client.FunGhostClient.registerManager;
+import com.fun.client.mods.Category;
+import com.fun.client.mods.Module;
 public class Velocity extends Module {
     private final Random random = new Random();
 
@@ -63,7 +62,7 @@ public class Velocity extends Module {
                 S12PacketEntityVelocityWrapper packetVelocity = new S12PacketEntityVelocityWrapper(packet.packet);
                 if (packetVelocity.getEntityID() == mc.getPlayer().getEntityID()) {
                     // 更新 target
-                    target = moduleManager.target.target;
+                    target = registerManager.vModuleManager.target.target;
                     if (target == null) {
                         return; // 如果没有目标，退出
                     }
@@ -91,7 +90,7 @@ public class Velocity extends Module {
     public void onMoment(EventMoment event) {
         super.onMoment(event);
         // 更新 target
-        target = moduleManager.target.target;
+        target = registerManager.vModuleManager.target.target;
         if (target == null) {
             return; // 如果没有目标，退出
         }

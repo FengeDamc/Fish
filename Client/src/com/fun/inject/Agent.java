@@ -198,8 +198,9 @@ public class Agent {
     public static boolean isSelfClass(String name){
         //NativeUtils.messageBox(name,"Fish");
         //System.out.println(name+" hook");
+        name=name.replace('/','.');
         for (String cname : selfClasses) {
-            if (name.replace('/', '.').startsWith(cname))
+            if (name.startsWith(cname))
             {
                 return true;
             }
@@ -306,9 +307,10 @@ public class Agent {
                 getVersion();
                 System.out.println("jarPath:"+jarPath);
                 File injection=new File(new File(jarPath).getParent(),"/injections/"+minecraftVersion.injection);
-                System.out.println(injection.getAbsolutePath());
+                //System.out.println(injection.getAbsolutePath());
                 injection=Mapper.mapJar(injection,minecraftType);
                 NativeUtils.addToSystemClassLoaderSearch(injection.getAbsolutePath());
+                System.out.println("injection: "+injection.getAbsolutePath());
                 //if(classLoader.getClass().getName().contains("launchwrapper"))injectClassLoader(classLoader.getClass());
                 //if(classLoader.getClass().getSuperclass().getName().contains("ModuleClassLoader"))injectClassLoader(classLoader.getClass().getSuperclass());
                 //ModuleClassLoader
@@ -351,9 +353,6 @@ public class Agent {
         transformer = new ClassTransformer();
         instrumentation.addTransformer(transformer, true);
 
-        System.out.println("1");
-        NativeUtils.setEventNotificationMode(1,54);
-        System.out.println("1.5");
         //NativeUtils.messageBox("native cl:"+NativeUtils.class.getClassLoader(),"Fish");
 
         for (Transformer transformer : Transformers.transformers) {
@@ -363,14 +362,15 @@ public class Agent {
                     System.out.println("NULL CLASS");
                     continue;
                 }
-                //System.out.println("TRANS:"+transformer.clazz.getName());
+                NativeUtils.setEventNotificationMode(1,54);
                 NativeUtils.retransformClass(transformer.clazz);
+                NativeUtils.setEventNotificationMode(0,54);
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
         System.out.println("2");
-        NativeUtils.setEventNotificationMode(0,54);
+
         instrumentation.doneTransform();
         System.out.println("3");
         System.out.println("Transform classes successfully");
@@ -394,23 +394,16 @@ public class Agent {
         //System.out.println("agentcl:"+agentClass.getClassLoader());
 
 
-        new Thread(() -> {
-            try {
-                TCPClient.send(TCPServer.getTargetPort(),new PacketInit());
-                System.out.println("client init start");
-                FunGhostClient.init();
-                System.out.println("client init successful");
-                ConfigModule.loadConfig();
-                System.out.println("config loaded");
-                TCPClient.send(Main.SERVERPORT, new PacketMCPath(System.getProperty("user.dir")));//"mcpath " +
-                TCPServer.startServer(SERVERPORT);
-                FontManager.init();
-                System.out.println("fish ghost client start!");
-            }
-            catch (Exception e) {
-                e.printStackTrace();
-            }
-        }).start();
+        TCPClient.send(TCPServer.getTargetPort(),new PacketInit());
+        System.out.println("client init start");
+        FunGhostClient.init();
+        System.out.println("client init successful");
+        ConfigModule.loadConfig();
+        System.out.println("config loaded");
+        TCPClient.send(Main.SERVERPORT, new PacketMCPath(System.getProperty("user.dir")));//"mcpath " +
+        TCPServer.startServer(SERVERPORT);
+        FontManager.init();
+        System.out.println("fish ghost client start!");
 
 
 
@@ -443,7 +436,9 @@ public class Agent {
                     }
                     ClassNode node = Transformers.node(transformer.oldBytes);
 
+                    //System.out.println("1");
                     for (Method method : transformer.getClass().getDeclaredMethods()) {
+                        //System.out.println("2");
                         //Agent.System.out.println(method.toString());
                         if (method.isAnnotationPresent(Inject.class)) {
 
@@ -517,6 +512,7 @@ public class Agent {
 
 
                     }
+
                     byte[] newBytes = Transformers.rewriteClass(node);
                     if(newBytes==null){
                         logger.error(className+" rewriteClass failed");
