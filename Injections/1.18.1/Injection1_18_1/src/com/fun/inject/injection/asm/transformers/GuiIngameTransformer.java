@@ -9,6 +9,8 @@ import com.fun.inject.injection.asm.api.Transformers;
 import com.fun.inject.Agent;
 import com.fun.inject.Mappings;
 import com.fun.inject.MinecraftType;
+import com.fun.utils.RenderManager;
+import com.mojang.blaze3d.vertex.PoseStack;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.*;
@@ -18,12 +20,12 @@ public class GuiIngameTransformer extends Transformer {
 
 
     public GuiIngameTransformer() {
-        super(!(Agent.minecraftType == MinecraftType.FORGE) ?"net/minecraft/client/gui/GuiIngame":"net/minecraftforge/client/GuiIngameForge");
+        super(!(Agent.minecraftType == MinecraftType.FORGE) ?"net/minecraft/client/gui/Gui":"net/minecraftforge/client/gui/ForgeIngameGui");
     }
 
 
-    @Inject(method = "renderGameOverlay", descriptor = "(F)V")
-    public void renderGameOverlay(MethodNode methodNode) {
+    @Inject(method = "render", descriptor = "(Lcom/mojang/blaze3d/vertex/PoseStack;F)V")
+    public void render(MethodNode methodNode) {
         InsnList list = new InsnList();
 
         AbstractInsnNode point = null;
@@ -35,11 +37,10 @@ public class GuiIngameTransformer extends Transformer {
 
                 MethodInsnNode meth = (MethodInsnNode) aisn; // hehe
 
-                if (meth.owner.equals(Mappings.getObfClass("net/minecraft/client/renderer/GlStateManager"))
+                if (meth.owner.equals(Mappings.getObfClass("com/mojang/blaze3d/systems/RenderSystem"))
                         // MD: bfl/c (FFFF)V net/minecraft/client/renderer/GlStateManager/func_179131_c (FFFF)V
-                        && meth.name.equals(Mappings.getObfMethod("func_179131_c"))
+                        && meth.name.equals(Mappings.getObfMethod("m_157429_"))
                         && meth.desc.equals("(FFFF)V")) {
-
                     point = aisn;
 
                 }
@@ -50,16 +51,16 @@ public class GuiIngameTransformer extends Transformer {
             Transformers.logger.error("Failed to find last GlStateManager#color call in GuiInGame");
             return;
         }
-
-        list.add(new MethodInsnNode(Opcodes.INVOKESTATIC, Type.getInternalName(GuiIngameTransformer.class),"onRender2D","()V"));
+        list.add(new VarInsnNode(Opcodes.ALOAD, 1));
+        list.add(new MethodInsnNode(Opcodes.INVOKESTATIC, Type.getInternalName(GuiIngameTransformer.class),"onRender2D","(Ljava/lang/Object;)V"));
 
 
         methodNode.instructions.insert(point, list);
 
     }
-    public static void onRender2D(){
-
-
+    public static void onRender2D(Object poseStack){
+        if(!(poseStack instanceof PoseStack)) throw new RuntimeException("invalid poseStack");
+        RenderManager.currentPoseStack= (PoseStack) poseStack;
         EventManager.call(new EventRender2D());
     }
 }

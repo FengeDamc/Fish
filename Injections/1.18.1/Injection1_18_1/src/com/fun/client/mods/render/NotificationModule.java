@@ -31,7 +31,7 @@ public class NotificationModule extends Module {
             n.render();
         }
     }
-    public void tick(EventTick event) {
+    public void tick() {
         ArrayList<Notification> removes=new ArrayList<>();
         for (int i = 0, notificationsSize = notifications.size(); i < notificationsSize; i++) {
             Notification n = notifications.get(i);

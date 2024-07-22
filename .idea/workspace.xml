@@ -17,8 +17,13 @@
     </loaded-modules>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="提交">
+    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="support1.18.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/render/HUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/render/HUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/render/NotificationModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/render/NotificationModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/GuiIngameTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/GuiIngameTransformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/wrapper/impl/network/packets/PacketWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/wrapper/impl/network/packets/PacketWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/utils/RenderManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/utils/RenderManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -310,14 +315,6 @@
       <workItem from="1721396460902" duration="21833000" />
       <workItem from="1721538855411" duration="1662000" />
       <workItem from="1721542656546" duration="6241000" />
-    </task>
-    <task id="LOCAL-00011" summary="fix java17+">
-      <option name="closed" value="true" />
-      <created>1717070693512</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1717070693512</updated>
     </task>
     <task id="LOCAL-00012" summary="更新了一些东西">
       <option name="closed" value="true" />
@@ -703,7 +700,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721608768889</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="support1.18.1">
+      <option name="closed" value="true" />
+      <created>1721610306805</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1721610306805</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -767,7 +772,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix java17+" />
     <MESSAGE value="更新了一些东西" />
     <MESSAGE value="注入网易1.12.2单人" />
     <MESSAGE value="更新一堆" />
@@ -792,7 +796,8 @@
     <MESSAGE value="修复了1.18.1原版bind失效的问题" />
     <MESSAGE value="所有1.18.1的transformer移植完成" />
     <MESSAGE value="提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交" />
+    <MESSAGE value="support1.18.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="support1.18.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

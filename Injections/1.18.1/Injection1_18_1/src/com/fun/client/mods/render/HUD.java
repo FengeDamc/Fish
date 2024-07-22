@@ -17,7 +17,6 @@ import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.GlowSquidRenderer;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.PotionItem;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraftforge.client.EffectRenderer;
 
@@ -85,6 +84,7 @@ public class HUD extends Module {
                     yCount++;
                     index++;
                     x++;
+
                 }
             }
         }

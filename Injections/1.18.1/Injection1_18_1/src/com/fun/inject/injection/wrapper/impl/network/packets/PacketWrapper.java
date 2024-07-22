@@ -8,6 +8,7 @@ import net.minecraft.network.protocol.Packet;
 
 public class PacketWrapper extends Wrapper {
     public Packet obj;
+    public String name;
 
     public PacketWrapper(String name) {
         super(name);
@@ -22,5 +23,10 @@ public class PacketWrapper extends Wrapper {
     }
     public void processPacket(INetHandler handler) {
         obj.handle(handler.obj);//Methods.processPacket_Packet.invoke(obj, handler);
+    }
+    public PacketWrapper(Packet<?> obj) {
+        this.obj = obj;
+    }public PacketWrapper(Object obj) {
+        this.obj = (Packet) obj;
     }
 }
