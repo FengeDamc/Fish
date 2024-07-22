@@ -17,7 +17,10 @@
     </loaded-modules>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="提交" />
+    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="提交">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -302,7 +305,7 @@
       <workItem from="1721394902370" duration="1353000" />
       <workItem from="1721396460902" duration="21833000" />
       <workItem from="1721538855411" duration="1662000" />
-      <workItem from="1721542656546" duration="5209000" />
+      <workItem from="1721542656546" duration="6241000" />
     </task>
     <task id="LOCAL-00010" summary="a">
       <option name="closed" value="true" />

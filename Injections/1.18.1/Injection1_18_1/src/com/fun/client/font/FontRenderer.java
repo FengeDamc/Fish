@@ -161,6 +161,11 @@ public class FontRenderer implements Closeable {
         float a = ((color >> 24) & 0xff) / 255f;
         drawString(stack, s, (float) x, (float) y, r, g, b, a);
     }
+    public void drawStringWithShadow(PoseStack stack,String text, float x, float y, int color) {
+        this.drawString(stack,text, x + 0.5F, y + 0.5F, 0xff000000);
+        this.drawString(stack,text, x, y, color);
+    }
+
 
     public void drawString(PoseStack stack, String s, double x, double y, Color color) {
         drawString(stack, s, (float) x, (float) y, color.getRed() / 255f, color.getGreen() / 255f, color.getBlue() / 255f, color.getAlpha());
@@ -252,13 +257,13 @@ public class FontRenderer implements Closeable {
                     xOffset += glyph.width();
                 }
             }
-            System.out.println("1");
+
             for (ResourceLocation ResourceLocation : GLYPH_PAGE_CACHE.keySet()) {
                 RenderSystem.setShaderTexture(0, ResourceLocation);
                 List<DrawEntry> objects = GLYPH_PAGE_CACHE.get(ResourceLocation);
-                System.out.println("2");
+
                 bufferBuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR);//POSITION_TEXTURE_COLOR
-                System.out.println("3");
+
                 for (DrawEntry object : objects) {
                     float xo = object.atX;
                     float yo = object.atY;
@@ -286,10 +291,10 @@ public class FontRenderer implements Closeable {
             GLYPH_PAGE_CACHE.clear();
         }
 
-        RenderSystem.setShaderColor(0.0F, 0.0F, 0.0F, 0.0F);
+        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
         stack.popPose();
         RenderSystem.bindTexture(0);
-        System.out.println("renderend");
+
     }
 
     public void drawCenteredString(PoseStack stack, String s, double x, double y, int color) {
