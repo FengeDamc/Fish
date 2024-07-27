@@ -18,7 +18,8 @@ public class Target extends Module {
     public ArrayList<Object> bots = new ArrayList<>();
     public Setting onlyPlayer = new Setting("OnlyPlayer", this, false);
     public Setting antiBot = new Setting("AntiBot", this, false);
-    public Setting range = new Setting("Range", this, 6.0, 0, 6.0, false);
+    public Setting range = new Setting("Range", this, 6.0, 0, 8.0, false);
+    public Setting minRange = new Setting("MinRange", this, 0.0, 0, 3.0, false); // 添加最小范围设置项
     public Setting invisible = new Setting("Invisible", this, false);
     public double dist = Double.MAX_VALUE;
 
@@ -38,9 +39,12 @@ public class Target extends Module {
         dist = Double.MAX_VALUE;
         EntityPlayerSPWrapper playersp = mc.getPlayer();
 
+        double minDist = minRange.getValDouble(); // 获取最小范围
+        double maxDist = range.getValDouble(); // 获取最大范围
+
         for (EntityWrapper player : onlyPlayer.getValBoolean() ? mc.getWorld().getLoadedPlayers() : mc.getWorld().getLoadedEntities()) {
             double d1 = mc.getPlayer().getDistance(player);
-            if (player.obj != playersp.getEntityObj() && d1 < range.getValDouble() && d1 < dist && !player.isDead()
+            if (player.obj != playersp.getEntityObj() && d1 >= minDist && d1 <= maxDist && d1 < dist && !player.isDead()
                     && Classes.EntityLivingBase.isInstanceof(player.obj) && (invisible.getValBoolean() || !player.isInvisible())) {
                 target = player;
                 dist = d1;

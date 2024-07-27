@@ -25,11 +25,15 @@ public class AimAssist extends Module {
     public EntityWrapper target = null;
     public Rotation lastRotations = null;
     public Rotation rotations = null;
+    private long lastClickTime = 0;
+    private boolean aimAssistActive = false;
 
+    public Setting requireClicking = new Setting("RequireClick", this, true);
     public Setting onAttack = new Setting("OnAttack", this, false);
     public Setting onRotate = new Setting("OnRotate", this, false);
-    public Setting speed = new Setting("Speed", this, 50, 0, 100, false);
-    public Setting fov = new Setting("FOV", this, 90, 0, 180, true);
+    public Setting speed = new Setting("Speed", this, 30, 0, 100, false);
+    public Setting fov = new Setting("FOV", this, 90, 0, 360, true);
+    public Setting minFov = new Setting("MinFOV", this, 10, 0, 60, true);  // 添加最小FOV设置
 
     @Override
     public void onUpdate(EventUpdate event) {
@@ -37,6 +41,20 @@ public class AimAssist extends Module {
 
         lastRotations = rotations;
         rotations = null;
+
+        if (requireClicking.getValBoolean()) {
+            if (mc.getGameSettings().getKey("key.attack").isPressed()) {
+                lastClickTime = System.currentTimeMillis();
+                aimAssistActive = true;
+            } else if (System.currentTimeMillis() - lastClickTime > 200) {
+                aimAssistActive = false;
+            }
+
+            if (!aimAssistActive) {
+                return;
+            }
+        }
+
         if (onAttack.getValBoolean() && !mc.getGameSettings().getKey("key.attack").isPressed()) return;
 
         target = registerManager.vModuleManager.target.target;
@@ -94,6 +112,8 @@ public class AimAssist extends Module {
 
     private boolean isInFOV(Rotation targetRotation, EntityPlayerSPWrapper player) {
         float yawDifference = getAngleDifference(player.getYaw(), targetRotation.getYaw());
-        return Math.abs(yawDifference) <= fov.getValDouble() / 2;
+        float maxFov = (float) fov.getValDouble() / 2;
+        float minFovValue = (float) minFov.getValDouble() / 2;  // 获取最小FOV值
+        return Math.abs(yawDifference) <= maxFov && Math.abs(yawDifference) >= minFovValue;
     }
 }

@@ -58,7 +58,13 @@ public class Reach extends Module {
     private void updateRandomRange() {
         double min = rangeMin.getValDouble();
         double max = rangeMax.getValDouble();
-        currentRange = min + (max - min) * random.nextDouble();
+        double probability = 0.8;
+
+        if (random.nextDouble() < probability) {
+            currentRange = min;
+        } else {
+            currentRange = min + (max - min) * random.nextDouble();
+        }
     }
 
     private boolean shouldApplyReach() {
