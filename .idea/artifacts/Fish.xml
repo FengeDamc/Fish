@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Fish">
+    <output-path>$PROJECT_DIR$/out/Fish</output-path>
+    <root id="archive" name="Fish.jar">
+      <element id="module-output" name="Launcher" />
+      <element id="directory" name="fish">
+        <element id="dir-copy" path="$PROJECT_DIR$/fish" />
+      </element>
+    </root>
+  </artifact>
+</component>

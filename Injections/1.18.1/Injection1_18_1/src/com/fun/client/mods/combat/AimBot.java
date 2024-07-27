@@ -5,10 +5,7 @@ import com.fun.client.mods.Category;
 import com.fun.client.mods.VModule;
 import com.fun.client.settings.Setting;
 import com.fun.client.utils.Rotation.Rotation;
-import com.fun.eventapi.event.events.EventAttackReach;
-import com.fun.eventapi.event.events.EventMotion;
-import com.fun.eventapi.event.events.EventStrafe;
-import com.fun.eventapi.event.events.EventUpdate;
+import com.fun.eventapi.event.events.*;
 
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.phys.Vec3;
@@ -23,8 +20,8 @@ public class AimBot extends VModule {
     public Setting speed = new Setting("Speed", this, 50, 0, 100, false);
 
     @Override
-    public void onAttackReach(EventAttackReach event) {
-        super.onAttackReach(event);
+    public void onRender2D(EventRender2D event) {
+        super.onRender2D(event);
         if(!onAttack.getValBoolean()||mc.mouseHandler.isLeftPressed()){
             Entity e=FunGhostClient.registerManager.vModuleManager.target.target;
             if(e==null)return;

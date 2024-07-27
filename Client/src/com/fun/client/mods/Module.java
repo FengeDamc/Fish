@@ -120,4 +120,11 @@ public class Module{
     public void onDisable(){
         FunGhostClient.registerManager.vModuleManager.notification.post(new Notification("Disable "+getName(), Notification.Type.RED));
     }
+
+    public void onView(EventView event) {
+
+    }
+
+    public void onJump(EventJump event) {
+    }
 }

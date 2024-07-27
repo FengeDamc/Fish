@@ -9,7 +9,6 @@ import com.fun.client.settings.Setting;
 import com.fun.inject.Agent;
 import com.fun.inject.Main;
 import com.fun.inject.InjectUtils;
-import com.fun.inject.injection.wrapper.impl.MinecraftWrapper;
 
 import javax.swing.*;
 import javax.swing.event.*;
@@ -171,15 +170,7 @@ public class FishFrame extends JFrame {
                             comboBox.setSelectedIndex(index);
 
                             comboBox.addItemListener(e12 -> {
-                                try{
-                                    MinecraftWrapper.get().addScheduledTask(()->{
-                                        set.setValString(((String) comboBox.getSelectedItem()));
-                                        //Agent.System.out.println("itemChange"+(String) set.getValString());
-                                    });
-                                }
-                                catch (Exception e1){
-                                    set.setValString(((String) comboBox.getSelectedItem()));
-                                }
+                                set.setValString(((String) comboBox.getSelectedItem()));
 
                             });
                             comboBox.setBackground(Color.lightGray);

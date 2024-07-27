@@ -132,36 +132,8 @@ public class EntityPlayerSPWrapper extends EntityPlayerWrapper {
         return Math.sqrt(f * f + f1 * f1 + f2 * f2);
     }
 
-    public float getEyeHeight() {
-        float value = 1.62f;
-        if (isSneaking()) {
-            value -= 0.08f;
-        }
-        return value;
-    }
 
-    public float getYaw() {
-        // FD: pk/y net/minecraft/world/entity/Entity/field_70177_z
-        Object value = ReflectionUtils.getFieldValue(obj, Fields.Yaw_Entity.getName());
-        return value == null ? 0.0f : (Float) value;
-    }
 
-    public float getPitch() {
-        // FD: pk/z net/minecraft/world/entity/Entity/field_70125_A
-        Object value = ReflectionUtils.getFieldValue(obj, Fields.Pitch_Entity.getName());
-        return value == null ? 0.0f : (Float) value;
-    }
-    public void setYaw(float yaw) {
-        // FD: pk/y net/minecraft/world/entity/Entity/field_70177_z
-        ReflectionUtils.setFieldValue(obj, Fields.Yaw_Entity.getName(), yaw);
-        //return value == null ? 0.0f : (Float) value;
-    }
-
-    public void setPitch(float pitch) {
-        // FD: pk/z net/minecraft/world/entity/Entity/field_70125_A
-        ReflectionUtils.setFieldValue(obj, Fields.Pitch_Entity.getName(),pitch);
-        //return value == null ? 0.0f : (Float) value;
-    }
 
 
     public Vector3f getVectorForRotation() {

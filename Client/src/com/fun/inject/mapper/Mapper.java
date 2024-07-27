@@ -4,6 +4,7 @@ import com.fun.inject.Agent;
 import com.fun.inject.Mappings;
 import com.fun.inject.MinecraftType;
 import com.fun.utils.file.IOUtils;
+import com.fun.utils.version.clazz.Classes;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.Handle;
@@ -13,9 +14,7 @@ import org.objectweb.asm.tree.*;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.HashMap;
+import java.util.*;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.jar.JarOutputStream;
@@ -134,7 +133,8 @@ public class Mapper {
                     }
                     if (insnNode instanceof FieldInsnNode) {
                         if(isObfibleClass(((FieldInsnNode) insnNode).owner)) {
-                            ((FieldInsnNode) insnNode).name = getObfField(((FieldInsnNode) insnNode).name, ((FieldInsnNode) insnNode).owner);
+                            Class<?> owner=Agent.findClass(getObfClass(((FieldInsnNode) insnNode).owner));
+                            ((FieldInsnNode) insnNode).name = getObfField(((FieldInsnNode) insnNode).name, owner);
                             ((FieldInsnNode) insnNode).owner = getObfClass(((FieldInsnNode) insnNode).owner);
                         }
                         ((FieldInsnNode) insnNode).desc = getObfFieldDesc(((FieldInsnNode) insnNode).desc);
@@ -251,34 +251,53 @@ public class Mapper {
     public static String getObfMethod(String mcpName,Class<?> owner,String desc)
     {
         String s;
-        //System.out.println(owner.getName());
-        s=getObfMethodOrNull(mcpName, Mappings.getUnobfClass(owner.getName()),desc);
-        if(s!=null)return s;
-        Class<?> c= owner;
-
-        while (c.getSuperclass()!=null){
+        List<Class<?>> classes=getSupers(owner);
+        for(Class<?> c:classes){
             s=getObfMethodOrNull(mcpName,Mappings.getUnobfClass(c.getName()),desc);
             if(s!=null)return s;
-            c=c.getSuperclass();
-            //System.out.println("1"+c.getName());
         }
-        //System.out.println("2"+owner.getName());
-        Class<?>[] is=owner.getInterfaces();
-        for (Class<?> i : is) {
-            s = getObfMethodOrNull(mcpName, Mappings.getUnobfClass(i.getName()), desc);
-            if (s != null) return s;
+        return mcpName;
+    }
+    public static List<Class<?>> getSupers(Class<?> theClass){
+        List<Class<?>> classes = new ArrayList<>();
+        Class<?> superClz = theClass;
+        while (superClz != Object.class) {
+            if (superClz != null) {
+                classes.add(superClz);
+                superClz = superClz.getSuperclass();
+            } else break;
+        }
+        Class<?> interfaceClz = theClass;
+        while (interfaceClz != Object.class) {
+            if (interfaceClz != null) {
+                classes.addAll(Arrays.asList(interfaceClz.getInterfaces()));
+                interfaceClz = interfaceClz.getSuperclass();
+            } else break;
+        }
+        return classes;
+    }
+    public static String getObfField(String mcpName,Class<?> owner)
+    {
+        String s;
+        List<Class<?>> classes=getSupers(owner);
+        for(Class<?> c:classes){
+            s=getObfFieldOrNull(mcpName,Mappings.getUnobfClass(c.getName()));
+            if(s!=null)return s;
         }
         return mcpName;
     }
     public static String getObfField(String mcpName,String owner){
+        String s=getObfFieldOrNull(mcpName, owner);
+        return s==null?mcpName:s;
+    }
+    public static String getObfFieldOrNull(String mcpName,String owner){
         String str=fieldMap.get(owner + "/" + mcpName);
         if(str==null){
-            return mcpName;
+            return null;
         }
 
         String[] s=str.split("/");
-        String t=s[s.length-1];
-        return t==null?mcpName:t;
+        return s[s.length-1];
     }
     public static String getObfDesc(String desc){
         if(isMethodDesc(desc)){

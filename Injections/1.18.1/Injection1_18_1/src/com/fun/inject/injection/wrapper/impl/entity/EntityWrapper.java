@@ -78,7 +78,7 @@ public class EntityWrapper extends Wrapper {
 
     public float getPitch() {
         // FD: pk/z net/minecraft/world/entity/Entity/field_70125_A
-        return ((Entity)obj).getYRot();
+        return ((Entity)obj).getXRot();
 
     }
     public void setYaw(float yaw) {

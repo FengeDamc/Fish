@@ -1,18 +1,15 @@
 package com.fun.client.mods;
 
-import com.fun.client.mods.combat.AimBot;
-import com.fun.client.mods.combat.AutoClicker;
-import com.fun.client.mods.combat.Reach;
-import com.fun.client.mods.combat.Target;
+import com.fun.client.mods.combat.*;
 import com.fun.client.mods.movement.KeepSprint;
+import com.fun.client.mods.movement.StrafeFix;
+import com.fun.client.mods.render.FreeLook;
 import com.fun.client.mods.render.HUD;
 import com.fun.client.mods.render.NotificationModule;
+import com.fun.client.mods.render.Rotations;
 import com.fun.client.mods.world.Eagle;
-import com.fun.inject.injection.wrapper.impl.setting.GameSettingsWrapper;
-import com.fun.utils.version.methods.Methods;
+import com.fun.client.mods.world.Scaffold;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.texture.DynamicTexture;
-
 
 
 public class VModuleManager {
@@ -24,7 +21,14 @@ public class VModuleManager {
     public Target target;
     public AimBot aimBot;
     public Eagle eagle;
+    public StrafeFix strafeFix;
     public Minecraft mc=Minecraft.getInstance();
+
+    public Rotations rotations;
+    public FreeLook freeLook;
+    public KillAura killAura;
+    public Scaffold scaffold;
+    public Velocity velocity;
     public void init(){
         Minecraft.getInstance().getWindow().setTitle("钓鱼岛");
         sprint=new KeepSprint();
@@ -35,10 +39,14 @@ public class VModuleManager {
         target=new Target();
         aimBot=new AimBot();
         eagle=new Eagle();
+        rotations=new Rotations();
+        strafeFix=new StrafeFix();
+        killAura=new KillAura();
+        freeLook =new FreeLook();
+        scaffold=new Scaffold();
+        velocity=new Velocity();
     }
     public void mouseFix() {
-        //mc.getGameSettings().getKey(GameSettingsWrapper.USE).setPressed((boolean) Methods.isButtonDown.invoke(null,1));
-        //mc.getGameSettings().getKey(GameSettingsWrapper.ATTACK).setPressed((boolean)Methods.isButtonDown.invoke(null,0));
-
+       //todo
     }
 }

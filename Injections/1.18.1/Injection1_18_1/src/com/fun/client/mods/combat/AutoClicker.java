@@ -21,8 +21,8 @@ public class AutoClicker extends VModule {
     public Setting right = new Setting("RightClick", this, true);
 
     @Override
-    public void onTick(EventTick event) {
-        super.onTick(event);
+    public void onUpdate(EventUpdate event) {
+        super.onUpdate(event);
         if(left.getValBoolean()&&mc.mouseHandler.isLeftPressed()){
             if(Math.random() <LeftCPS.getValDouble()/20&&mc.screen==null&&mc.level!=null){
                 sendClick(Type.LEFT);

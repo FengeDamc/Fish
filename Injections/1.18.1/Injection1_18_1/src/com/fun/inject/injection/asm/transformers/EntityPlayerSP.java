@@ -163,12 +163,9 @@ public class EntityPlayerSP extends Transformer {
             if (node instanceof VarInsnNode && ((VarInsnNode) node).var >= j) {
                 ((VarInsnNode) node).var += j;//插入偏移值;
             }
-            //FD: pk/s net/minecraft/world/entity/Entity/field_70165_t
-            //FD: pk/t net/minecraft/world/entity/Entity/field_70163_u
-            //FD: pk/u net/minecraft/world/entity/Entity/field_70161_v
-            //FD: pk/y net/minecraft/world/entity/Entity/field_70177_z
-            //FD: pk/z net/minecraft/world/entity/Entity/field_70125_A
-            if (node instanceof MethodInsnNode && ((MethodInsnNode) node).name.equals(Mapper.getObfMethod("getYRot",Mapper.getObfClass("net/minecraft/world/entity/Entity"),"()F"))) {
+
+            if (node instanceof MethodInsnNode && ((MethodInsnNode) node).name.equals(Mapper.getObfMethod("getYRot","net/minecraft/world/entity/Entity","()F"))
+                    &&((MethodInsnNode) node).desc.equals("()F")) {
                 //标记替换yaw轴
                 AbstractInsnNode aload_0 = methodNode.instructions.get(i - 1);
                 if (aload_0 instanceof VarInsnNode) {
@@ -178,7 +175,8 @@ public class EntityPlayerSP extends Transformer {
                     //rl.add(node);
                 }
             }
-            if (node instanceof MethodInsnNode && ((MethodInsnNode) node).name.equals(Mapper.getObfMethod("getXRot",Mapper.getObfClass("net/minecraft/world/entity/Entity"),"()F"))) {
+            if (node instanceof MethodInsnNode && ((MethodInsnNode) node).name.equals(Mapper.getObfMethod("getXRot","net/minecraft/world/entity/Entity","()F"))
+                    &&((MethodInsnNode) node).desc.equals("()F")) {
                 //标记替换yaw轴
                 AbstractInsnNode aload_0 = methodNode.instructions.get(i - 1);
                 if (aload_0 instanceof VarInsnNode) {
@@ -188,7 +186,8 @@ public class EntityPlayerSP extends Transformer {
                     //rl.add(node);
                 }
             }
-            if (node instanceof MethodInsnNode && ((MethodInsnNode) node).name.equals(Mapper.getObfMethod("getX",Mapper.getObfClass("net/minecraft/world/entity/Entity"),"()D"))) {
+            if (node instanceof MethodInsnNode && ((MethodInsnNode) node).name.equals(Mapper.getObfMethod("getX","net/minecraft/world/entity/Entity","()D"))
+                    &&((MethodInsnNode) node).desc.equals("()D")) {
                 //标记替换yaw轴
                 AbstractInsnNode aload_0 = methodNode.instructions.get(i - 1);
                 if (aload_0 instanceof VarInsnNode) {
@@ -198,7 +197,8 @@ public class EntityPlayerSP extends Transformer {
                     //rl.add(node);
                 }
             }
-            if (node instanceof MethodInsnNode && ((MethodInsnNode) node).name.equals(Mapper.getObfMethod("getY",Mapper.getObfClass("net/minecraft/world/entity/Entity"),"()D"))) {
+            if (node instanceof MethodInsnNode && ((MethodInsnNode) node).name.equals(Mapper.getObfMethod("getY","net/minecraft/world/entity/Entity","()D"))
+                    &&((MethodInsnNode) node).desc.equals("()D")) {
                 //标记替换yaw轴
                 AbstractInsnNode aload_0 = methodNode.instructions.get(i - 1);
                 if (aload_0 instanceof VarInsnNode) {
@@ -208,7 +208,8 @@ public class EntityPlayerSP extends Transformer {
                     //rl.add(node);
                 }
             }
-            if (node instanceof MethodInsnNode && ((MethodInsnNode) node).name.equals(Mapper.getObfMethod("getZ",Mapper.getObfClass("net/minecraft/world/entity/Entity"),"()D"))) {
+            if (node instanceof MethodInsnNode && ((MethodInsnNode) node).name.equals(Mapper.getObfMethod("getZ","net/minecraft/world/entity/Entity","()D"))
+                    &&((MethodInsnNode) node).desc.equals("()D")) {
                 //标记替换yaw轴
                 AbstractInsnNode aload_0 = methodNode.instructions.get(i - 1);
                 if (aload_0 instanceof VarInsnNode) {

@@ -2,6 +2,8 @@ package com.fun.inject.injection.asm.transformers;
 
 import com.fun.eventapi.EventManager;
 import com.fun.eventapi.event.events.EventTick;
+import com.fun.eventapi.event.events.EventView;
+import com.fun.inject.injection.asm.api.Inject;
 import com.fun.inject.injection.asm.api.Mixin;
 import com.fun.inject.injection.asm.api.Transformer;
 import com.fun.utils.version.clazz.Classes;
@@ -18,8 +20,16 @@ public class MinecraftTransformer extends Transformer {
     @Mixin(method = Methods.runTick_Minecraft)
     public void runTick(MethodNode methodNode){
         methodNode.instructions.insert(new MethodInsnNode(Opcodes.INVOKESTATIC, Type.getInternalName(MinecraftTransformer.class),"onRunTick","()V"));
+    }//getRenderViewEntity ()Lnet/minecraft/entity/Entity;
+    @Inject(method = "getRenderViewEntity",descriptor = "()Lnet/minecraft/entity/Entity;")
+    public void getRenderViewEntity(MethodNode methodNode){
+        methodNode.instructions.insert(new MethodInsnNode(Opcodes.INVOKESTATIC, Type.getInternalName(MinecraftTransformer.class),"onGetRenderViewEntity","()V"));
+
     }
     public static void onRunTick(){
         EventManager.call(new EventTick());
+    }
+    public static void onGetRenderViewEntity(){
+        EventManager.call(new EventView());
     }
 }

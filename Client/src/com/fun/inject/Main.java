@@ -23,8 +23,6 @@ public class Main {
     public static Injector injector;
     static {
         if(!Agent.isAgent)System.loadLibrary("libinjector");
-
-
     }
     public static void start()
     {

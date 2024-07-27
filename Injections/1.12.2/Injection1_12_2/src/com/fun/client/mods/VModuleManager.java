@@ -5,6 +5,7 @@ import com.fun.client.mods.movement.Flight;
 import com.fun.client.mods.movement.KeepSprint;
 import com.fun.client.mods.render.HUD;
 import com.fun.client.mods.render.NotificationModule;
+import com.fun.client.mods.render.Rotations;
 import com.fun.client.mods.world.Backtrack;
 import com.fun.client.mods.world.Eagle;
 import com.fun.inject.injection.wrapper.impl.setting.GameSettingsWrapper;
@@ -25,6 +26,7 @@ public class VModuleManager {
     public AutoBlocking autoBlocking;
     public NotificationModule notification;
     public Target target;
+    public Rotations rotations;
     public void init(){
         try{
             backtrack = new Backtrack();
@@ -39,6 +41,7 @@ public class VModuleManager {
             autoBlocking = new AutoBlocking();
             notification = new NotificationModule();
             target = new Target();
+            rotations = new Rotations();
         }
         catch(Exception e){
             e.printStackTrace();

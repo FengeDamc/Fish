@@ -4,6 +4,7 @@ package com.fun.inject.injection.asm.transformers;
 import com.fun.eventapi.EventManager;
 import com.fun.eventapi.event.events.EventPacket;
 import com.fun.inject.Agent;
+import com.fun.inject.Mappings;
 import com.fun.inject.injection.asm.api.Mixin;
 import com.fun.inject.injection.asm.api.Transformer;
 import com.fun.utils.version.methods.Methods;
@@ -63,7 +64,6 @@ public class NetworkManagerTransFormer extends Transformer {
     // func_179290_a,sendPacket,2,
 
     public static boolean onPacket(Object packet){
-        //Agent.logger.info(Mappings.getUnobfClass(packet.getClass().getName()));
         return EventManager.call(new EventPacket(packet)).cancel;
     }
 }

@@ -1,5 +1,6 @@
 package com.fun.inject.injection.asm.transformers;
 
+import com.fun.client.FunGhostClient;
 import com.fun.eventapi.EventManager;
 import com.fun.eventapi.event.events.EventStrafe;
 import com.fun.inject.injection.asm.api.Inject;
@@ -9,7 +10,9 @@ import com.fun.inject.injection.asm.api.Transformer;
 import com.fun.inject.Agent;
 import com.fun.inject.Mappings;
 import com.fun.inject.MinecraftVersion;
+import com.fun.inject.mapper.Mapper;
 import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.phys.Vec3;
 import org.objectweb.asm.Opcodes;
@@ -71,5 +74,39 @@ public class EntityTransformer extends Transformer {
             this.yaw=yaw;
             this.friction=friction;
         }
+    }
+    @Inject(method = "getViewVector",descriptor = "(F)Lnet/minecraft/world/phys/Vec3;")
+    public void getLookAngle(MethodNode methodNode){
+        for (int i = 0; i < methodNode.instructions.size(); ++i) {
+            AbstractInsnNode node = methodNode.instructions.get(i);
+            if(node instanceof MethodInsnNode){
+                if(((MethodInsnNode) node).name.equals(Mapper.getObfMethod("getViewYRot","net/minecraft/world/entity/Entity","(F)F"))
+                &&((MethodInsnNode) node).desc.equals("(F)F")){
+
+                    methodNode.instructions.insertBefore(node,new MethodInsnNode(Opcodes.INVOKESTATIC,Type.getInternalName(EntityTransformer.class),"yaw","(Ljava/lang/Object;F)F"));
+
+                    methodNode.instructions.remove(node);
+                }
+                if(((MethodInsnNode) node).name.equals(Mapper.getObfMethod("getViewXRot","net/minecraft/world/entity/Entity","(F)F"))
+                        &&((MethodInsnNode) node).desc.equals("(F)F")){
+
+                    methodNode.instructions.insertBefore(node,new MethodInsnNode(Opcodes.INVOKESTATIC,Type.getInternalName(EntityTransformer.class),"pitch","(Ljava/lang/Object;F)F"));
+                    methodNode.instructions.remove(node);
+                }
+            }
+        }
+    }
+    public static float yaw(Object entity,float f){
+        if(entity instanceof LocalPlayer)
+            return FunGhostClient.rotationManager.getRation().y;
+        else if(entity instanceof Entity) return ((Entity) entity).getViewYRot(f);
+        throw new RuntimeException("arg0 isn't Entity");
+    }
+    public static float pitch(Object entity,float f){//getViewVector
+
+        if(entity instanceof LocalPlayer)
+            return FunGhostClient.rotationManager.getRation().x;
+        else if(entity instanceof Entity) return ((Entity) entity).getViewXRot(f);
+        throw new RuntimeException("arg0 isn't Entity");
     }
 }

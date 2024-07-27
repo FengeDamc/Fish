@@ -14,6 +14,9 @@
 # EXTERNAL cache entries
 ########################
 
+//Build static libraries
+BUILD_STATIC_LIBS:BOOL=OFF
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=C:/Program Files/JetBrains/CLion 2024.1.3/bin/mingw/bin/addr2line.exe
 

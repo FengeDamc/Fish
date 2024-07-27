@@ -256,8 +256,11 @@ public final class EventManager {
         try {
             data.getTarget().invoke(data.getSource(), argument);
         } catch (IllegalAccessException e) {
+            e.printStackTrace();
         } catch (IllegalArgumentException e) {
+            e.printStackTrace();
         } catch (InvocationTargetException e) {
+            e.printStackTrace();
         }
     }
 	

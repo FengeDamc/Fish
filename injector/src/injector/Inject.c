@@ -31,6 +31,7 @@
 #include <stdlib.h>
 #include "LoadLibraryR.h"
 #include "../java/jni.h"
+#include "../java/jvmti.h"
 
 #pragma comment(lib,"Advapi32.lib")
 
@@ -109,4 +110,15 @@ JNIEXPORT void JNICALL Java_com_fun_inject_InjectorUtils_injectorR
     (*env)->ReleaseStringUTFChars(env,dll,cpDllFile);
 
 
+}
+extern JNIEXPORT void JNICALL Java_com_fun_inject_InjectorUtils_addToSystemClassLoaderSearch(JNIEnv *jniEnv, jclass _,jstring str){
+    const char* ctr=(*jniEnv)->GetStringUTFChars(jniEnv,str,0);
+    jvmtiEnv* jvmti;
+    JavaVM *vm;
+    (*jniEnv)->GetJavaVM(jniEnv,&vm);
+    (*vm)->GetEnv(vm, (void **) (&jvmti),JVMTI_VERSION);
+    if(!jvmti)
+        MessageBoxA(NULL,"jvmtiEnv is null","FishInjector",0);
+    (*jvmti)->AddToSystemClassLoaderSearch(jvmti,ctr);
+    (*jniEnv)->ReleaseStringUTFChars(jniEnv,str,ctr);
 }

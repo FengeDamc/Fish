@@ -23,6 +23,7 @@ public class RegisterManager {
     public void init() {
         mods.clear();
         EventManager.register(this);
+        EventManager.register(FunGhostClient.rotationManager);
         try {
             vModuleManager = new VModuleManager();
             vModuleManager.init();
@@ -72,6 +73,12 @@ public class RegisterManager {
         //System.out.println("onStrafe2");
         for (Module m : mods) {
             if (m.running) m.onStrafe(event);
+        }//EventView
+    }
+    @EventTarget
+    public void onView(EventView event) {
+        for (Module m : mods) {
+            if (m.running) m.onView(event);
         }
     }
     @EventTarget
@@ -137,6 +144,16 @@ public class RegisterManager {
             if (m.running){
 
                 m.onTick(event);
+            }
+        }
+    }
+    @EventTarget
+    public void onJump(EventJump event){
+        vModuleManager.mouseFix();
+        for (Module m : mods) {
+            if (m.running){
+
+                m.onJump(event);
             }
         }
 

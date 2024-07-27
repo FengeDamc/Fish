@@ -6,7 +6,7 @@
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
     ShowWindow(GetConsoleWindow(), SW_HIDE);
     char command[1024];
-    sprintf(command, "\"java8\\bin\\java.exe\"  -jar FunGhostClient.jar");
+    sprintf(command, "java -jar FunGhostClient.jar");
 
     // 使用system函数执行命令
     return system(command);

@@ -12,6 +12,8 @@ import com.fun.utils.math.vecmath.Vec3;
 import javax.vecmath.Vector2f;
 
 import static com.fun.client.FunGhostClient.registerManager;
+import static com.fun.utils.rotation.RotationUtils.getAngleDifference;
+
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
 
@@ -77,9 +79,7 @@ public class AimAssist extends Module {
         playersp.setAngles(f2, f3 * i);
     }
 
-    public static float getAngleDifference(final float a, final float b) {
-        return Float.parseFloat(Double.valueOf(MathHelper.wrapAngleTo180_double((a) - b)).toString());
-    }
+
 
     public static Vector2f aim(Vec3 player, Vec3 target) {
         double x = target.xCoord - player.xCoord;

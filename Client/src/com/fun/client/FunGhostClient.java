@@ -7,12 +7,16 @@ import com.fun.eventapi.event.events.EventRender3D;
 import com.fun.client.settings.SettingsManager;
 import com.fun.inject.injection.asm.api.Transformers;
 import com.fun.client.mods.render.notify.Notification;
+import com.fun.utils.rotation.RotationManager;
+import com.fun.utils.rotation.RotationUtils;
 
 public class FunGhostClient {
     public static SettingsManager settingsManager;
     public static RegisterManager registerManager;
+    public static RotationManager rotationManager;
     public static void init(){
             try{
+                rotationManager = new RotationManager();
 
                 settingsManager=new SettingsManager();
 

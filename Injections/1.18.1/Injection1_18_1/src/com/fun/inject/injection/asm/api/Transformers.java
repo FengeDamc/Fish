@@ -63,7 +63,7 @@ public class Transformers {
         transformers.add(new GuiScreenTransformer());
         transformers.add(new EntityTransformer());
         transformers.add(new MinecraftTransformer());
-
-
+        transformers.add(new PlayerModelTransformer());
+        transformers.add(new LivingEntityTransformer());
     }
 }

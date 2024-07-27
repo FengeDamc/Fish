@@ -155,7 +155,7 @@ public class Setting implements Serializable {
 
 		}
 		this.bval = in;
-		this.parent.onSettingChange(this);
+		this.onSettingChange();
 
 	}
 
@@ -171,7 +171,7 @@ public class Setting implements Serializable {
 			TCPClient.send(TCPServer.getTargetPort(),new PacketSetDouble(FunGhostClient.settingsManager.getSettings().indexOf(this),in));
 		}
 		this.dval = in;
-		this.parent.onSettingChange(this);
+		this.onSettingChange();
 
 	}
 
