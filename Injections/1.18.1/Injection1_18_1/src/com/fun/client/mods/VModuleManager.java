@@ -9,6 +9,7 @@ import com.fun.client.mods.render.NotificationModule;
 import com.fun.client.mods.render.Rotations;
 import com.fun.client.mods.world.Eagle;
 import com.fun.client.mods.world.Scaffold;
+import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.Minecraft;
 
 

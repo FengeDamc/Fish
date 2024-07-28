@@ -4,6 +4,7 @@ package com.fun.client.config;
 import com.fun.client.FunGhostClient;
 import com.fun.client.mods.Module;
 import com.fun.client.settings.Setting;
+import com.fun.inject.Agent;
 import com.fun.inject.Main;
 
 import java.io.*;
@@ -29,7 +30,7 @@ public class ConfigModule {
     }
     public static void saveConfig() {
         PrintWriter writer=null;
-        File file=new File(Main.mcPath+"/Fish.config.txt");
+        File file=new File(new File(Main.mcPath).getParent(),"Fish.config-"+ Agent.minecraftVersion.getVer()+".txt");
         try {
             writer=new PrintWriter(file);
         } catch (FileNotFoundException ignored) {
@@ -53,7 +54,7 @@ public class ConfigModule {
 
     public static void loadConfig() {
         FileReader reader=null;
-        File file=new File(Main.mcPath+"/Fish.config.txt");
+        File file=new File(new File(Main.mcPath).getParent(),"Fish.config-"+ Agent.minecraftVersion.getVer()+".txt");
         if (!file.exists()) {
             try {
 

@@ -17,58 +17,20 @@
     </loaded-modules>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="support1.18.1">
-      <change afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/event/events/EventJump.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/event/events/EventView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/rotation/RotationManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/src/com/fun/client/mods/render/Rotations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/combat/KillAura.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/movement/StrafeFix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/render/FreeLook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/render/Rotations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/world/Scaffold.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/LivingEntityTransformer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/PlayerModelTransformer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/utils/PacketUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/client/mods/render/Rotations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Launcher/Launcher/Launcher.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Launcher/Launcher/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Launcher/Launcher/src/Main.java" afterDir="false" />
+    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="大更新">
+      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/player/AutoArmor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/player/AutoTool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/player/ChestStealer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/player/IncCleaner.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/fish/libagent.dll.a" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/fish/libinjector.dll.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Fish.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Fish.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/client/FunGhostClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/FunGhostClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/client/mods/Module.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/mods/Module.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/client/config/ConfigModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/config/ConfigModule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/com/fun/client/mods/RegisterManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/mods/RegisterManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/client/settings/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/settings/Setting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/eventapi/EventManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/eventapi/EventManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/gui/FishFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/gui/FishFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/inject/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/inject/mapper/Mapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/mapper/Mapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/utils/packet/RotationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/rotation/RotationUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/src/com/fun/client/mods/VModuleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/src/com/fun/client/mods/VModuleManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/src/com/fun/inject/injection/asm/transformers/MinecraftTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.12.2/Injection1_12_2/src/com/fun/inject/injection/asm/transformers/MinecraftTransformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/utils/rotation/RotationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/rotation/RotationManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/VModuleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/VModuleManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/combat/AimBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/combat/AimBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/combat/AutoClicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/combat/AutoClicker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/combat/Target.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/combat/Target.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/combat/Velocity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/combat/Velocity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/api/Transformers.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/api/Transformers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/EntityPlayerSP.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/EntityPlayerSP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/EntityTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/EntityTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/KeyBindTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/KeyBindTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/MinecraftTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/MinecraftTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/NetworkManagerTransFormer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/asm/transformers/NetworkManagerTransFormer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/wrapper/impl/entity/EntityPlayerSPWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/wrapper/impl/entity/EntityPlayerSPWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/wrapper/impl/entity/EntityWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/inject/injection/wrapper/impl/entity/EntityWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/mappings/forge.srg" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/mappings/forge.srg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/mappings/vanilla.srg" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/mappings/vanilla.srg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/client/mods/VModuleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/client/mods/VModuleManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/client/mods/combat/AimAssist.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/client/mods/combat/AimAssist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/inject/injection/asm/transformers/MinecraftTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/inject/injection/asm/transformers/MinecraftTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/inject/injection/asm/transformers/NetworkManagerTransFormer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.8.9/Injection1_8_9/src/com/fun/inject/injection/asm/transformers/NetworkManagerTransFormer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/FunGhostClient.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/FunGhostClient.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/fish.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/inject.bat" beforeDir="false" afterPath="$PROJECT_DIR$/fish/inject.bat" afterDir="false" />
@@ -832,24 +794,6 @@
       <change beforePath="$PROJECT_DIR$/fish/launcher.exe" beforeDir="false" afterPath="$PROJECT_DIR$/fish/launcher.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/libagent.dll" beforeDir="false" afterPath="$PROJECT_DIR$/fish/libagent.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/libinjector.dll" beforeDir="false" afterPath="$PROJECT_DIR$/fish/libinjector.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/injector/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/injector/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/.cmake/api/v1/reply/cache-v2-15468713f32846acfe38.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-5c659ac0c26fe726fee8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-6b25cbd450c36601b5a8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/.cmake/api/v1/reply/index-2024-07-08T11-06-11-0243.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/.cmake/api/v1/reply/target-agent-Debug-e48f7abd1e6dfad2c6f9.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/.cmake/api/v1/reply/target-injector-Debug-0c4b32a30c1fb72b1921.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/.cmake/api/v1/reply/target-launcher-Debug-38743b609fb1740c23da.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/injector.dir/src/injector/Inject.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/injector.dir/src/injector/Inject.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/launcher.dir/src/launcher/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/CMakeFiles/launcher.dir/src/launcher/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/injector/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/src/injector/Inject.c" beforeDir="false" afterPath="$PROJECT_DIR$/injector/src/injector/Inject.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/src/launcher/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/injector/src/launcher/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -908,9 +852,6 @@
   <component name="NamedScopeManager">
     <scope name="minecraft" pattern="" />
   </component>
-  <component name="PerforceDirect.Settings">
-    <option name="CHARSET" value="无" />
-  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -943,7 +884,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/FengeGG/Fish/Launcher/Launcher/src&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/FengeGG/Fish/fish/fishgc使用方法.txt&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -990,18 +931,6 @@
     </key>
   </component>
   <component name="RunAnythingCache">
-    <myKeys>
-      <visibility group="Gradle 任务" flag="true" />
-      <visibility group="Grunt" flag="true" />
-      <visibility group="Gulp" flag="true" />
-      <visibility group="HTTP 请求" flag="true" />
-      <visibility group="Maven 目标" flag="true" />
-      <visibility group="Node.js" flag="true" />
-      <visibility group="npm" flag="true" />
-      <visibility group="yarn" flag="true" />
-      <visibility group="最近的项目" flag="true" />
-      <visibility group="运行配置" flag="true" />
-    </myKeys>
     <option name="myCommands">
       <command value="mc." />
     </option>
@@ -1165,15 +1094,9 @@
       <workItem from="1721872048785" duration="683000" />
       <workItem from="1721874729659" duration="3293000" />
       <workItem from="1721882093453" duration="18010000" />
-      <workItem from="1722034417322" duration="1614000" />
-    </task>
-    <task id="LOCAL-00015" summary="更新一点">
-      <option name="closed" value="true" />
-      <created>1718628980220</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1718628980220</updated>
+      <workItem from="1722034417322" duration="6288000" />
+      <workItem from="1722124471929" duration="297000" />
+      <workItem from="1722160660869" duration="2578000" />
     </task>
     <task id="LOCAL-00016" summary="更新了注入网易">
       <option name="closed" value="true" />
@@ -1559,7 +1482,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721624045603</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="大更新">
+      <option name="closed" value="true" />
+      <created>1722046599216</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1722046599217</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1641,14 +1572,14 @@
     <MESSAGE value="我手贱给回滚了1" />
     <MESSAGE value="提交classDefiner for inject1.18.1forge" />
     <MESSAGE value="提交classDefiner for inject1.18.1forge&#10;注入原版forge不起作用需要退出重进服务器/单人世界&#10;网易forge 原版 lunar均没有此问题" />
-    <MESSAGE value="大更新" />
     <MESSAGE value="添加了1.18.1的字体渲染" />
     <MESSAGE value="更新了1.18.1hud" />
     <MESSAGE value="修复了1.18.1原版bind失效的问题" />
     <MESSAGE value="所有1.18.1的transformer移植完成" />
     <MESSAGE value="提交" />
     <MESSAGE value="support1.18.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="support1.18.1" />
+    <MESSAGE value="大更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="大更新" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

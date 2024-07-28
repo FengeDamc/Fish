@@ -16,11 +16,15 @@ public class RotationManager {
     private int tick=0;
 
     public void setRation(Vector2f ration) {
+        if(ration.equals(getLocalPlayer()))return;
         this.ration = ration;
         active=true;
     }
     public Vector2f getRation() {
         return isActive()?ration:new Vector2f(mc.getPlayer().getPitch(),mc.getPlayer().getYaw());
+    }
+    public Vector2f getLocalPlayer() {
+        return new Vector2f(mc.getPlayer().getPitch(),mc.getPlayer().getYaw());
     }
     @EventTarget
     public void onMotion(EventMotion event) {

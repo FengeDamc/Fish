@@ -11,6 +11,7 @@ import java.util.Random;
 import static com.fun.client.FunGhostClient.registerManager;
 import com.fun.client.mods.Category;
 import com.fun.client.mods.Module;
+import com.fun.eventapi.event.events.EventTick;
 import com.fun.eventapi.event.events.EventUpdate;
 import com.fun.utils.PacketUtils;
 import net.minecraft.network.protocol.Packet;
@@ -30,10 +31,11 @@ public class Velocity extends VModule {
         super("Velocity", Category.Combat);
     }
 
+
     //public Entity target = null;
 
     public Setting mode = new Setting("Mode", this, "Vanilla", new String[]{"Vanilla", "JumpReset","GrimNoXZ"});
-    public Setting noxzCount=new Setting("NoxzCount",this,100,20,200,true){
+    public Setting noxzCount=new Setting("NoxzCount",this,15,10,30,true){
         @Override
         public boolean isVisible() {
             return mode.getValString().equalsIgnoreCase("GrimNoXZ");
@@ -69,7 +71,7 @@ public class Velocity extends VModule {
     private double getRandomMultiplier(double min, double max) {
         return min + (max - min) * Math.random();
     }
-
+    private boolean shouldNoxz=false;
     @Override
     public void onPacket(EventPacket packet) {
         super.onPacket(packet);
@@ -77,18 +79,11 @@ public class Velocity extends VModule {
         if (packet.packet instanceof ClientboundSetEntityMotionPacket) {
             try {
                 if (((ClientboundSetEntityMotionPacket) packet.packet).getId() == mc.player.getId()) {
-                    // 更新 target
-                    /*target = registerManager.vModuleManager.target.target;
-                    if (target == null) {
-                        return; // 如果没有目标，退出
-                    }*/
 
                     if (this.mode.getValString().equalsIgnoreCase("Vanilla")) {
-                        System.out.println(0);
                         if (waterCheck.getValBoolean() && mc.player.isInWater()) {
                             return;
                         }
-                        System.out.println("1");
                         if (random.nextDouble() * 100 <= chance.getValDouble()) {
 
                             double horizontalMultiplier = getRandomMultiplier(horizontalMin.getValDouble(), horizontalMax.getValDouble()) / 100.0;
@@ -96,26 +91,14 @@ public class Velocity extends VModule {
                             Vec3 newVec= new Vec3(((ClientboundSetEntityMotionPacket) packet.packet).getXa()/8000.0f* horizontalMultiplier,
                                     ((ClientboundSetEntityMotionPacket) packet.packet).getYa()/8000.0f* verticalMultiplier,
                                     ((ClientboundSetEntityMotionPacket) packet.packet).getZa()/8000.0f* horizontalMultiplier);
-                            System.out.println("1.5");
                             ClientboundSetEntityMotionPacket newPacket= new ClientboundSetEntityMotionPacket(((ClientboundSetEntityMotionPacket) packet.packet).getId(),newVec);
-                            System.out.println("2");
                             PacketUtils.receivePacketNoEvent(newPacket);
-                            System.out.println("3");
                             packet.cancel=true;
 
                         }
                     }
-                    if(mode.getValString().equalsIgnoreCase("GrimNoXZ")) {
-                        PacketUtils.receivePacketNoEvent((Packet) packet.packet);
-                        if(registerManager.vModuleManager.target.target!=null){
-                            for(int i=0;i<noxzCount.getValDouble();i++){
-                                PacketUtils.sendPacket(ServerboundInteractPacket.createAttackPacket(registerManager.vModuleManager.target.target, mc.player.isShiftKeyDown()));
-                                mc.player.setSprinting(false);
-                                mc.player.setDeltaMovement(mc.player.getDeltaMovement().multiply(0.6,1.0,0.6));
-                                PacketUtils.sendPacket(new ServerboundSwingPacket(InteractionHand.MAIN_HAND));
-                            }
-                        }
-                        packet.cancel=true;
+                    if(mode.getValString().equalsIgnoreCase("GrimNoXZ")){
+                        shouldNoxz=true;
                     }
                 }
             } catch (NullPointerException e) {
@@ -146,9 +129,24 @@ public class Velocity extends VModule {
     }
 
     @Override
-    public void onUpdate(EventUpdate event) {
-        super.onUpdate(event);
-        //
+    public void onEnable() {
+        super.onEnable();
+        shouldNoxz=false;
+    }
+
+    @Override
+    public void onTick(EventTick event) {
+        super.onTick(event);
+        if(mode.getValString().equalsIgnoreCase("GrimNoXZ")) {
+            if(registerManager.vModuleManager.target.target!=null&&shouldNoxz){
+                for(int i=0;i<noxzCount.getValDouble();i++){
+                    mc.gameMode.attack(mc.player,registerManager.vModuleManager.target.target);
+                    PacketUtils.sendPacket(new ServerboundSwingPacket(InteractionHand.MAIN_HAND));
+                    shouldNoxz=false;
+                    System.out.println(i);
+                }
+            }
+        }
 
     }
 }

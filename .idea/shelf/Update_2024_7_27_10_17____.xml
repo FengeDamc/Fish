@@ -1,0 +1,2179 @@
+<changelist name="在进行Update之前于_2024_7_27_上午10_17_取消提交了更改_[更改]" date="1722046714323" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_27_上午10_17_取消提交了更改_[更改]/shelved.patch" />
+  <option name="DESCRIPTION" value="在进行Update之前于 2024/7/27 上午10:17 取消提交了更改 [更改]" />
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-core-kit_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-heapdump_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-sampler.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/lib/locale/org-openide-util-lookup_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-explorer_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-utilities_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/LICENSE" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/ant-javafx.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/lib/locale/jfluid-server_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/images/cursors/win32_LinkDrop32x32.gif" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-awt_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-openide-windows.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/libagent.dll" />
+    <option name="AFTER_PATH" value="fish/libagent.dll" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_27_上午10_17_取消提交了更改_[更改]/libagent.dll" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/LICENSE" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/jfr/profile.jfc" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/meta-index" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-uihandler.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-core-multitabs.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-editor-mimelookup_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-queries_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-sa.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-nodes_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/org-netbeans-lib-profiler.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-core.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-modules-appui_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/etc/visualvm.clusters" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/core/com-sun-tools-visualvm-modules-startup.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-autoupdate-services_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-lib-uihandler_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/.lastModified" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-attach.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/src.zip" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/config/Modules/org-netbeans-core-output2.xml_hidden" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-application-views_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-multiview_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/fonts/LucidaTypewriterRegular.ttf" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/org-netbeans-lib-profiler-common.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-lib-profiler-common_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/lib/org-openide-modules.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/injections/1.12.2.jar" />
+    <option name="AFTER_PATH" value="fish/injections/1.12.2.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_27_上午10_17_取消提交了更改_[更改]/1.12.2.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/security/blacklist" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-templates_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-autoupdate-ui.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-oql_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-sa_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-sa_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-core-ui.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-editor-mimelookup_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-autoupdate-cli_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-templates_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-swing-plaf_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/config/Modules/org-netbeans-core-io-ui.xml_hidden" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-selector-api_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-charts_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/jfr.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-uihandler_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-jvm_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/fish.zip" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-options-api_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-progress-ui_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-jmx.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-api-annotations-common_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-windows_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/ct.sym" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-coredump_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-attach_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-spi-actions.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/fontconfig.bfc" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-sendopts.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-masterfs_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-attach_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/ext/jfxrt.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-openide-dialogs.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-jmx_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-spi-quicksearch_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/config/Modules/org-netbeans-lib-uihandler.xml_hidden" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/lib/deployed/jdk15/windows-amd64/profilerinterface.dll" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-selector-ui_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/lib/locale/boot_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/ext/sunec.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-ui_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/javafx-mx.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/lib/nbexec.dll" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-compat_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-keyring-impl.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/lib/locale/org-openide-util_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-spi-actions_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-core_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/lib/locale/org-openide-modules_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-output2_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-execution_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-multitabs_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-api-progress_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/core/locale/com-sun-tools-visualvm-modules-startup_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-application-views_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/cmm/sRGB.pf" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-heapwalker_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-openide-awt.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/deploy/splash.gif" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-api-caching_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/security/blacklisted.certs" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/org-netbeans-lib-profiler-charts.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/security/policy/unlimited/US_export_policy.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/org-netbeans-modules-profiler-snaptracer.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/lib/nbexec.exe" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-snaptracer_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/management/jmxremote.access" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/ext/access-bridge-64.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-masterfs.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-dialogs_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-applemenu.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/libinjector.dll" />
+    <option name="AFTER_PATH" value="fish/libinjector.dll" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_27_上午10_17_取消提交了更改_[更改]/libinjector.dll" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/security/policy/unlimited/local_policy.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-openide-compat.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/fonts/LucidaBrightItalic.ttf" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-autoupdate-services_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-core-execution.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/cmm/GRAY.pf" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/ext/jaccess.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-openide-io.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/jconsole.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-modules-appui_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/psfont.properties.ja" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-print_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-keyring-impl_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-api-search_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/jawt.lib" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/security/javaws.policy" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-api-progress_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/org-netbeans-core_visualvm.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/config/Modules/org-netbeans-modules-favorites.xml_hidden" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/lib/nbexec64.exe" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-tools_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/config/Modules/org-openide-util-enumerations.xml_hidden" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/sa-jdi.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-options-api_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-sendopts_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-keyring-fallback.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-lib-profiler-charts_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-oql_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-swing-plaf_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-explorer_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-host_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-application-views.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/deploy.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-api-annotations-common_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-actions_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-attach_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/dt.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/core/locale/core_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-core-windows.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-lib-profiler_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/lib/jfluid-server.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/fontconfig.properties.src" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-charts.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/lib/locale/boot_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-lib-profiler-common_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-windows_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-sampler_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/ext/sunjce_provider.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/ext/zipfs.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/packager.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/images/cursors/win32_CopyDrop32x32.gif" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/fonts/LucidaBrightRegular.ttf" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/org-netbeans-modules-profiler-selector-ui.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-core-multiview.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/cmm/PYCC.pf" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-execution_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/jfxswt.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-windows_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/COPYRIGHT" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/config/Modules/org-openide-compat.xml_hidden" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/ext/cldrdata.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-snaptracer_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-sampler.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-javahelp.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/core/locale/core_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-heapwalker_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/core/locale/core_visualvm.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-api_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-sampler_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-editor-mimelookup-impl.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/management/jmxremote.password.template" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-io-ui_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/images/cursors/win32_LinkNoDrop32x32.gif" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/fonts/LucidaSansRegular.ttf" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/security/cacerts" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/core/locale/org-openide-filesystems_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/currency.data" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/images/cursors/invalid32x32.gif" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-threaddump.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-execution_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/core/locale/com-sun-tools-visualvm-modules-startup_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-openide-nodes.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-text_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-keyring-fallback_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/injection_none.jar" />
+    <option name="AFTER_PATH" value="fish/injection_none.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_27_上午10_17_取消提交了更改_[更改]/injection_none.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-swing-outline_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/.lastModified" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/images/cursors/win32_MoveDrop32x32.gif" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/security/policy/limited/local_policy.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-autoupdate-cli_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-settings_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-api-search.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/core/locale/org-openide-filesystems_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/core/org-openide-filesystems.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="fish/libagent.dll.a" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_27_上午10_17_取消提交了更改_[更改]/libagent.dll.a" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-core.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/.lastModified" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-progress-ui.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/ext/localedata.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-charts_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-masterfs-nio2_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-print_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/config/Modules/org-openide-execution.xml_hidden" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/deploy/splash_11@2x-lic.gif" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/ext/jhall-2.0_05.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-nodes_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/org-netbeans-modules-profiler-selector-api.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="fish/libinjector.dll.a" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_27_上午10_17_取消提交了更改_[更改]/libinjector.dll.a" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-spi-quicksearch.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-options_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/config/Modules/org-netbeans-modules-print.xml_hidden" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/config/Modules/org-netbeans-modules-templates.xml_hidden" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/config/Modules/org-netbeans-modules-options-keymap.xml_hidden" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/jvm.lib" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/deploy/splash@2x.gif" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-jvm.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/ext/locale/updater_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-util-enumerations_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-core-io-ui.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-host-remote_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-spi-actions_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-swing-outline_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-api_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/lib/deployed/jdk16/windows-amd64/profilerinterface.dll" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/tzmappings" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-io_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-keyring_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-tools_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-lib-profiler_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/jsse.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-editor-mimelookup-impl_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-api-caching_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-core_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-execution_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/javafx-src.zip" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/images/cursors/win32_MoveNoDrop32x32.gif" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-autoupdate-services.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-profiling_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/amd64/jvm.cfg" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-jvmstat_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-swing-tabcontrol_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/plugin.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/lib/locale/jfluid-server_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-keyring-fallback_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-sendopts_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-jvmstat.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/launcher.exe" />
+    <option name="AFTER_PATH" value="fish/launcher.exe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_27_上午10_17_取消提交了更改_[更改]/launcher.exe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/rt.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-uisupport.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-lib-uihandler_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-core-output2.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-attach_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/ext/sunmscapi.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-modules-appui.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-io_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-host-views_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-threaddump_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-settings_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-dialogs_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-host-views.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-utilities_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/injection_vanilla.jar" />
+    <option name="AFTER_PATH" value="fish/injection_vanilla.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_27_上午10_17_取消提交了更改_[更改]/injection_vanilla.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-tools.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-favorites_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-api-progress.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/lib/locale/org-openide-util_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/javaws.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-options-api.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/tzdb.dat" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-options-keymap_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-options-keymap_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/ext/dnsns.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-favorites_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/config/Modules/org-netbeans-core-execution.xml_hidden" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-sampler_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-awt_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-swing-outline.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/management/snmp.acl.template" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-javahelp_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/classlist" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/ext/locale/updater_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-spi-quicksearch_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-queries.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/COPYRIGHT" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-masterfs-nio2_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-openide-util-enumerations.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-jmx_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-text_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-queries_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-masterfs_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/config/Modules/org-netbeans-api-visual.xml_hidden" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/injection_forge.jar" />
+    <option name="AFTER_PATH" value="fish/injection_forge.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_27_上午10_17_取消提交了更改_[更改]/injection_forge.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/FunGhostClient.jar" />
+    <option name="AFTER_PATH" value="fish/FunGhostClient.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_27_上午10_17_取消提交了更改_[更改]/FunGhostClient.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/deploy/splash_11-lic.gif" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-openide-options.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-core-kit_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-jvmstat_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/core/core.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/lib/locale/org-openide-util-lookup_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/lib/org-openide-util-lookup.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-profiling_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-coredump.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-host.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-sampler_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-swing-plaf.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/config/Modules/org-openide-options.xml_hidden" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-options-keymap.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/lib/nbexec64.dll" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-host_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/images/cursors/win32_CopyNoDrop32x32.gif" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-progress-ui_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-host-remote.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/org-netbeans-core-windows_visualvm.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-io-ui_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-print.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-masterfs-nio2.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/cmm/CIEXYZ.pf" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-settings.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-api-visual.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-openide-loaders.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/release" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-actions_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-util-enumerations_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-host-views_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/fonts/LucidaBrightDemiItalic.ttf" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-loaders_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-favorites.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-editor-mimelookup-impl_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-selector-api_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/org-netbeans-modules-profiler-attach.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-profiler.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/fonts/LucidaBrightDemiBold.ttf" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/jce.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-uisupport_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-multiview_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/jfr/default.jfc" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-windows_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-threaddump_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/fonts/LucidaTypewriterBold.ttf" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-heapdump.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/security/java.security" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/lib/org-openide-util.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/charsets.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-openide-text.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-heapdump_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/ext/updater.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-api-annotations-common.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/security/policy/limited/US_export_policy.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-jvm_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-openide-actions.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/org-netbeans-modules-profiler-api.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/config/Modules/org-netbeans-modules-uihandler.xml_hidden" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/injections/1.18.1.jar" />
+    <option name="AFTER_PATH" value="fish/injections/1.18.1.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_27_上午10_17_取消提交了更改_[更改]/1.18.1.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-autoupdate-ui_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-profiler_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/org-netbeans-modules-profiler.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-openide-execution.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-lib-profiler-charts_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/resources.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-uihandler_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/org-netbeans-lib-profiler-ui.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/lib/locale/org-openide-modules_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/deploy/ffjcext.zip" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/ext/nashorn.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-options_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-keyring-impl_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-lib-profiler-ui_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-lib-profiler-ui_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/security/java.policy" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/org-netbeans-modules-profiler-heapwalker.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-coredump_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/cmm/LINEAR_RGB.pf" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/injections/1.8.9.jar" />
+    <option name="AFTER_PATH" value="fish/injections/1.8.9.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行Update之前于_2024_7_27_上午10_17_取消提交了更改_[更改]/1.8.9.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/fonts/LucidaSansDemiBold.ttf" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/config/Modules/org-netbeans-modules-spi-actions.xml_hidden" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-output2_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/security/public_suffix_list.dat" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-javahelp_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/tools.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/org-netbeans-modules-profiler-utilities.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-loaders_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-api-caching.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/ext/sunpkcs11.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-api-search_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-editor-mimelookup.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/config/Modules/org-netbeans-modules-core-kit.xml_hidden" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-selector-ui_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-templates.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/management-agent.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-api-visual_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-core-kit.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/ext/meta-index" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-autoupdate-ui_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-keyring.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-multitabs_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-uisupport_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-swing-tabcontrol_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-lib-uihandler.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-host-remote_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core-ui_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-applemenu_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-application_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-openide-explorer.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/lib/boot.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-profiling.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-openide-compat_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-applemenu_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/org-netbeans-modules-profiler_visualvm.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-api-visual_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/modules/org-netbeans-modules-profiler-oql.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-core_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-profiler_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-modules-autoupdate-cli.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/org-netbeans-swing-tabcontrol.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/etc/visualvm.conf" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-application.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-application_zh_CN.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/jre/lib/security/trusted.libraries" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/platform/modules/locale/org-netbeans-modules-keyring_ja.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="fish/java8/lib/visualvm/profiler/lib/jfluid-server-15.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+</changelist>

@@ -4,8 +4,17 @@
     <root id="archive" name="Fish.jar">
       <element id="module-output" name="Launcher" />
       <element id="directory" name="fish">
-        <element id="dir-copy" path="$PROJECT_DIR$/fish" />
+        <element id="directory" name="injections">
+          <element id="artifact" artifact-name="Injection1_18_1:jar" />
+          <element id="artifact" artifact-name="Injection1_12_2:jar" />
+          <element id="artifact" artifact-name="Injection1_8_9:jar" />
+        </element>
+        <element id="artifact" artifact-name="FunGhostClient:jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/fish/launcher.exe" />
+        <element id="file-copy" path="$PROJECT_DIR$/fish/libagent.dll" />
+        <element id="file-copy" path="$PROJECT_DIR$/fish/libinjector.dll" />
       </element>
+      <element id="file-copy" path="$PROJECT_DIR$/fish/fishgc使用方法.txt" />
     </root>
   </artifact>
 </component>

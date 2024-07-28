@@ -6,6 +6,8 @@ import com.fun.eventapi.EventTarget;
 import com.fun.eventapi.event.events.*;
 import com.fun.client.FunGhostClient;
 import com.fun.client.config.ConfigModule;
+import com.fun.inject.Agent;
+import com.fun.inject.MinecraftVersion;
 import com.fun.inject.injection.wrapper.impl.setting.GameSettingsWrapper;
 import com.fun.utils.version.methods.Methods;
 
@@ -98,7 +100,8 @@ public class RegisterManager {
             }
             if (m.running) m.onKey(event);
         }
-        if (event.key == 1) ConfigModule.saveConfig();
+        if (event.key == 1&& Agent.minecraftVersion!= MinecraftVersion.VER_1181) ConfigModule.saveConfig();
+        if (event.key==256&&Agent.minecraftVersion== MinecraftVersion.VER_1181)ConfigModule.saveConfig();
     }
 
     @EventTarget
