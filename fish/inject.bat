@@ -1,2 +1,2 @@
-"java8/bin/java.exe"  -jar FunGhostClient.jar
+java  -jar FunGhostClient.jar
 pause
