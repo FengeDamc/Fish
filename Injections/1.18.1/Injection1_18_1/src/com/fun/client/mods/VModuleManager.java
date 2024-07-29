@@ -3,6 +3,7 @@ package com.fun.client.mods;
 import com.fun.client.mods.combat.*;
 import com.fun.client.mods.movement.KeepSprint;
 import com.fun.client.mods.movement.StrafeFix;
+import com.fun.client.mods.player.ChestStealer;
 import com.fun.client.mods.render.FreeLook;
 import com.fun.client.mods.render.HUD;
 import com.fun.client.mods.render.NotificationModule;
@@ -30,6 +31,7 @@ public class VModuleManager {
     public KillAura killAura;
     public Scaffold scaffold;
     public Velocity velocity;
+    public ChestStealer chestStealer;
     public void init(){
         Minecraft.getInstance().getWindow().setTitle("钓鱼岛");
         sprint=new KeepSprint();
@@ -46,6 +48,7 @@ public class VModuleManager {
         freeLook =new FreeLook();
         scaffold=new Scaffold();
         velocity=new Velocity();
+        chestStealer=new ChestStealer();
     }
     public void mouseFix() {
        //todo

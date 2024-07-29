@@ -3,6 +3,7 @@ package com.fun.inject.mapper;
 import com.fun.inject.Agent;
 import com.fun.inject.Mappings;
 import com.fun.inject.MinecraftType;
+import com.fun.inject.utils.FishClassWriter;
 import com.fun.utils.file.IOUtils;
 import com.fun.utils.version.clazz.Classes;
 import org.objectweb.asm.ClassReader;
@@ -207,7 +208,7 @@ public class Mapper {
                 classNode.name = getObfClass(classNode.name);
                 classNode.superName = getObfClass(classNode.superName);
             }
-            ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS | ClassWriter.COMPUTE_FRAMES);
+            FishClassWriter writer = new FishClassWriter(ClassWriter.COMPUTE_MAXS | ClassWriter.COMPUTE_FRAMES);
             classNode.accept(writer);
             //System.out.println(classNode.name);
             return writer.toByteArray();

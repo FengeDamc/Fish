@@ -17,29 +17,19 @@
     </loaded-modules>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="大更新">
-      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/player/AutoArmor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/player/AutoTool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/player/ChestStealer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/player/IncCleaner.java" afterDir="false" />
+    <list default="true" id="63d72f21-e07c-452a-ac01-d5128fa5c2f5" name="更改" comment="更新">
       <change afterPath="$PROJECT_DIR$/fish/libagent.dll.a" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/fish/libinjector.dll.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Fish.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Fish.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/client/config/ConfigModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/config/ConfigModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/client/mods/RegisterManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/client/mods/RegisterManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/utils/rotation/RotationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/rotation/RotationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/fun/inject/mapper/Mapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/inject/mapper/Mapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/VModuleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/VModuleManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/combat/Velocity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/combat/Velocity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/player/ChestStealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Injections/1.18.1/Injection1_18_1/src/com/fun/client/mods/player/ChestStealer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/FunGhostClient.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/FunGhostClient.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fish/fish.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fish/inject.bat" beforeDir="false" afterPath="$PROJECT_DIR$/fish/inject.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fish/fish.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/fun/utils/math/Timer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/injection_forge.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injection_forge.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/injection_none.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injection_none.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/injection_vanilla.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injection_vanilla.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fish/injections/1.12.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injections/1.12.2.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/injections/1.18.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injections/1.18.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fish/injections/1.8.9.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fish/injections/1.8.9.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/java8/COPYRIGHT" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/java8/LICENSE" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/java8/README.html" beforeDir="false" />
@@ -790,10 +780,6 @@
       <change beforePath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-tools.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/java8/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-uisupport.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/fish/java8/release" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fish/java8/src.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fish/launcher.exe" beforeDir="false" afterPath="$PROJECT_DIR$/fish/launcher.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fish/libagent.dll" beforeDir="false" afterPath="$PROJECT_DIR$/fish/libagent.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fish/libinjector.dll" beforeDir="false" afterPath="$PROJECT_DIR$/fish/libinjector.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -890,7 +876,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;工件&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15234375&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.4013841&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
@@ -1096,23 +1082,9 @@
       <workItem from="1721882093453" duration="18010000" />
       <workItem from="1722034417322" duration="6288000" />
       <workItem from="1722124471929" duration="297000" />
-      <workItem from="1722160660869" duration="2578000" />
-    </task>
-    <task id="LOCAL-00016" summary="更新了注入网易">
-      <option name="closed" value="true" />
-      <created>1718630055886</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1718630055886</updated>
-    </task>
-    <task id="LOCAL-00017" summary="更新了注入网易">
-      <option name="closed" value="true" />
-      <created>1718630088744</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1718630088744</updated>
+      <workItem from="1722160660869" duration="6141000" />
+      <workItem from="1722229871665" duration="138000" />
+      <workItem from="1722234793863" duration="1476000" />
     </task>
     <task id="LOCAL-00018" summary="add AimAssist">
       <option name="closed" value="true" />
@@ -1490,7 +1462,23 @@
       <option name="project" value="LOCAL" />
       <updated>1722046599217</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="更新">
+      <option name="closed" value="true" />
+      <created>1722174498769</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1722174498770</updated>
+    </task>
+    <task id="LOCAL-00066" summary="更新">
+      <option name="closed" value="true" />
+      <created>1722174534995</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1722174534995</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1554,7 +1542,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="更新了一些东西" />
     <MESSAGE value="注入网易1.12.2单人" />
     <MESSAGE value="更新一堆" />
     <MESSAGE value="更新一点" />
@@ -1579,7 +1566,8 @@
     <MESSAGE value="提交" />
     <MESSAGE value="support1.18.1" />
     <MESSAGE value="大更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="大更新" />
+    <MESSAGE value="更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
